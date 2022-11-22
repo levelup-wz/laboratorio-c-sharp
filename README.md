@@ -3,6 +3,6 @@
 - [x]  Imprimir os números ÍMPARES de 1 a 100
 - [x]  Imprimir a soma dos números de 1 a 100
 - [x]  Imprimir a sequência de Fibonacci
-- [ ]  "Cadastrar" cliente
-- [ ]  Calcular equação de 2º grau
+- [x]  "Cadastrar" cliente
+- [x]  Calcular equação de 2º grau
 - [ ]  Calcular IMC

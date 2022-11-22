@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soma dos numeros de 1 a 100
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequencia de Fibonacci", "Sequencia de Fibonacci\Sequencia de Fibonacci.csproj", "{185D9AEE-4427-4DF6-BEC5-70FDA6A94A97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro de Cliente", "Cadastro de Cliente\Cadastro de Cliente.csproj", "{E112E574-8F79-4510-A7FB-3AF82006790F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{185D9AEE-4427-4DF6-BEC5-70FDA6A94A97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{185D9AEE-4427-4DF6-BEC5-70FDA6A94A97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{185D9AEE-4427-4DF6-BEC5-70FDA6A94A97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E112E574-8F79-4510-A7FB-3AF82006790F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E112E574-8F79-4510-A7FB-3AF82006790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E112E574-8F79-4510-A7FB-3AF82006790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E112E574-8F79-4510-A7FB-3AF82006790F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

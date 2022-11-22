@@ -1,2 +1,2 @@
-# Desafio Pull Request concluído!
-## Saulo Alves Magalhães esteve aqui!
+# Semana 2 - Explorando C#
+## 

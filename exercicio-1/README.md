@@ -3,5 +3,5 @@ Uma turma possui 5 alunos: Ana, Bia, Caio, Dani e Eli. As notas de cada um foram
 
 ## Tarefa:
 1. Calcule a média de notas da turma;
-1. Exiba a seguinte mensagem para o usuário: **A média da turma foi de <VALOR_DA_MÉDIA>.**;
-1. Se a média for maior que 7, exibir a mensagem: **Turma aprovada!**.
+2. Exiba a seguinte mensagem para o usuário: **A média da turma foi de <VALOR_DA_MÉDIA>.**;
+3. Se a média for maior que 7, exibir a mensagem: **Turma aprovada!**.

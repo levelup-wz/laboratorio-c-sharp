@@ -5,4 +5,4 @@
 - [x]  Imprimir a sequência de Fibonacci
 - [x]  "Cadastrar" cliente
 - [x]  Calcular equação de 2º grau
-- [ ]  Calcular IMC
+- [x]  Calcular IMC

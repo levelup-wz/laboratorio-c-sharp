@@ -10,10 +10,10 @@ for (int i = 1; i <= 100; i++) {
 
 // Resolução com 'while'
 Console.WriteLine("\nUsando o laço 'while':");
-int i = 1;
-while (i < 100) {
-    if (i % 2 != 0) {
-        Console.WriteLine(i);
+int j = 1;
+while (j < 100) {
+    if (j % 2 != 0) {
+        Console.WriteLine(j);
     }
-    i++;
+    j++;
 }

@@ -12,10 +12,10 @@ Console.WriteLine($"Usando o laço 'for': {soma}");
 
 // Resolução com 'while'
 soma = 0;
-int i = 0;
+int j = 0;
 
-while (i <= 100) {
-    soma += i;
-    i++;
+while (j <= 100) {
+    soma += j;
+    j++;
 }
 Console.WriteLine($"Usando o laço 'while': {soma}");

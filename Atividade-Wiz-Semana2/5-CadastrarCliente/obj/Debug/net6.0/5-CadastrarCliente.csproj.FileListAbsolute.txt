@@ -1,0 +1,15 @@
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\bin\Debug\net6.0\5-CadastrarCliente.exe
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\bin\Debug\net6.0\5-CadastrarCliente.deps.json
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\bin\Debug\net6.0\5-CadastrarCliente.runtimeconfig.json
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\bin\Debug\net6.0\5-CadastrarCliente.dll
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\bin\Debug\net6.0\5-CadastrarCliente.pdb
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.csproj.AssemblyReference.cache
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.AssemblyInfoInputs.cache
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.AssemblyInfo.cs
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.csproj.CoreCompileInputs.cache
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.dll
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\refint\5-CadastrarCliente.dll
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.pdb
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\5-CadastrarCliente.genruntimeconfig.cache
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Semana 1-Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana2\5-CadastrarCliente\obj\Debug\net6.0\ref\5-CadastrarCliente.dll

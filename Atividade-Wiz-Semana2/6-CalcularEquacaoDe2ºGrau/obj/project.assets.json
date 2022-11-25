@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\6-CalcularEquacaoDe2ºGrau\\6-CalcularEquacaoDe2ºGrau.csproj",
+      "projectUniqueName": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\6-CalcularEquacaoDe2ºGrau\\6-CalcularEquacaoDe2ºGrau.csproj",
       "projectName": "6-CalcularEquacaoDe2ºGrau",
-      "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\6-CalcularEquacaoDe2ºGrau\\6-CalcularEquacaoDe2ºGrau.csproj",
+      "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\6-CalcularEquacaoDe2ºGrau\\6-CalcularEquacaoDe2ºGrau.csproj",
       "packagesPath": "C:\\Users\\Heber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\6-CalcularEquacaoDe2ºGrau\\obj\\",
+      "outputPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\6-CalcularEquacaoDe2ºGrau\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Heber\\AppData\\Roaming\\NuGet\\NuGet.Config",

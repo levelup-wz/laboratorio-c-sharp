@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\5-CadastrarCliente\\5-CadastrarCliente.csproj",
+      "projectUniqueName": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\5-CadastrarCliente\\5-CadastrarCliente.csproj",
       "projectName": "5-CadastrarCliente",
-      "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\5-CadastrarCliente\\5-CadastrarCliente.csproj",
+      "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\5-CadastrarCliente\\5-CadastrarCliente.csproj",
       "packagesPath": "C:\\Users\\Heber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\5-CadastrarCliente\\obj\\",
+      "outputPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\5-CadastrarCliente\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Heber\\AppData\\Roaming\\NuGet\\NuGet.Config",

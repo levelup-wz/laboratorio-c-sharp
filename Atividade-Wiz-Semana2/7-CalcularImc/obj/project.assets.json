@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\7-CalcularImc\\7-CalcularImc.csproj",
+      "projectUniqueName": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\7-CalcularImc\\7-CalcularImc.csproj",
       "projectName": "7-CalcularImc",
-      "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\7-CalcularImc\\7-CalcularImc.csproj",
+      "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\7-CalcularImc\\7-CalcularImc.csproj",
       "packagesPath": "C:\\Users\\Heber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Semana 1-Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\7-CalcularImc\\obj\\",
+      "outputPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana2\\7-CalcularImc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Heber\\AppData\\Roaming\\NuGet\\NuGet.Config",

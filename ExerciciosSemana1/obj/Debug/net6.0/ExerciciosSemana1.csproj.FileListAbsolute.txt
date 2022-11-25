@@ -1,0 +1,15 @@
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\bin\Debug\net6.0\ExerciciosSemana1.exe
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\bin\Debug\net6.0\ExerciciosSemana1.deps.json
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\bin\Debug\net6.0\ExerciciosSemana1.runtimeconfig.json
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\bin\Debug\net6.0\ExerciciosSemana1.dll
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\bin\Debug\net6.0\ExerciciosSemana1.pdb
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.csproj.AssemblyReference.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.AssemblyInfoInputs.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.AssemblyInfo.cs
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.csproj.CoreCompileInputs.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.dll
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\refint\ExerciciosSemana1.dll
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.pdb
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ExerciciosSemana1.genruntimeconfig.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\ExerciciosSemana1\obj\Debug\net6.0\ref\ExerciciosSemana1.dll

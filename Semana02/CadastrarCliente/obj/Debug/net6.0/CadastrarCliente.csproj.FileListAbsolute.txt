@@ -1,0 +1,15 @@
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.csproj.AssemblyReference.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.AssemblyInfoInputs.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.AssemblyInfo.cs
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.csproj.CoreCompileInputs.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\bin\Debug\net6.0\CadastrarCliente.exe
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\bin\Debug\net6.0\CadastrarCliente.deps.json
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\bin\Debug\net6.0\CadastrarCliente.runtimeconfig.json
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\bin\Debug\net6.0\CadastrarCliente.dll
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\bin\Debug\net6.0\CadastrarCliente.pdb
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.dll
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\refint\CadastrarCliente.dll
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.pdb
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\CadastrarCliente.genruntimeconfig.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CadastrarCliente\obj\Debug\net6.0\ref\CadastrarCliente.dll

@@ -10,7 +10,7 @@ class Programa
         for (i = 0; i <= 100; i++)
         {
             
-            if (i % 2 == 1)
+            if (i % 2 == 1) //se o resto da divisão for = 1 são impares, então eles são impressos
             {
                 Console.WriteLine(i);
        

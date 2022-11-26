@@ -15,7 +15,7 @@ class Programa
 
         for (i=1; i<=20; i++) {
 
-            fib = num1;
+            fib = num1; 
             num1 = num2;
             num2 = num1 + fib;
             Console.WriteLine(fib);

@@ -11,7 +11,7 @@ class Programa
         for (i = 0; i <= 100; i++)
         {
 
-            if (i % 2 == 0)
+            if (i % 2 == 0) // se o resto a divisão for 0 e que o número é par, então ele e somado 
             {
                 soma = soma + i;
                 Console.WriteLine(soma);

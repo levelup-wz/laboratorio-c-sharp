@@ -10,7 +10,7 @@ class Programa
         string email;
 
         Console.WriteLine("Digite o seu nome: ");
-        nome =  Console.ReadLine();
+        nome =  Console.ReadLine(); //A variavel recebe o valor digitado (o valor r salvo na forma de string)
         Console.WriteLine("Digite o seu email: ");
         email = Console.ReadLine();
 

@@ -1,0 +1,15 @@
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\bin\Debug\net6.0\TarefaMediaTurma.exe
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\bin\Debug\net6.0\TarefaMediaTurma.deps.json
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\bin\Debug\net6.0\TarefaMediaTurma.runtimeconfig.json
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\bin\Debug\net6.0\TarefaMediaTurma.dll
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\bin\Debug\net6.0\TarefaMediaTurma.pdb
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.csproj.AssemblyReference.cache
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.AssemblyInfoInputs.cache
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.AssemblyInfo.cs
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.csproj.CoreCompileInputs.cache
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.dll
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\refint\TarefaMediaTurma.dll
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.pdb
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\TarefaMediaTurma.genruntimeconfig.cache
+C:\Users\Andressa\Desktop\TEREFAS CONCLUÍDAS\TarefaMediaTurma\TarefaMediaTurma\obj\Debug\net6.0\ref\TarefaMediaTurma.dll

@@ -1,0 +1,15 @@
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.csproj.AssemblyReference.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.AssemblyInfoInputs.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.AssemblyInfo.cs
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.csproj.CoreCompileInputs.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\bin\Debug\net6.0\IMPARESde1a100.exe
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\bin\Debug\net6.0\IMPARESde1a100.deps.json
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\bin\Debug\net6.0\IMPARESde1a100.runtimeconfig.json
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\bin\Debug\net6.0\IMPARESde1a100.dll
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\bin\Debug\net6.0\IMPARESde1a100.pdb
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.dll
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\refint\IMPARESde1a100.dll
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.pdb
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\IMPARESde1a100.genruntimeconfig.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\IMPARESde1a100\IMPARESde1a100\obj\Debug\net6.0\ref\IMPARESde1a100.dll

@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Andressa\\source\\repos\\AprendendoCSharp\\IMPARESde1a100\\IMPARESde1a100\\IMPARESde1a100.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Andressa\\source\\repos\\AprendendoCSharp\\IMPARESde1a100\\IMPARESde1a100\\IMPARESde1a100.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Andressa\\source\\repos\\AprendendoCSharp\\IMPARESde1a100\\IMPARESde1a100\\IMPARESde1a100.csproj",
+        "projectName": "IMPARESde1a100",
+        "projectPath": "C:\\Users\\Andressa\\source\\repos\\AprendendoCSharp\\IMPARESde1a100\\IMPARESde1a100\\IMPARESde1a100.csproj",
+        "packagesPath": "C:\\Users\\Andressa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andressa\\source\\repos\\AprendendoCSharp\\IMPARESde1a100\\IMPARESde1a100\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Andressa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

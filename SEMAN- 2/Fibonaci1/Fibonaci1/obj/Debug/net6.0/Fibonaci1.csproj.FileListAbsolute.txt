@@ -1,0 +1,15 @@
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\bin\Debug\net6.0\Fibonaci1.exe
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\bin\Debug\net6.0\Fibonaci1.deps.json
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\bin\Debug\net6.0\Fibonaci1.runtimeconfig.json
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\bin\Debug\net6.0\Fibonaci1.dll
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\bin\Debug\net6.0\Fibonaci1.pdb
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.csproj.AssemblyReference.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.AssemblyInfoInputs.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.AssemblyInfo.cs
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.csproj.CoreCompileInputs.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.dll
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\refint\Fibonaci1.dll
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.pdb
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\Fibonaci1.genruntimeconfig.cache
+C:\Users\Andressa\source\repos\AprendendoCSharp\Fibonaci1\Fibonaci1\obj\Debug\net6.0\ref\Fibonaci1.dll

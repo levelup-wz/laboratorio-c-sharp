@@ -8,3 +8,7 @@
 - "Cadastrar" cliente ✔️
 - Calcular equação de 2º grau ✔️
 - Calcular IMC ✔️
+
+## Desafio Extra:
+
+- Verificar utilização de letras maiúsculas ✔️

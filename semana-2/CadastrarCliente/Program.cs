@@ -4,8 +4,8 @@ class Programa
 {
   static void Main(string[] args)
   {
-    string nome;
-    string email;
+    string? nome;
+    string? email;
 
     Console.WriteLine("Digite seu nome:");
     nome = Console.ReadLine();

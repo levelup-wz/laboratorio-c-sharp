@@ -4,8 +4,6 @@
 
 ### Exercício: Calcular média e aprovação da turma
 
-</br>
-
 Uma turma possui 5 alunos: Ana, Bia, Caio, Dani e Eli. As notas de cada um foram 6,8, 7,9, 6,1, 10 e 5,4 respectivamente.
 
 **Tarefa**:
@@ -17,8 +15,6 @@ Se a média for maior que 7, exibir a mensagem: Turma aprovada!.
 </br>
 
 ### Exercício: Imprimir os números ÍMPARES de 1 a 100
-
-</br>
 
 **Descrição**:
 Crie um programa que exiba os números ímpares de 1 a 100.
@@ -33,8 +29,6 @@ Faça o programa usando tanto o laço for quanto o while.
 
 ### Exercício: Imprimir a soma dos números de 1 a 100
 
-</br>
-
 **Descrição**:
 Crie um programa que exiba a soma de todos os números de 1 a 100. O resultado do cálculo deve ser igual a 5050.
 
@@ -44,8 +38,6 @@ Faça o programa usando tanto o laço for quanto o while.
 </br>
 
 ### Exercício: Imprimir a sequência de Fibonacci
-
-</br>
 
 **Descrição**:
 Imprimir a sequência de Fibonacci até o vigésimo elemento:
@@ -58,8 +50,6 @@ Depois de conseguir, tente resolver com duas variáveis apenas. 😃
 </br>
 
 ### Exercício: "Cadastrar" cliente
-
-</br>
 
 **Descrição**:
 Crie um programa que solicite para criar um novo cliente em um sistema.
@@ -81,8 +71,6 @@ Crie um programa que solicite para criar um novo cliente em um sistema.
 
 ### Exercício: Calcular equação de 2° grau
 
-</br>
-
 **Descrição**:
 Sabemos que a equação do segundo grau tem o formato `ax² + bx + c`. E sua solução se dá pela aplicação da _Fómula de Bhaskara_, cuja estrutura pode ser obtida na imagem anexa.
 
@@ -93,8 +81,6 @@ Crie um programa leia os valores de `a = 12, b = 3 e c = -9`, calcule as duas ra
 </br>
 
 ### Exercício: Calcular IMC
-
-</br>
 
 **Descrição**:
 Crie um programa que solicite o peso e a altura de um usuário, calcule seu Índice de Massa Corporal (IMC) e exiba a situação na saída do console.

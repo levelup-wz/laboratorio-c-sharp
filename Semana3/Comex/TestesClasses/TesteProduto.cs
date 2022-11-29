@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 partial class Program
 {
-    static void TestaProduto(Produto notebook, Produto cleanArchiteture, Produto monitor, Produto cadeira)
+    static void TestaProduto(Produto notebook, Produto cleanArchiteture, Produto monitor)
     {
         Console.WriteLine("\n----- TESTE DE PRODUTO -----\n");
 
@@ -20,10 +20,6 @@ partial class Program
         Console.WriteLine("\n----------------------------------\n");
 
         monitor.ListarProdutos();
-
-        Console.WriteLine("\n----------------------------------\n");
-
-        cadeira.ListarProdutos();
 
     }
 

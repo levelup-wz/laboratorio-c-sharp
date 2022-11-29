@@ -29,7 +29,6 @@ Cliente lara = new Cliente("Lara", "Sousa", "852963741-22", "7798802-0058", "Rua
 Produto notebook = new Produto("Notebook Sansung", 3523.00, 1, informatica);
 Produto cleanArchiteture = new Produto("Clean Architeture", 102.90, 2, livros);
 Produto monitor = new Produto("Monitor Dell", 1889.00, 3, informatica);
-Produto cadeira = new Produto("Cadeira Gamer", 1200.00, 4, moveis);
 
 TestaProduto(notebook, cleanArchiteture, monitor, cadeira);
 #endregion

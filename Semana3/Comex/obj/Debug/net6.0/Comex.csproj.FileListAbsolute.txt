@@ -1,0 +1,15 @@
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\bin\Debug\net6.0\Comex.exe
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\bin\Debug\net6.0\Comex.deps.json
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\bin\Debug\net6.0\Comex.runtimeconfig.json
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\bin\Debug\net6.0\Comex.dll
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\bin\Debug\net6.0\Comex.pdb
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.csproj.AssemblyReference.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.GeneratedMSBuildEditorConfig.editorconfig
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.AssemblyInfoInputs.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.AssemblyInfo.cs
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.csproj.CoreCompileInputs.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.dll
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\refint\Comex.dll
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.pdb
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\Comex.genruntimeconfig.cache
+E:\Level-up-Wiz-Alura\laboratorio-c-sharp\Semana3\Comex\Comex\obj\Debug\net6.0\ref\Comex.dll

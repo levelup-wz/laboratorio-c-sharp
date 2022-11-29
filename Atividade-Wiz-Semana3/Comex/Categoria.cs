@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Comex
 {
-    internal class Categoria
+    public class Categoria
     {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Status { get; set; }
     }
 }

@@ -1,7 +1,8 @@
 # Semana 3 - Introdução a Orientação a Objetos
-- [ ]  Testa classe Categoria
-- [ ]  Cria classe Produto
-- [ ]  Testa a classe Produto
+- [x]  Cria classe Categoria
+- [x]  Testa classe Categoria
+- [x]  Cria a classe Produto
+- [x]  Testa a classe Produto
 - [ ]  Cria a classe Pedido
 - [ ]  Cria classe Categoria
 - [ ]  Testa a classe Pedido

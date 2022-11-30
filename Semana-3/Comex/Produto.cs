@@ -26,17 +26,17 @@ namespace Comex
 
         public string InformacoesDoProduto()
         {
-            return $" Id: {Id}\n Nome: {Nome}\n Preço Unitário: {PrecoUnitario}\n Quantidade em Estoque: {QuantidadeEmEstoque}\n Categoria: {Categoria}\n";
+            return $" Id: {Id}\n Nome: {Nome}\n Preço Unitário: {PrecoUnitario:C2}\n Quantidade em Estoque: {QuantidadeEmEstoque}\n Categoria: {Categoria}\n";
         }
 
-        public string ValorTotalEmEstoque()
+        public double ValorTotalEmEstoque()
         {
-           return $"Valor total do produto em estoque: R$ {QuantidadeEmEstoque * PrecoUnitario}\n";
+           return QuantidadeEmEstoque * PrecoUnitario;
         }
 
-        public string CalculaImposto()
+        public double CalculaImposto()
         {
-            return $"Imposto: R$ {PrecoUnitario * 0.40}";
+            return PrecoUnitario * 0.40;
         }
 
     }

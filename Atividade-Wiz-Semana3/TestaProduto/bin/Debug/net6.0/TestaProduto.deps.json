@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TestaProduto/1.0.0": {
+        "dependencies": {
+          "Comex": "1.0.0"
+        },
+        "runtime": {
+          "TestaProduto.dll": {}
+        }
+      },
+      "Comex/1.0.0": {
+        "runtime": {
+          "Comex.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestaProduto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Comex/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

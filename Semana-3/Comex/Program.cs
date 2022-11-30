@@ -11,3 +11,7 @@ Console.WriteLine("Testa Pedido:");
 Console.WriteLine("-----------------------------------");
 new TestaPedido();
 Console.WriteLine(" ");
+Console.WriteLine("Testa Cliente:");
+Console.WriteLine("-----------------------------------");
+new TestaCliente();
+Console.WriteLine(" ");

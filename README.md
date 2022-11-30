@@ -3,9 +3,8 @@
 - [x]  Testa classe Categoria
 - [x]  Cria a classe Produto
 - [x]  Testa a classe Produto
-- [ ]  Cria a classe Pedido
-- [ ]  Cria classe Categoria
-- [ ]  Testa a classe Pedido
-- [ ]  Cria a classe Cliente
-- [ ]  Testa a classe Cliente
+- [x]  Cria a classe Pedido
+- [x]  Testa a classe Pedido
+- [x]  Cria a classe Cliente
+- [x]  Testa a classe Cliente
 - [ ]  Ao instanciar as classes: Categoria, Produto, Cliente, Pedido, definir Id automaticamente

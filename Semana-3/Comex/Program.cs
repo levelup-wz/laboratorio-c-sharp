@@ -7,3 +7,7 @@ Console.WriteLine("Testa Produto:");
 Console.WriteLine("-----------------------------------");
 new TestaProduto();
 Console.WriteLine(" ");
+Console.WriteLine("Testa Pedido:");
+Console.WriteLine("-----------------------------------");
+new TestaPedido();
+Console.WriteLine(" ");

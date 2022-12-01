@@ -16,14 +16,25 @@ namespace Comex
         public double Quantidade_Em_Estoque { get; set; }
         public string Categoria { get; set; }
 
-        public string CalculaValorTotalEmEstoque()
+        public Produto (int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
         {
-            return $"Valor total em estoque: R$ {Quantidade_Em_Estoque * Preco_Unitario}";
+            Id = id;
+            Nome = nome;
+            Preco_Unitario = preco_Unitario;
+            Quantidade_Em_Estoque = quantidade_Em_Estoque;
+            Categoria = categoria;
         }
 
-        public string CalculaImposto()
+        public double CalculaValorTotalEmEstoque()
         {
-            return $"Valor de Imposto: R$ {Preco_Unitario * 0.40}";
+            double resultado = Quantidade_Em_Estoque * Preco_Unitario;
+            return resultado;
+        }
+
+        public double CalculaImposto()
+        {
+            double resultado = Preco_Unitario * 0.40;
+            return resultado;
         }
     }
 }

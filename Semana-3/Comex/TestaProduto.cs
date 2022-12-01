@@ -8,9 +8,9 @@ namespace Comex
 {
     public class TestaProduto
     {
-        Produto produto1 = new Produto(1, "Notebook Samsung", 3523.00, 1, "Informática");
-        Produto produto2 = new Produto(2, "Clean Architecture", 102.90, 2, "Livros");
-        Produto produto3 = new Produto(3, "Monitor Dell 27", 1889.00, 3, "Informática");
+        Produto produto1 = new Produto("Notebook Samsung", 3523.00, 1, "Informática");
+        Produto produto2 = new Produto("Clean Architecture", 102.90, 2, "Livros");
+        Produto produto3 = new Produto("Monitor Dell 27", 1889.00, 3, "Informática");
 
         public TestaProduto()
         {

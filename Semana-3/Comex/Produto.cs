@@ -8,6 +8,7 @@ namespace Comex
 {
     public class Produto
     {
+        private static int _id = 0;
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
@@ -15,9 +16,9 @@ namespace Comex
         public int QuantidadeEmEstoque { get; set; }
         public string Categoria { get; set; }
 
-        public Produto(int id, string nome, double precoUnitario, int quantidadeEmEstoque, string categoria)
+        public Produto(string nome, double precoUnitario, int quantidadeEmEstoque, string categoria)
         {
-            Id = id;
+            Id = ++_id;
             Nome = nome;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque = quantidadeEmEstoque;

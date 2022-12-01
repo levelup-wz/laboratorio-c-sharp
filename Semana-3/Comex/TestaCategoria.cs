@@ -8,9 +8,9 @@ namespace Comex
 {
     public class TestaCategoria
     {
-        Categoria categoria1 = new Categoria(1, "INFORMÁTICA");
-        Categoria categoria2 = new Categoria(2, "MÓVEIS", "INATIVA");
-        Categoria categoria3 = new Categoria(3, "LIVROS");
+        Categoria categoria1 = new Categoria("INFORMÁTICA");
+        Categoria categoria2 = new Categoria("MÓVEIS", "INATIVA");
+        Categoria categoria3 = new Categoria("LIVROS");
 
         public TestaCategoria()
         {

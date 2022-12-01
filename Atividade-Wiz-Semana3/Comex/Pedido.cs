@@ -11,11 +11,11 @@ namespace Comex
     {
         public int Id { get; }
         public DateTime Data = DateTime.Now;
-        public string Cliente { get; }
+        public Cliente Cliente { get; }
         public Produto Produto { get; }
         public double Quantidade_Vendida { get; }
 
-        public Pedido(int id, string cliente, Produto produto, double quantidade_vendida)
+        public Pedido(int id, Cliente cliente, Produto produto, double quantidade_vendida)
         {
             Id = id;
             Cliente = cliente;

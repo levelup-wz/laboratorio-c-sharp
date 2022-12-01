@@ -8,7 +8,7 @@ namespace Comex.Testes
         public void TestaInformacoesDoProduto()
         {
             Produto produto = new Produto("Notebook Samsung", 3523.00, 1, "Informática");
-            produto.InformacoesDoProduto().Should().Be(" Id: 1\n Nome: Notebook Samsung\n Preço Unitário: R$ 3.523,00\n Quantidade em Estoque: 1\n Categoria: Informática\n");
+            produto.InformacoesDoProduto().Should().Be($" Id: {produto.Id}\n Nome: Notebook Samsung\n Preço Unitário: R$ 3.523,00\n Quantidade em Estoque: 1\n Categoria: Informática\n");
         }
         
         [Fact]

@@ -9,7 +9,7 @@ namespace Comex.Testes
         public void TestaCriacaoDeCategoria()
         {
             Categoria categoria = new Categoria("INFORMÁTICA", "INATIVA");
-            categoria.Id.Should().Be(1);
+            categoria.Id.Should().BeGreaterThan(0);
             categoria.Nome.Should().Be("INFORMÁTICA");
             categoria.Status.Should().Be("INATIVA");
         }

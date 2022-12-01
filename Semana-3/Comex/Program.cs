@@ -1,0 +1,17 @@
+﻿using Comex;
+Console.WriteLine("Testa Categoria:");
+Console.WriteLine("-----------------------------------");
+new TestaCategoria();
+Console.WriteLine(" ");
+Console.WriteLine("Testa Produto:");
+Console.WriteLine("-----------------------------------");
+new TestaProduto();
+Console.WriteLine(" ");
+Console.WriteLine("Testa Pedido:");
+Console.WriteLine("-----------------------------------");
+new TestaPedido();
+Console.WriteLine(" ");
+Console.WriteLine("Testa Cliente:");
+Console.WriteLine("-----------------------------------");
+new TestaCliente();
+Console.WriteLine(" ");

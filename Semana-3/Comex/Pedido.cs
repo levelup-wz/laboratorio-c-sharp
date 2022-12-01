@@ -10,14 +10,14 @@ namespace Comex
     {
         public int Id { get; set; }
         public DateTime data = DateTime.Now;
-        public string Cpf { get; set; }
+        public Cliente Cliente { get; set; }
         public Produto Produto { get; set; }
         public int QuantidadeVendida { get; set; }
 
-        public Pedido(int id, string cpf, Produto produto, int quantidadeVendida)
+        public Pedido(int id, Cliente cliente, Produto produto, int quantidadeVendida)
         {
             Id = id;
-            Cpf = cpf;
+            Cliente = cliente;
             Produto = produto;
             QuantidadeVendida= quantidadeVendida;
         }

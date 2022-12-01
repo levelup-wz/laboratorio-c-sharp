@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comex", "Comex\Comex.csproj", "{055DF2CD-142E-416F-BA29-0EFB3BD6A194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex", "Comex\Comex.csproj", "{055DF2CD-142E-416F-BA29-0EFB3BD6A194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comex.Testes", "Comex.Testes\Comex.Testes.csproj", "{D1FC5708-4276-4615-B808-D442A38237FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{055DF2CD-142E-416F-BA29-0EFB3BD6A194}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{055DF2CD-142E-416F-BA29-0EFB3BD6A194}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{055DF2CD-142E-416F-BA29-0EFB3BD6A194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FC5708-4276-4615-B808-D442A38237FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FC5708-4276-4615-B808-D442A38237FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FC5708-4276-4615-B808-D442A38237FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FC5708-4276-4615-B808-D442A38237FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

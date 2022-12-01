@@ -41,7 +41,7 @@ namespace Comex
 
         public string EnderecoCompleto()
         {
-            return $" {Rua}, {NumeroDoEndereco}, {Complemento}\n {Cidade} - {Estado}";
+            return $" {Rua}, {NumeroDoEndereco}, {Complemento}, {Cidade} - {Estado}";
         }
     }
 }

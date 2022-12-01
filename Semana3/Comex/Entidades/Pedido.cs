@@ -37,14 +37,14 @@ namespace Comex.Entidades
             return valorTotalImposto;
         }
 
-        public void ListarPedidos()
+        public string ListarPedidos()
         {
-            Console.WriteLine($"***** Pedido nº {_id} *****");
-            Console.WriteLine($"Nome do Cliente: {_cliente.NomeCompleto()}");
-            Console.WriteLine($"Endereço do Cliente: {_cliente.EnderecoCompleto()}");
-            Console.WriteLine($"Produto: {_produto._nome} - Quantidade: {_quantidadeVendida} - Categoria: {_produto._categoria._nome}");
-            Console.WriteLine($"Valor Total: R$ {CalcularValorTotal().ToString("n2")}");
-            Console.WriteLine($"Valor do Imposto: {CalculaImpostoTotal().ToString("n2")}");
+            return $"***** Pedido nº {_id} *****\n" +
+                $"Nome do Cliente: {_cliente.NomeCompleto()}\n" +
+                $"Endereço do Cliente: {_cliente.EnderecoCompleto()}\n" +
+                $"Produto: {_produto._nome} - Quantidade: {_quantidadeVendida} - Categoria: {_produto._categoria._nome}\n" +
+                $"Valor Total: R$ {CalcularValorTotal().ToString("n2")}\n" +
+                $"Valor do Imposto: {CalculaImpostoTotal().ToString("n2")}";
         }
     }
 }

@@ -12,14 +12,14 @@ partial class Program
         Console.WriteLine("\n----- TESTE DE PEDIDO -----\n");
 
         Pedido pedido1 = new Pedido(andre, notebook, 2);
-        pedido1.ListarPedidos();
+        Console.WriteLine(pedido1.ListarPedidos());
         Console.WriteLine("\n----------------------------------\n");
 
         Pedido pedido2 = new Pedido(luisa, monitor, 3);
-        pedido2.ListarPedidos();
+        Console.WriteLine(pedido2.ListarPedidos());
         Console.WriteLine("\n----------------------------------\n");
 
         Pedido pedido3 = new Pedido(lara, cleanArchiteture, 4);
-        pedido3.ListarPedidos();
+        Console.WriteLine(pedido3.ListarPedidos());
     }
 }

@@ -37,10 +37,11 @@ namespace Comex.Entidades
             return valorImposto;
         }
 
-        public void ListarProdutos()
+        public string ListarProdutos()
         {
-            Console.WriteLine($"Id: {_id} - Produto: {_nome} - Preço Unitário: R$ {_precoUnitario.ToString("n2")}");
-            Console.WriteLine($"Quantidade em Estoque: {_quantidadeEstoque} - Categoria: {_categoria._nome}");
+            return ($"Id: {_id} - Produto: {_nome} - Preço Unitário: R$ {_precoUnitario.ToString("n2")}\n" +
+                $"Quantidade em Estoque: {_quantidadeEstoque} - Categoria: {_categoria._nome}\n" +
+                $"Valor total em Estoque: {CalcularValorEstoque().ToString("n2")} - Imposto: {CalculaImposto().ToString("n2")}");
         }
     }
 }

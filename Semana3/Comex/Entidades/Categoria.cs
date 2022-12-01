@@ -8,11 +8,10 @@ namespace Comex.Entidades
 {
     public class Categoria
     {
-        public static int numId = 1;
-
+        private static int numId = 1;
         public int _id { get; private set; }
-        public string _nome { get; set; }
-        public string _status { get; set; }
+        public string _nome { get; private set; }
+        public string _status { get; private set; }
 
         public Categoria(string nome, string status = "ativa")
         {

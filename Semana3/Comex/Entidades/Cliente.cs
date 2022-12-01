@@ -44,15 +44,15 @@ namespace Comex.Entidades
 
         public string EnderecoCompleto()
         {
-            return ($"Rua: {_rua}, nº {_numeroEndereco}, complemento: {_complemento}," +
-                $" bairro: {_bairro}, cidade: {_cidade}, estado: {_estado}");
+            return ($"Rua: {_rua}, nº {_numeroEndereco}, complemento: {_complemento},\n" +
+                $"bairro: {_bairro}, cidade: {_cidade}, estado: {_estado}");
         }
 
-        public void ListarCliente()
+        public string ListarCliente()
         {
-            Console.WriteLine($"***** Código do Cliente nº {_id} *****");
-            Console.WriteLine($"Nome: {NomeCompleto()}");
-            Console.WriteLine($"Endereço: {EnderecoCompleto()}");
+            return ($"***** Código do Cliente nº {_id} *****\n" +
+                $"Nome: {NomeCompleto()}\n" +
+                $"Endereço: {EnderecoCompleto()}");
         }
     }
 }

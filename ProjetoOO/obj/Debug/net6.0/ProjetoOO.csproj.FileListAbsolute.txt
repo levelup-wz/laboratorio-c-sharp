@@ -1,0 +1,15 @@
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\bin\Debug\net6.0\ProjetoOO.exe
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\bin\Debug\net6.0\ProjetoOO.deps.json
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\bin\Debug\net6.0\ProjetoOO.runtimeconfig.json
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\bin\Debug\net6.0\ProjetoOO.dll
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\bin\Debug\net6.0\ProjetoOO.pdb
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.AssemblyInfo.cs
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.dll
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\refint\ProjetoOO.dll
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.pdb
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ProjetoOO.genruntimeconfig.cache
+C:\Users\usuario\Desktop\Curso de C#\ProjetoOO\obj\Debug\net6.0\ref\ProjetoOO.dll

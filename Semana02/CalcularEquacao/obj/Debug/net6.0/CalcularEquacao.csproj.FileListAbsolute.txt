@@ -1,0 +1,15 @@
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.csproj.AssemblyReference.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.AssemblyInfoInputs.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.AssemblyInfo.cs
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.csproj.CoreCompileInputs.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\bin\Debug\net6.0\CalcularEquacao.exe
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\bin\Debug\net6.0\CalcularEquacao.deps.json
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\bin\Debug\net6.0\CalcularEquacao.runtimeconfig.json
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\bin\Debug\net6.0\CalcularEquacao.dll
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\bin\Debug\net6.0\CalcularEquacao.pdb
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.dll
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\refint\CalcularEquacao.dll
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.pdb
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\CalcularEquacao.genruntimeconfig.cache
+C:\Users\ANDRÉ\source\repos\ExerciciosSemana02\CalcularEquacao\obj\Debug\net6.0\ref\CalcularEquacao.dll

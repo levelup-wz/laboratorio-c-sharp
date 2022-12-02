@@ -28,13 +28,12 @@ namespace Comex
             return PrecoUnitario * 0.4;
         }
 
-        public Produto(string nome, string descricao, double precoUnitario, int quantidade)
+        public Produto(string nome, double precoUnitario, int quantidade)
         {
             TotalProdutos += 1;
 
             Id = TotalProdutos;
             Nome = nome;
-            Descricao = descricao;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque += quantidade;
         }

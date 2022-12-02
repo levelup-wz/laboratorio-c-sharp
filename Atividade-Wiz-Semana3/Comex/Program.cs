@@ -15,9 +15,9 @@ categoria3.DefineId();
 categoria3.Nome = "LIVROS";
 categoria3.Status = "ATIVA";
 
-Console.WriteLine($"{categoria1.Nome} ({categoria1.Id} - {categoria1.Status})");
-Console.WriteLine($"{categoria2.Nome} ({categoria2.Id} - {categoria2.Status})");
-Console.WriteLine($"{categoria3.Nome} ({ categoria3.Id} - {categoria3.Status})" + "\n");
+Console.WriteLine($"{categoria1.Nome} ({categoria1.DefineId()} - {categoria1.Status})");
+Console.WriteLine($"{categoria2.Nome} ({categoria2.DefineId()} - {categoria2.Status})");
+Console.WriteLine($"{categoria3.Nome} ({ categoria3.DefineId()} - {categoria3.Status})" + "\n");
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 

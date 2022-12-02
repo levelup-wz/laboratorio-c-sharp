@@ -9,6 +9,7 @@ namespace Comex
 {
     public class Produto
     {
+        private static int _id = 1;
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descircao { get; set; }
@@ -16,13 +17,18 @@ namespace Comex
         public double Quantidade_Em_Estoque { get; set; }
         public string Categoria { get; set; }
 
-        public Produto (int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
+        public Produto (string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
         {
-            Id = id;
+            Id = _id++;
             Nome = nome;
             Preco_Unitario = preco_Unitario;
             Quantidade_Em_Estoque = quantidade_Em_Estoque;
             Categoria = categoria;
+        }
+
+        public int DefineId()
+        {
+            return Id;
         }
 
         public double CalculaValorTotalEmEstoque()

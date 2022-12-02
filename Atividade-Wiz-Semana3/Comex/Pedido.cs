@@ -9,18 +9,24 @@ namespace Comex
 {
     public class Pedido
     {
+        private static int _id = 1;
         public int Id { get; }
         public DateTime Data = DateTime.Now;
         public Cliente Cliente { get; }
         public Produto Produto { get; }
         public double Quantidade_Vendida { get; }
 
-        public Pedido(int id, Cliente cliente, Produto produto, double quantidade_vendida)
+        public Pedido(Cliente cliente, Produto produto, double quantidade_vendida)
         {
-            Id = id;
+            Id = _id++;
             Cliente = cliente;
             Produto = produto;
             Quantidade_Vendida = quantidade_vendida;
+        }
+
+        public int DefineId()
+        {
+            return Id;
         }
 
         public double CalculaValorTotal()

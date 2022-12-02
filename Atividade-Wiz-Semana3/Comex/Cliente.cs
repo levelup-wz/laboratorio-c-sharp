@@ -8,7 +8,8 @@ namespace Comex
 {
     public class Cliente
     {
-        public int ID { get; }
+        private static int _id = 1;
+        public int Id { get; }
         public string PrimeiroNome { get; }
         public string Sobrenome { get; }
         public string Cpf { get; }
@@ -20,18 +21,24 @@ namespace Comex
         public string Cidade { get; }
         public string Estado { get; }
 
-        public Cliente(string primeiroNome, string sobrenome, string cpf, string rua, string numero, string complemento, string bairro, string cidade, string estado)
+        public Cliente(string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numero, string complemento, string bairro, string cidade, string estado)
         {
-            
+            Id = _id++;
             PrimeiroNome = primeiroNome;
             Sobrenome = sobrenome;
             Cpf = cpf;
+            Telefone = telefone;
             Rua = rua;
             Numero = numero;
             Complemento = complemento;
             Bairro = bairro;
             Cidade = cidade;
             Estado = estado;
+        }
+
+        public int DefineId()
+        {
+            return Id;
         }
 
         public string NomeCompleto()

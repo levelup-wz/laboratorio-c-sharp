@@ -23,8 +23,8 @@ namespace Comex
         public PedidoTeste()
         {
             Pedido pedido1 = new Pedido(cliente1, produto1, 1);
-            Pedido pedido2 = new Pedido(cliente2, produto1, 2);
-            Pedido pedido3 = new Pedido(cliente3, produto1, 3);
+            Pedido pedido2 = new Pedido(cliente2, produto2, 2);
+            Pedido pedido3 = new Pedido(cliente3, produto3, 3);
 
             Console.WriteLine(pedido1.RetornaInfosPedido());
             Console.WriteLine(pedido2.RetornaInfosPedido());

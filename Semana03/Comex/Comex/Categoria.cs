@@ -19,6 +19,7 @@ namespace Comex
         public string Status { get; set; }
         public Categoria CategoriaClasse { get; set; }
 
+
         public Categoria(string nome, String status) {
             Id = ++ContId;
             Nome = nome;

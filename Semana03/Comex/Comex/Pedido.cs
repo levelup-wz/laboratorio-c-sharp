@@ -52,6 +52,7 @@ namespace Comex
                 $"Data do pedido: {Data.ToString("dd/MM/yyyy")}\n" +
                 $"Produto: {ProdutoPedido.Nome}\n" +
                 $"Quantidade do pedido: {Quantidade}\n" +
+                $"Valor unitário: {ProdutoPedido.PrecoUnitario.ToString("N2")}\n" +
                 $"O valor total do pedido R$ {ValorPedido().ToString("N2")}\n" +
                 $"Impostos do pedido R$ {ImpostoTotal().ToString("N2")}\n ";
         }

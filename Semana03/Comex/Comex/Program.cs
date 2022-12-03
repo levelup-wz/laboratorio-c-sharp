@@ -65,6 +65,39 @@ Console.WriteLine("_____________________________________________________________
 
 Console.WriteLine("Testando Pedidos: \n");
 
+Pedido pedido1 = new Pedido(1, "001.328.568-55", produto1, 1);
+Console.WriteLine("Id: " + pedido1.Id);
+Console.WriteLine("CPF: " + pedido1.Cliente);
+Console.WriteLine("Data do pedido:" +pedido1.Data.ToString("dd/MM/yyyy"));
+Console.WriteLine("Produto: " + produto1.Nome);
+Console.WriteLine("Quantidade: "+ pedido1.Quantidade);
+Console.WriteLine("Valor total do Pedido R$" +pedido1.ValorPedido().ToString("N2"));
+Console.WriteLine("Valor Imposto R$" + pedido1.ImpostoTotal().ToString("N2"));
+Console.WriteLine();
+Console.WriteLine("**********************************************");
+
+Pedido pedido2 = new Pedido(2, "380.462.678-88", produto2, 2);
+Console.WriteLine("Id: " + pedido2.Id);
+Console.WriteLine("CPF: " + pedido2.Cliente);
+Console.WriteLine("Data do pedido:" + pedido2.Data.ToString("dd/MM/yyyy"));
+Console.WriteLine("Produto: " + produto2.Nome);
+Console.WriteLine("Quantidade: " + pedido2.Quantidade);
+Console.WriteLine("Valor total do Pedido R$" + pedido2.ValorPedido().ToString("N2"));
+Console.WriteLine("Valor Imposto R$" + pedido2.ImpostoTotal().ToString("N2"));
+Console.WriteLine();
+Console.WriteLine("**********************************************");
+
+Pedido pedido3 = new Pedido(3, "778.569.258-64", produto3, 3);
+Console.WriteLine("Id: " + pedido3.Id);
+Console.WriteLine("CPF: " + pedido3.Cliente);
+Console.WriteLine("Data do pedido:" + pedido3.Data.ToString("dd/MM/yyyy"));
+Console.WriteLine("Produto: " + produto3.Nome);
+Console.WriteLine("Quantidade: " + pedido3.Quantidade);
+Console.WriteLine("Valor total do Pedido R$" + pedido3.ValorPedido().ToString("N2"));
+Console.WriteLine("Valor Imposto R$" + pedido3.ImpostoTotal().ToString("N2"));
+Console.WriteLine();
+Console.WriteLine("**********************************************");
+
 
 
 Console.ReadKey();

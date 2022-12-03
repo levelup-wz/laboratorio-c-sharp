@@ -1,6 +1,8 @@
 ﻿using Comex;
 
-/*Categoria c1 = new Categoria("Informática");
+/* Testa Categoria
+
+Categoria c1 = new Categoria("Informática");
 
 Categoria c2 = new Categoria("Móveis");
 c2.Status = OpcoesStatus.INATIVA;
@@ -14,7 +16,9 @@ Console.WriteLine($"{c3.Nome} ({c3.Id} - {c3.Status})");
 
 
 
-/*Categoria c1 = new Categoria("Informática");
+/* Testa Pedido
+
+Categoria c1 = new Categoria("Informática");
 Categoria c2 = new Categoria("Livros");
 
 Produto p1 = new Produto("Notebook Samsung", 3523.00, 1);
@@ -32,7 +36,9 @@ Console.WriteLine($"Id: {p3.Id}\nNome: {p3.Nome}\nCategoria: {p3.ProdutoCategori
 
 
 
-/*Categoria categoria1 = new Categoria("Informática");
+/* Testa Pedido - Cliente
+
+Categoria categoria1 = new Categoria("Informática");
 Categoria categoria2 = new Categoria("Livros");
 
 Produto produto1 = new Produto("Notebook Samsung", 3523.00, 1);
@@ -44,9 +50,12 @@ produto2.ProdutoCategoria = categoria2;
 Produto produto3 = new Produto("Monitor Dell 27", 1889.00, 3);
 produto3.ProdutoCategoria = categoria1;
 
-Pedido pedido1 = new Pedido("012.345.678-90", produto1, 1);
-Pedido pedido2 = new Pedido("098.765.432-10", produto2, 1);
-Pedido pedido3 = new Pedido("234.567.890-12", produto3, 1);
+Cliente cliente1 = new Cliente("José", "Rodrigues", 01234567890, "(61) 9 9352-9033", "Rua das Jabuticabeiras", 5, "Apto 201", "Setor 9", "Valparaíso", "Goiás");
+
+
+Pedido pedido1 = new Pedido(cliente1, produto1, 1);
+Pedido pedido2 = new Pedido(cliente1, produto2, 1);
+Pedido pedido3 = new Pedido(cliente1, produto3, 1);
 
 Console.WriteLine(
     $"Id do pedido: {pedido1.Id}\n" +
@@ -54,7 +63,9 @@ Console.WriteLine(
     $"Categoria: {pedido1.PedidoProduto.ProdutoCategoria.Nome}\n" +
     $"Nome do produto: {pedido1.PedidoProduto.Nome}\n" +
     $"Total de Impostos: R$ {Math.Round(pedido1.CalcularImposto(), 2)}\n" +
-    $"Valor Total: R$ {pedido1.CalcularValorTotal()}\n"
+    $"Valor Total: R$ {pedido1.CalcularValorTotal()}\n" +
+    $"Cliente {pedido1.ClientePedido.ObterNomeCompleto()}\n" +
+    $"{pedido1.ClientePedido.ObterEndereco()}\n"
 );
 
 Console.WriteLine(
@@ -63,7 +74,9 @@ Console.WriteLine(
     $"Categoria: {pedido2.PedidoProduto.ProdutoCategoria.Nome}\n" +
     $"Nome do produto: {pedido2.PedidoProduto.Nome}\n" +
     $"Total de Impostos: R$ {Math.Round(pedido2.CalcularImposto(), 2)}\n" +
-    $"Valor Total: R$ {pedido2.CalcularValorTotal()}\n"
+    $"Valor Total: R$ {pedido2.CalcularValorTotal()}\n" +
+    $"Cliente {pedido2.ClientePedido.ObterNomeCompleto()}\n" +
+    $"{pedido2.ClientePedido.ObterEndereco()}\n"
 );
 
 Console.WriteLine(
@@ -72,7 +85,9 @@ Console.WriteLine(
     $"Categoria: {pedido3.PedidoProduto.ProdutoCategoria.Nome}\n" +
     $"Nome do produto: {pedido3.PedidoProduto.Nome}\n" +
     $"Total de Impostos: R$ {Math.Round(pedido3.CalcularImposto(), 2)}\n" +
-    $"Valor Total: R$ {pedido3.CalcularValorTotal()}\n"
+    $"Valor Total: R$ {pedido3.CalcularValorTotal()}\n" +
+    $"Cliente {pedido3.ClientePedido.ObterNomeCompleto()}\n" +
+    $"{pedido3.ClientePedido.ObterEndereco()}\n"
 );*/
 
 Console.ReadKey();

@@ -11,7 +11,7 @@ namespace Comex
     {
         public int Id { get; set; }
         public DateTime Data { get; set; }
-        public string Cliente { get; set; }
+        public Cliente ClientePedido { get; set; }
         public Produto PedidoProduto { get; set; }
         public int QuantidadeVendida { get; set; }
 
@@ -25,13 +25,13 @@ namespace Comex
             return QuantidadeVendida * PedidoProduto.CalcularImposto();
         }
 
-        public Pedido(string cliente, Produto pedidoProduto, int quantidadeVendida) 
+        public Pedido(Cliente cliente, Produto pedidoProduto, int quantidadeVendida) 
         {
             TotalPedidos += 1;
 
             Id = TotalPedidos;
             Data = DateTime.Now;
-            Cliente = cliente;
+            ClientePedido = cliente;
             PedidoProduto = pedidoProduto;
             QuantidadeVendida = quantidadeVendida;
         }

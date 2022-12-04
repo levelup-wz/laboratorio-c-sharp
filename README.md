@@ -1,9 +1,3 @@
-# desafio-pull-request
-# Desafio Pull Request concluído!
-## Danilo Siervi esteve aqui!
-
-
-<p> Semana 1 concluída! </p>
-<p> Semana 2 concluída! </p>
+<h1> Semana 3 concluída! </h1>
 
 :)

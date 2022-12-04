@@ -4,13 +4,15 @@ namespace Comex.Categorias
 {
     public class Categoria
     {
-        public int Id { get; set; }
+        public static int Quantidade { get; private set; }
+        public int Id { get; private set; }
         public string Nome { get; set; }
         public string Status { get; set; }
 
-        public Categoria(int id, string nome, string status)
+        public Categoria(string nome, string status)
         {
-            Id = id;
+            Quantidade++;
+            Id = Quantidade;
             Nome = nome;
             Status = status;
         }

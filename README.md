@@ -6,4 +6,4 @@ O programa é uma iniciativa da empresa [Wiz Soluções](https://wizsolucoes.com
 
 ## Sobre o repositório
 
-Este repositório contém todos os exercícios desenvolvidos durante o programa, onde estão organizados em pastas por semana, e cada semana contém um arquivo README.md com a descrição dos exercícios.
+Este repositório contém todos os projetos desenvolvidos durante o programa, onde estão organizados em pastas por semana, e cada semana contém um arquivo README.md com a descrição do projeto.

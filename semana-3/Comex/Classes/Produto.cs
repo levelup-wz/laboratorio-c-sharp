@@ -2,16 +2,16 @@ namespace Comex
 {
   public class Produto
   {
-    public int Id { get; set; }
+    public static int Id { get; set; }
     public string Nome { get; set; }
     public string Descricao { get; set; }
     public double PrecoUnitario { get; set; }
     public int QuantidadeEmEstoque { get; set; }
     public Categoria Categoria { get; set; }
 
-    public Produto(int id, string nome, string descricao, double precoUnitario, int quantidadeEmEstoque, Categoria categoria)
+    public Produto(string nome, string descricao, double precoUnitario, int quantidadeEmEstoque, Categoria categoria)
     {
-      Id = id;
+      Id = Id + 1;
       Nome = nome;
       Descricao = descricao;
       PrecoUnitario = precoUnitario;

@@ -2,15 +2,15 @@ namespace Comex
 {
   public class Pedido
   {
-    public int Id { get; set; }
+    public static int Id { get; set; }
     public DateTime Data { get; set; }
     public Cliente Cliente { get; set; }
     public Produto Produto { get; set; }
     public int QuantidadeVendida { get; set; }
 
-    public Pedido(int id, DateTime data, Cliente cliente, Produto produto, int quantidadeVendida)
+    public Pedido(DateTime data, Cliente cliente, Produto produto, int quantidadeVendida)
     {
-      Id = id;
+      Id = Id + 1;
       Data = data;
       Cliente = cliente;
       Produto = produto;

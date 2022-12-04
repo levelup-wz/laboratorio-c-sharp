@@ -2,7 +2,7 @@ namespace Comex
 {
   public class Cliente
   {
-    public int Id { get; set; }
+    public static int Id { get; set; }
     public string PrimeiroNome { get; set; }
     public string Sobrenome { get; set; }
     public string Cpf { get; set; }
@@ -14,9 +14,9 @@ namespace Comex
     public string Cidade { get; set; }
     public string Estado { get; set; }
 
-    public Cliente(int id, string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numero, string complemento, string bairro, string cidade, string estado)
+    public Cliente(string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numero, string complemento, string bairro, string cidade, string estado)
     {
-      Id = id;
+      Id = Id + 1;
       PrimeiroNome = primeiroNome;
       Sobrenome = sobrenome;
       Cpf = cpf;

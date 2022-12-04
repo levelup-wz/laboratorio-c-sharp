@@ -70,11 +70,6 @@ Crie um programa que solicite para criar um novo cliente em um sistema.
 - Peça o email do cliente e guarde numa variável;
 - Exiba a mensagem:
   `Olá, <NOME DO CLIENTE>! Usuário <EMAIL DO CLIENTE> cadastrado!`
-  </br>
-  </br>
-  _Dicas:_
-  Você pode ler pedir dados pelo console com Console.ReadLine();
-  os dados sempre serão retornados como string.
 
 </br>
 </br>

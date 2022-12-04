@@ -4,11 +4,11 @@ namespace Comex
   {
     public int Id { get; set; }
     public DateTime Data { get; set; }
-    public string Cliente { get; set; }
+    public Cliente Cliente { get; set; }
     public Produto Produto { get; set; }
     public int QuantidadeVendida { get; set; }
 
-    public Pedido(int id, DateTime data, string cliente, Produto produto, int quantidadeVendida)
+    public Pedido(int id, DateTime data, Cliente cliente, Produto produto, int quantidadeVendida)
     {
       Id = id;
       Data = data;

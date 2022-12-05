@@ -30,15 +30,15 @@ namespace Comex
             return $" Id: {Id}\n Nome: {Nome}\n Preço Unitário: {PrecoUnitario:C2}\n Quantidade em Estoque: {QuantidadeEmEstoque}\n Categoria: {Categoria}\n";
         }
 
-        public double ValorTotalEmEstoque()
+        public virtual double ValorTotalEmEstoque()
         {
            return QuantidadeEmEstoque * PrecoUnitario;
         }
 
-        public double CalculaImposto()
+        public virtual double CalculaImposto()
         {
             return PrecoUnitario * 0.40;
         }
-
+        
     }
 }

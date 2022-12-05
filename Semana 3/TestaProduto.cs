@@ -17,9 +17,9 @@
 
 //        public TestaProduto()
 //        {
-//            Console.WriteLine($"{produto1.Nome()} Valor total do produto em estoque:{produto1.MontanteEstoque():C2}\n Imposto:{produto1.CalculaImposto():C2}\n");
-//            Console.WriteLine($"{produto2.Nome()} Valor total do produto em estoque:{produto2.MontanteEstoque():C2}\n Imposto:{produto2.CalculaImposto():C2}\n");
-//            Console.WriteLine($"{produto3.Nome()} Valor total do produto em estoque:{produto3.MontanteEstoque():C2}\n Imposto:{produto3.CalculaImposto():C2}\n");
+//            Console.WriteLine($"{produto1.Nome()} Valor total do produto em estoque:{produto1.MontanteEstoque()}\n Imposto:{produto1.CalculaImposto()}\n");
+//            Console.WriteLine($"{produto2.Nome()} Valor total do produto em estoque:{produto2.MontanteEstoque()}\n Imposto:{produto2.CalculaImposto()}\n");
+//            Console.WriteLine($"{produto3.Nome()} Valor total do produto em estoque:{produto3.MontanteEstoque()}\n Imposto:{produto3.CalculaImposto()}\n");
 //        }
 //    }
 //}

@@ -14,9 +14,9 @@ namespace Comex
 
         public TestaProduto()
         {
-            Console.WriteLine($"{produto1.InformacoesDoProduto()} Valor total do produto em estoque:{produto1.ValorTotalEmEstoque():C2}\n Imposto:{produto1.CalculaImposto():C2}\n");
-            Console.WriteLine($"{produto2.InformacoesDoProduto()} Valor total do produto em estoque:{produto2.ValorTotalEmEstoque():C2}\n Imposto:{produto2.CalculaImposto():C2}\n");
-            Console.WriteLine($"{produto3.InformacoesDoProduto()} Valor total do produto em estoque:{produto3.ValorTotalEmEstoque():C2}\n Imposto:{produto3.CalculaImposto():C2}\n");
+            Console.WriteLine($"{produto1.InformacoesDoProduto()} Valor total do produto em estoque:{produto1.ValorTotalEmEstoque():C2}\n Imposto Unidade:{produto1.CalculaImposto():C2}\n");
+            Console.WriteLine($"{produto2.InformacoesDoProduto()} Valor total do produto em estoque:{produto2.ValorTotalEmEstoque():C2}\n Imposto Unidade:{produto2.CalculaImposto():C2}\n");
+            Console.WriteLine($"{produto3.InformacoesDoProduto()} Valor total do produto em estoque:{produto3.ValorTotalEmEstoque():C2}\n Imposto Unidade:{produto3.CalculaImposto():C2}\n");
         }
     }
 }

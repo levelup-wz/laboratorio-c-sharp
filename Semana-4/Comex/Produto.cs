@@ -32,7 +32,7 @@ namespace Comex
 
         public virtual double ValorTotalEmEstoque()
         {
-           return QuantidadeEmEstoque * PrecoUnitario;
+           return QuantidadeEmEstoque * PrecoUnitario; 
         }
 
         public virtual double CalculaImposto()

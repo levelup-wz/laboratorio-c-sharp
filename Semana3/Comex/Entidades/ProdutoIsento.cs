@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comex.Entidades
 {
-    internal class ProdutoIsento : Produto
+    public class ProdutoIsento : Produto
     {
 
         public ProdutoIsento(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria) : base(nome, precoUnitario, quantidadeEstoque, categoria)

@@ -55,7 +55,7 @@ namespace Comex.Testes
             var listarProduto = produto.ListarProdutos();
             string result = $"Id: {produto._id} - Produto: {produto._nome} - Preço Unitário: R$ {produto._precoUnitario.ToString("n2")}\n" +
                 $"Quantidade em Estoque: {produto._quantidadeEstoque} - Categoria: {produto._categoria.Nome}\n" +
-                $"Valor total em Estoque: {produto.CalcularValorEstoque().ToString("n2")} - Imposto: {produto.CalculaImposto().ToString("n2")}";
+                $"Valor total em Estoque: {produto.CalcularValorEstoque().ToString("n2")} - Imposto: {produto.CalculaImposto().ToString("n2")}\n";
             Assert.Equal(result, listarProduto);
         }
 

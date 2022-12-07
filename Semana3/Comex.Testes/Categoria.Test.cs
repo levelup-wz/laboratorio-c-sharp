@@ -19,7 +19,7 @@ namespace Comex.Testes
         {
             var categoria = new Categoria("categoria de teste");
             Assert.Equal("CATEGORIA DE TESTE", categoria.Nome);
-            Assert.Equal(EStatus.Inativa, categoria.Status);
+            Assert.Equal(EStatus.Ativa, categoria.Status);
         }
 
         [Fact]

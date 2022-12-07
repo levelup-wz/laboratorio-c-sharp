@@ -4,7 +4,7 @@
 - [x] Criar Classe ProdutoIsento
 - [x] Testar Classe ProdutoIsento
 - [x] Criar Classe Estoque
-- [ ] Testar entrada de produto no Estoque
+- [x] Testar entrada de produto no Estoque
 - [ ] Testar saída de produto no Estoque
 - [ ] Enviar entregas
 

@@ -41,6 +41,11 @@ TestaPedido(andre, luisa, lara, notebook, cleanArchiteture, monitor);
 
 Console.WriteLine("\n*************** Testar produto Isento ***********\n");
 
-TestaProdutoIsento teste = new TestaProdutoIsento();
-teste.Main();
+TestaProdutoIsento testeProdutoIsento = new TestaProdutoIsento();
+testeProdutoIsento.Main();
+
+Console.WriteLine("\n*************** Testar Entrada de Produto no Estoque ***********\n");
+
+TesteEntradaDeProdutoNoEstoque testeEntradaProdutoNoEstoque = new TesteEntradaDeProdutoNoEstoque();
+testeEntradaProdutoNoEstoque.Main();
 

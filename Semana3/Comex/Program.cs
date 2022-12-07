@@ -10,14 +10,10 @@ TestaCategoria.Main();
 // PRODUTOS
 TestaProduto.Main();
 
-//PEDIDOS
+// PEDIDOS
 TestaPedido.Main();
 
-
-Console.WriteLine("\n*************** Testar produto Isento ***********\n");
-
-TestaProdutoIsento testeProdutoIsento = new TestaProdutoIsento();
-testeProdutoIsento.Main();
+TestaProdutoIsento.Main();
 
 Console.WriteLine("*************** Testar Entrada de Produto no Estoque ***********");
 

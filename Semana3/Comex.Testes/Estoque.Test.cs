@@ -75,6 +75,26 @@ namespace Comex.Testes
             Assert.Equal(((decimal)useACabeca.CalcularValorEstoque()), novoEstoqueTeste.Montante);
         }
 
+        [Fact]
+        public void TestaZerarEstoque()
+        {
+            Categoria saude = new Categoria("saúde");
+
+            ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, saude);
+
+            Estoque novoEstoqueTeste = new Estoque();
+            novoEstoqueTeste.RegistrarEntrada(vacina);
+
+            Assert.Equal((1000 - novoEstoqueTeste.Ocupacao), novoEstoqueTeste.Capacidade);
+            Assert.Equal((vacina._quantidadeEstoque), novoEstoqueTeste.Ocupacao);
+            Assert.Equal(((decimal)vacina.CalcularValorEstoque()), novoEstoqueTeste.Montante);
+
+            novoEstoqueTeste.ResistrarSaida(vacina);
+
+            Assert.Equal((1000 - novoEstoqueTeste.Ocupacao), novoEstoqueTeste.Capacidade);
+            Assert.Equal(0, novoEstoqueTeste.Ocupacao);
+            Assert.Equal(0, novoEstoqueTeste.Montante);
+        }
 
     }
 }

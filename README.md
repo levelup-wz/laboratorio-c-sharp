@@ -3,7 +3,7 @@
 - [x] Setup Inicial
 - [x] Criar Classe ProdutoIsento
 - [x] Testar Classe ProdutoIsento
-- [ ] Criar Classe Estoque
+- [x] Criar Classe Estoque
 - [ ] Testar entrada de produto no Estoque
 - [ ] Testar saída de produto no Estoque
 - [ ] Enviar entregas

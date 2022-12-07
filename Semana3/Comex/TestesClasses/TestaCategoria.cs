@@ -5,10 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-partial class Program
+public class TestaCategoria
 {
-    static void TestaCategoria(Categoria informatica, Categoria moveis, Categoria livros)
+    public static void Main()
     {
+        Categoria informatica = new Categoria("informática");
+        Categoria moveis = new Categoria("móveis", EStatus.Inativa);
+        Categoria livros = new Categoria("livros");
+
         Console.WriteLine("\n----- TESTE DE CATEGORIA -----\n");
 
         informatica.ListarCategoria();

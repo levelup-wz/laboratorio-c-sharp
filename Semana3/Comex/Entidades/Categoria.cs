@@ -24,5 +24,6 @@ namespace Comex.Entidades
         {
             Console.WriteLine($"{Nome} ({Id} - {Status})");
         }
+                
     }
 }

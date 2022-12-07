@@ -7,32 +7,12 @@ Console.WriteLine("Hello, World! - Semana 3");
 // CATEGORIAS
 TestaCategoria.Main();
 
+// PRODUTOS
+TestaProduto.Main();
 
-//#region Clientes
-//// CLIENTES
-//Cliente andre = new Cliente("Andre", "Sousa", "123456789-22", "7798802-0059", "Rua 1", "10", "Bem querer",
-//    "Candeias", "Vitoria da Conquista", "Bahia");
+//PEDIDOS
+TestaPedido.Main();
 
-//Cliente luisa = new Cliente("Luisa", "Sousa", "789654123-22", "7798802-0061", "Rua 2", "20", "Bem querer",
-//    "Candeias", "Vitoria da Conquista", "Bahia");
-
-//Cliente lara = new Cliente("Lara", "Sousa", "852963741-22", "7798802-0058", "Rua 3", "30", "Bem querer",
-//    "Candeias", "Vitoria da Conquista", "Bahia");
-//#endregion
-
-//#region Produtos
-//// PRODUTOS
-//Produto notebook = new Produto("Notebook Sansung", 3523.00, 1, informatica);
-//Produto cleanArchiteture = new Produto("Clean Architeture", 102.90, 2, livros);
-//Produto monitor = new Produto("Monitor Dell", 1889.00, 3, informatica);
-
-//TestaProduto(notebook, cleanArchiteture, monitor);
-//#endregion
-
-//#region Pedidos
-////PEDIDOS
-//TestaPedido(andre, luisa, lara, notebook, cleanArchiteture, monitor);
-//#endregion
 
 Console.WriteLine("\n*************** Testar produto Isento ***********\n");
 

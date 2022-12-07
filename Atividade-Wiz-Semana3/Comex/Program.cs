@@ -98,8 +98,8 @@ Console.WriteLine($"Total de impostos: {pedido3.CalculaTotalDeImpostos().ToStrin
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("TestaProdutoIsento:" + "\n");
-
 TestaProdutoIsento.MostraProdutoIsento();
 
 Console.WriteLine("Tecle enter para fechar o programa...");
+
 Console.ReadKey();

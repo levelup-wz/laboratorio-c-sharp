@@ -9,20 +9,20 @@ namespace Comex.Entidades
     public class Categoria
     {
         private static int numId = 1;
-        public int _id { get; private set; }
-        public string _nome { get; private set; }
-        public string _status { get; private set; }
+        public int Id { get; private set; }
+        public string Nome { get; private set; }
+        public EStatus Status { get; private set; }
 
-        public Categoria(string nome, string status = "ativa")
+        public Categoria(string nome, EStatus status = EStatus.Ativa)
         {
-            _status = status.ToUpper();
-            _nome = nome.ToUpper();
-            _id = Categoria.numId;
+            Status = status;
+            Nome = nome.ToUpper();
+            Id = Categoria.numId;
             Categoria.numId++;
         }
         public void ListarCategoria()
         {
-            Console.WriteLine($"{_nome} ({_id} - {_status})");
+            Console.WriteLine($"{Nome} ({Id} - {Status})");
         }
     }
 }

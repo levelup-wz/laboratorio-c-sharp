@@ -72,7 +72,7 @@ namespace Comex.Testes
             var result = $"***** Pedido nº {pedido._id} *****\n" +
                 $"Nome do Cliente: {pedido._cliente.NomeCompleto()}\n" +
                 $"Endereço do Cliente: {pedido._cliente.EnderecoCompleto()}\n" +
-                $"Produto: {pedido._produto._nome} - Quantidade: {pedido._quantidadeVendida} - Categoria: {pedido._produto._categoria._nome}\n" +
+                $"Produto: {pedido._produto._nome} - Quantidade: {pedido._quantidadeVendida} - Categoria: {pedido._produto._categoria.Nome}\n" +
                 $"Valor Total: R$ {pedido.CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {pedido.CalculaImpostoTotal().ToString("n2")}";
 

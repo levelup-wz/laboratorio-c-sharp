@@ -6,7 +6,7 @@ Console.WriteLine("Hello, World! - Semana 3");
 #region Categorias
 // CATEGORIAS
 Categoria informatica = new Categoria("informática");
-Categoria moveis = new Categoria("móveis", "inativa");
+Categoria moveis = new Categoria("móveis", EStatus.Inativa);
 Categoria livros = new Categoria("livros");
 
 TestaCategoria(informatica, moveis, livros);
@@ -30,7 +30,7 @@ Produto notebook = new Produto("Notebook Sansung", 3523.00, 1, informatica);
 Produto cleanArchiteture = new Produto("Clean Architeture", 102.90, 2, livros);
 Produto monitor = new Produto("Monitor Dell", 1889.00, 3, informatica);
 
-TestaProduto(notebook, cleanArchiteture, monitor, cadeira);
+TestaProduto(notebook, cleanArchiteture, monitor);
 #endregion
 
 #region Pedidos

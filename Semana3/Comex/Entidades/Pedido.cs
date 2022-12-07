@@ -42,7 +42,7 @@ namespace Comex.Entidades
             return $"***** Pedido nº {_id} *****\n" +
                 $"Nome do Cliente: {_cliente.NomeCompleto()}\n" +
                 $"Endereço do Cliente: {_cliente.EnderecoCompleto()}\n" +
-                $"Produto: {_produto._nome} - Quantidade: {_quantidadeVendida} - Categoria: {_produto._categoria._nome}\n" +
+                $"Produto: {_produto._nome} - Quantidade: {_quantidadeVendida} - Categoria: {_produto._categoria.Nome}\n" +
                 $"Valor Total: R$ {CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {CalculaImpostoTotal().ToString("n2")}";
         }

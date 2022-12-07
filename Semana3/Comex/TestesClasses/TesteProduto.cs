@@ -21,13 +21,6 @@ partial class Program
 
         Console.WriteLine(monitor.ListarProdutos());
 
-<<<<<<< HEAD
-        Console.WriteLine("\n----------------------------------\n");
-
-        Console.WriteLine(cadeira.ListarProdutos());
-
-=======
->>>>>>> 58d8a8ce9969f0b7992cb50f2311435a03f69655
     }
 
 }

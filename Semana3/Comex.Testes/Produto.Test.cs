@@ -11,7 +11,7 @@ namespace Comex.Testes
         public void TestaProdutoInstancia()
         {
             var produto = new Produto("Computador", 1000.00, 5, categoria);
-            Assert.Equal("INFORMATICA", produto._categoria._nome);
+            Assert.Equal("INFORMATICA", produto._categoria.Nome);
             Assert.Equal("Computador", produto._nome);
             Assert.Equal(1000.00, produto._precoUnitario);
             Assert.Equal(5, produto._quantidadeEstoque);
@@ -25,7 +25,7 @@ namespace Comex.Testes
         {
             var tipoCategoria = new Categoria(categoria);
             var produto = new Produto(nome, valor, estoque, tipoCategoria);
-            Assert.Equal(categoria, produto._categoria._nome);
+            Assert.Equal(categoria, produto._categoria.Nome);
             Assert.Equal(nome, produto._nome);
             Assert.Equal(valor, produto._precoUnitario);
             Assert.Equal(estoque, produto._quantidadeEstoque);
@@ -54,7 +54,7 @@ namespace Comex.Testes
             var produto = new Produto("Computador", 1000.00, 5, categoria);
             var listarProduto = produto.ListarProdutos();
             string result = $"Id: {produto._id} - Produto: {produto._nome} - Preço Unitário: R$ {produto._precoUnitario.ToString("n2")}\n" +
-                $"Quantidade em Estoque: {produto._quantidadeEstoque} - Categoria: {produto._categoria._nome}\n" +
+                $"Quantidade em Estoque: {produto._quantidadeEstoque} - Categoria: {produto._categoria.Nome}\n" +
                 $"Valor total em Estoque: {produto.CalcularValorEstoque().ToString("n2")} - Imposto: {produto.CalculaImposto().ToString("n2")}";
             Assert.Equal(result, listarProduto);
         }

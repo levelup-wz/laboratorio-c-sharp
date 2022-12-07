@@ -40,7 +40,7 @@ namespace Comex.Entidades
         public string ListarProdutos()
         {
             return ($"Id: {_id} - Produto: {_nome} - Preço Unitário: R$ {_precoUnitario.ToString("n2")}\n" +
-                $"Quantidade em Estoque: {_quantidadeEstoque} - Categoria: {_categoria._nome}\n" +
+                $"Quantidade em Estoque: {_quantidadeEstoque} - Categoria: {_categoria.Nome}\n" +
                 $"Valor total em Estoque: {CalcularValorEstoque().ToString("n2")} - Imposto: {CalculaImposto().ToString("n2")}");
         }
     }

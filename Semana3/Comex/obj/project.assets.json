@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Level-up-Wiz-Alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex\\Comex.csproj",
+      "projectUniqueName": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex.csproj",
       "projectName": "Comex",
-      "projectPath": "E:\\Level-up-Wiz-Alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex\\Comex.csproj",
+      "projectPath": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex.csproj",
       "packagesPath": "C:\\Users\\dedoj\\.nuget\\packages\\",
-      "outputPath": "E:\\Level-up-Wiz-Alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex\\obj\\",
+      "outputPath": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dedoj\\AppData\\Roaming\\NuGet\\NuGet.Config",

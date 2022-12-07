@@ -2,7 +2,7 @@
 using Comex.Entidades;
 using Comex.TestesClasses;
 
-Console.WriteLine("Hello, World! - Semana 3");
+Console.WriteLine("Hello, World! - Projeto Comex");
 
 // CATEGORIAS
 TestaCategoria.Main();
@@ -13,15 +13,12 @@ TestaProduto.Main();
 // PEDIDOS
 TestaPedido.Main();
 
+// PRODUTO ISENTO
 TestaProdutoIsento.Main();
 
-Console.WriteLine("*************** Testar Entrada de Produto no Estoque ***********");
+// ESTOQUE - ENTRADA DE PRODUTOS NO ESTOQUE
+TesteEntradaDeProdutoNoEstoque.Main();
 
-TesteEntradaDeProdutoNoEstoque testeEntradaProdutoNoEstoque = new TesteEntradaDeProdutoNoEstoque();
-testeEntradaProdutoNoEstoque.Main();
-
-Console.WriteLine("\n*************** Testar Saída de Produto no Estoque ***********");
-
-TestaSaidaDeProdutoNoEstoque testaSaidaDeProdutoNoEstoque = new TestaSaidaDeProdutoNoEstoque();
-testaSaidaDeProdutoNoEstoque.Main();
+// ESTOQUE - SAIDA DE PRODUTOS NO ESTOQUE
+TestaSaidaDeProdutoNoEstoque.Main();
 

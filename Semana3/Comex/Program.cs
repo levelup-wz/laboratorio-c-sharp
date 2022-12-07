@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Comex.Entidades;
+using Comex.TestesClasses;
 
 Console.WriteLine("Hello, World! - Semana 3");
 
@@ -37,4 +38,9 @@ TestaProduto(notebook, cleanArchiteture, monitor);
 //PEDIDOS
 TestaPedido(andre, luisa, lara, notebook, cleanArchiteture, monitor);
 #endregion
+
+Console.WriteLine("\n*************** Testar produto Isento ***********\n");
+
+TestaProdutoIsento teste = new TestaProdutoIsento();
+teste.Main();
 

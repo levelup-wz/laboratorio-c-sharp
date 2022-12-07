@@ -15,8 +15,7 @@ namespace Comex.Entidades
 
         public override double CalculaImposto()
         {
-            int valorImposto = 0;
-            return valorImposto;
+            return 0;
         }
 
     }

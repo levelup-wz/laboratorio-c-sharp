@@ -31,7 +31,7 @@ namespace Comex.Entidades
             return valorEstoque;
         }
 
-        public double CalculaImposto()
+        public virtual double CalculaImposto()
         {
             double valorImposto = _precoUnitario * 0.40;
             return valorImposto;
@@ -41,7 +41,7 @@ namespace Comex.Entidades
         {
             return ($"Id: {_id} - Produto: {_nome} - Preço Unitário: R$ {_precoUnitario.ToString("n2")}\n" +
                 $"Quantidade em Estoque: {_quantidadeEstoque} - Categoria: {_categoria.Nome}\n" +
-                $"Valor total em Estoque: {CalcularValorEstoque().ToString("n2")} - Imposto: {CalculaImposto().ToString("n2")}");
+                $"Valor total em Estoque: {CalcularValorEstoque().ToString("n2")} - Imposto: {CalculaImposto().ToString("n2")}\n");
         }
     }
 }

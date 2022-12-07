@@ -1,8 +1,8 @@
 # Desafio Semana 4 - Comex - Herança, Interface e Polimorfismo.
 
 - [x] Setup Inicial
-- [ ] Criar Classe ProdutoIsento
-- [ ] Testar Classe ProdutoIsento
+- [x] Criar Classe ProdutoIsento
+- [x] Testar Classe ProdutoIsento
 - [ ] Criar Classe Estoque
 - [ ] Testar entrada de produto no Estoque
 - [ ] Testar saída de produto no Estoque

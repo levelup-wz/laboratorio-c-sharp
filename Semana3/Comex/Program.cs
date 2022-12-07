@@ -44,8 +44,13 @@ Console.WriteLine("\n*************** Testar produto Isento ***********\n");
 TestaProdutoIsento testeProdutoIsento = new TestaProdutoIsento();
 testeProdutoIsento.Main();
 
-Console.WriteLine("\n*************** Testar Entrada de Produto no Estoque ***********\n");
+Console.WriteLine("*************** Testar Entrada de Produto no Estoque ***********");
 
 TesteEntradaDeProdutoNoEstoque testeEntradaProdutoNoEstoque = new TesteEntradaDeProdutoNoEstoque();
 testeEntradaProdutoNoEstoque.Main();
+
+Console.WriteLine("\n*************** Testar Saída de Produto no Estoque ***********");
+
+TestaSaidaDeProdutoNoEstoque testaSaidaDeProdutoNoEstoque = new TestaSaidaDeProdutoNoEstoque();
+testaSaidaDeProdutoNoEstoque.Main();
 

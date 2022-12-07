@@ -5,8 +5,8 @@
 - [x] Testar Classe ProdutoIsento
 - [x] Criar Classe Estoque
 - [x] Testar entrada de produto no Estoque
-- [ ] Testar saída de produto no Estoque
-- [ ] Enviar entregas
+- [x] Testar saída de produto no Estoque
+- [x] Enviar entregas
 
 # Desafio Semana 3 - Comex!
 

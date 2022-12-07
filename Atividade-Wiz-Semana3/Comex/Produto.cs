@@ -37,7 +37,7 @@ namespace Comex
             return resultado;
         }
 
-        public double CalculaImposto()
+        public virtual double CalculaImposto()
         {
             double resultado = Preco_Unitario * 0.40;
             return resultado;

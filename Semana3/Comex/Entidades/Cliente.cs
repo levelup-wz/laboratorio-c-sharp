@@ -9,48 +9,48 @@ namespace Comex.Entidades
     public class Cliente
     {
         public static int numCliente = 1;
-        public int _id { get; }
-        public string _nome { get; }
-        public string _sobreNome { get; }
-        public string _cpf { get; }
-        public string _telefone { get; }
-        public string _rua { get; }
-        public string _numeroEndereco { get; }
-        public string _complemento { get; }
-        public string _bairro { get; }
-        public string _cidade { get; }
-        public string _estado { get; }
+        public int Id { get; }
+        public string Nome { get; }
+        public string SobreNome { get; }
+        public string Cpf { get; }
+        public string Telefone { get; }
+        public string Rua { get; }
+        public string NumeroEndereco { get; }
+        public string Complemento { get; }
+        public string Bairro { get; }
+        public string Cidade { get; }
+        public string Estado { get; }
 
         public Cliente(string nome, string sobreNome, string cpf, string telefone, string rua,
             string numero, string complemento, string bairro, string cidade, string estado)
         {
-            _nome = nome;
-            _sobreNome = sobreNome;
-            _cpf = cpf;
-            _telefone = telefone;
-            _rua = rua;
-            _numeroEndereco = numero;
-            _complemento = complemento;
-            _bairro = bairro;
-            _cidade = cidade;
-            _estado = estado;
-            _id = Cliente.numCliente;
+            Nome = nome;
+            SobreNome = sobreNome;
+            Cpf = cpf;
+            Telefone = telefone;
+            Rua = rua;
+            NumeroEndereco = numero;
+            Complemento = complemento;
+            Bairro = bairro;
+            Cidade = cidade;
+            Estado = estado;
+            Id = Cliente.numCliente;
             Cliente.numCliente++;
         }
         public string NomeCompleto()
         {
-            return $"{_nome} {_sobreNome}";
+            return $"{Nome} {SobreNome}";
         }
 
         public string EnderecoCompleto()
         {
-            return ($"Rua: {_rua}, nº {_numeroEndereco}, complemento: {_complemento},\n" +
-                $"bairro: {_bairro}, cidade: {_cidade}, estado: {_estado}");
+            return ($"Rua: {Rua}, nº {NumeroEndereco}, complemento: {Complemento},\n" +
+                $"bairro: {Bairro}, cidade: {Cidade}, estado: {Estado}");
         }
 
         public string ListarCliente()
         {
-            return ($"***** Código do Cliente nº {_id} *****\n" +
+            return ($"***** Código do Cliente nº {Id} *****\n" +
                 $"Nome: {NomeCompleto()}\n" +
                 $"Endereço: {EnderecoCompleto()}");
         }

@@ -10,16 +10,16 @@ namespace Comex.Testes
         [Fact]
         public void TestaClienteInstancia()
         {
-            Assert.Equal("Andre", cliente._nome);
-            Assert.Equal("Sousa", cliente._sobreNome);
-            Assert.Equal("123456789-88", cliente._cpf);
-            Assert.Equal("77988124578", cliente._telefone);
-            Assert.Equal("João Alberto", cliente._rua);
-            Assert.Equal("12", cliente._numeroEndereco);
-            Assert.Equal("Bem querer", cliente._complemento);
-            Assert.Equal("Candeias", cliente._bairro);
-            Assert.Equal("Salvador", cliente._cidade);
-            Assert.Equal("Bahia", cliente._estado);
+            Assert.Equal("Andre", cliente.Nome);
+            Assert.Equal("Sousa", cliente.SobreNome);
+            Assert.Equal("123456789-88", cliente.Cpf);
+            Assert.Equal("77988124578", cliente.Telefone);
+            Assert.Equal("João Alberto", cliente.Rua);
+            Assert.Equal("12", cliente.NumeroEndereco);
+            Assert.Equal("Bem querer", cliente.Complemento);
+            Assert.Equal("Candeias", cliente.Bairro);
+            Assert.Equal("Salvador", cliente.Cidade);
+            Assert.Equal("Bahia", cliente.Estado);
         }
 
         [Theory]
@@ -31,23 +31,23 @@ namespace Comex.Testes
         {
             Cliente novoCliente = new Cliente(nome, sobreNome, cpf, fone, rua, numeroEndereco, complemento, bairro, cidade, estado);
 
-            Assert.Equal(nome, novoCliente._nome);
-            Assert.Equal(sobreNome, novoCliente._sobreNome);
-            Assert.Equal(cpf, novoCliente._cpf);
-            Assert.Equal(fone, novoCliente._telefone);
-            Assert.Equal(rua, novoCliente._rua);
-            Assert.Equal(numeroEndereco, novoCliente._numeroEndereco);
-            Assert.Equal(complemento, novoCliente._complemento);
-            Assert.Equal(bairro, novoCliente._bairro);
-            Assert.Equal(cidade, novoCliente._cidade);
-            Assert.Equal(estado, novoCliente._estado);
+            Assert.Equal(nome, novoCliente.Nome);
+            Assert.Equal(sobreNome, novoCliente.SobreNome);
+            Assert.Equal(cpf, novoCliente.Cpf);
+            Assert.Equal(fone, novoCliente.Telefone);
+            Assert.Equal(rua, novoCliente.Rua);
+            Assert.Equal(numeroEndereco, novoCliente.NumeroEndereco);
+            Assert.Equal(complemento, novoCliente.Complemento);
+            Assert.Equal(bairro, novoCliente.Bairro);
+            Assert.Equal(cidade, novoCliente.Cidade);
+            Assert.Equal(estado, novoCliente.Estado);
         }
 
         [Fact]
         public void TestaClienteNomeCompleto()
         {
             var nomeCompleto = cliente.NomeCompleto();
-            var result = cliente._nome + " " + cliente._sobreNome;
+            var result = cliente.Nome + " " + cliente.SobreNome;
             Assert.Equal(result, nomeCompleto);
         }
 
@@ -55,8 +55,8 @@ namespace Comex.Testes
         public void TestaClienteEnderecoCompleto()
         {
             var enderecoCompleto = cliente.EnderecoCompleto();
-            var result = $"Rua: {cliente._rua}, nº {cliente._numeroEndereco}, complemento: {cliente._complemento},\n" +
-                $"bairro: {cliente._bairro}, cidade: {cliente._cidade}, estado: {cliente._estado}";
+            var result = $"Rua: {cliente.Rua}, nº {cliente.NumeroEndereco}, complemento: {cliente.Complemento},\n" +
+                $"bairro: {cliente.Bairro}, cidade: {cliente.Cidade}, estado: {cliente.Estado}";
             Assert.Equal(result, enderecoCompleto);
         }
 
@@ -64,7 +64,7 @@ namespace Comex.Testes
         public void TestaClienteListarCliente()
         {
             var listarCliente = cliente.ListarCliente();
-            var result = ($"***** Código do Cliente nº {cliente._id} *****\n" +
+            var result = ($"***** Código do Cliente nº {cliente.Id} *****\n" +
                 $"Nome: {cliente.NomeCompleto()}\n" +
                 $"Endereço: {cliente.EnderecoCompleto()}");
             Assert.Equal(result, listarCliente);

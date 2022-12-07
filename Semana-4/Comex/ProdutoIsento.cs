@@ -17,11 +17,5 @@ namespace Comex
         {
             return 0;
         }
-
-        public override double ValorTotalEmEstoque()
-        {
-            return base.ValorTotalEmEstoque();
-
-        }
     }
 }

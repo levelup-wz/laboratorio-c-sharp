@@ -26,11 +26,11 @@ namespace Comex
             Montante = Montante - (decimal)produto.CalculaValorTotalEmEstoque();
         }
 
-        public static void ExibirDadosEstoque()
+        public void ExibirDadosEstoque()
         {
             Console.WriteLine($"Capacidade do estoque: {Capacidade}");
             Console.WriteLine($"Ocupação do estoque: {Ocupacao}");
-            Console.WriteLine($"Montante do estoque: {Montante}" + "\n");
+            Console.WriteLine($"Montante do estoque: {Montante.ToString("N2")}" + "\n");
         }
     }
 }

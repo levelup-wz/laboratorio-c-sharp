@@ -102,10 +102,11 @@ TestaProdutoIsento.MostraProdutoIsento();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
+Console.WriteLine("Exibir entrada no estoque:" + "\n");
+TestaEntradaDeProdutoNoEstoque.RegistraEntradaEstoque();
 
-Console.WriteLine("Exibir dados do estoque:" + "\n");
-//TestaEntradaDeProdutoNoEstoque.ExibirDadosEstoque();
-Estoque.ExibirDadosEstoque();
+Console.WriteLine("Exibir saída no estoque:" + "\n");
+TestaSaidaDeProdutoNoEstoque.RegistaSaidaEstoque();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 

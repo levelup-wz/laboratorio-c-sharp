@@ -100,6 +100,15 @@ Console.WriteLine(".--------------------..--------------------..----------------
 Console.WriteLine("TestaProdutoIsento:" + "\n");
 TestaProdutoIsento.MostraProdutoIsento();
 
+Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
+
+
+Console.WriteLine("Exibir dados do estoque:" + "\n");
+//TestaEntradaDeProdutoNoEstoque.ExibirDadosEstoque();
+Estoque.ExibirDadosEstoque();
+
+Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
+
 Console.WriteLine("Tecle enter para fechar o programa...");
 
 Console.ReadKey();

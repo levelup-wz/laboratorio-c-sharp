@@ -12,7 +12,7 @@ namespace Comex
         {
             return 0;
         }
-        public ProdutoIsento(string nome, double precoUnitario, int quantidade) : base(nome, precoUnitario, quantidade)
+        public ProdutoIsento(string nome, double precoUnitario, int quantidade, Categoria categoria) : base(nome, precoUnitario, quantidade, categoria)
         {
         }
     }

@@ -8,9 +8,9 @@ namespace Comex
 {
     public class Estoque
     {
-        static int Capacidade { get; private set; } = 1000;
-        static int Ocupacao { get; private set; }
-        static decimal Montante { get; private set; }
+        static public int Capacidade { get; private set; } = 1000;
+        static public int Ocupacao { get; private set; }
+        static public decimal Montante { get; private set; }
         public Produto Produto { get; set; }
 
         public void RegistraEntrada(Produto produto) 

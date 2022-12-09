@@ -1,12 +1,8 @@
-# Semana-3
+# Semana-4
 ## Atividades:
 - Setup inicial ✔️
-- Criar classe Categoria ✔️
-- Testar classe Categoria ✔️
-- Criar classe Produto ✔️
-- Testar classe Produto ✔️
-- Criar classe Pedido ✔️
-- Testar classe Pedido ✔️
-- Criar classe Cliente ✔️
-- Usar classe Cliente ✔️
-- Definição de ids ✔️ 
+- Criar classe ProdutoIsento ✔️
+- Testar classe ProdutoIsento ✔️
+- Criar classe Estoque ✔️
+- Testar entrada de produto no Estoque ✔️
+- Testar saída de produto no Estoque ✔️

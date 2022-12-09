@@ -91,7 +91,7 @@ Console.WriteLine(
     $"{pedido3.ClientePedido.ObterEndereco()}\n"
 );*/
 
-Categoria saude = new Categoria("Saúde");
+/*Categoria saude = new Categoria("Saúde");
 Categoria livros = new Categoria("Livros");
 Categoria informatica = new Categoria("Informática");
 
@@ -106,6 +106,27 @@ estoque.RegistraEntrada(macbookPro);
 
 Console.WriteLine(
     $"ESTOQUE\n" +
+    $"Capacidade: {Estoque.Capacidade}\n" +
+    $"Ocupação: {Estoque.Ocupacao}\n" +
+    $"Montante: {Estoque.Montante:C}\n"
+);*/
+
+Categoria saude = new Categoria("Saúde");
+ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, saude);
+
+Estoque estoque = new Estoque();
+
+estoque.RegistraEntrada(vacina);
+Console.WriteLine(
+    $"ESTOQUE - REGISTRO DE ENTRADA\n" +
+    $"Capacidade: {Estoque.Capacidade}\n" +
+    $"Ocupação: {Estoque.Ocupacao}\n" +
+    $"Montante: {Estoque.Montante:C}\n"
+);
+
+estoque.RegistraSaida(vacina);
+Console.WriteLine(
+    $"ESTOQUE - REGISTRO DE SAÍDA\n" +
     $"Capacidade: {Estoque.Capacidade}\n" +
     $"Ocupação: {Estoque.Ocupacao}\n" +
     $"Montante: {Estoque.Montante:C}\n"

@@ -17,6 +17,7 @@ namespace Comex
             estoque1.RegistarEntrada(vacina2);
             Console.WriteLine(estoque1.RetornarInfosEstoque());
             estoque1.RegistarSaida(vacina2);
+            Console.WriteLine("Após a saída do estoque");
             Console.WriteLine(estoque1.RetornarInfosEstoque());
 
         }

@@ -11,7 +11,6 @@ namespace Comex
         public ProdutoIsento(string nome, double precoUnitario, int quantidade, string categoria) : base(nome, precoUnitario, quantidade, categoria)
         {
 
-            Console.WriteLine("Criando um produto Isento");
         }
 
         public override double ValorEstoque()

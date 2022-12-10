@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Comex
 
 {
-    public class Produto
+    public abstract class Produto
     {
         public int Id { get; set; }
         public static int ContId = 0;
@@ -29,13 +29,13 @@ namespace Comex
 
         }
 
-        public double ValorEstoque()
+        public virtual double ValorEstoque()
         {
             double total = PrecoUnitario * Quantidade;
             return total;
         }
 
-        public double Imposto()
+        public virtual double Imposto()
         {
             double TotalImposto = PrecoUnitario * 0.40;
             return TotalImposto;

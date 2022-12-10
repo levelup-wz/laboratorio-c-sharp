@@ -14,9 +14,9 @@ namespace Comex
         Cliente cliente3 = new Cliente("Julio", "Pereira da Silva", "245.985.658-82", "(64) 99924-3258", "Rua Maria de Paula", "502",
             "Casa 02", "Margon", "Catalão", "Goiás");
 
-        Produto produto1 = new Produto("Notebook Samsung", 3523, 1, "Informática" );
-        Produto produto2 = new Produto("Clean Architecture", 102.90, 2, "Livros");
-        Produto produto3 = new Produto("Monitor Dell 27", 1889, 3, "Informática");
+        ProdutoNaoIsento produto1 = new ProdutoNaoIsento ("Notebook Samsung", 3523, 1, "Informática");
+        ProdutoNaoIsento produto2 = new ProdutoNaoIsento("Clean Architecture", 102.90, 2, "Livros");
+        ProdutoNaoIsento produto3 = new ProdutoNaoIsento("Monitor Dell 27", 1889, 3, "Informática");
 
 
 

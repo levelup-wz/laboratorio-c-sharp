@@ -19,6 +19,11 @@ Console.WriteLine("----------------------------------");
 Console.WriteLine("Teste Pedido:");
 Console.WriteLine("----------------------------------");
 new PedidoTeste();
+Console.WriteLine("----------------------------------");
+Console.WriteLine("Teste ProdutoIsento:");
+Console.WriteLine("----------------------------------");
+new ProdutoIsentoteste();
+
 
 
 

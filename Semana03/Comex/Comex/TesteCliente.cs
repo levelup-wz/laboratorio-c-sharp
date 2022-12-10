@@ -4,6 +4,9 @@ namespace Comex
 
     public class ClienteTeste
     {
+
+    
+
         Cliente cliente1 = new Cliente("André Luiz", "Silva Azevêdo", "201.658.987-32", "(64) 98532-0766", "Rua João Pereira", "15A", 
             "Sem complemento", "Centro", "Goiandira", "Goiás");
 

@@ -24,9 +24,13 @@ Console.WriteLine("Teste Produto Isento:");
 Console.WriteLine("----------------------------------");
 new ProdutoIsentoteste();
 Console.WriteLine("----------------------------------");
-Console.WriteLine("Teste Entradas no Estoque:");
+Console.WriteLine("Teste Entradas do Estoque:");
 Console.WriteLine("----------------------------------");
 TestaEntradaDeProdutoNoEstoque.Main();
+Console.WriteLine("----------------------------------");
+Console.WriteLine("Teste Saída do Estoque:");
+Console.WriteLine("----------------------------------");
+TestaSaidaDeProdutoNoEstoque.Main();
 
 
 

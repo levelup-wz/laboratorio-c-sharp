@@ -10,9 +10,9 @@ namespace Comex
     public class Estoque
     {
         
-        static public int Capacidade { get; private set; } = 1000;
-        static public int Ocupacao { get; private set; }
-        static public decimal Montante { get; private set; }
+         public int Capacidade { get; private set; } = 1000;
+         public int Ocupacao { get; private set; }
+         public decimal Montante { get; private set; }
         public Produto Produto { get; set; }
 
         

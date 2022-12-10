@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Comex
 
 {
-    public abstract class Produto
+    public class Produto
     {
         public int Id { get; set; }
         public static int ContId = 0;

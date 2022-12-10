@@ -20,9 +20,13 @@ Console.WriteLine("Teste Pedido:");
 Console.WriteLine("----------------------------------");
 new PedidoTeste();
 Console.WriteLine("----------------------------------");
-Console.WriteLine("Teste ProdutoIsento:");
+Console.WriteLine("Teste Produto Isento:");
 Console.WriteLine("----------------------------------");
 new ProdutoIsentoteste();
+Console.WriteLine("----------------------------------");
+Console.WriteLine("Teste Entradas no Estoque:");
+Console.WriteLine("----------------------------------");
+TestaEntradaDeProdutoNoEstoque.Main();
 
 
 

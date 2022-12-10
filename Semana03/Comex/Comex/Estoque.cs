@@ -9,12 +9,15 @@ namespace Comex
 {
     public class Estoque
     {
+        
         static public int Capacidade { get; private set; } = 1000;
         static public int Ocupacao { get; private set; }
         static public decimal Montante { get; private set; }
         public Produto Produto { get; set; }
 
-        public void RegistarEntrada (Produto produto)
+        
+
+        public void RegistarEntrada(Produto produto)
         {
             Capacidade -= produto.Quantidade;
             Ocupacao += produto.Quantidade;
@@ -28,7 +31,24 @@ namespace Comex
             Montante -= Convert.ToDecimal(produto.ValorEstoque());
         }
 
+        public string RetornarInfosEstoque()
+        {
+            return $"Capacidade {Capacidade} \n " +
+                $"Ocupação {Ocupacao} \n" +
+                $"Montante {Montante} \n";
+                   
+
+
+        }
+
+
     }
+
+       
+
+        
+
+    
 }
 
 

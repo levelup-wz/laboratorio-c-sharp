@@ -19,6 +19,7 @@ namespace Comex
             Console.WriteLine(estoque.InformacoesDoEstoque());
             Console.WriteLine("Saída do produto");
             estoque.RegistraSaida(vacina);
+            estoque.RegistraSaida(vacina);
             Console.WriteLine(estoque.InformacoesDoEstoque());
         }
     }

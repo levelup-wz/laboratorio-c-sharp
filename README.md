@@ -1,3 +1,13 @@
+# Desafio Semana 5 - Comex - Entendendo Exceções.
+
+- [x] Setup Inicial
+- [x] Validar entrada e saída de produtos no Estoque
+- [x] Testar validações no Estoque
+- [x] Criar e lançar exceções aderentes ao negócio
+- [x] Validações ao criar uma Categoria
+- [x] Validações de Produto e ProdutoIsento
+- [x] Enviar entregas
+
 # Desafio Semana 4 - Comex - Herança, Interface e Polimorfismo.
 
 - [x] Setup Inicial

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.Models;
 
-namespace Comex
+namespace Comex.TestaModels
 {
     public class TestaSaidaDeProdutoNoEstoque
     {
@@ -19,7 +20,7 @@ namespace Comex
             Console.WriteLine(estoque.InformacoesDoEstoque());
             Console.WriteLine("Saída do produto");
             estoque.RegistraSaida(vacina);
-            estoque.RegistraSaida(vacina);
+            //estoque.RegistraSaida(vacina);
             Console.WriteLine(estoque.InformacoesDoEstoque());
         }
     }

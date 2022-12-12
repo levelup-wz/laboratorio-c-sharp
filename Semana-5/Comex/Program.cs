@@ -1,4 +1,4 @@
-﻿using Comex;
+﻿using Comex.TestaModels;
 using Comex.Exceptions;
 
 try
@@ -14,6 +14,10 @@ try
     Console.WriteLine("Testa Saída De Produtos No Estoque:");
     Console.WriteLine("-----------------------------------");
     TestaSaidaDeProdutoNoEstoque.Main();
+    Console.WriteLine(" ");
+    Console.WriteLine("Testa Validação de Categoria:");
+    Console.WriteLine("-----------------------------------");
+    TestaValidacaoDeCategoria.Main();
     Console.WriteLine(" ");
 }
 catch (LimiteDeEstoqueExcedidoException ex)

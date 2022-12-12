@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using Comex.Models;
+using FluentAssertions;
 
 namespace Comex.Testes
 {

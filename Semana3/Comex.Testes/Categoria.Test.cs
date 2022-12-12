@@ -5,10 +5,10 @@ namespace Comex.Testes
     public class TestCategoria
     {
         [Theory]
-        [InlineData("INFORMÁTICA", EStatus.Ativa)]
-        [InlineData("MÓVEIS", EStatus.Inativa)]
-        [InlineData("LIVROS", EStatus.Ativa)]
-        public void TestarInstanciasCategoria(string nome, EStatus status)
+        [InlineData("INFORMÁTICA", "Ativa")]
+        [InlineData("MÓVEIS", "Inativa")]
+        [InlineData("LIVROS", "Ativa")]
+        public void TestarInstanciasCategoria(string nome, string status)
         {
             var testeCategoria = new Categoria(nome, status);
             Assert.Equal(nome, testeCategoria.Nome);
@@ -19,15 +19,15 @@ namespace Comex.Testes
         {
             var categoria = new Categoria("categoria de teste");
             Assert.Equal("CATEGORIA DE TESTE", categoria.Nome);
-            Assert.Equal(EStatus.Ativa, categoria.Status);
+            Assert.Equal("Ativa", categoria.Status);
         }
 
         [Fact]
         public void TestaCategoriaInativa()
         {
-            var categoria = new Categoria("categoria de teste", EStatus.Inativa);
+            var categoria = new Categoria("categoria de teste", "Inativa");
             Assert.Equal("CATEGORIA DE TESTE", categoria.Nome);
-            Assert.Equal(EStatus.Inativa, categoria.Status);
+            Assert.Equal("Inativa", categoria.Status);
         }
 
     }

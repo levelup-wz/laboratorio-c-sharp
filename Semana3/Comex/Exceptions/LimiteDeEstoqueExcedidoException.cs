@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Comex.Exceptions
 {
-    public class CustonException : Exception
+    public class LimiteDeEstoqueExcedidoException : Exception
     {
-        public CustonException(string mensagem) : base(mensagem)
+        public LimiteDeEstoqueExcedidoException(string mensagem) : base(mensagem)
         {
             
         }

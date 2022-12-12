@@ -10,7 +10,7 @@ public class TestaCategoria
     public static void Main()
     {
         Categoria informatica = new Categoria("informática");
-        Categoria moveis = new Categoria("móveis", EStatus.Inativa);
+        Categoria moveis = new Categoria("móveis", "Inativa");
         Categoria livros = new Categoria("livros");
 
         Console.WriteLine("\n----- TESTE DE CATEGORIA -----\n");

@@ -25,6 +25,19 @@ namespace Comex.Entidades
             _id = Produto.prodId;
             Produto.prodId++;
         }
+
+        public Produto(int id, string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria)
+        {
+            try
+            {
+                ValidarInformacoes(id, nome, precoUnitario, quantidadeEstoque, categoria);
+            }
+            catch (ArgumentException erro)
+            {
+                Console.WriteLine(erro.Message);
+            }
+        }
+
         public double CalcularValorEstoque()
         {
             double valorEstoque = _quantidadeEstoque * _precoUnitario;
@@ -43,5 +56,36 @@ namespace Comex.Entidades
                 $"Quantidade em Estoque: {_quantidadeEstoque} - Categoria: {_categoria.Nome}\n" +
                 $"Valor total em Estoque: {CalcularValorEstoque().ToString("n2")} - Imposto: {CalculaImposto().ToString("n2")}\n");
         }
+
+        public void ValidarInformacoes(int id, string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria)
+        {
+            if (id <= 0)
+            {
+                throw new ArgumentException("Campo ID deve ser maior que ZERO");
+            }
+            if (nome.Length <= 5)
+            {
+                throw new ArgumentException("Campo NOME deve ter mais de 5 caracteres");
+            }
+            if (precoUnitario <= 0)
+            {
+                throw new ArgumentException("Campo PREÇO UNITÁRIO deve ser maior que ZERO");
+            }
+            if (quantidadeEstoque <= 0)
+            {
+                throw new ArgumentException("Campo QUANTIDADE EM ESTOQUE deve ser maior que ZERO");
+            }
+            else
+            {
+                _id = id;
+                _nome = nome;
+                _precoUnitario = precoUnitario;
+                _quantidadeEstoque = quantidadeEstoque;
+                _categoria = categoria;
+
+                Console.WriteLine($"Produto: {_nome} criado com sucesso!");
+            }
+        }
+
     }
 }

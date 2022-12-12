@@ -13,6 +13,10 @@ namespace Comex.Entidades
         {
         }
 
+        public ProdutoIsento(int id, string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria) : base(id, nome, precoUnitario, quantidadeEstoque, categoria)
+        {
+        }
+
         public override double CalculaImposto()
         {
             return 0;

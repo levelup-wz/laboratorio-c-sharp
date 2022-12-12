@@ -23,5 +23,8 @@ Console.WriteLine("Hello, World! - Projeto Comex");
 //TestaSaidaDeProdutoNoEstoque.Main();
 
 //Teste de validação de categorias
-TestaValidacaoDeCategoria.Main();
+//TestaValidacaoDeCategoria.Main();
+
+//Teste de validações de Produto e Produto Isento
+TestaValidacaoDeProdutos.Main();
 

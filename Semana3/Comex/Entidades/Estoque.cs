@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comex.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace Comex.Entidades
             {
                 VerificarEntrada(produto);
             }
-            catch (Exception error)
+            catch (CustonException error)
             {
                 Console.WriteLine(error.Message);
             }
@@ -43,7 +44,7 @@ namespace Comex.Entidades
             {
                 VerificarSaida(produto);
             }
-            catch (Exception error)
+            catch (CustonException error)
             {
                 Console.WriteLine(error.Message);
             }
@@ -53,7 +54,7 @@ namespace Comex.Entidades
         {
             if (produto._quantidadeEstoque > Capacidade)
             {
-                throw new Exception($"A quantidade do estoque: {produto._quantidadeEstoque} do produto: {produto._nome} é maior que a capacidade disponível: {Capacidade}.");
+                throw new CustonException($"A quantidade do estoque: {produto._quantidadeEstoque} do produto: {produto._nome} é maior que a capacidade disponível: {Capacidade}.");
             }
             else
             {
@@ -68,7 +69,7 @@ namespace Comex.Entidades
         {
             if (produto._quantidadeEstoque > Ocupacao)
             {
-                throw new Exception($"Não foi possível efetuar a saída do produto: {produto._nome}, pois não existe no estoque.");
+                throw new CustonException($"Não foi possível efetuar a saída do produto: {produto._nome}, pois não existe no estoque.");
             }
             else
             {

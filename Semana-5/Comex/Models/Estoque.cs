@@ -17,7 +17,7 @@ namespace Comex
         {
             if (produto.QuantidadeEmEstoque > Capacidade)
             {
-                throw new EntradaInvalidaException("O estoque não possui capacidade suficiente");
+                throw new LimiteDeEstoqueExcedidoException("O estoque não possui capacidade suficiente");
             }
             Capacidade -= produto.QuantidadeEmEstoque;
             Ocupacao += produto.QuantidadeEmEstoque;
@@ -28,7 +28,7 @@ namespace Comex
         {
             if (Ocupacao == 0)
             {
-                throw new SaidaInvalidaException("Não existe nenhum produto em estoque");
+                throw new LimiteDeEstoqueExcedidoException("Não existe nenhum produto em estoque");
             }
             Capacidade += produto.QuantidadeEmEstoque;
             Ocupacao -= produto.QuantidadeEmEstoque;

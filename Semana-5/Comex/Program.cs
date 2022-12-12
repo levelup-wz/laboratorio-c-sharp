@@ -16,7 +16,7 @@ try
     TestaSaidaDeProdutoNoEstoque.Main();
     Console.WriteLine(" ");
 }
-catch (Exception ex)
+catch (LimiteDeEstoqueExcedidoException ex)
 {
     Console.WriteLine(ex.Message);
 }

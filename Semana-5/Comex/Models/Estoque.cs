@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comex.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,15 +15,21 @@ namespace Comex
 
         public void RegistraEntrada(Produto produto)
         {
+            if (produto.QuantidadeEmEstoque > Capacidade)
             {
-                Capacidade -= produto.QuantidadeEmEstoque;
-                Ocupacao += produto.QuantidadeEmEstoque;
-                Montante += (decimal)produto.ValorTotalEmEstoque();
+                throw new EntradaInvalidaException("O estoque não possui capacidade suficiente");
             }
+            Capacidade -= produto.QuantidadeEmEstoque;
+            Ocupacao += produto.QuantidadeEmEstoque;
+            Montante += (decimal)produto.ValorTotalEmEstoque();
         }
 
         public void RegistraSaida(Produto produto)
         {
+            if (Ocupacao == 0)
+            {
+                throw new SaidaInvalidaException("Não existe nenhum produto em estoque");
+            }
             Capacidade += produto.QuantidadeEmEstoque;
             Ocupacao -= produto.QuantidadeEmEstoque;
             Montante -= (decimal)produto.ValorTotalEmEstoque();

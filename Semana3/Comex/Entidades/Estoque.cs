@@ -27,16 +27,57 @@ namespace Comex.Entidades
 
         public void RegistrarEntrada (Produto produto)
         {
-            Capacidade -= produto._quantidadeEstoque;
-            Ocupacao += produto._quantidadeEstoque;
-            Montante += (decimal)produto.CalcularValorEstoque();
+            try
+            {
+                VerificarEntrada(produto);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine (error.Message);
+            }
+            
         }
 
         public void ResistrarSaida (Produto produto)
         {
-            Capacidade += produto._quantidadeEstoque;
-            Ocupacao -= produto._quantidadeEstoque;
-            Montante -= (decimal)produto.CalcularValorEstoque();
+            try
+            {
+                VerificarSaida(produto);
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error.Message);
+            }
+        }
+
+        public void VerificarEntrada(Produto produto)
+        {
+            if (produto._quantidadeEstoque > Capacidade)
+            {
+                throw new Exception($"A quantidade do estoque: {produto._quantidadeEstoque} do produto: {produto._nome} é maior que a capacidade disponível: {Capacidade}.");
+            }
+            else
+            {
+                Capacidade -= produto._quantidadeEstoque;
+                Ocupacao += produto._quantidadeEstoque;
+                Montante += (decimal)produto.CalcularValorEstoque();
+                Console.WriteLine($"Produto: {produto._nome} adicionado com sucesso!");
+            }
+        }
+
+        public void VerificarSaida(Produto produto)
+        {
+            if (produto._quantidadeEstoque > Ocupacao)
+            {
+                throw new Exception($"A quantidade do estoque: {produto._quantidadeEstoque} do produto: {produto._nome} é maior que a ocupação disponível: {Ocupacao}.");
+            }
+            else
+            {
+                Capacidade += produto._quantidadeEstoque;
+                Ocupacao -= produto._quantidadeEstoque;
+                Montante -= (decimal)produto.CalcularValorEstoque();
+                Console.WriteLine($"Produto: {produto._nome} retirado com sucesso!");
+            }
         }
 
         public void ListarEstoque ()

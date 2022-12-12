@@ -19,7 +19,7 @@ namespace Comex.TestesClasses
 
             Console.WriteLine("\n*************** Testar Saída de Produto no Estoque ***********");
 
-            estoque.RegistrarEntrada(vacina);
+            //estoque.RegistrarEntrada(vacina);
             estoque.ListarEstoque();
             estoque.ResistrarSaida(vacina);
             estoque.ListarEstoque();

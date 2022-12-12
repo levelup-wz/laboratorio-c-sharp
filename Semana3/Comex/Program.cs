@@ -5,19 +5,19 @@ using Comex.TestesClasses;
 Console.WriteLine("Hello, World! - Projeto Comex");
 
 // CATEGORIAS
-TestaCategoria.Main();
+//TestaCategoria.Main();
 
 // PRODUTOS
-TestaProduto.Main();
+//TestaProduto.Main();
 
 // PEDIDOS
-TestaPedido.Main();
+//TestaPedido.Main();
 
 // PRODUTO ISENTO
-TestaProdutoIsento.Main();
+//TestaProdutoIsento.Main();
 
 // ESTOQUE - ENTRADA DE PRODUTOS NO ESTOQUE
-TesteEntradaDeProdutoNoEstoque.Main();
+//TesteEntradaDeProdutoNoEstoque.Main();
 
 // ESTOQUE - SAIDA DE PRODUTOS NO ESTOQUE
 TestaSaidaDeProdutoNoEstoque.Main();

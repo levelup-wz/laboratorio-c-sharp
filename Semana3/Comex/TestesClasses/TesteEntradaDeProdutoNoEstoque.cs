@@ -15,7 +15,7 @@ namespace Comex.TestesClasses
             Categoria saude = new Categoria("saúde");
             Categoria livros = new Categoria("livros");
 
-            ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, saude);
+            ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 980, saude);
             ProdutoIsento useACabeca = new ProdutoIsento("Use a Cabeça", 112.90, 5, livros);
             Produto macbook = new Produto("Macbook Pro", 20000.00, 15, informatica);
 

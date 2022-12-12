@@ -33,9 +33,8 @@ namespace Comex.Entidades
             }
             catch (Exception error)
             {
-                Console.WriteLine (error.Message);
+                Console.WriteLine(error.Message);
             }
-            
         }
 
         public void ResistrarSaida (Produto produto)
@@ -69,7 +68,7 @@ namespace Comex.Entidades
         {
             if (produto._quantidadeEstoque > Ocupacao)
             {
-                throw new Exception($"A quantidade do estoque: {produto._quantidadeEstoque} do produto: {produto._nome} é maior que a ocupação disponível: {Ocupacao}.");
+                throw new Exception($"Não foi possível efetuar a saída do produto: {produto._nome}, pois não existe no estoque.");
             }
             else
             {

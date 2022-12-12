@@ -8,7 +8,7 @@ namespace Loja
     class Carro
     {
         //visibilidade tipo Nome getter e setter
-        public int Id {get; set;}
+        public static int Id {get; set;}
         public int NumeroPortas { get; set; }
         public Cor Cor { get; set; }
         public string Nome { get; set; }
@@ -19,6 +19,9 @@ namespace Loja
         public List<Acessorio> Acessorios { get; set; }
         public OpcoesDeDirecao TipoDirecao {get; set;}
 
+        public int QuantidadeDeAccessorios() {
+            return Acessorios.Count;
+        }
     }
 
     enum OpcoesDeDirecao
@@ -27,6 +30,7 @@ namespace Loja
         Hidraulica = 2,
         Mecanica = 3
     }
+
 
     // enum Classificacao
     // {

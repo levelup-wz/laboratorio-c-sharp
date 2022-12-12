@@ -22,7 +22,8 @@ namespace Comex
 
     class Banco
     {
-        public decimal Saldo { get; private set; }
+
+        public decimal Saldo {get; private set;}
 
         public void Debito(decimal valor)
         {

@@ -19,6 +19,10 @@ try
     Console.WriteLine("-----------------------------------");
     TestaValidacaoDeCategoria.Main();
     Console.WriteLine(" ");
+    Console.WriteLine("Testa Validação de Produtos:");
+    Console.WriteLine("-----------------------------------");
+    TestaValidacaoDeProdutos.Main();
+    Console.WriteLine(" ");
 }
 catch (LimiteDeEstoqueExcedidoException ex)
 {

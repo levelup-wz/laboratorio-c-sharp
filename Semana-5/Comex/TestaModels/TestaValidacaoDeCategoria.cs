@@ -15,7 +15,7 @@ namespace Comex.TestaModels
             { 
                 Categoria categoria1 = new Categoria("INFORMÁTICA", "INATIVA");
                 Categoria categoria2 = new Categoria("MÓVEIS");
-                Categoria categoria3 = new Categoria("LI", "INATIVA");
+                Categoria categoria3 = new Categoria("LIVROS", "INATIVA");
 
                 Console.WriteLine(categoria1.Informacoes());
                 Console.WriteLine(categoria2.Informacoes());

@@ -8,7 +8,7 @@ namespace Comex.Entidades
 {
     public class Produto
     {
-        public static int ProdId = 1;
+        public static int prodId = 1;
         public int Id { get; private set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
@@ -22,8 +22,8 @@ namespace Comex.Entidades
             PrecoUnitario = precoUnitario;
             QuantidadeEstoque = quantidadeEstoque;
             Categoria = categoria;
-            Id = Produto.ProdId;
-            Produto.ProdId++;
+            Id = Produto.prodId;
+            Produto.prodId++;
         }
 
         public Produto(int id, string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria)
@@ -32,9 +32,10 @@ namespace Comex.Entidades
             {
                 ValidarInformacoes(id, nome, precoUnitario, quantidadeEstoque, categoria);
             }
-            catch (ArgumentException erro)
+            catch (ArgumentException error)
             {
-                Console.WriteLine(erro.Message);
+                // Console.WriteLine(error.StackTrace);
+                Console.WriteLine(error.Message);
             }
         }
 

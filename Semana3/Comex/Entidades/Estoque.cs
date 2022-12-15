@@ -34,6 +34,7 @@ namespace Comex.Entidades
             }
             catch (LimiteDeEstoqueExcedidoException error)
             {
+                // Console.WriteLine(error.StackTrace);
                 Console.WriteLine(error.Message);
             }
         }
@@ -46,6 +47,7 @@ namespace Comex.Entidades
             }
             catch (LimiteDeEstoqueExcedidoException error)
             {
+                // Console.WriteLine(error.StackTrace);
                 Console.WriteLine(error.Message);
             }
         }

@@ -38,6 +38,7 @@ namespace Comex.Entidades
             }
             catch (ArgumentException error)
             {
+                // Console.WriteLine(error.StackTrace);
                 Console.WriteLine(error.Message);
             }
         }

@@ -8,7 +8,7 @@ namespace Comex
 {
     public class TestaSaidaDeProdutoNoEstoque
     {
-        public static void RegistaSaidaEstoque()
+        public static void RegistraSaidoEstoque()
         {
             try
             {
@@ -16,13 +16,13 @@ namespace Comex
 
                 Estoque estoque = new Estoque();
 
-                estoque.ExibirDadosEstoque();
-                Console.WriteLine("Entrada de Saúde:");
-                estoque.RegistraEntrada(vacina);
-                estoque.ExibirDadosEstoque();
+                //estoque.ExibirDadosEstoque();
+                //Console.WriteLine("Entrada de Saúde:");
+                //estoque.RegistraEntrada(vacina);
                 Console.WriteLine("Saída de Saúde:");
                 estoque.RegistraSaida(vacina);
                 estoque.ExibirDadosEstoque();
+                estoque.RegistraSaida(vacina);
             }
             catch (ArgumentException ex)
             {

@@ -26,7 +26,7 @@ namespace Comex
 
         public void RegistraSaida(Produto produto)
         {
-            if (Ocupacao == 0)
+            if (Ocupacao <= 0)
             {
                 throw new ArgumentException("Não existe mais produtos no estoque.", nameof(Ocupacao));
             }

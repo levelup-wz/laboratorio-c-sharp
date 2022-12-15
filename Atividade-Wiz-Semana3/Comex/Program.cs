@@ -17,7 +17,7 @@ categoria3.Status = "ATIVA";
 
 Console.WriteLine($"{categoria1.Nome} ({categoria1.DefineId()} - {categoria1.Status})");
 Console.WriteLine($"{categoria2.Nome} ({categoria2.DefineId()} - {categoria2.Status})");
-Console.WriteLine($"{categoria3.Nome} ({ categoria3.DefineId()} - {categoria3.Status})" + "\n");
+Console.WriteLine($"{categoria3.Nome} ({categoria3.DefineId()} - {categoria3.Status})" + "\n");
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
@@ -103,10 +103,12 @@ TestaProdutoIsento.MostraProdutoIsento();
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("Exibir entrada no estoque:" + "\n");
-TestaEntradaDeProdutoNoEstoque.RegistraEntradaEstoque();
+TestaEntradaDeProdutoNoEstoque.RegistraEntradoEstoque();
+Console.WriteLine("\n");
 
-Console.WriteLine("Exibir saída no estoque:" + "\n");
-TestaSaidaDeProdutoNoEstoque.RegistaSaidaEstoque();
+Console.WriteLine("Exibir saída do estoque:" + "\n");
+TestaSaidaDeProdutoNoEstoque.RegistraSaidoEstoque();
+TestaSaidaDeProdutoNoEstoque.RegistraSaidoEstoque();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 

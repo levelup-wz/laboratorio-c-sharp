@@ -17,9 +17,9 @@ namespace Comex.Testes
 
             var pedido = new Pedido(novoCliente, produto, 2);
 
-            Assert.Equal(pedido._cliente, novoCliente);
-            Assert.Equal(pedido._produto, produto);
-            Assert.Equal(2, pedido._quantidadeVendida);
+            Assert.Equal(pedido.Cliente, novoCliente);
+            Assert.Equal(pedido.Produto, produto);
+            Assert.Equal(2, pedido.QuantidadeVendida);
         }
 
         [Theory]
@@ -33,9 +33,9 @@ namespace Comex.Testes
 
             var pedido = new Pedido(novoCliente, novoProduto, quantidadePedido);
 
-            Assert.Equal(pedido._cliente, novoCliente);
-            Assert.Equal(pedido._produto, novoProduto);
-            Assert.Equal(pedido._quantidadeVendida, quantidadePedido);
+            Assert.Equal(pedido.Cliente, novoCliente);
+            Assert.Equal(pedido.Produto, novoProduto);
+            Assert.Equal(pedido.QuantidadeVendida, quantidadePedido);
         }
 
         [Fact]
@@ -45,7 +45,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
             
             var valorTotal = pedido.CalcularValorTotal();
-            var result = pedido._quantidadeVendida * pedido._produto._precoUnitario;
+            var result = pedido.QuantidadeVendida * pedido.Produto.PrecoUnitario;
 
             Assert.Equal(result, valorTotal);
         }
@@ -57,7 +57,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
 
             var valorImpostoTotal = pedido.CalculaImpostoTotal();
-            var result = pedido._quantidadeVendida * pedido._produto.CalculaImposto();
+            var result = pedido.QuantidadeVendida * pedido.Produto.CalculaImposto();
 
             Assert.Equal(result, valorImpostoTotal);
         }
@@ -69,10 +69,10 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
 
             var pedidoListarPedido = pedido.ListarPedidos();
-            var result = $"***** Pedido nº {pedido._id} *****\n" +
-                $"Nome do Cliente: {pedido._cliente.NomeCompleto()}\n" +
-                $"Endereço do Cliente: {pedido._cliente.EnderecoCompleto()}\n" +
-                $"Produto: {pedido._produto._nome} - Quantidade: {pedido._quantidadeVendida} - Categoria: {pedido._produto._categoria.Nome}\n" +
+            var result = $"***** Pedido nº {pedido.Id} *****\n" +
+                $"Nome do Cliente: {pedido.Cliente.NomeCompleto()}\n" +
+                $"Endereço do Cliente: {pedido.Cliente.EnderecoCompleto()}\n" +
+                $"Produto: {pedido.Produto.Nome} - Quantidade: {pedido.QuantidadeVendida} - Categoria: {pedido.Produto.Categoria.Nome}\n" +
                 $"Valor Total: R$ {pedido.CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {pedido.CalculaImpostoTotal().ToString("n2")}";
 

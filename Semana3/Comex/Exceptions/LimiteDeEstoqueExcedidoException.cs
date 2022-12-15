@@ -8,9 +8,10 @@ namespace Comex.Exceptions
 {
     public class LimiteDeEstoqueExcedidoException : Exception
     {
-        public LimiteDeEstoqueExcedidoException(string mensagem) : base(mensagem)
-        {
-            
-        }
+        public LimiteDeEstoqueExcedidoException() {}
+        public LimiteDeEstoqueExcedidoException(string mensagem) : base(mensagem) {}
+
+        public LimiteDeEstoqueExcedidoException(string mensagem, Exception excecaoInterna) : base(mensagem, excecaoInterna) { }
+
     }
 }

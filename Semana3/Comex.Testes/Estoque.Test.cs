@@ -25,7 +25,7 @@ namespace Comex.Testes
             
             estoqueTeste.RegistrarEntrada(produto);
 
-            Assert.Equal((1000 - produto._quantidadeEstoque), estoqueTeste.Capacidade);
+            Assert.Equal((1000 - produto.QuantidadeEstoque), estoqueTeste.Capacidade);
             Assert.Equal(estoque, estoqueTeste.Ocupacao);
             Assert.Equal(((decimal)produto.CalcularValorEstoque()), estoqueTeste.Montante);
         }
@@ -47,7 +47,7 @@ namespace Comex.Testes
             novoEstoqueTeste.RegistrarEntrada(macbook);
 
             Assert.Equal((1000 - novoEstoqueTeste.Ocupacao), novoEstoqueTeste.Capacidade);
-            Assert.Equal((vacina._quantidadeEstoque + useACabeca._quantidadeEstoque + macbook._quantidadeEstoque), novoEstoqueTeste.Ocupacao);
+            Assert.Equal((vacina.QuantidadeEstoque + useACabeca.QuantidadeEstoque + macbook.QuantidadeEstoque), novoEstoqueTeste.Ocupacao);
             Assert.Equal(((decimal)vacina.CalcularValorEstoque() + (decimal)useACabeca.CalcularValorEstoque() + (decimal)macbook.CalcularValorEstoque()),novoEstoqueTeste.Montante);
         }
 
@@ -65,13 +65,13 @@ namespace Comex.Testes
             novoEstoqueTeste.RegistrarEntrada(useACabeca);
 
             Assert.Equal((1000 - novoEstoqueTeste.Ocupacao), novoEstoqueTeste.Capacidade);
-            Assert.Equal((vacina._quantidadeEstoque + useACabeca._quantidadeEstoque), novoEstoqueTeste.Ocupacao);
+            Assert.Equal((vacina.QuantidadeEstoque + useACabeca.QuantidadeEstoque), novoEstoqueTeste.Ocupacao);
             Assert.Equal(((decimal)vacina.CalcularValorEstoque() + (decimal)useACabeca.CalcularValorEstoque()), novoEstoqueTeste.Montante);
 
             novoEstoqueTeste.ResistrarSaida(vacina);
 
             Assert.Equal((1000 - novoEstoqueTeste.Ocupacao), novoEstoqueTeste.Capacidade);
-            Assert.Equal((useACabeca._quantidadeEstoque), novoEstoqueTeste.Ocupacao);
+            Assert.Equal((useACabeca.QuantidadeEstoque), novoEstoqueTeste.Ocupacao);
             Assert.Equal(((decimal)useACabeca.CalcularValorEstoque()), novoEstoqueTeste.Montante);
         }
 
@@ -86,7 +86,7 @@ namespace Comex.Testes
             novoEstoqueTeste.RegistrarEntrada(vacina);
 
             Assert.Equal((1000 - novoEstoqueTeste.Ocupacao), novoEstoqueTeste.Capacidade);
-            Assert.Equal((vacina._quantidadeEstoque), novoEstoqueTeste.Ocupacao);
+            Assert.Equal((vacina.QuantidadeEstoque), novoEstoqueTeste.Ocupacao);
             Assert.Equal(((decimal)vacina.CalcularValorEstoque()), novoEstoqueTeste.Montante);
 
             novoEstoqueTeste.ResistrarSaida(vacina);

@@ -52,31 +52,31 @@ namespace Comex.Entidades
 
         public void VerificarEntrada(Produto produto)
         {
-            if (produto._quantidadeEstoque > Capacidade)
+            if (produto.QuantidadeEstoque > Capacidade)
             {
-                throw new LimiteDeEstoqueExcedidoException($"A quantidade do estoque: {produto._quantidadeEstoque} do produto: {produto._nome} é maior que a capacidade disponível: {Capacidade}.");
+                throw new LimiteDeEstoqueExcedidoException($"A quantidade do estoque: {produto.QuantidadeEstoque} do produto: {produto.Nome} é maior que a capacidade disponível: {Capacidade}.");
             }
             else
             {
-                Capacidade -= produto._quantidadeEstoque;
-                Ocupacao += produto._quantidadeEstoque;
+                Capacidade -= produto.QuantidadeEstoque;
+                Ocupacao += produto.QuantidadeEstoque;
                 Montante += (decimal)produto.CalcularValorEstoque();
-                Console.WriteLine($"Produto: {produto._nome} adicionado com sucesso!");
+                Console.WriteLine($"Produto: {produto.Nome} adicionado com sucesso!");
             }
         }
 
         public void VerificarSaida(Produto produto)
         {
-            if (produto._quantidadeEstoque > Ocupacao)
+            if (produto.QuantidadeEstoque > Ocupacao)
             {
-                throw new LimiteDeEstoqueExcedidoException($"Não foi possível efetuar a saída do produto: {produto._nome}, pois não existe no estoque.");
+                throw new LimiteDeEstoqueExcedidoException($"Não foi possível efetuar a saída do produto: {produto.Nome}, pois não existe no estoque.");
             }
             else
             {
-                Capacidade += produto._quantidadeEstoque;
-                Ocupacao -= produto._quantidadeEstoque;
+                Capacidade += produto.QuantidadeEstoque;
+                Ocupacao -= produto.QuantidadeEstoque;
                 Montante -= (decimal)produto.CalcularValorEstoque();
-                Console.WriteLine($"Produto: {produto._nome} retirado com sucesso!");
+                Console.WriteLine($"Produto: {produto.Nome} retirado com sucesso!");
             }
         }
 

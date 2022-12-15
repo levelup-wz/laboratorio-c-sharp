@@ -9,40 +9,40 @@ namespace Comex.Entidades
     public class Pedido
     {
         public static int numPedido = 1;
-        public int _id { get; }
-        public DateTime _date { get; }
-        public Cliente _cliente { get; }
-        public Produto _produto { get; }
-        public int _quantidadeVendida { get; }
+        public int Id { get; }
+        public DateTime Date { get; }
+        public Cliente Cliente { get; }
+        public Produto Produto { get; }
+        public int QuantidadeVendida { get; }
 
         public Pedido(Cliente cliente, Produto produto, int quantidadeVendida)
         {
-            _date = new DateTime();
-            _cliente = cliente;
-            _produto = produto;
-            _quantidadeVendida = quantidadeVendida;
-            _id = Pedido.numPedido;
+            Date = new DateTime();
+            Cliente = cliente;
+            Produto = produto;
+            QuantidadeVendida = quantidadeVendida;
+            Id = Pedido.numPedido;
             Pedido.numPedido++;
         }
 
         public double CalcularValorTotal()
         {
-            double valorTotal = _quantidadeVendida * _produto._precoUnitario;
+            double valorTotal = QuantidadeVendida * Produto.PrecoUnitario;
             return valorTotal;
         }
 
         public double CalculaImpostoTotal()
         {
-            double valorTotalImposto = _quantidadeVendida * _produto.CalculaImposto();
+            double valorTotalImposto = QuantidadeVendida * Produto.CalculaImposto();
             return valorTotalImposto;
         }
 
         public string ListarPedidos()
         {
-            return $"***** Pedido nº {_id} *****\n" +
-                $"Nome do Cliente: {_cliente.NomeCompleto()}\n" +
-                $"Endereço do Cliente: {_cliente.EnderecoCompleto()}\n" +
-                $"Produto: {_produto._nome} - Quantidade: {_quantidadeVendida} - Categoria: {_produto._categoria.Nome}\n" +
+            return $"***** Pedido nº {Id} *****\n" +
+                $"Nome do Cliente: {Cliente.NomeCompleto()}\n" +
+                $"Endereço do Cliente: {Cliente.EnderecoCompleto()}\n" +
+                $"Produto: {Produto.Nome} - Quantidade: {QuantidadeVendida} - Categoria: {Produto.Categoria.Nome}\n" +
                 $"Valor Total: R$ {CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {CalculaImpostoTotal().ToString("n2")}";
         }

@@ -24,7 +24,7 @@ namespace Comex
       return PrecoUnitario * QuantidadeEmEstoque;
     }
 
-    public double CalcularImposto()
+    public virtual double CalcularImposto()
     {
       return PrecoUnitario * 0.4;
     }

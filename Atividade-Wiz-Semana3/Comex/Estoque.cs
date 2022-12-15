@@ -14,6 +14,11 @@ namespace Comex
 
         public void RegistraEntrada(Produto produto)
         {
+            if (produto.Quantidade_Em_Estoque > Capacidade)
+            {
+                throw new ArgumentException("Capacidade de estoque excedida.", nameof(produto.Quantidade_Em_Estoque));
+            }
+
             Capacidade = (int)(Capacidade - produto.Quantidade_Em_Estoque);
             Ocupacao = (int)(Ocupacao + produto.Quantidade_Em_Estoque);
             Montante = Montante + (decimal)produto.CalculaValorTotalEmEstoque();
@@ -21,6 +26,11 @@ namespace Comex
 
         public void RegistraSaida(Produto produto)
         {
+            if (Ocupacao == 0)
+            {
+                throw new ArgumentException("Não existe mais produtos no estoque.", nameof(Ocupacao));
+            }
+
             Capacidade = (int)(Capacidade + produto.Quantidade_Em_Estoque);
             Ocupacao = (int)(Ocupacao - produto.Quantidade_Em_Estoque);
             Montante = Montante - (decimal)produto.CalculaValorTotalEmEstoque();

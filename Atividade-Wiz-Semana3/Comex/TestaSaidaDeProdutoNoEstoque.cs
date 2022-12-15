@@ -10,17 +10,25 @@ namespace Comex
     {
         public static void RegistaSaidaEstoque()
         {
-            ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, "Saúde");
+            try
+            {
+                ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, "Saúde");
 
-            Estoque estoque = new Estoque();
+                Estoque estoque = new Estoque();
 
-            estoque.ExibirDadosEstoque();
-            Console.WriteLine("Entrada de Saúde:");
-            estoque.RegistraEntrada(vacina);
-            estoque.ExibirDadosEstoque();
-            Console.WriteLine("Saída de Saúde:");
-            estoque.RegistraSaida(vacina);
-            estoque.ExibirDadosEstoque();
+                estoque.ExibirDadosEstoque();
+                Console.WriteLine("Entrada de Saúde:");
+                estoque.RegistraEntrada(vacina);
+                estoque.ExibirDadosEstoque();
+                Console.WriteLine("Saída de Saúde:");
+                estoque.RegistraSaida(vacina);
+                estoque.ExibirDadosEstoque();
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Ocorreu um erro do tipo ArgumentException.");
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

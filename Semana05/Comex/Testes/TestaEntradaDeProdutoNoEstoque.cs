@@ -23,19 +23,9 @@ namespace Comex
                 estoque2.RegistarEntrada(macbook);
                 Console.WriteLine(estoque2.RetornarInfosEstoque());
 
-            }catch(EstoqueException )
-            {
-                //Console.WriteLine("Estoque cheio");
+            }catch(EstoqueException) { }
+         
 
-            }
-
-
-
-
-            /*estoque2.RegistarEntrada(vacina1);
-            estoque2.RegistarEntrada(use);
-            estoque2.RegistarEntrada(macbook);
-            Console.WriteLine(estoque2.RetornarInfosEstoque());*/
             
         }
     }

@@ -42,31 +42,27 @@ namespace Comex
 
         public void RegistarSaida(Produto produto)
         {
-            Capacidade += produto.Quantidade;
-            Ocupacao -= produto.Quantidade;
-            Montante -= Convert.ToDecimal(produto.ValorEstoque());
+            if (Ocupacao == 0) 
+            {
+                throw new EstoqueException("Estoque vazio");
+            }
+            else
+            {
+                Capacidade += produto.Quantidade;
+                Ocupacao -= produto.Quantidade;
+                Montante -= Convert.ToDecimal(produto.ValorEstoque());
+            }
+           
         }
 
         public string RetornarInfosEstoque()
         {
+
             return $"Capacidade {Capacidade} \n " +
                 $"Ocupação {Ocupacao} \n" +
                 $"Montante {Montante} \n";
-                   
+
         }
-
-       /* public void EstoqueCheio()
-        {
-            if (Ocupacao >= 1000) 
-            {
-                //exceçao
-            }
-            else
-            {
-                RegistarEntrada(Produto);
-            }
-        }*/
-
 
     }
 

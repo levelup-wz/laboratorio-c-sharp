@@ -31,7 +31,7 @@ TestaEntradaDeProdutoNoEstoque.Main();
 Console.WriteLine("----------------------------------");
 Console.WriteLine("Teste Saída do Estoque:");
 Console.WriteLine("----------------------------------");
-//TestaSaidaDeProdutoNoEstoque.Main();
+TestaSaidaDeProdutoNoEstoque.Main();
 
 
 

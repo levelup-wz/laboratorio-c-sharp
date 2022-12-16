@@ -19,6 +19,9 @@ Console.WriteLine($"{categoria1.Nome} ({categoria1.DefineId()} - {categoria1.Sta
 Console.WriteLine($"{categoria2.Nome} ({categoria2.DefineId()} - {categoria2.Status})");
 Console.WriteLine($"{categoria3.Nome} ({categoria3.DefineId()} - {categoria3.Status})" + "\n");
 
+TestaValidacaoDeCategoria.RegistaEntradaParametro();
+Console.WriteLine();
+
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("TestaProduto:" + "\n");

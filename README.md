@@ -1,24 +1,14 @@
-# Comex
+# Continuação do Projeto Comex
 
 O projeto **Comex** é um sistema de _e-commerce marketplace_. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.
 
 ## Requisitos
-✅ Criar uma classe `Categoria` para representar a categoria dos produtos do comércio eletrônico.
+✅ Criar uma classe chamada `ProdutoIsento` que contenha tudo o que a classe Produto tem.
 
-✅ Verificar se a classe `Categoria` funciona adequadamente.
+✅ Verificar se a classe `ProdutoIsento` funciona adequadamente.
 
-✅ Criar uma classe `Produto` para representar os produtos vendidos no comércio eletrônico.
+✅ Criar uma classe chamada `Estoque` que controla o quanto de um estoque está ocupado, e o montante financeiro armazenado.
 
-✅ Verificar se a classe `Produto` funciona adequadamente.
+✅ Verificar se a classe `Estoque` funciona adequadamente testando a entrada de produto no Estoque. 
 
-✅ Criar uma classe `Pedido` para registrar os pedidos dos clientes. Neste momento, o comércio eletrônico só permite vender um produto por pedido.
-
-✅ Verificar se a classe `Pedido` funciona adequadamente.
-
-✅ Criar uma classe `Cliente` para representar o cliente das vendas e as informações para identificá-lo e enviar o pedido.
-
-✅ Alterar a classe `Pedido` para ter um cliente completo, não somente seu CPF;
-
-✅ Alterar o arquivo `TestaPedido` para utilizar a classe `Cliente` e imprimir o nome completo do cliente e seu endereço.
-
-✅ Fazer com que, ao criar um objeto, o `id` seja definido automaticamente, sempre incrementando o valor anterior.
+✅ Verificar se a classe `Estoque` funciona adequadamente testando a saída de produto no Estoque.

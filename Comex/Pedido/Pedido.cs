@@ -2,7 +2,7 @@ namespace Comex
 {
   public class Pedido
   {
-    public static int Id { get; set; }
+    public static int Id { get; private set; }
     public DateTime Data { get; set; }
     public Cliente Cliente { get; set; }
     public Produto Produto { get; set; }

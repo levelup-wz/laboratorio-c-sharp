@@ -2,7 +2,7 @@ namespace Comex
 {
   public class Produto
   {
-    public static int Id { get; set; }
+    public static int Id { get; private set; }
     public string Nome { get; set; }
     public string Descricao { get; set; }
     public double PrecoUnitario { get; set; }

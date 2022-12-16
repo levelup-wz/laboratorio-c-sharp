@@ -2,7 +2,7 @@ namespace Comex
 {
   public class Cliente
   {
-    public static int Id { get; set; }
+    public static int Id { get; private set; }
     public string PrimeiroNome { get; set; }
     public string Sobrenome { get; set; }
     public string Cpf { get; set; }

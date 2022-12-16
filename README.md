@@ -1,31 +1,24 @@
-# Speed Wiz Dev
+# Comex
 
-## 🧡 Sobre o programa
+O projeto **Comex** é um sistema de _e-commerce marketplace_. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.
 
-O programa é uma iniciativa da empresa [Wiz Co](https://wizsolucoes.com.br/), que tem como objetivo acelerar a carreira de pessoas interessadas em programação. Em parceria como a [Alura](https://www.alura.com.br/), a aceleração capacita os participantes para atuarem no mercado de trabalho com a linguagem CSharp.
+## Requisitos
+✅ Criar uma classe `Categoria` para representar a categoria dos produtos do comércio eletrônico.
 
-</br>
+✅ Verificar se a classe `Categoria` funciona adequadamente.
 
-## ✍ Sobre o repositório
+✅ Criar uma classe `Produto` para representar os produtos vendidos no comércio eletrônico.
 
-Este repositório contém todos os projetos desenvolvidos durante o programa, onde estão organizados em pastas por semana, e cada semana contém um arquivo README.md com a descrição do projeto.
+✅ Verificar se a classe `Produto` funciona adequadamente.
 
-</br>
+✅ Criar uma classe `Pedido` para registrar os pedidos dos clientes. Neste momento, o comércio eletrônico só permite vender um produto por pedido.
 
-## 📚 Conteúdo
+✅ Verificar se a classe `Pedido` funciona adequadamente.
 
-- [Semana 1 - Git e GitHub](https://github.com/angelicapedroso/laboratorio-c-sharp/tree/main/semana-1)
-- [Semana 2 - Explorando a linguagem](https://github.com/angelicapedroso/laboratorio-c-sharp/tree/main/semana-2)
-- [Semana 3 - Orientação a objetos](https://github.com/angelicapedroso/laboratorio-c-sharp/tree/main/semana-3)
+✅ Criar uma classe `Cliente` para representar o cliente das vendas e as informações para identificá-lo e enviar o pedido.
 
-</br>
+✅ Alterar a classe `Pedido` para ter um cliente completo, não somente seu CPF;
 
-## 👩‍💻 Autora:
+✅ Alterar o arquivo `TestaPedido` para utilizar a classe `Cliente` e imprimir o nome completo do cliente e seu endereço.
 
-[<img src="https://avatars.githubusercontent.com/u/89040425?v=4" width=115><br><sub>Angélica Pedroso</sub>](https://github.com/angelicapedroso)
-
-## 📧 Contato
-
-[![Linkedin Badge](https://img.shields.io/badge/-Angélica-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/angelica-pedroso/)](https://www.linkedin.com/in/angelicapedroso/)
-
-![Email Badge](https://img.shields.io/badge/-Email-red?style=flat-square&logo=Gmail&logoColor=white&link=mailto:contatoangelicapedroso@gmail.com)
+✅ Fazer com que, ao criar um objeto, o `id` seja definido automaticamente, sempre incrementando o valor anterior.

@@ -12,4 +12,10 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="C:\Users\dedoj\.nuget\packages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)reportgenerator\5.1.12\build\netstandard2.0\ReportGenerator.props" Condition="Exists('$(NuGetPackageRoot)reportgenerator\5.1.12\build\netstandard2.0\ReportGenerator.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgReportGenerator Condition=" '$(PkgReportGenerator)' == '' ">C:\Users\dedoj\.nuget\packages\reportgenerator\5.1.12</PkgReportGenerator>
+  </PropertyGroup>
 </Project>

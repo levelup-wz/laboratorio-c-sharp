@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "izPiulNCthvYP8LAN5mE+1WmT4YZQqt8d5VlutM5Zruu5VG3hzcWo7z0dNhs8EqEg1IJpGl/om9Z2cPw9k2w4A==",
+  "dgSpecHash": "w7kqIpYVO90oUpNx4LX8atqef7gxp/ov4h4KfAYZrKQKsxHtg5SG5FRgY6MQ1SD497SrXFoHpMpWTSlZNZcz5A==",
   "success": true,
   "projectFilePath": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex.Testes\\Comex.Testes.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\dedoj\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\dedoj\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\fluentassertions\\6.0.0\\fluentassertions.6.0.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\fluentassertions.json\\6.1.0\\fluentassertions.json.6.1.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
@@ -18,6 +18,7 @@
     "C:\\Users\\dedoj\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
+    "C:\\Users\\dedoj\\.nuget\\packages\\reportgenerator\\5.1.12\\reportgenerator.5.1.12.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

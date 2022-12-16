@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
+
 
 namespace Comex
 {
@@ -16,8 +19,9 @@ namespace Comex
         {
             if (produto.Quantidade_Em_Estoque > Capacidade)
             {
-                throw new ArgumentException("Capacidade de estoque excedida.", nameof(produto.Quantidade_Em_Estoque));
+                throw new LimiteDeEstoqueExcedidoException("Capacidade de estoque excedida.");
             }
+
 
             Capacidade = (int)(Capacidade - produto.Quantidade_Em_Estoque);
             Ocupacao = (int)(Ocupacao + produto.Quantidade_Em_Estoque);
@@ -28,7 +32,7 @@ namespace Comex
         {
             if (Ocupacao <= 0)
             {
-                throw new ArgumentException("Não existe mais produtos no estoque.", nameof(Ocupacao));
+                throw new LimiteDeEstoqueExcedidoException("Não existe mais produtos no estoque.");
             }
 
             Capacidade = (int)(Capacidade + produto.Quantidade_Em_Estoque);

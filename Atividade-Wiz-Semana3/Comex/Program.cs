@@ -109,6 +109,7 @@ Console.WriteLine("\n");
 Console.WriteLine("Exibir saída do estoque:" + "\n");
 TestaSaidaDeProdutoNoEstoque.RegistraSaidoEstoque();
 TestaSaidaDeProdutoNoEstoque.RegistraSaidoEstoque();
+Console.WriteLine();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 

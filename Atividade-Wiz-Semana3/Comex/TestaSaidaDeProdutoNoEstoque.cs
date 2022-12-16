@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace Comex
 {
@@ -24,9 +26,10 @@ namespace Comex
                 estoque.ExibirDadosEstoque();
                 estoque.RegistraSaida(vacina);
             }
-            catch (ArgumentException ex)
+            catch (LimiteDeEstoqueExcedidoException ex)
             {
-                Console.WriteLine("Ocorreu um erro do tipo ArgumentException.");
+                Console.WriteLine("Ocorreu um erro do tipo LimiteDeEstoqueExcedidoException.");
+                Console.WriteLine(ex.StackTrace);
                 Console.WriteLine(ex.Message);
             }
         }

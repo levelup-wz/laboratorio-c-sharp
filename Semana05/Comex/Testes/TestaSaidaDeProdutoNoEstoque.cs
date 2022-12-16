@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.exceptions;
 
 namespace Comex
 {
@@ -22,7 +23,12 @@ namespace Comex
                 Console.WriteLine("Após a saída do estoque");
                 Console.WriteLine(estoque1.RetornarInfosEstoque());
             }
-            catch (EstoqueException) { }
+            catch (LimiteDeEstoqueExcedidoException ex) 
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+
+            }
 
         }
 

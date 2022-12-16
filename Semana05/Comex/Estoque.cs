@@ -1,4 +1,5 @@
 ﻿using Comex;
+using Comex.exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace Comex
 {
     public class Estoque
     {
-        
-         public int Capacidade { get; private set; } = 1000;
-        public int Ocupacao { get; private set; } = 1000;
+        private object error;
+
+        public int Capacidade { get; private set; } = 1000;
+        public int Ocupacao { get; private set; } 
          public decimal Montante { get; private set; }
         public Produto Produto { get; set; }
 
@@ -19,14 +21,14 @@ namespace Comex
 
         public void RegistarEntrada(Produto produto)
         {
-            if (produto.Quantidade >= 1000)
+            if (produto.Quantidade > Capacidade)
             {
-                throw new EstoqueException("Estoque Cheio");
+                throw new exceptions.LimiteDeEstoqueExcedidoException("O estoque não tem capacidade para essa quantidade de produtos!");
                 
             }
             if(Ocupacao >= 1000)
             {
-                throw new EstoqueException("Ocupação excedida");
+                throw new LimiteDeEstoqueExcedidoException("Ocupação excedida");
             }
             else
             {
@@ -48,7 +50,7 @@ namespace Comex
         {
             if (Ocupacao<=0) 
             {
-                throw new EstoqueException("Estoque vazio");
+                throw new LimiteDeEstoqueExcedidoException("O estoque está vazio");
             }
             else
             {

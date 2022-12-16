@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.exceptions;
 
 namespace Comex
 {
@@ -26,7 +28,18 @@ namespace Comex
                 estoque2.RegistarEntrada(bala);
                 Console.WriteLine(estoque2.RetornarInfosEstoque());
 
-            }catch(EstoqueException) { }
+            }catch(LimiteDeEstoqueExcedidoException ex) 
+            {
+             
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+
+               /* Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+
+                Console.WriteLine(ex.InnerException.Message);
+                Console.WriteLine(ex.InnerException.StackTrace);*/
+
+            }
            
          
 

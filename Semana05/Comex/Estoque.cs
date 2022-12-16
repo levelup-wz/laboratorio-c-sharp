@@ -11,7 +11,7 @@ namespace Comex
     {
         
          public int Capacidade { get; private set; } = 1000;
-         public int Ocupacao { get; private set; }
+        public int Ocupacao { get; private set; } = 1000;
          public decimal Montante { get; private set; }
         public Produto Produto { get; set; }
 
@@ -19,10 +19,14 @@ namespace Comex
 
         public void RegistarEntrada(Produto produto)
         {
-            if (Ocupacao >= 1000)
+            if (produto.Quantidade >= 1000)
             {
                 throw new EstoqueException("Estoque Cheio");
                 
+            }
+            if(Ocupacao >= 1000)
+            {
+                throw new EstoqueException("Ocupação excedida");
             }
             else
             {
@@ -42,7 +46,7 @@ namespace Comex
 
         public void RegistarSaida(Produto produto)
         {
-            if (Ocupacao == 0) 
+            if (Ocupacao<=0) 
             {
                 throw new EstoqueException("Estoque vazio");
             }

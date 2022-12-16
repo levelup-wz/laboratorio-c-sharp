@@ -2,7 +2,7 @@ namespace Comex
 {
   public class Categoria
   {
-    public static int Id { get; set; }
+    public static int Id { get; private set; }
     public string Nome { get; set; }
     public string Status { get; set; }
 

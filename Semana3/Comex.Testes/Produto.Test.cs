@@ -1,4 +1,6 @@
 using Comex.Entidades;
+using Comex.Exceptions;
+using FluentAssertions;
 
 namespace Comex.Testes
 {
@@ -57,6 +59,26 @@ namespace Comex.Testes
                 $"Quantidade em Estoque: {produto.QuantidadeEstoque} - Categoria: {produto.Categoria.Nome}\n" +
                 $"Valor total em Estoque: {produto.CalcularValorEstoque().ToString("n2")} - Imposto: {produto.CalculaImposto().ToString("n2")}\n";
             Assert.Equal(result, listarProduto);
+        }
+
+        [Theory(DisplayName = "Teste de validação na criação do Produto")]
+        [InlineData(0, "nomeProduto", 2.00, 5, "nomeCategoria", "Campo ID deve ser maior que ZERO")]
+        [InlineData(1, "tesd", 2.00, 5, "nomeCategoria", "Campo NOME deve ter mais de 5 caracteres")]
+        [InlineData(1, "teste preço unitario", 0, 5, "nomeCategoria", "Campo PREÇO UNITÁRIO deve ser maior que ZERO")]
+        [InlineData(1, "teste quantidade em estoque", 2, 0, "nomeCategoria", "Campo QUANTIDADE EM ESTOQUE deve ser maior que ZERO")]
+        public void TestaValidacaoProdutoException(int idEntry, string nameProductEntry, double priceEntry, int quantityEntry, string categoriaEntry, string messageError)
+        {
+            var instanceCategory = new Categoria(categoriaEntry);
+            var instanceProduct = new Produto(idEntry, nameProductEntry, priceEntry, quantityEntry, instanceCategory);
+            var instanceProductIsent = new ProdutoIsento(idEntry, nameProductEntry, priceEntry, quantityEntry, instanceCategory);
+
+            var actProduct = () => instanceProduct.ValidarInformacoes(idEntry, nameProductEntry, priceEntry, quantityEntry, instanceCategory);
+            var actProductIsent = () => instanceProduct.ValidarInformacoes(idEntry, nameProductEntry, priceEntry, quantityEntry, instanceCategory);
+
+            instanceCategory.Should().NotBeNull();
+            actProduct.Should().Throw<ArgumentException>().WithMessage(messageError);
+            actProductIsent.Should().Throw<ArgumentException>().WithMessage(messageError);
+
         }
 
 

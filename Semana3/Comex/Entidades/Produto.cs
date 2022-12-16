@@ -13,7 +13,7 @@ namespace Comex.Entidades
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public double PrecoUnitario { get; set; }
-        public int QuantidadeEstoque { get; set; }
+        public int QuantidadeEstoque { get; private set; }
         public Categoria Categoria { get; set; }
 
         public Produto(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria)
@@ -36,6 +36,7 @@ namespace Comex.Entidades
             {
                 // Console.WriteLine(error.StackTrace);
                 Console.WriteLine(error.Message);
+                //throw;
             }
         }
 

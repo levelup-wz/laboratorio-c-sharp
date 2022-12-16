@@ -1,4 +1,7 @@
 using Comex.Entidades;
+using Comex.Exceptions;
+using FluentAssertions;
+using Microsoft.VisualBasic;
 
 namespace Comex.Testes
 {
@@ -96,5 +99,40 @@ namespace Comex.Testes
             Assert.Equal(0, novoEstoqueTeste.Montante);
         }
 
+        [Theory(DisplayName = "Teste para lançamentos de exceções na classe Estoque, Adicionar ao estoque")]
+        [InlineData("produtoNomeEntrada", 100, 1001, "informatica")]
+        public void TestaEstoqueEntradaExceptions(string productNameEntry, int valueEntry, int quantityEntry, string categoriaEntry)
+        {
+            var estoqueTesteException = new Estoque();
+            var instanceCategory = new Categoria(categoriaEntry);
+            var instanceProduct = new Produto(productNameEntry, valueEntry, quantityEntry, instanceCategory);
+
+            var act = () => estoqueTesteException.RegistrarEntrada(instanceProduct);
+
+            instanceCategory.Should().NotBeNull();
+            instanceProduct.Should().NotBeNull();
+            estoqueTesteException.Ocupacao.Should().Be(0);
+            estoqueTesteException.Capacidade.Should().Be(1000);
+            act.Should().Throw<LimiteDeEstoqueExcedidoException>()
+                .WithMessage($"A quantidade do estoque: {instanceProduct.QuantidadeEstoque} do produto: {instanceProduct.Nome} é maior que a capacidade disponível: {estoqueTesteException.Capacidade}.");
+        }
+
+        [Theory(DisplayName = "Teste para lançamentos de exceções na classe Estoque, Saída do estoque")]
+        [InlineData("produtoNomeSaida", 100, 900, "informatica")]
+        public void TestaEstoqueSaidaExceptions(string productNameEntry, int valueEntry, int quantityEntry, string categoriaEntry)
+        {
+            var estoqueTesteException = new Estoque();
+            var instanceCategory = new Categoria(categoriaEntry);
+            var instanceProduct = new Produto(productNameEntry, valueEntry, quantityEntry, instanceCategory);
+
+            var act = () => estoqueTesteException.ResistrarSaida(instanceProduct);
+
+            instanceCategory.Should().NotBeNull();
+            instanceProduct.Should().NotBeNull();
+            estoqueTesteException.Ocupacao.Should().Be(0);
+            estoqueTesteException.Capacidade.Should().Be(1000);
+            act.Should().Throw<LimiteDeEstoqueExcedidoException>()
+                .WithMessage($"Não foi possível efetuar a saída do produto: {instanceProduct.Nome}, pois não existe no estoque.");
+        }
     }
 }

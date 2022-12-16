@@ -40,6 +40,7 @@ namespace Comex.Entidades
             {
                 // Console.WriteLine(error.StackTrace);
                 Console.WriteLine(error.Message);
+                //throw;
             }
         }
 

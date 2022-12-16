@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jY/o+ghWAiKrYuqfGn9j+6ULgtgW3o+BCeXbDVj8yC4mgAHzESfflr/BtlP0UguNzofB5Hdj/eDHoebp4D10Ng==",
+  "success": true,
+  "projectFilePath": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dedoj\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\dedoj\\.nuget\\packages\\reportgenerator\\5.1.12\\reportgenerator.5.1.12.nupkg.sha512"
+  ],
+  "logs": []
+}

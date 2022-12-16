@@ -9,12 +9,12 @@ namespace Comex
     public string Telefone { get; set; }
     public string Rua { get; set; }
     public string Numero { get; set; }
-    public string Complemento { get; set; }
+    public string Complemento { get; set; } = "";
     public string Bairro { get; set; }
     public string Cidade { get; set; }
     public string Estado { get; set; }
 
-    public Cliente(string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numero, string complemento, string bairro, string cidade, string estado)
+    public Cliente(string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numero, string bairro, string cidade, string estado)
     {
       Id = Id + 1;
       PrimeiroNome = primeiroNome;
@@ -23,7 +23,6 @@ namespace Comex
       Telefone = telefone;
       Rua = rua;
       Numero = numero;
-      Complemento = complemento;
       Bairro = bairro;
       Cidade = cidade;
       Estado = estado;

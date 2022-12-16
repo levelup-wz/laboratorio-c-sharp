@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Semana04",
+    "\\Semana04\\Comex",
+    "\\Semana04\\Comex\\Testes"
   ],
-  "SelectedNode": "\\Comex.sln",
+  "SelectedNode": "\\Semana04\\Comex\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

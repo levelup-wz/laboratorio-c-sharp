@@ -31,10 +31,11 @@ TestaEntradaDeProdutoNoEstoque.Main();
 Console.WriteLine("----------------------------------");
 Console.WriteLine("Teste Saída do Estoque:");
 Console.WriteLine("----------------------------------");
-TestaSaidaDeProdutoNoEstoque.Main();
+//TestaSaidaDeProdutoNoEstoque.Main();
 
 
 
 
 
 Console.ReadKey();
+Console.WriteLine("Clik para sair");

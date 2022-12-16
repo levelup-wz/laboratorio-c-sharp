@@ -15,8 +15,15 @@ namespace Comex
         {
             TestCategory testeCategoria = new TestCategory();
             testeCategoria.ToList();
-            
-           
+
+            TestProduct testeProduto = new TestProduct();
+            testeProduto.ToList();
+
+            TestOrder testePedido = new TestOrder();
+            testePedido.ToList();
+
+
+
 
 
         }

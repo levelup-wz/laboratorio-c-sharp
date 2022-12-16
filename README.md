@@ -3,12 +3,16 @@
 O projeto **Comex** é um sistema de _e-commerce marketplace_. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.
 
 ## Requisitos
-✅ Criar uma classe chamada `ProdutoIsento` que contenha tudo o que a classe Produto tem.
+[ ] Validar entrada e saída de produtos no Estoque.
 
-✅ Verificar se a classe `ProdutoIsento` funciona adequadamente.
+[ ] Verificar se a classe `Estoque` valida corretamente os cenários de exceção.
 
-✅ Criar uma classe chamada `Estoque` que controla o quanto de um estoque está ocupado, e o montante financeiro armazenado.
+[ ] Criar e lançar exceções aderentes ao negócio:
+</br>
+    - definir uma **_custom exception_** chamada `LimiteDeEstoqueExcedidoException`;
+</br>
+    - alterar as classes `Estoque`, `TestaEntradaDeProdutoNoEstoque` e `TestaSaidaDeProdutoNoEstoque` para utilizar a nova *exception*.
 
-✅ Verificar se a classe `Estoque` funciona adequadamente testando a entrada de produto no Estoque. 
+[ ] Não permitir que uma `Categoria` seja criada com valores inválidos.
 
-✅ Verificar se a classe `Estoque` funciona adequadamente testando a saída de produto no Estoque.
+[ ] Garantir que as classes `Produto` e `ProdutoIsento` não sejam criadas com valores inválidos.

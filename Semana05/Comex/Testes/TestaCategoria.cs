@@ -4,16 +4,31 @@ namespace Comex
 {
     public class CategoriaTeste
     {
-        Categoria categoria1 = new Categoria("Informática", "Ativa");
-        Categoria categoria2 = new Categoria("Móveis", "Inativa");
-        Categoria categoria3 = new Categoria("Livros", "Ativa");
-        
-        public CategoriaTeste() 
+        public static void Main()
         {
-            Console.WriteLine(categoria1.RetornaInfos());
-            Console.WriteLine(categoria2.RetornaInfos());
-            Console.WriteLine(categoria3.RetornaInfos());
+            //Categoria categoria1 = new Categoria(1, "Informática", "Ativa");
+            //Categoria categoria2 = new Categoria(2, "Móveis", "Inativa");
+            //Categoria categoria3 = new Categoria( "Livro", "in");
+
+            //Console.WriteLine(categoria1.RetornaInfos());
+            //Console.WriteLine(categoria2.RetornaInfos());
+            //Console.WriteLine(categoria3.RetornaInfos());
+
+            try
+            {
+                Categoria categoria1 = new Categoria("livros", "aer");
+                
+
+            }catch(ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+               
+
+            
         }
+        
+        
 
     }
 }

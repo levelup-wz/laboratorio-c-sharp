@@ -6,7 +6,8 @@ using System;
 
 Console.WriteLine("Teste Categoria:");
 Console.WriteLine("----------------------------------");
-new CategoriaTeste();
+//new CategoriaTeste();
+CategoriaTeste.Main();
 Console.WriteLine("----------------------------------");
 Console.WriteLine("Teste Produto:");
 Console.WriteLine("----------------------------------");
@@ -36,6 +37,6 @@ TestaSaidaDeProdutoNoEstoque.Main();
 
 
 
-
+Console.WriteLine("Telce enter para sair");
 Console.ReadKey();
-Console.WriteLine("Clik para sair");
+

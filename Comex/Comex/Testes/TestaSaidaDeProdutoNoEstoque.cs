@@ -14,8 +14,8 @@ namespace Comex.Testes
             ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, saude);
 
             Estoque estoque = new Estoque();
-            
-            estoque.RegistraEntrada(vacina);
+
+            /*estoque.RegistraEntrada(vacina);
             Console.WriteLine(
                 $"ESTOQUE - REGISTRO DE ENTRADA\n" +
                 $"Capacidade: {Estoque.Capacidade}\n" +
@@ -29,7 +29,16 @@ namespace Comex.Testes
                 $"Capacidade: {Estoque.Capacidade}\n" +
                 $"Ocupação: {Estoque.Ocupacao}\n" +
                 $"Montante: {Estoque.Montante:C}\n"
-            );
+            );*/
+
+            try
+            {
+                estoque.RegistraSaida(vacina);
+            }
+            catch (EstoqueException e)
+            {
+                Console.WriteLine($"ERRO: {e.Message}");
+            }
         }
     }
 }

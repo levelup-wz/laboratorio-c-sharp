@@ -111,7 +111,7 @@ Console.WriteLine(
     $"Montante: {Estoque.Montante:C}\n"
 );*/
 
-Categoria saude = new Categoria("Saúde");
+/*Categoria saude = new Categoria("Saúde");
 ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, saude);
 
 Estoque estoque = new Estoque();
@@ -130,6 +130,52 @@ Console.WriteLine(
     $"Capacidade: {Estoque.Capacidade}\n" +
     $"Ocupação: {Estoque.Ocupacao}\n" +
     $"Montante: {Estoque.Montante:C}\n"
-);
+);*/
+
+/*Categoria saude = new Categoria("Saúde");
+Categoria livros = new Categoria("Livros");
+Categoria informatica = new Categoria("Informática");
+
+ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, saude);
+ProdutoIsento useACabecaJava = new ProdutoIsento("Use a cabeça: Java", 112.90, 5, livros);
+Produto macbookPro = new Produto("Macbook Pro", 20000.00, 15, informatica);*/
+
+/*estoqueEstoque estoque = new Estoque();
+.RegistraEntrada(vacina);
+estoque.RegistraEntrada(useACabecaJava);
+estoque.RegistraEntrada(macbookPro);
+
+Console.WriteLine(
+    $"ESTOQUE\n" +
+    $"Capacidade: {Estoque.Capacidade}\n" +
+    $"Ocupação: {Estoque.Ocupacao}\n" +
+    $"Montante: {Estoque.Montante:C}\n"
+);*/
+
+
+/*Estoque estoque = new Estoque();
+Produto bala7Belo = new Produto("Bala 7 Belo", 0.1, 5000, new Categoria("Alimentos"));
+
+try
+{
+    estoque.RegistraEntrada(bala7Belo);
+}
+catch (EstoqueException e)
+{
+    Console.WriteLine($"ERRO: {e.Message}");
+}*/
+
+
+ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, new Categoria("Saúde"));
+Estoque estoque = new Estoque();
+
+try
+{
+    estoque.RegistraSaida(vacina);
+}
+catch (EstoqueException e)
+{
+    Console.WriteLine($"ERRO: {e.Message}");
+}
 
 Console.ReadKey();

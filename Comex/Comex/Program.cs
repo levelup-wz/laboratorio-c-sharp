@@ -178,17 +178,24 @@ catch (EstoqueException e)
 }*/
 
 
-
-
-Console.WriteLine("Teste");
-
-try
+/*try
 {
     Categoria saude = new Categoria(0, "Ana", "INDEFINIDO");
 }
 catch (ArgumentException e)
 {
     Console.WriteLine($"ERRO: {e.Message}");
+}*/
+
+/*try
+{
+    Produto bala7Belo = new Produto(10, "Bala 7 Belo", 0.1, 5000, new Categoria("Alimentos"));
+    ProdutoIsento useACabecaJava = new ProdutoIsento(2, "Use a cabeça: Java", 112.90, 5, new Categoria(2, "os"));
 }
+catch (ArgumentException e)
+{
+    Console.WriteLine($"ERRO: {e.Message}");
+    Console.WriteLine($"Método que lançou a exceção: {e.TargetSite}");
+}*/
 
 Console.ReadKey();

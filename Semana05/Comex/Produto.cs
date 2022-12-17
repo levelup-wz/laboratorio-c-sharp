@@ -27,6 +27,27 @@ namespace Comex
             Quantidade = quantidade;
             Categoria = categoria;
 
+            if (nome.Length <= 5)
+            {
+                throw new ArgumentException("O nome deve conter mais de cinco caracteres", nameof(nome));
+            }
+            if (precoUnitario <= 0)
+            {
+                throw new ArgumentException("O preço unitário de um produto deve ser maior que zero", nameof(precoUnitario));
+            }
+            if (quantidade <= 0)
+            {
+                throw new ArgumentException("A quantidade de produto em estoque deve ser maior do que zero", nameof(quantidade));
+            }
+            if (categoria == null)
+            {
+                throw new ArgumentException("A categoria do produto deve ser informada", nameof(categoria));
+            }
+            else
+            {
+                RetornaInfosProduto();
+            }
+
         }
 
         public virtual double ValorEstoque()
@@ -52,5 +73,37 @@ namespace Comex
                 $"Valor imposto: {Imposto().ToString("N2")} \n";
         }
 
-    }
-}
+      /*  public void ValidacaoDeProdutos(string nome, double precoUnitario, int quantidade, string categoria)
+        {
+            Nome = nome;
+            PrecoUnitario = precoUnitario;
+            Quantidade = quantidade;
+            Categoria = categoria;
+
+            if (nome.Length <= 5)
+            {
+                throw new ArgumentException("O nome deve conter mais de cinco caracteres", nameof(nome));
+            }
+            if (precoUnitario <= 0)
+            {
+                throw new ArgumentException("O preço unitário de um produto deve ser maior que zero", nameof(precoUnitario));
+            }
+            if(quantidade <= 0)
+            {
+                throw new ArgumentException("A quantidade de produto em estoque deve ser maior do que zero", nameof(quantidade));
+            }
+            if (categoria == null)
+            {
+                throw new ArgumentException("A categoria do produto deve ser informada", nameof(categoria));
+            }
+            else
+            {
+                RetornaInfosProduto();
+            }*/
+
+            
+
+
+        }
+ }
+

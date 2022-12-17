@@ -1,5 +1,6 @@
 ﻿
 using Comex;
+using Comex.Testes;
 using System;
 
 
@@ -28,12 +29,19 @@ new ProdutoIsentoteste();
 Console.WriteLine("----------------------------------");
 Console.WriteLine("Teste Entradas do Estoque:");
 Console.WriteLine("----------------------------------");
-TestaEntradaDeProdutoNoEstoque.Main();
+//TestaEntradaDeProdutoNoEstoque.Main();
 Console.WriteLine("----------------------------------");
 Console.WriteLine("Teste Saída do Estoque:");
 Console.WriteLine("----------------------------------");
-TestaSaidaDeProdutoNoEstoque.Main();
-
+//TestaSaidaDeProdutoNoEstoque.Main();
+Console.WriteLine("----------------------------------");
+Console.WriteLine("Teste Validação de Categoria:");
+Console.WriteLine("----------------------------------");
+TestaValidacaoDeCategoria.Main();
+Console.WriteLine("----------------------------------");
+Console.WriteLine("Teste Validação do Produto:");
+Console.WriteLine("----------------------------------");
+TestaValidacaoDeProdutos.Main();
 
 
 

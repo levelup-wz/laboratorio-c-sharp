@@ -37,7 +37,7 @@ namespace Comex.Testes
             {
                 estoque.RegistraEntrada(bala7Belo);
             }
-            catch (EstoqueException e)
+            catch (LimiteDeEstoqueExcedidoException e)
             {
                 Console.WriteLine($"ERRO: {e.Message}");
             }

@@ -35,7 +35,7 @@ namespace Comex.Testes
             {
                 estoque.RegistraSaida(vacina);
             }
-            catch (EstoqueException e)
+            catch (LimiteDeEstoqueExcedidoException e)
             {
                 Console.WriteLine($"ERRO: {e.Message}");
             }

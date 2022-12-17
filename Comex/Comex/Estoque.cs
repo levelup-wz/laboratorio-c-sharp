@@ -18,7 +18,7 @@ namespace Comex
             // Verifica se a quantidade do produto a ser inserida no estoque excede a capacidade, que por padrão é 1000
             if (Capacidade - produto.QuantidadeEmEstoque < 0)
             {
-                throw new EstoqueException("A capacidade do estoque é limitada a 1000 unidades do produto.");
+                throw new LimiteDeEstoqueExcedidoException("A capacidade do estoque é limitada a 1000 unidades do produto.");
             }
             Capacidade -= produto.QuantidadeEmEstoque;
             Ocupacao += produto.QuantidadeEmEstoque;
@@ -30,7 +30,7 @@ namespace Comex
             // Verifica se o estoque está vazio
             if (Ocupacao == 0)
             {
-                throw new EstoqueException("Não é possível registrar saída de produto(s), pois o estoque está vazio.");
+                throw new LimiteDeEstoqueExcedidoException("Não é possível registrar saída de produto(s), pois o estoque está vazio.");
             }
             Capacidade += produto.QuantidadeEmEstoque;
             Ocupacao -= produto.QuantidadeEmEstoque;

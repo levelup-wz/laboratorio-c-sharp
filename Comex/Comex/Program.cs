@@ -165,8 +165,7 @@ catch (EstoqueException e)
     Console.WriteLine($"ERRO: {e.Message}");
 }*/
 
-
-ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, new Categoria("Saúde"));
+/*ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, new Categoria("Saúde"));
 Estoque estoque = new Estoque();
 
 try
@@ -174,6 +173,20 @@ try
     estoque.RegistraSaida(vacina);
 }
 catch (EstoqueException e)
+{
+    Console.WriteLine($"ERRO: {e.Message}");
+}*/
+
+
+
+
+Console.WriteLine("Teste");
+
+try
+{
+    Categoria saude = new Categoria(0, "Ana", "INDEFINIDO");
+}
+catch (ArgumentException e)
 {
     Console.WriteLine($"ERRO: {e.Message}");
 }

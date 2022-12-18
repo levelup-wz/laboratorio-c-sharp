@@ -1,12 +1,9 @@
-# Semana-3
+# Semana-5
 ## Atividades:
 - Setup inicial ✔️
-- Criar classe Categoria ✔️
-- Testar classe Categoria ✔️
-- Criar classe Produto ✔️
-- Testar classe Produto ✔️
-- Criar classe Pedido ✔️
-- Testar classe Pedido ✔️
-- Criar classe Cliente ✔️
-- Usar classe Cliente ✔️
-- Definição de ids ✔️ 
+- Validar entrada e saída de produtos no Estoque ✔️
+- Testar validações no Estoque ✔️
+- Criar e lançar exceções aderentes ao negócio ✔️
+- Validações ao criar uma Categoria ✔️
+- Validações de Produto e ProdutoIsento ✔️
+- Enviar entregas ✔️

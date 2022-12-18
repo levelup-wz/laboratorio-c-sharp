@@ -49,6 +49,9 @@ Console.WriteLine($"Valor total em estoque: {produto3.CalculaValorTotalEmEstoque
 Console.WriteLine($"Preço unitário: {produto3.Preco_Unitario}");
 Console.WriteLine($"Valor de Imposto: {produto3.CalculaImposto().ToString("N2")}" + "\n");
 
+TestaValidacaoDeProdutos.RegistaEntradaProdutos();
+Console.WriteLine();
+
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("TestaPedido:" + "\n");
@@ -102,6 +105,10 @@ Console.WriteLine(".--------------------..--------------------..----------------
 
 Console.WriteLine("TestaProdutoIsento:" + "\n");
 TestaProdutoIsento.MostraProdutoIsento();
+Console.WriteLine("\n");
+
+TestaValidacaoDeProdutos.RegistaEntradaProdutosIsentos();
+Console.WriteLine();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 

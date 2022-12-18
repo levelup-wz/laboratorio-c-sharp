@@ -47,7 +47,7 @@ namespace Comex
                 Console.WriteLine("Erro no parâmetro: " + ex.ParamName);
                 Console.WriteLine("Ocorreu um erro do tipo ArgumentException.");
                 Console.WriteLine(ex.StackTrace);
-                Console.WriteLine($"{ex.Message}");
+                Console.WriteLine(ex.Message);
             }
         }
     }

@@ -26,6 +26,36 @@ namespace Comex
             Categoria = categoria;
         }
 
+        public Produto (int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
+        {
+            Id = id;
+            Nome = nome;
+            Preco_Unitario = preco_Unitario;
+            Quantidade_Em_Estoque = quantidade_Em_Estoque;
+            Categoria = categoria;
+
+            if (id <= 0)
+            {
+                throw new ArgumentException("ID deve ser maior que ZERO.", nameof(id));
+            }
+            if (nome.Length <= 5)
+            {
+                throw new ArgumentException("Nome deve ter mais que 5 caracteres", nameof(nome));
+            }
+            if (preco_Unitario <= 0)
+            {
+                throw new ArgumentException("Preço unitário não pode ser ZERO.", nameof(preco_Unitario));
+            }
+            if (quantidade_Em_Estoque <= 0)
+            {
+                throw new ArgumentException("Não é possível inserir um produto com a quantidade ZERO no estoque.", nameof(quantidade_Em_Estoque));
+            }
+            if (categoria.Length <= 0)
+            {
+                throw new ArgumentException("Obrigatorio definir a categoria do produto.", nameof(categoria));
+            }
+        }
+
         public int DefineId()
         {
             return Id;

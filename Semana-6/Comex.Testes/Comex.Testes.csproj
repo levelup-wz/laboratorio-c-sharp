@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Comex\Comex.csproj" />
+    <ProjectReference Include="..\Comex.Models\Comex.Models.csproj" />
   </ItemGroup>
 
 </Project>

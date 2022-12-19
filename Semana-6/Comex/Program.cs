@@ -1,5 +1,5 @@
 ﻿using Comex.TestaModels;
-using Comex.Exceptions;
+using Comex.Models.Exceptions;
 
 try
 {

@@ -1,4 +1,5 @@
 using System;
+using Comex.Exceptions;
 
 namespace Comex.Produtos
 {
@@ -17,12 +18,22 @@ namespace Comex.Produtos
 
         public void RegistraEntrada(Produto produto)
         {
+            if (Ocupacao + produto.Estoque >= 1000)
+            {
+                throw new LimiteDeEstoqueExcedidoException("Estoque excedido!");
+            }
+
             Capacidade -= produto.Estoque;
             Ocupacao += produto.Estoque;
             Montante += produto.ValorTotal();
         }
         public void RegistraSaida(Produto produto)
         {
+            if (Ocupacao - produto.Estoque < 0)
+            {
+                throw new LimiteDeEstoqueExcedidoException("Não há produtos no estoque!");
+            }
+
             Capacidade += produto.Estoque;
             Ocupacao -= produto.Estoque;
             Montante -= produto.ValorTotal();

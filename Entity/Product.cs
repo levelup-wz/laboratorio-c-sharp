@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comex.Entity
 {
-    class Products
+    public class Products
     {
         private static int _id = 0;
         public int Id { get; set; }
@@ -28,14 +28,14 @@ namespace Comex.Entity
 
         }
 
-        public double TotalAmountStock()
+        public virtual double TotalAmountStock()
         {
 
             return StockQuantity * UnitPrice;
 
         }
 
-        public double CalculateTax()
+        public virtual double CalculateTax()
         {
             return UnitPrice * 0.4;
 

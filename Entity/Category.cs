@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comex.Entity
 {
-    class Categories
+    public class Categories
     {
         private static int _id = 0;
         public int Id { get; set; }

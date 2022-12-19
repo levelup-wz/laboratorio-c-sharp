@@ -1,12 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "DULU/BxD5EU6CzR7yK/BVxAmzZG+UmzJLO8PF6b9r2tfruSWA8wkqLg905sq8ozL3v1JjLIwvpM4N8q0Q5S0oA==",
+  "dgSpecHash": "jDr8yJJHqWmRpmotOb04ot6mC/WyHsNzGZWpSFzFGzDMcqzsX8kRdAT+fMMQvKNtpcs491y6WCZVqxi9jy0pmw==",
   "success": true,
   "projectFilePath": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dedoj\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\dedoj\\.nuget\\packages\\escritaporextenso\\0.2.2\\escritaporextenso.0.2.2.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\numericwordsconversion\\2.0.0\\numericwordsconversion.2.0.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\reportgenerator\\5.1.12\\reportgenerator.5.1.12.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'EscritaPorExtenso 0.2.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "EscritaPorExtenso",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

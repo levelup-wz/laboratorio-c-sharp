@@ -8,6 +8,15 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "EscritaPorExtenso/0.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/EscritaPorExtenso.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EscritaPorExtenso.dll": {}
+        }
+      },
       "FluentAssertions/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -2012,6 +2021,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Comex.Models": "1.0.0",
+          "EscritaPorExtenso": "0.2.2",
           "NumericWordsConversion": "2.0.0",
           "ReportGenerator": "5.1.12"
         },
@@ -2026,6 +2036,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "EscritaPorExtenso": "0.2.2",
           "NumericWordsConversion": "2.0.0"
         },
         "compile": {
@@ -2089,6 +2100,18 @@
         "coverlet-icon.png",
         "coverlet.collector.3.2.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "EscritaPorExtenso/0.2.2": {
+      "sha512": "pYFWWT2ZY26Zb0T3ZE0CGqx7qhcSM7zJJ634FIeV3IX/KAQ57EvK4VtA1pPNdHVZciTCaPdCDwitR5N8iV3ykw==",
+      "type": "package",
+      "path": "escritaporextenso/0.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "escritaporextenso.0.2.2.nupkg.sha512",
+        "escritaporextenso.nuspec",
+        "lib/net45/EscritaPorExtenso.dll"
       ]
     },
     "FluentAssertions/6.0.0": {
@@ -7087,6 +7110,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Comex >= 1.0.0",
+      "EscritaPorExtenso >= 0.2.2",
       "FluentAssertions.Json >= 6.1.0",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "NumericWordsConversion >= 2.0.0",
@@ -7139,6 +7163,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "EscritaPorExtenso": {
+            "target": "Package",
+            "version": "[0.2.2, )"
+          },
           "FluentAssertions.Json": {
             "target": "Package",
             "version": "[6.1.0, )"
@@ -7191,5 +7219,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'EscritaPorExtenso 0.2.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "EscritaPorExtenso",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

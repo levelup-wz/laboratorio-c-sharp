@@ -1,4 +1,5 @@
 ﻿using Comex.Entidades;
+using EscritaPorExtenso.Moeda;
 using NumericWordsConversion;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,14 @@ namespace Comex.Models.Models
     {
         private Pedido Pedido { get; set; }
         string Words { get; set; }
+        string WordsPortuguese { get; set; }
 
         public NotaFiscal(Pedido pedido)
         {
             Pedido = pedido;
             CurrencyWordsConverter converter = new CurrencyWordsConverter();
             Words = converter.ToWords((decimal)Pedido.CalcularValorTotal());
+            WordsPortuguese = Pedido.CalcularValorTotal().PorExtensoDeReal();
         }
 
         public override string ToString()
@@ -27,7 +30,8 @@ namespace Comex.Models.Models
                 $"Nome: {Pedido.Cliente.Nome}\n" +
                 $"Data da compra: {Pedido.Date}\n" +
                 $"Total do pedido: R$ {Pedido.CalcularValorTotal().ToString("n2")} => " +
-                $"{Words}";
+                $"{Words}\n" +
+                $"{WordsPortuguese}";
         }
     }
 }

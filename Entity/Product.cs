@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comex.Entidades
+namespace Comex.Entity
 {
     class Products
     {
@@ -16,33 +16,34 @@ namespace Comex.Entidades
         public int StockQuantity { get; set; }
         public Categories Category { get; set; }
 
-        
-        public Products(string name, string description, double unitPrice, int stockQuantity, Categories category ){
+
+        public Products(string name, string description, double unitPrice, int stockQuantity, Categories category)
+        {
             Id = _id++;
             Name = name;
             Description = description;
-            UnitPrice= unitPrice;
+            UnitPrice = unitPrice;
             StockQuantity = stockQuantity;
             Category = category;
 
         }
 
         public double TotalAmountStock()
-        {            
+        {
 
             return StockQuantity * UnitPrice;
-    
+
         }
 
         public double CalculateTax()
-        {            
+        {
             return UnitPrice * 0.4;
-            
+
         }
 
     }
 
-   
+
 
 
 

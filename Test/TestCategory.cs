@@ -4,8 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.Entity;
 
-namespace Comex
+namespace Comex.Test
 {
     class TestCategory
     {

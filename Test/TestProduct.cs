@@ -4,16 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Comex.Entidades;
+using Comex.Entity;
 
-namespace Comex
+namespace Comex.Test
 {
     class TestProduct
     {
-                       
-        List<Products> listProducts = new List<Products>();       
-        
-        public void ToList() {
+
+        List<Products> listProducts = new List<Products>();
+
+        public void ToList()
+        {
             Categories categoryProd1 = new Categories("Informática", "Ativa");
             Products product1 = new Products("Notebook Samsung", "Notebook Corei7", 3523.00, 1, categoryProd1);
 

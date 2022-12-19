@@ -1,11 +1,11 @@
-﻿using Comex.Entidades;
+﻿using Comex.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comex
+namespace Comex.Test
 {
     class TestOrder
     {
@@ -14,7 +14,7 @@ namespace Comex
         public void ToList()
         {
             Categories categoryProd1 = new Categories("Informática", "Ativa");
-            Products product1 = new Products("Notebook Samsung", "Notebook Corei7", 3523.00, 5, categoryProd1);                       
+            Products product1 = new Products("Notebook Samsung", "Notebook Corei7", 3523.00, 5, categoryProd1);
             Order order1 = new Order(DateTime.Today, "111.222.333.444-55", product1, 4);
 
             Categories categoryProd2 = new Categories("Livros", "Ativa");

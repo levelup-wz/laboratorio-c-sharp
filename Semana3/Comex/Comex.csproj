@@ -15,4 +15,8 @@
     <PackageReference Include="ReportGenerator" Version="5.1.12" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Comex.Models\Comex.Models.csproj" />
+  </ItemGroup>
+
 </Project>

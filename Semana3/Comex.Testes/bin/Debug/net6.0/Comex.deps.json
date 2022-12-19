@@ -8,13 +8,21 @@
     ".NETCoreApp,Version=v6.0": {
       "Comex/1.0.0": {
         "dependencies": {
-          "ReportGenerator": "5.1.12"
+          "Comex.Models": "1.0.0",
+          "ReportGenerator": "5.1.12",
+          "coverlet.collector": "3.2.0"
         },
         "runtime": {
           "Comex.dll": {}
         }
       },
-      "ReportGenerator/5.1.12": {}
+      "coverlet.collector/3.2.0": {},
+      "ReportGenerator/5.1.12": {},
+      "Comex.Models/1.0.0": {
+        "runtime": {
+          "Comex.Models.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -23,12 +31,24 @@
       "serviceable": false,
       "sha512": ""
     },
+    "coverlet.collector/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xjY8xBigSeWIYs4I7DgUHqSNoGqnHi7Fv7/7RZD02rvZyG3hlsjnQKiVKVWKgr9kRKgmV+dEfu8KScvysiC0Wg==",
+      "path": "coverlet.collector/3.2.0",
+      "hashPath": "coverlet.collector.3.2.0.nupkg.sha512"
+    },
     "ReportGenerator/5.1.12": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KE/Rms+lCDO2igCjwj1FZ0QO4JhRJp706saeoTzWXu7Ats4TBrsHhXmPyOWHcUOpOB2WTiIm80y+g+QiwKcTmQ==",
       "path": "reportgenerator/5.1.12",
       "hashPath": "reportgenerator.5.1.12.nupkg.sha512"
+    },
+    "Comex.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

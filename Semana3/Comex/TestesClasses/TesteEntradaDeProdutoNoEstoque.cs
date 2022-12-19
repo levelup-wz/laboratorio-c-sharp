@@ -28,7 +28,7 @@ namespace Comex.TestesClasses
             estoque.RegistrarEntrada(vacina);
             estoque.RegistrarEntrada(useACabeca);
             estoque.RegistrarEntrada(macbook);
-            estoque.RegistrarEntrada(bala7belo);
+            //estoque.RegistrarEntrada(bala7belo);
 
             estoque.ListarEstoque();
 

@@ -21,8 +21,8 @@ namespace Comex.TestesClasses
 
             //estoque.RegistrarEntrada(vacina);
             estoque.ListarEstoque();
-            estoque.ResistrarSaida(vacina);
-            estoque.ListarEstoque();
+            //estoque.ResistrarSaida(vacina);
+            //estoque.ListarEstoque();
         }
     }
 }

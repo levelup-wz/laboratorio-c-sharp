@@ -2002,6 +2002,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Comex.Models": "1.0.0",
           "ReportGenerator": "5.1.12"
         },
         "compile": {
@@ -2009,6 +2010,16 @@
         },
         "runtime": {
           "bin/placeholder/Comex.dll": {}
+        }
+      },
+      "Comex.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Comex.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Comex.Models.dll": {}
         }
       }
     }
@@ -7040,6 +7051,11 @@
       "type": "project",
       "path": "../Comex/Comex.csproj",
       "msbuildProject": "../Comex/Comex.csproj"
+    },
+    "Comex.Models/1.0.0": {
+      "type": "project",
+      "path": "../Comex.Models/Comex.Models.csproj",
+      "msbuildProject": "../Comex.Models/Comex.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {

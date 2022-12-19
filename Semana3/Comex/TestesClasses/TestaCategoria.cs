@@ -1,4 +1,5 @@
-﻿using Comex.Entidades;
+﻿using Comex;
+using Comex.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;

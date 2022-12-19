@@ -5,8 +5,8 @@
 - [x] Criar uma nova Classe Nota Fiscal
 - [x] Mostre o valor da Nota Fiscal por exetenso
 - [x] Procure uma biblioteca que converta numeros para um valor extenso em português
-- [ ] Criar testes para classe nota fiscal
-- [ ] Enviar entregas
+- [x] Criar testes para classe nota fiscal
+- [x] Enviar entregas
 
 # Desafio Semana 5 - Comex - Entendendo Exceções.
 

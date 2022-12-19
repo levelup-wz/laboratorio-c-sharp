@@ -17,6 +17,10 @@ namespace Comex.Models.Models
 
         public NotaFiscal(Pedido pedido)
         {
+            if (pedido == null)
+            {
+                throw new ArgumentNullException("Precisa passar um pedido válido como parâmetro");
+            }
             Pedido = pedido;
             CurrencyWordsConverter converter = new CurrencyWordsConverter();
             Words = converter.ToWords((decimal)Pedido.CalcularValorTotal());
@@ -27,7 +31,7 @@ namespace Comex.Models.Models
         {
             return
                 $"Numero pedido: {Pedido.Id}\n" +
-                $"Nome: {Pedido.Cliente.Nome}\n" +
+                $"Nome: {Pedido.Cliente.Nome} {Pedido.Cliente.SobreNome}\n" +
                 $"Data da compra: {Pedido.Date}\n" +
                 $"Total do pedido: R$ {Pedido.CalcularValorTotal().ToString("n2")} => " +
                 $"{Words}\n" +

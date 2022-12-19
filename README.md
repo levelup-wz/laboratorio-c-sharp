@@ -4,5 +4,6 @@
 - [x] Testar validações no Estoque
 - [x] Criar e lançar exceções aderentes ao negócio
 - [x] Validações ao criar uma Categoria
+- [x] Validações de Produto e ProdutoIsento
 
 :)

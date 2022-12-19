@@ -1,3 +1,13 @@
+# Desafio Semana 6 - Comex - Bibliotecas DLLs, documentação e usando o NuGet.
+
+- [x] Setup Inicial
+- [ ] Mover as classes para um novo projeto Comex.Modelos
+- [ ] Criar uma nova Classe Nota Fiscal
+- [ ] Mostre o valor da Nota Fiscal por exetenso
+- [ ] Procure uma biblioteca que converta numeros para um valor extenso em português
+- [ ] Criar testes para classe nota fiscal
+- [ ] Enviar entregas
+
 # Desafio Semana 5 - Comex - Entendendo Exceções.
 
 - [x] Setup Inicial

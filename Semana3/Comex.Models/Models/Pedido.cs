@@ -17,7 +17,7 @@ namespace Comex.Entidades
 
         public Pedido(Cliente cliente, Produto produto, int quantidadeVendida)
         {
-            Date = new DateTime();
+            Date = DateTime.Now;
             Cliente = cliente;
             Produto = produto;
             QuantidadeVendida = quantidadeVendida;

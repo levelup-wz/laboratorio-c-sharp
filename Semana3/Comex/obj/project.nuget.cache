@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Yx3iKOIobIYOxoxxvxigj1kr73Oaj27qnazZUapIEZaqWupaYFt6g53EIqNbgkNV4PPzr7soFj0HZDXam9RObg==",
+  "dgSpecHash": "DULU/BxD5EU6CzR7yK/BVxAmzZG+UmzJLO8PF6b9r2tfruSWA8wkqLg905sq8ozL3v1JjLIwvpM4N8q0Q5S0oA==",
   "success": true,
   "projectFilePath": "E:\\Level-up-Wiz-Alura\\wiz-alura\\laboratorio-c-sharp\\Semana3\\Comex\\Comex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dedoj\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\dedoj\\.nuget\\packages\\numericwordsconversion\\2.0.0\\numericwordsconversion.2.0.0.nupkg.sha512",
     "C:\\Users\\dedoj\\.nuget\\packages\\reportgenerator\\5.1.12\\reportgenerator.5.1.12.nupkg.sha512"
   ],
   "logs": []

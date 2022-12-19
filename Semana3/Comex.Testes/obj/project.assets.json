@@ -467,6 +467,15 @@
           }
         }
       },
+      "NumericWordsConversion/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/NumericWordsConversion.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/NumericWordsConversion.dll": {}
+        }
+      },
       "ReportGenerator/5.1.12": {
         "type": "package",
         "build": {
@@ -2003,6 +2012,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Comex.Models": "1.0.0",
+          "NumericWordsConversion": "2.0.0",
           "ReportGenerator": "5.1.12"
         },
         "compile": {
@@ -2015,6 +2025,9 @@
       "Comex.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "NumericWordsConversion": "2.0.0"
+        },
         "compile": {
           "bin/placeholder/Comex.Models.dll": {}
         },
@@ -2867,6 +2880,19 @@
         "lib/netstandard2.0/NuGet.Frameworks.xml",
         "nuget.frameworks.5.11.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "NumericWordsConversion/2.0.0": {
+      "sha512": "+TrawaDCENyOpPDQucKiIfVmn27yDmdmTkf83w68bVRzUPfLFY6KZM9AprVqZxJIgchZbVTPb8tnWBx9t/mgpA==",
+      "type": "package",
+      "path": "numericwordsconversion/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netcoreapp3.0/NumericWordsConversion.dll",
+        "numericwordsconversion.2.0.0.nupkg.sha512",
+        "numericwordsconversion.nuspec"
       ]
     },
     "ReportGenerator/5.1.12": {
@@ -7063,6 +7089,7 @@
       "Comex >= 1.0.0",
       "FluentAssertions.Json >= 6.1.0",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
+      "NumericWordsConversion >= 2.0.0",
       "ReportGenerator >= 5.1.12",
       "coverlet.collector >= 3.2.0",
       "xunit >= 2.4.2",
@@ -7119,6 +7146,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.3.2, )"
+          },
+          "NumericWordsConversion": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "ReportGenerator": {
             "target": "Package",

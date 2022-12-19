@@ -3,7 +3,7 @@
 - [x] Setup Inicial
 - [x] Mover as classes para um novo projeto Comex.Modelos
 - [x] Criar uma nova Classe Nota Fiscal
-- [ ] Mostre o valor da Nota Fiscal por exetenso
+- [x] Mostre o valor da Nota Fiscal por exetenso
 - [ ] Procure uma biblioteca que converta numeros para um valor extenso em português
 - [ ] Criar testes para classe nota fiscal
 - [ ] Enviar entregas

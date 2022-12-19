@@ -8,6 +8,15 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "NumericWordsConversion/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/NumericWordsConversion.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/NumericWordsConversion.dll": {}
+        }
+      },
       "ReportGenerator/5.1.12": {
         "type": "package",
         "build": {
@@ -17,6 +26,9 @@
       "Comex.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "NumericWordsConversion": "2.0.0"
+        },
         "compile": {
           "bin/placeholder/Comex.Models.dll": {}
         },
@@ -78,6 +90,19 @@
         "coverlet-icon.png",
         "coverlet.collector.3.2.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "NumericWordsConversion/2.0.0": {
+      "sha512": "+TrawaDCENyOpPDQucKiIfVmn27yDmdmTkf83w68bVRzUPfLFY6KZM9AprVqZxJIgchZbVTPb8tnWBx9t/mgpA==",
+      "type": "package",
+      "path": "numericwordsconversion/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netcoreapp3.0/NumericWordsConversion.dll",
+        "numericwordsconversion.2.0.0.nupkg.sha512",
+        "numericwordsconversion.nuspec"
       ]
     },
     "ReportGenerator/5.1.12": {
@@ -410,6 +435,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Comex.Models >= 1.0.0",
+      "NumericWordsConversion >= 2.0.0",
       "ReportGenerator >= 5.1.12",
       "coverlet.collector >= 3.2.0"
     ]
@@ -457,6 +483,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "NumericWordsConversion": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "ReportGenerator": {
             "target": "Package",
             "version": "[5.1.12, )"

@@ -32,3 +32,4 @@ E:\Level-up-Wiz-Alura\wiz-alura\laboratorio-c-sharp\Semana3\Comex\bin\Debug\net6
 E:\Level-up-Wiz-Alura\wiz-alura\laboratorio-c-sharp\Semana3\Comex\bin\Debug\net6.0\Comex.Models.dll
 E:\Level-up-Wiz-Alura\wiz-alura\laboratorio-c-sharp\Semana3\Comex\bin\Debug\net6.0\Comex.Models.pdb
 E:\Level-up-Wiz-Alura\wiz-alura\laboratorio-c-sharp\Semana3\Comex\obj\Debug\net6.0\Comex.csproj.CopyComplete
+E:\Level-up-Wiz-Alura\wiz-alura\laboratorio-c-sharp\Semana3\Comex\bin\Debug\net6.0\NumericWordsConversion.dll

@@ -65,7 +65,7 @@ class Program
 
             switch(op) 
             {
-                #region Testa Categoria
+                #region Testa Categoria, Produto e ProdutoIsento
                 case "1":
                     Console.Clear();
 
@@ -117,7 +117,7 @@ class Program
                     break;
                 #endregion
 
-                #region Testa Pedido
+                #region Testa Pedido e Cliente
                 case "2":
                     Console.WriteLine($"\n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} \n{pedido1.Produto.Nome} " +
                         $"{pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()} - Imposto: R${pedido1.CalculaTotalImposto()}");

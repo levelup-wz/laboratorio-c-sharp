@@ -13,6 +13,16 @@ namespace Comex.Categorias
         {
             Quantidade++;
             Id = Quantidade;
+            
+            if (nome.Length <= 3) 
+            {
+                throw new ArgumentException("Nome deve ser maior que 3 caracteres");
+            }
+            if (status != "ATIVA" && status != "INATIVA")
+            {
+                throw new ArgumentException("Status deve ser somente ATIVA ou INATIVA");
+            }
+            
             Nome = nome;
             Status = status;
         }

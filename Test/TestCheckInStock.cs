@@ -1,4 +1,5 @@
 ﻿using Comex.Entity;
+using Comex.Exceptions;
 using Microsoft.Win32;
 using System;
 using System.Collections;
@@ -53,6 +54,22 @@ namespace Comex.Test
                 Console.WriteLine($"Montante do estoque: {value.Amount}");
                 Console.WriteLine("-------------------------------------------------------------------------------------");
 
+            }
+
+            Categories categoryCandy = new Categories("Alimentos", "Ativa");
+            Products candy = new Products("Bala 7 Belo", "Bala de Framboesa", 0.1, 5000, categoryCandy);
+
+            Stock stock = new Stock();
+
+            try
+            {
+                stock.CheckIn(candy);
+            }
+            catch (LimitCapacityStockException e)
+            {
+                Console.WriteLine($"ERRO: {e.Message}");
+                Console.WriteLine(e.StackTrace);
+                throw;
             }
 
         }

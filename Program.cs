@@ -14,17 +14,17 @@ namespace Comex
         public static void Main(string[] args)
 
         {
-            TestCategory testeCategoria = new TestCategory();
-            testeCategoria.ToList();
+            //TestCategory testeCategoria = new TestCategory();
+            //testeCategoria.ToList();
 
-            TestProduct testeProduto = new TestProduct();
-            testeProduto.ToList();
+            //TestProduct testeProduto = new TestProduct();
+            //testeProduto.ToList();
 
-            TestOrder testePedido = new TestOrder();
-            testePedido.ToList();
+            //TestOrder testePedido = new TestOrder();
+            //testePedido.ToList();
 
-            TestProductExempt testeProdutoIsento = new TestProductExempt();
-            testeProdutoIsento.ToList();
+            //TestProductExempt testeProdutoIsento = new TestProductExempt();
+            //testeProdutoIsento.ToList();
 
             TestCheckInStock testeEntradaProdutoEstoque = new TestCheckInStock();
             testeEntradaProdutoEstoque.ToList();

@@ -1,4 +1,5 @@
 ﻿using Comex.Entity;
+using Comex.Exceptions;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,17 @@ namespace Comex.Test
 
             }
 
+            
+            try
+            {
+                stock1.CheckOut(exemptProduct1);
+            }
+            catch (LimitCapacityStockException e)
+            {
+                Console.WriteLine($"ERRO: {e.Message}");
+                Console.WriteLine(e.StackTrace);
+                throw;
+            }
 
         }
     }

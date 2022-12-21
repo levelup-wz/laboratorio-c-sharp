@@ -1,5 +1,6 @@
 ﻿using Comex.TestaModels;
 using Comex.Models.Exceptions;
+using Comex.Models;
 
 try
 {
@@ -22,6 +23,11 @@ try
     Console.WriteLine("Testa Validação de Produtos:");
     Console.WriteLine("-----------------------------------");
     TestaValidacaoDeProdutos.Main();
+    Console.WriteLine(" ");
+    Console.WriteLine("Testa Saída da Nota Fiscal:");
+    Console.WriteLine("-----------------------------------");
+    var notaFiscal = new NotaFiscal(new Pedido(new Cliente("Saulo", "Alves", "99999999999", "99", "s", "2", "casa", "ibotirama", "ba"), new Produto("Notebook", 10.00, 10, "informatica"), 10));
+    Console.WriteLine(notaFiscal.ToString());
     Console.WriteLine(" ");
 }
 catch (LimiteDeEstoqueExcedidoException ex)

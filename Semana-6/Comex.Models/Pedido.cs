@@ -10,7 +10,7 @@ namespace Comex.Models
     {
         private static int _id = 0;
         public int Id { get; set; }
-        public DateTime data = DateTime.Now;
+        public DateTime Data = DateTime.Now;
         public Cliente Cliente { get; set; }
         public Produto Produto { get; set; }
         public int QuantidadeVendida { get; set; }

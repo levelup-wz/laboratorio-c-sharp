@@ -5,9 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-
-
-namespace Comex
+namespace Comex.Models
 {
     public class Estoque
     {

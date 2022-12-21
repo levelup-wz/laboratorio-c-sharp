@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Comex/1.0.0": {
+        "dependencies": {
+          "Comex.Models": "1.0.0"
+        },
         "runtime": {
           "Comex.dll": {}
+        }
+      },
+      "Comex.Models/1.0.0": {
+        "runtime": {
+          "Comex.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Comex/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Comex.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

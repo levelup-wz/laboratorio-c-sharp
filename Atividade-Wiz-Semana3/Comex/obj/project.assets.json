@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Comex.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Comex.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Comex.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Comex.Models/1.0.0": {
+      "type": "project",
+      "path": "../Comex.Models/Comex.Models.csproj",
+      "msbuildProject": "../Comex.Models/Comex.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Comex.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Heber\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana3\\Comex.Models\\Comex.Models.csproj": {
+              "projectPath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana3\\Comex.Models\\Comex.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

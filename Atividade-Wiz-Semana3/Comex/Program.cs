@@ -1,4 +1,6 @@
 ﻿using Comex;
+using Comex.Models;
+
 Console.WriteLine("TestaCategoria:" + "\n");
 Categoria categoria1 = new Categoria();
 categoria1.DefineId();

@@ -43,6 +43,10 @@
             "NumericWordsConversion": {
               "target": "Package",
               "version": "[2.0.0, )"
+            },
+            "NumerosExtensos": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [

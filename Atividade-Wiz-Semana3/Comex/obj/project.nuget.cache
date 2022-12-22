@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "P5lcpZjaGQxsOK8HQkAlkjpamJpvWiCOALMK3r3eVxMvr60sv3UW6ti7UQGBXOKMwBVOcUriQq/gz+2Le5ABkg==",
+  "dgSpecHash": "ZHoQQsGaF/qArhvDykb7bDGAjNhW2VOUWthNiP38f6voM+vAnFig5WHtYNk7UJDZnA9VFQC0hmSh41u1YFWYcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana3\\Comex\\Comex.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Heber\\.nuget\\packages\\numericwordsconversion\\2.0.0\\numericwordsconversion.2.0.0.nupkg.sha512"
+    "C:\\Users\\Heber\\.nuget\\packages\\numericwordsconversion\\2.0.0\\numericwordsconversion.2.0.0.nupkg.sha512",
+    "C:\\Users\\Heber\\.nuget\\packages\\numerosextensos\\2.0.0\\numerosextensos.2.0.0.nupkg.sha512"
   ],
   "logs": []
 }

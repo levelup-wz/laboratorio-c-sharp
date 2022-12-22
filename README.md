@@ -1,12 +1,7 @@
-# Semana-3
+# Semana-6
 ## Atividades:
 - Setup inicial ✔️
-- Criar classe Categoria ✔️
-- Testar classe Categoria ✔️
-- Criar classe Produto ✔️
-- Testar classe Produto ✔️
-- Criar classe Pedido ✔️
-- Testar classe Pedido ✔️
-- Criar classe Cliente ✔️
-- Usar classe Cliente ✔️
-- Definição de ids ✔️ 
+- Mover as classes para um novo projeto Comex.Modelos ✔️
+- Criar uma nova classe Nota Fiscal ✔️
+- Mostre o valor da nota fiscal por extenso ✔️
+- Procure uma biblioteca que converta números para um valor em extenso que seja em portugues. ✔️

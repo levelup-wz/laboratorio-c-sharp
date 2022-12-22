@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Comex.Models;
+﻿using Comex.Models;
 
 namespace Comex
 {
@@ -14,17 +8,17 @@ namespace Comex
         {
             try
             {
-                ProdutoIsento vacina = new ProdutoIsento("Vacina", 250.00, 500, "Saúde");
+                ProdutoIsento vacina = new("Vacina", 250.00, 500, "Saúde");
 
-                Estoque estoque = new Estoque();
+                Estoque estoque = new();
 
                 //estoque.ExibirDadosEstoque();
                 //Console.WriteLine("Entrada de Saúde:");
                 //estoque.RegistraEntrada(vacina);
                 Console.WriteLine("Saída de Saúde:");
-                estoque.RegistraSaida(vacina);
-                estoque.ExibirDadosEstoque();
-                estoque.RegistraSaida(vacina);
+                Estoque.RegistraSaida(vacina);
+                Estoque.ExibirDadosEstoque();
+                Estoque.RegistraSaida(vacina);
             }
             catch (LimiteDeEstoqueExcedidoException ex)
             {

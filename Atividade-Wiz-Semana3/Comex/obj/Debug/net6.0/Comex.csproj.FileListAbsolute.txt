@@ -16,3 +16,4 @@ C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Fork e Pull Request\laborator
 C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana3\Comex\bin\Debug\net6.0\Comex.Models.dll
 C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana3\Comex\bin\Debug\net6.0\Comex.Models.pdb
 C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana3\Comex\obj\Debug\net6.0\Comex.csproj.CopyComplete
+C:\Users\Heber\OneDrive\Área de Trabalho\HB\Alura\Fork e Pull Request\laboratorio-c-sharp\Atividade-Wiz-Semana3\Comex\bin\Debug\net6.0\NumericWordsConversion.dll

@@ -1,17 +1,12 @@
 ﻿using Comex.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Comex
 {
     public static class TestaProdutoIsento
     {
-        static ProdutoIsento isento1 = new ProdutoIsento("Vacina", 250.00, 1000, "Saúde");
-        static ProdutoIsento isento2 = new ProdutoIsento("Use a Cabeça: Java", 112.90, 5, "Livros");
-        static ProdutoIsento isento3 = new ProdutoIsento("Macbook Pro", 20000.00, 11, "Informática");
+        static readonly ProdutoIsento isento1 = new("Vacina", 250.00, 1000, "Saúde");
+        static readonly ProdutoIsento isento2 = new("Use a Cabeça: Java", 112.90, 5, "Livros");
+        static readonly ProdutoIsento isento3 = new("Macbook Pro", 20000.00, 11, "Informática");
 
         public static void MostraProdutoIsento()
         {
@@ -37,7 +32,7 @@ namespace Comex
             Console.WriteLine($"Quantidade em estoque: {isento3.Quantidade_Em_Estoque}");
             Console.WriteLine($"Categoria: {isento3.Categoria}");
             Console.WriteLine($"Valor total em estoque: {isento3.CalculaValorTotalEmEstoque().ToString("N2")}");
-            Console.WriteLine($"Valor de Imposto: {isento3.CalculaImposto().ToString("N2")}" + "\n");
+            Console.WriteLine($"Valor de Imposto: {isento3.CalculaImposto().ToString("N2")}");
         }
     }
 }

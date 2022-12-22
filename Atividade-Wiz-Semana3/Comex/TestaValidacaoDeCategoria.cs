@@ -1,9 +1,4 @@
 ﻿using Comex.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Comex
 {
@@ -13,7 +8,7 @@ namespace Comex
         {
             try
             {
-                Categoria teste1 = new Categoria(0, "INFORMÁTICA", "ATIVA");
+                Categoria teste1 = new(0, "INFORMÁTICA", "ATIVA");
              
                 Console.WriteLine($"{teste1.Nome} ({teste1.Id} - {teste1.Status})");
             }
@@ -26,7 +21,7 @@ namespace Comex
             }
             try
             {
-                Categoria teste2 = new Categoria(20, "MÓV", "INATIVA");
+                Categoria teste2 = new(20, "MÓV", "INATIVA");
 
                 Console.WriteLine($"{teste2.Nome} ({teste2.Id} - {teste2.Status})");
             }
@@ -39,7 +34,7 @@ namespace Comex
             }
             try
             {
-                Categoria teste3 = new Categoria(25, "LIVROS", "ERRO");
+                Categoria teste3 = new(25, "LIVROS", "ERRO");
 
                 Console.WriteLine($"{teste3.Nome} ({teste3.Id} - {teste3.Status})");
             }

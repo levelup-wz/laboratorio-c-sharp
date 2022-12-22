@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Comex.Models
+﻿namespace Comex.Models
 {
     public class Pedido
     {
@@ -29,7 +22,7 @@ namespace Comex.Models
             return Id;
         }
 
-        public double CalculaValorTotal()
+        public virtual double CalculaValorTotal()
         {
             double resultado = Produto.Preco_Unitario * Quantidade_Vendida;
             return resultado;

@@ -2,9 +2,21 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "NumericWordsConversion/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/NumericWordsConversion.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/NumericWordsConversion.dll": {}
+        }
+      },
       "Comex.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "NumericWordsConversion": "2.0.0"
+        },
         "compile": {
           "bin/placeholder/Comex.Models.dll": {}
         },
@@ -15,6 +27,19 @@
     }
   },
   "libraries": {
+    "NumericWordsConversion/2.0.0": {
+      "sha512": "+TrawaDCENyOpPDQucKiIfVmn27yDmdmTkf83w68bVRzUPfLFY6KZM9AprVqZxJIgchZbVTPb8tnWBx9t/mgpA==",
+      "type": "package",
+      "path": "numericwordsconversion/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netcoreapp3.0/NumericWordsConversion.dll",
+        "numericwordsconversion.2.0.0.nupkg.sha512",
+        "numericwordsconversion.nuspec"
+      ]
+    },
     "Comex.Models/1.0.0": {
       "type": "project",
       "path": "../Comex.Models/Comex.Models.csproj",

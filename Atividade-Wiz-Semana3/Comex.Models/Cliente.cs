@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Comex.Models
+﻿namespace Comex.Models
 {
     public class Cliente
     {
@@ -41,7 +35,7 @@ namespace Comex.Models
             return Id;
         }
 
-        public string NomeCompleto()
+        public virtual string NomeCompleto()
         {
             string nomeCompleto = $"{PrimeiroNome} {Sobrenome}";
             return nomeCompleto;

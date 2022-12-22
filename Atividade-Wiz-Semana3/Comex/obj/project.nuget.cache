@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LICpwolgO5WflifRbZ/HydXxQ7FoxDVbD+hX8Rj1XocTaaKBEALUqUej10XemcGplCr/MCKCEaLIVXp1IO76Sg==",
+  "dgSpecHash": "P5lcpZjaGQxsOK8HQkAlkjpamJpvWiCOALMK3r3eVxMvr60sv3UW6ti7UQGBXOKMwBVOcUriQq/gz+2Le5ABkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Heber\\OneDrive\\Área de Trabalho\\HB\\Alura\\Fork e Pull Request\\laboratorio-c-sharp\\Atividade-Wiz-Semana3\\Comex\\Comex.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Heber\\.nuget\\packages\\numericwordsconversion\\2.0.0\\numericwordsconversion.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

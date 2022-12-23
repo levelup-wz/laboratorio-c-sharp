@@ -2,6 +2,7 @@
 using Comex;
 using Comex.Testes;
 using System;
+using Comex.Models;
 
 
 

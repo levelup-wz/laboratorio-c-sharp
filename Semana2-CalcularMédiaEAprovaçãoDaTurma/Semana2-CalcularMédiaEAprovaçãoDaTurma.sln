@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana2-Imprimir a soma dos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana2-Imprimir a sequência de Fibonacci", "..\Semana2-Imprimir a sequência de Fibonacci\Semana2-Imprimir a sequência de Fibonacci.csproj", "{8952F46A-7358-4815-A139-1393E88D24DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extra-Cadastrar cliente", "..\Extra-Cadastrar cliente\Extra-Cadastrar cliente.csproj", "{0CE34F79-153B-4343-8D30-ABEFEAE0DD8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extra-Calcular equação de 2º grau", "..\Extra-Calcular equação de 2º grau\Extra-Calcular equação de 2º grau.csproj", "{0DAC5D17-FF58-4595-BC1D-E39A90266B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extra-Calcular IMC", "..\Extra-Calcular IMC\Extra-Calcular IMC.csproj", "{AF92E605-0E74-4DCC-9429-D590DE6BE0D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{8952F46A-7358-4815-A139-1393E88D24DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8952F46A-7358-4815-A139-1393E88D24DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8952F46A-7358-4815-A139-1393E88D24DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE34F79-153B-4343-8D30-ABEFEAE0DD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE34F79-153B-4343-8D30-ABEFEAE0DD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE34F79-153B-4343-8D30-ABEFEAE0DD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE34F79-153B-4343-8D30-ABEFEAE0DD8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DAC5D17-FF58-4595-BC1D-E39A90266B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAC5D17-FF58-4595-BC1D-E39A90266B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAC5D17-FF58-4595-BC1D-E39A90266B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAC5D17-FF58-4595-BC1D-E39A90266B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF92E605-0E74-4DCC-9429-D590DE6BE0D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF92E605-0E74-4DCC-9429-D590DE6BE0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF92E605-0E74-4DCC-9429-D590DE6BE0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF92E605-0E74-4DCC-9429-D590DE6BE0D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

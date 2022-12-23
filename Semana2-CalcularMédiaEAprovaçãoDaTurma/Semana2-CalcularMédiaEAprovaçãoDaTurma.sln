@@ -5,6 +5,12 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Semana2-CalcularMédiaEAprovaçãoDaTurma", "Semana2-CalcularMédiaEAprovaçãoDaTurma.csproj", "{AC291E6A-14F9-475A-A939-E20C9DB7E055}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "semana2-Imprimir os números ÍMPARES de 1 a 100", "..\semana2-Imprimir os números ÍMPARES de 1 a 100\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj", "{F8DF3E6E-6F26-4D67-89C4-DE8FBBCC1D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana2-Imprimir a soma dos números de 1 a 100", "..\Semana2-Imprimir a soma dos números de 1 a 100\Semana2-Imprimir a soma dos números de 1 a 100.csproj", "{64DEC406-3338-45F5-BFC2-14A083B0771F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semana2-Imprimir a sequência de Fibonacci", "..\Semana2-Imprimir a sequência de Fibonacci\Semana2-Imprimir a sequência de Fibonacci.csproj", "{8952F46A-7358-4815-A139-1393E88D24DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{AC291E6A-14F9-475A-A939-E20C9DB7E055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC291E6A-14F9-475A-A939-E20C9DB7E055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC291E6A-14F9-475A-A939-E20C9DB7E055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DF3E6E-6F26-4D67-89C4-DE8FBBCC1D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DF3E6E-6F26-4D67-89C4-DE8FBBCC1D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DF3E6E-6F26-4D67-89C4-DE8FBBCC1D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DF3E6E-6F26-4D67-89C4-DE8FBBCC1D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DEC406-3338-45F5-BFC2-14A083B0771F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DEC406-3338-45F5-BFC2-14A083B0771F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DEC406-3338-45F5-BFC2-14A083B0771F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DEC406-3338-45F5-BFC2-14A083B0771F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8952F46A-7358-4815-A139-1393E88D24DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8952F46A-7358-4815-A139-1393E88D24DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8952F46A-7358-4815-A139-1393E88D24DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8952F46A-7358-4815-A139-1393E88D24DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

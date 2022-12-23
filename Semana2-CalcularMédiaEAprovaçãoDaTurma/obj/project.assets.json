@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\alexoliveira\\.nuget\\packages\\": {}
+    "C:\\Users\\alexs\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexoliveira\\Desktop\\Curso_Speed_\\Curso1_CSharp-Aula6\\Curso1_CSharp-Aula6\\Semana2-CalcularMédiaEAprovaçãoDaTurma\\Semana2-CalcularMédiaEAprovaçãoDaTurma.csproj",
+      "projectUniqueName": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Semana2-CalcularMédiaEAprovaçãoDaTurma\\Semana2-CalcularMédiaEAprovaçãoDaTurma.csproj",
       "projectName": "Semana2-CalcularMédiaEAprovaçãoDaTurma",
-      "projectPath": "C:\\Users\\alexoliveira\\Desktop\\Curso_Speed_\\Curso1_CSharp-Aula6\\Curso1_CSharp-Aula6\\Semana2-CalcularMédiaEAprovaçãoDaTurma\\Semana2-CalcularMédiaEAprovaçãoDaTurma.csproj",
-      "packagesPath": "C:\\Users\\alexoliveira\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexoliveira\\Desktop\\Curso_Speed_\\Curso1_CSharp-Aula6\\Curso1_CSharp-Aula6\\Semana2-CalcularMédiaEAprovaçãoDaTurma\\obj\\",
+      "projectPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Semana2-CalcularMédiaEAprovaçãoDaTurma\\Semana2-CalcularMédiaEAprovaçãoDaTurma.csproj",
+      "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Semana2-CalcularMédiaEAprovaçãoDaTurma\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\alexoliveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

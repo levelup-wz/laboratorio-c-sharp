@@ -1,4 +1,4 @@
-### Semana 5 Wiz Level Up
+### Semana 6 Wiz Level Up
 
 - [ ] Mover as classes para um novo projeto Comex.Modelos
 - [ ] Criar uma nova classe Nota Fiscal

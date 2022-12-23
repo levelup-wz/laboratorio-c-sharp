@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj": {}
+    "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj": {
+    "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj",
+        "projectUniqueName": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj",
         "projectName": "Extra-Calcular equação de 2º grau",
-        "projectPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj",
+        "projectPath": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\Extra-Calcular equação de 2º grau.csproj",
         "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\obj\\",
+        "outputPath": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular equação de 2º grau\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

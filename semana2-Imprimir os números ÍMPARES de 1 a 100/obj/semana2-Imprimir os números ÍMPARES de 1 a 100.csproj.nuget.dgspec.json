@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj": {}
+    "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj": {
+    "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj",
+        "projectUniqueName": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj",
         "projectName": "semana2-Imprimir os números ÍMPARES de 1 a 100",
-        "projectPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj",
+        "projectPath": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\semana2-Imprimir os números ÍMPARES de 1 a 100.csproj",
         "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\obj\\",
+        "outputPath": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\semana2-Imprimir os números ÍMPARES de 1 a 100\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

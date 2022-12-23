@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj": {}
+    "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj": {
+    "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj",
+        "projectUniqueName": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj",
         "projectName": "Extra-Calcular IMC",
-        "projectPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj",
+        "projectPath": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\Extra-Calcular IMC.csproj",
         "packagesPath": "C:\\Users\\alexs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexs\\source\\repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\obj\\",
+        "outputPath": "C:\\Users\\alexs\\Source\\Repos\\alexstok\\laboratorio-c-sharp\\Extra-Calcular IMC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

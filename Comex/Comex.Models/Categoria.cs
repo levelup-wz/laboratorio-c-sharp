@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comex
+namespace Comex.Models
 {
     public class Categoria
     {

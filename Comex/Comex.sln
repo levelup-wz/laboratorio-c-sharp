@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex", "Comex\Comex.csproj", "{2319DE1C-082F-472F-A68B-D08E16BB355D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comex.Models", "Comex.Models\Comex.Models.csproj", "{8F6E4F47-7AFC-403E-B19B-EBE6F937AF10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2319DE1C-082F-472F-A68B-D08E16BB355D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2319DE1C-082F-472F-A68B-D08E16BB355D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2319DE1C-082F-472F-A68B-D08E16BB355D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6E4F47-7AFC-403E-B19B-EBE6F937AF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6E4F47-7AFC-403E-B19B-EBE6F937AF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6E4F47-7AFC-403E-B19B-EBE6F937AF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6E4F47-7AFC-403E-B19B-EBE6F937AF10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

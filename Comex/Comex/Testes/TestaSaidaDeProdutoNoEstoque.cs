@@ -1,8 +1,9 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.Models;
 
 namespace Comex.Testes
 {
@@ -15,7 +16,7 @@ namespace Comex.Testes
 
             Estoque estoque = new Estoque();
 
-            /*estoque.RegistraEntrada(vacina);
+            *//*estoque.RegistraEntrada(vacina);
             Console.WriteLine(
                 $"ESTOQUE - REGISTRO DE ENTRADA\n" +
                 $"Capacidade: {Estoque.Capacidade}\n" +
@@ -29,7 +30,7 @@ namespace Comex.Testes
                 $"Capacidade: {Estoque.Capacidade}\n" +
                 $"Ocupação: {Estoque.Ocupacao}\n" +
                 $"Montante: {Estoque.Montante:C}\n"
-            );*/
+            );*//*
 
             try
             {
@@ -42,3 +43,4 @@ namespace Comex.Testes
         }
     }
 }
+*/

@@ -1,8 +1,9 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.Models;
 
 namespace Comex.Testes
 {
@@ -19,7 +20,7 @@ namespace Comex.Testes
             Produto macbookPro = new Produto("Macbook Pro", 20000.00, 15, informatica);
 
             Estoque estoque = new Estoque();
-            /*estoque.RegistraEntrada(vacina);
+            *//*estoque.RegistraEntrada(vacina);
             estoque.RegistraEntrada(useACabecaJava);
             estoque.RegistraEntrada(macbookPro);
 
@@ -29,7 +30,7 @@ namespace Comex.Testes
                 $"Ocupação: {Estoque.Ocupacao}\n" +
                 $"Montante: {Estoque.Montante:C}\n"
             );
-            */
+            *//*
 
             Produto bala7Belo = new Produto("Bala 7 Belo", 0.1, 5000, new Categoria ("Alimentos"));
 
@@ -44,3 +45,4 @@ namespace Comex.Testes
         }
     }
 }
+*/

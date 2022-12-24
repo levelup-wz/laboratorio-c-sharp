@@ -1,4 +1,6 @@
-﻿/*namespace Comex.Testes
+﻿/*using Comex.Models;
+
+namespace Comex.Testes
 {
     public class TestaProduto
     {

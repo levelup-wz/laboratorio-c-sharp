@@ -1,7 +1,7 @@
-﻿using Comex;
-using Comex.Testes;
+﻿/*using Comex;
+using Comex.Models;
 
-/* Testa Categoria
+/*Testa Categoria
 
 Categoria c1 = new Categoria("Informática");
 
@@ -12,8 +12,7 @@ Categoria c3 = new Categoria("Livros");
 
 Console.WriteLine($"{c1.Nome} ({c1.Id} - {c1.Status})");
 Console.WriteLine($"{c2.Nome} ({c2.Id} - {c2.Status})");
-Console.WriteLine($"{c3.Nome} ({c3.Id} - {c3.Status})");
-*/
+Console.WriteLine($"{c3.Nome} ({c3.Id} - {c3.Status})");*/
 
 
 
@@ -198,4 +197,5 @@ catch (ArgumentException e)
     Console.WriteLine($"Método que lançou a exceção: {e.TargetSite}");
 }*/
 
+Console.WriteLine("Teste");
 Console.ReadKey();

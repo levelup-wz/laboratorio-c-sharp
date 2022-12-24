@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using NumericWordsConversion;
+using NumerosExtensos;
+using NumerosExtensos.Enums;
 
 namespace Comex.Models
 {
@@ -27,6 +29,16 @@ namespace Comex.Models
             decimal valorTotalDecimal = Convert.ToDecimal(CalcularValorTotal());
             
             return converter.ToWords(valorTotalDecimal);
+        }
+
+        public string CalcularValorPorExtensoPtBr()
+        {
+            var valor = CalcularValorTotal();
+            var extenso = new Extenso();
+            var escrever = extenso.Escrever(OpcoesPredefinidas.Predefinicoes[Predefinicoes.MonetarioBRL]);
+            var numeroPorExtenso = escrever.Numero(valor.ToString());
+            
+            return numeroPorExtenso;
         }
 
         public double CalcularImposto()

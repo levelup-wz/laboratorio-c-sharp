@@ -197,5 +197,16 @@ catch (ArgumentException e)
     Console.WriteLine($"Método que lançou a exceção: {e.TargetSite}");
 }*/
 
+using Comex.Models;
+
 Console.WriteLine("Teste");
+
+Categoria categoria1 = new Categoria("Teste");
+Produto produto1 = new Produto("Notebook Samsung", 3523.00, 1, categoria1);
+Cliente cliente1 = new Cliente("José", "Rodrigues", 01234567890, "(61) 9 9352-9033", "Rua das Jabuticabeiras", 5, "Apto 201", "Setor 9", "Valparaíso", "Goiás");
+Pedido pedido1 = new Pedido(cliente1, produto1, 2);
+NotaFiscal notafiscal1 = new NotaFiscal(pedido1);
+
+Console.WriteLine(notafiscal1.GerarNotaFiscal());
+
 Console.ReadKey();

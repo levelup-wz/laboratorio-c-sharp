@@ -15,7 +15,7 @@ namespace Comex.Models
         {
             return $"Nome do cliente: {Pedido.ClientePedido.PrimeiroNome} {Pedido.ClientePedido.Sobrenome}\n" +
                    $"Data do pedido: {Pedido.Data}\n" +
-                   $"Valor total: {Pedido.CalcularValorTotal()}";
+                   $"Valor total: {Pedido.CalcularValorTotal():C2} ({Pedido.CalcularValorPorExtenso()})";
         }
 
         public NotaFiscal(Pedido pedido)

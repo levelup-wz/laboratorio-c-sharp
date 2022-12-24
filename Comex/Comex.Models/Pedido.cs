@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using NumericWordsConversion;
 
 namespace Comex.Models
 {
@@ -18,6 +19,14 @@ namespace Comex.Models
         public double CalcularValorTotal()
         {
             return PedidoProduto.PrecoUnitario * QuantidadeVendida;
+        }
+
+        public string CalcularValorPorExtenso()
+        {
+            NumericWordsConverter converter = new NumericWordsConverter();
+            decimal valorTotalDecimal = Convert.ToDecimal(CalcularValorTotal());
+            
+            return converter.ToWords(valorTotalDecimal);
         }
 
         public double CalcularImposto()

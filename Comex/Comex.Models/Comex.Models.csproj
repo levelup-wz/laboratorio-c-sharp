@@ -7,4 +7,8 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NumericWordsConversion" Version="2.0.0" />
+  </ItemGroup>
+
 </Project>

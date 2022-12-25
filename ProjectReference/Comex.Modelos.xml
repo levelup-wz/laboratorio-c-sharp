@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Comex.Modelos</name>
+    </assembly>
+    <members>
+        <member name="M:Comex.Categorias.Categoria.#ctor(System.String,System.String)">
+            <summary>
+            Cria uma categoria nova
+            </summary>
+            <param name="nome"> Nome da categoria necessário e maior que 3 caracteres </param>
+            <param name="status"> Status (ATIVA / INATIVA) </param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Comex.Clientes.Cliente.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Cria um novo cliente
+            </summary>
+            <param name="nome"></param>
+            <param name="sobrenome"></param>
+            <param name="cpf"></param>
+            <param name="telefone"></param>
+            <param name="rua"></param>
+            <param name="numero"></param>
+            <param name="complemento"></param>
+            <param name="bairro"></param>
+            <param name="cidade"></param>
+            <param name="estado"></param>
+        </member>
+    </members>
+</doc>

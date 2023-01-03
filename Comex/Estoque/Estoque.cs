@@ -8,6 +8,11 @@ namespace Comex
 
     public void RegistraEntrada(Produto produto)
     {
+        if(produto.QuantidadeEmEstoque > Capacidade)
+            {
+                throw new CapacityLimitExceededException("A quantidade de produto é maior que a capacidade do estoque.");
+            }
+
         Capacidade -= produto.QuantidadeEmEstoque;
         Ocupacao += produto.QuantidadeEmEstoque;
         Montante += Convert.ToDecimal(produto.CalculaValorTotalEmEstoque());
@@ -15,7 +20,12 @@ namespace Comex
 
     public void RegistraSaida(Produto produto)
     {
-        Capacidade += produto.QuantidadeEmEstoque;
+        if(Ocupacao == 0)
+            {
+                throw new CapacityLimitExceededException("O estoque está vazio.");
+            }
+
+            Capacidade += produto.QuantidadeEmEstoque;
         Ocupacao -= produto.QuantidadeEmEstoque;
         Montante -= Convert.ToDecimal(produto.CalculaValorTotalEmEstoque());
     }

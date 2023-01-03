@@ -135,5 +135,5 @@ _NCrunch*
 refint/
 .vs
 
-/Comex.csproj
-/Comex.sln
+*.csproj
+*/Comex.sln

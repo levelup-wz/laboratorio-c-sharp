@@ -6,22 +6,27 @@ namespace Comex.Models
 {
     public class NotaFiscal
     {
-        internal static Pedido? Pedido { get; set; }
-        public static string? ExtensoNumero { get; set; }
+        internal Pedido Pedido { get; set; }
+        public string ExtensoNumero { get; set; }
 
-        public static void RegistraPedido(Pedido pedido)
+        public NotaFiscal(Pedido pedido) 
         {
+            Pedido = pedido;
             NumericWordsConverter numericWordsConverter = new();
             ExtensoNumero = numericWordsConverter.ToWords((decimal)pedido.CalculaValorTotal());
-            var meuNumero = pedido.CalculaValorTotal();
+        }
+
+        public void RegistraPedido()
+        {
+            var meuNumero = Pedido.CalculaValorTotal();
             Extenso extenso = new();
             var escrever = extenso.Escrever(OpcoesPredefinidas.Predefinicoes[Predefinicoes.MonetarioBRL]);
             var numeroPorExtenso = escrever.Numero(meuNumero.ToString());
 
-            Console.WriteLine($"Nome do cliente: {pedido.Cliente.NomeCompleto()}"); 
-            Console.WriteLine($"Data de compra: {pedido.Data}");
-            Console.WriteLine($"Total do pedido: US$ {pedido.CalculaValorTotal()} = {ExtensoNumero}");
-            Console.WriteLine($"Total do pedido: R$ {pedido.CalculaValorTotal():N2} = {numeroPorExtenso}");
+            Console.WriteLine($"Nome do cliente: {Pedido.Cliente.NomeCompleto()}"); 
+            Console.WriteLine($"Data de compra: {Pedido.Data}");
+            Console.WriteLine($"Total do pedido: US$ {Pedido.CalculaValorTotal()} = {ExtensoNumero}");
+            Console.WriteLine($"Total do pedido: R$ {Pedido.CalculaValorTotal():N2} = {numeroPorExtenso}");
 
         }
     }

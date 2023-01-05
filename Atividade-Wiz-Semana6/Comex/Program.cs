@@ -127,9 +127,13 @@ Console.WriteLine();
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("Nota fiscal:" + "\n");
-NotaFiscal.RegistraPedido(new Pedido(new Cliente("Hebert", "Belchior", "111.333.444-55", "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
+NotaFiscal notaFiscal = new(new Pedido(new Cliente("Hebert", "Belchior", "111.333.444-55", "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
                            "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
                            new Produto("Notebook Samsung", 3523.00, 1, "Informática"), 1));
+notaFiscal.RegistraPedido();
+//NotaFiscal.RegistraPedido(new Pedido(new Cliente("Hebert", "Belchior", "111.333.444-55", "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
+//                           "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
+//                           new Produto("Notebook Samsung", 3523.00, 1, "Informática"), 1));
 Console.WriteLine();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");

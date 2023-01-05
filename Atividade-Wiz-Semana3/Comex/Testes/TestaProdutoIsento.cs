@@ -1,6 +1,6 @@
 ﻿using Comex.Models;
 
-namespace Comex
+namespace Comex.Testes
 {
     public static class TestaProdutoIsento
     {

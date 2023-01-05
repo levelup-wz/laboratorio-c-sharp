@@ -1,4 +1,4 @@
-﻿namespace Comex.Models
+﻿namespace Comex.Models.Exceptions
 {
     public class LimiteDeEstoqueExcedidoException : Exception
     {

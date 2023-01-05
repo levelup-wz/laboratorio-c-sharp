@@ -1,6 +1,7 @@
 ﻿using Comex.Models;
+using Comex.Models.Exceptions;
 
-namespace Comex
+namespace Comex.Testes
 {
     public class TestaEntradaDeProdutoNoEstoque
     {

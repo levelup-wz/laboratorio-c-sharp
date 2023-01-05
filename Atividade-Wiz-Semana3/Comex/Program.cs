@@ -1,5 +1,5 @@
-﻿using Comex;
-using Comex.Models;
+﻿using Comex.Models;
+using Comex.Testes;
 
 Console.WriteLine("TestaCategoria:" + "\n");
 Categoria categoria1 = new();

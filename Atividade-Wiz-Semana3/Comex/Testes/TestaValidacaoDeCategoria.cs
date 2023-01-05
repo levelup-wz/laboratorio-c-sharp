@@ -1,6 +1,6 @@
 ﻿using Comex.Models;
 
-namespace Comex
+namespace Comex.Testes
 {
     public class TestaValidacaoDeCategoria
     {
@@ -9,7 +9,7 @@ namespace Comex
             try
             {
                 Categoria teste1 = new(0, "INFORMÁTICA", "ATIVA");
-             
+
                 Console.WriteLine($"{teste1.Nome} ({teste1.Id} - {teste1.Status})");
             }
             catch (ArgumentException ex)

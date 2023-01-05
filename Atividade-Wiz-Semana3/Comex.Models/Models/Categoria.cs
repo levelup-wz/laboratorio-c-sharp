@@ -1,4 +1,4 @@
-﻿namespace Comex.Models
+﻿namespace Comex.Models.Models
 {
     public class Categoria
     {
@@ -7,7 +7,7 @@
         public string Nome { get; set; }
         public string Status { get; set; }
 
-        public Categoria() 
+        public Categoria()
         {
             Id = _id++;
         }

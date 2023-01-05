@@ -1,4 +1,5 @@
-﻿using Comex.Models;
+﻿using Comex.Models.Exceptions;
+using Comex.Models.Models;
 
 namespace Comex.Testes
 {

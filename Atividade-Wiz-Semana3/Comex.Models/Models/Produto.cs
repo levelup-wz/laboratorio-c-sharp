@@ -1,4 +1,4 @@
-﻿namespace Comex.Models
+﻿namespace Comex.Models.Models
 {
     public class Produto
     {
@@ -10,7 +10,7 @@
         public double Quantidade_Em_Estoque { get; set; }
         public string Categoria { get; set; }
 
-        public Produto (string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
+        public Produto(string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
         {
             Id = _id++;
             Nome = nome;
@@ -19,7 +19,7 @@
             Categoria = categoria;
         }
 
-        public Produto (int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
+        public Produto(int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
         {
             Id = id;
             Nome = nome;

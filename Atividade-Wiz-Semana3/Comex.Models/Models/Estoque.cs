@@ -1,10 +1,12 @@
-﻿namespace Comex.Models;
+﻿using Comex.Models.Exceptions;
+
+namespace Comex.Models.Models;
 
 public class Estoque
 {
-   static public int Capacidade { get; set; } = 1000;
-   static public int Ocupacao { get; set; }
-   static public decimal Montante { get; set; }
+    static public int Capacidade { get; set; } = 1000;
+    static public int Ocupacao { get; set; }
+    static public decimal Montante { get; set; }
 
     public static void RegistraEntrada(Produto produto)
     {

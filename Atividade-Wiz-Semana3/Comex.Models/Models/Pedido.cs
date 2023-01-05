@@ -1,4 +1,4 @@
-﻿namespace Comex.Models
+﻿namespace Comex.Models.Models
 {
     public class Pedido
     {

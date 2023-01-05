@@ -1,4 +1,4 @@
-﻿using Comex.Models;
+﻿using Comex.Models.Models;
 using Comex.Testes;
 
 Console.WriteLine("TestaCategoria:" + "\n");

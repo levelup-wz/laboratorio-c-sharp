@@ -2,7 +2,7 @@
 using NumerosExtensos;
 using NumerosExtensos.Enums;
 
-namespace Comex.Models
+namespace Comex.Models.Models
 {
     public class NotaFiscal
     {
@@ -18,7 +18,7 @@ namespace Comex.Models
             var escrever = extenso.Escrever(OpcoesPredefinidas.Predefinicoes[Predefinicoes.MonetarioBRL]);
             var numeroPorExtenso = escrever.Numero(meuNumero.ToString());
 
-            Console.WriteLine($"Nome do cliente: {pedido.Cliente.NomeCompleto()}"); 
+            Console.WriteLine($"Nome do cliente: {pedido.Cliente.NomeCompleto()}");
             Console.WriteLine($"Data de compra: {pedido.Data}");
             Console.WriteLine($"Total do pedido: US$ {pedido.CalculaValorTotal()} = {ExtensoNumero}");
             Console.WriteLine($"Total do pedido: R$ {pedido.CalculaValorTotal():N2} = {numeroPorExtenso}");

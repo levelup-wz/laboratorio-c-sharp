@@ -1,4 +1,4 @@
-﻿using Comex.Models;
+﻿using Comex.Models.Models;
 
 namespace Comex.Testes
 {

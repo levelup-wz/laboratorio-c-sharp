@@ -7,14 +7,14 @@
         public DateTime Data = DateTime.Now;
         public Cliente Cliente { get; }
         public Produto Produto { get; }
-        public double Quantidade_Vendida { get; }
+        public double QuantidadeVendida { get; }
 
         public Pedido(Cliente cliente, Produto produto, double quantidade_vendida)
         {
             Id = _id++;
             Cliente = cliente;
             Produto = produto;
-            Quantidade_Vendida = quantidade_vendida;
+            QuantidadeVendida = quantidade_vendida;
         }
 
         public int DefineId()
@@ -24,13 +24,13 @@
 
         public virtual double CalculaValorTotal()
         {
-            double resultado = Produto.Preco_Unitario * Quantidade_Vendida;
+            double resultado = Produto.PrecoUnitario * QuantidadeVendida;
             return resultado;
         }
 
         public double CalculaTotalDeImpostos()
         {
-            double resultado = Quantidade_Vendida * Produto.CalculaImposto();
+            double resultado = QuantidadeVendida * Produto.CalculaImposto();
             return resultado;
         }
     }

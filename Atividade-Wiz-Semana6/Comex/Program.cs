@@ -35,21 +35,21 @@ Produto produto2 = new("Clean Architecture", 102.90, 2, "Livros");
 Produto produto3 = new("Monitor Dell 27", 1889.00, 3, "Informática");
 
 Console.WriteLine($"{produto1.Categoria} ({produto1.DefineId()} - {produto1.Nome})");
-Console.WriteLine($"Quantidade em estoque: {produto1.Quantidade_Em_Estoque}");
+Console.WriteLine($"Quantidade em estoque: {produto1.QuantidadeEmEstoque}");
 Console.WriteLine($"Valor total em estoque: {produto1.CalculaValorTotalEmEstoque():N2}");
-Console.WriteLine($"Preço unitário: {produto1.Preco_Unitario}");
+Console.WriteLine($"Preço unitário: {produto1.PrecoUnitario}");
 Console.WriteLine($"Valor de Imposto: {produto1.CalculaImposto():N2}" + "\n");
 
 Console.WriteLine($"{produto2.Categoria} ({produto2.DefineId()} - {produto2.Nome})");
-Console.WriteLine($"Quantidade em estoque: {produto2.Quantidade_Em_Estoque}");
+Console.WriteLine($"Quantidade em estoque: {produto2.QuantidadeEmEstoque}");
 Console.WriteLine($"Valor total em estoque: {produto2.CalculaValorTotalEmEstoque():N2}");
-Console.WriteLine($"Preço unitário: {produto2.Preco_Unitario}");
+Console.WriteLine($"Preço unitário: {produto2.PrecoUnitario}");
 Console.WriteLine($"Valor de Imposto: {produto2.CalculaImposto():N2}" + "\n");
 
 Console.WriteLine($"{produto3.Categoria} ({produto3.DefineId()} - {produto3.Nome})");
-Console.WriteLine($"Quantidade em estoque: {produto3.Quantidade_Em_Estoque}");
+Console.WriteLine($"Quantidade em estoque: {produto3.QuantidadeEmEstoque}");
 Console.WriteLine($"Valor total em estoque: {produto3.CalculaValorTotalEmEstoque():N2}");
-Console.WriteLine($"Preço unitário: {produto3.Preco_Unitario}");
+Console.WriteLine($"Preço unitário: {produto3.PrecoUnitario}");
 Console.WriteLine($"Valor de Imposto: {produto3.CalculaImposto():N2}" + "\n");
 
 TestaValidacaoDeProdutos.RegistaEntradaProdutos();
@@ -70,7 +70,7 @@ Console.WriteLine($"Telefone do cliente: {pedido1.Cliente.Telefone}");
 Console.WriteLine($"Endereço do cliente: {pedido1.Cliente.EnderecoCompleto()}");
 Console.WriteLine($"Produto do pedido: {pedido1.Produto.Nome}");
 Console.WriteLine($"Categoria do produto: {pedido1.Produto.Categoria}");
-Console.WriteLine($"Quantidade vendida: {pedido1.Quantidade_Vendida}");
+Console.WriteLine($"Quantidade vendida: {pedido1.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido1.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: { pedido1.CalculaTotalDeImpostos():N2}" + "\n");
 Pedido pedido2 = new(new Cliente("Monalisa", "Mata", "222.333.444-55", "(81)92345-6789", "Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
@@ -85,7 +85,7 @@ Console.WriteLine($"Telefone do cliente: {pedido2.Cliente.Telefone}");
 Console.WriteLine($"Endereço do cliente: {pedido2.Cliente.EnderecoCompleto()}");
 Console.WriteLine($"Produto do pedido: {pedido2.Produto.Nome}");
 Console.WriteLine($"Categoria do produto: {pedido2.Produto.Categoria}");
-Console.WriteLine($"Quantidade vendida: {pedido2.Quantidade_Vendida}");
+Console.WriteLine($"Quantidade vendida: {pedido2.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido2.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido2.CalculaTotalDeImpostos():N2}" + "\n");
 
@@ -100,7 +100,7 @@ Console.WriteLine($"Telefone do cliente: {pedido2.Cliente.Telefone}");
 Console.WriteLine($"Endereço do cliente: {pedido3.Cliente.EnderecoCompleto()}");
 Console.WriteLine($"Produto do pedido: {pedido3.Produto.Nome}");
 Console.WriteLine($"Categoria do produto: {pedido3.Produto.Categoria}");
-Console.WriteLine($"Quantidade vendida: {pedido3.Quantidade_Vendida}");
+Console.WriteLine($"Quantidade vendida: {pedido3.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido3.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido3.CalculaTotalDeImpostos():N2}" + "\n");
 
@@ -131,9 +131,6 @@ NotaFiscal notaFiscal = new(new Pedido(new Cliente("Hebert", "Belchior", "111.33
                            "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
                            new Produto("Notebook Samsung", 3523.00, 1, "Informática"), 1));
 notaFiscal.RegistraPedido();
-//NotaFiscal.RegistraPedido(new Pedido(new Cliente("Hebert", "Belchior", "111.333.444-55", "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
-//                           "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
-//                           new Produto("Notebook Samsung", 3523.00, 1, "Informática"), 1));
 Console.WriteLine();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");

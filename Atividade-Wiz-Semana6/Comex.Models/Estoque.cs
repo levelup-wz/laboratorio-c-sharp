@@ -10,14 +10,14 @@ public class Estoque
 
     public static void RegistraEntrada(Produto produto)
     {
-        if (produto.Quantidade_Em_Estoque > Capacidade)
+        if (produto.QuantidadeEmEstoque > Capacidade)
         {
             throw new LimiteDeEstoqueExcedidoException("Capacidade de estoque excedida.");
         }
 
 
-        Capacidade = (int)(Capacidade - produto.Quantidade_Em_Estoque);
-        Ocupacao = (int)(Ocupacao + produto.Quantidade_Em_Estoque);
+        Capacidade = (int)(Capacidade - produto.QuantidadeEmEstoque);
+        Ocupacao = (int)(Ocupacao + produto.QuantidadeEmEstoque);
         Montante += (decimal)produto.CalculaValorTotalEmEstoque();
     }
 
@@ -28,8 +28,8 @@ public class Estoque
             throw new LimiteDeEstoqueExcedidoException("Não existe mais produtos no estoque.");
         }
 
-        Capacidade = (int)(Capacidade + produto.Quantidade_Em_Estoque);
-        Ocupacao = (int)(Ocupacao - produto.Quantidade_Em_Estoque);
+        Capacidade = (int)(Capacidade + produto.QuantidadeEmEstoque);
+        Ocupacao = (int)(Ocupacao - produto.QuantidadeEmEstoque);
         Montante -= (decimal)produto.CalculaValorTotalEmEstoque();
     }
 

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Comex.Utils" Version="1.0.0" />
+    <PackageReference Include="Comex.Utils" Version="1.0.1" />
     <PackageReference Include="EscritaPorExtenso" Version="0.2.2" />
     <PackageReference Include="NumericWordsConversion" Version="2.0.0" />
   </ItemGroup>

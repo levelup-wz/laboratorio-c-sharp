@@ -6,6 +6,11 @@
 - [x] Mostre o valor da Nota Fiscal por exetenso
 - [x] Procure uma biblioteca que converta numeros para um valor extenso em português
 - [x] Criar testes para classe nota fiscal
+
+- Requisitos adicionados posteriormente
+- [x] Criar um pacote Comex.Utils e a classe Correios
+- [x] Criar uma classe Frete e o metodo Calcular
+- [x] Testar a classe frete e o método calcular
 - [x] Enviar entregas
 
 # Desafio Semana 5 - Comex - Entendendo Exceções.

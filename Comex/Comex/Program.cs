@@ -1,5 +1,4 @@
-﻿/*using Comex;
-using Comex.Models;
+﻿using Comex.Utils;
 
 /*Testa Categoria
 
@@ -197,7 +196,7 @@ catch (ArgumentException e)
     Console.WriteLine($"Método que lançou a exceção: {e.TargetSite}");
 }*/
 
-using Comex.Models;
+/*using Comex.Models;
 
 Console.WriteLine("Teste");
 
@@ -208,5 +207,11 @@ Pedido pedido1 = new Pedido(cliente1, produto1, 2);
 NotaFiscal notafiscal1 = new NotaFiscal(pedido1);
 
 Console.WriteLine(notafiscal1.GerarNotaFiscal());
+
+Console.ReadKey();*/
+
+Correios c = new Correios();
+string regiao = c.ObterRegiaoPorCEP("72925162");
+Console.WriteLine(regiao);
 
 Console.ReadKey();

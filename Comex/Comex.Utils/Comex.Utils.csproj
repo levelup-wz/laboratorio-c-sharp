@@ -1,15 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>CorreiosUtils</Title>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Comex.Models\Comex.Models.csproj" />
-    <ProjectReference Include="..\Comex.Utils\Comex.Utils.csproj" />
-  </ItemGroup>
 
 </Project>

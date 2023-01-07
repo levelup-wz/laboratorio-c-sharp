@@ -12,11 +12,6 @@ namespace Comex.Modelos.Pedidos
             Correios = new Correios(cep);
         }
 
-        /// <summary>
-        /// Retorna o preço do frete do pedido
-        /// </summary>
-        /// <param name="cep"> Cep da região </param>
-        /// <returns></returns>
         public decimal Calcular()
         {
             switch (Correios.ObterRegiaoPorCEP())

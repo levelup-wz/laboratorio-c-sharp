@@ -1,4 +1,5 @@
-﻿using Comex.Utils;
+﻿using Comex.Models;
+using Comex.Utils;
 
 /*Testa Categoria
 

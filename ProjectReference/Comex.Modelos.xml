@@ -12,13 +12,6 @@
             <param name="status"> <see cref="P:Comex.Categorias.Categoria.Status"/> (ATIVA / INATIVA) </param>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
-        <member name="M:Comex.Modelos.Pedidos.Frete.Calcular">
-            <summary>
-            Retorna o preço do frete do pedido
-            </summary>
-            <param name="cep"> Cep da região </param>
-            <returns></returns>
-        </member>
         <member name="M:Comex.Produtos.Produto.#ctor(System.String,System.String,System.Double,System.Int32,Comex.Categorias.Categoria)">
             <summary>
             Cria uma instância de Produto

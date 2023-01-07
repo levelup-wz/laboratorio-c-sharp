@@ -59,7 +59,7 @@ class Program
         {
             Console.Clear();
             
-            Console.WriteLine("[1] Ver categorias \n[2] Ver pedidos e notas fiscais \n[3] Conferir estoque \n[4] Teste entrada \n[5] Teste saída \n" +
+            Console.WriteLine("[1] Ver categorias \n[2] Ver pedidos, frete e notas fiscais \n[3] Conferir estoque \n[4] Teste entrada \n[5] Teste saída \n" +
                 "[6] Teste validação de Categorias \n[7] Teste validação de Produtos \n[8] Encerrar");
             op = Console.ReadLine();
             Console.Clear();

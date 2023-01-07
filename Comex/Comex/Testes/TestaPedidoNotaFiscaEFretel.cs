@@ -6,7 +6,7 @@ using System;
 
 namespace Comex.Testes
 {
-    public class TestaPedido
+    public class TestaPedidoNotaFiscalEFrete
     {
         Categoria informatica = new Categoria("INFORMÁTICA", "ATIVA");
         Categoria moveis = new Categoria("MÓVEIS", "INATIVA");
@@ -22,16 +22,19 @@ namespace Comex.Testes
         Cliente danilo = new Cliente("Danilo", "Siervi", "12345678913", "32998145012", "Rua Legal",
             "D13", "Perto de casa", "Centro", "Cidade bonita", "Minas Gerais");
 
-        Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2);
-        Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2);
-        Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1);
+        Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2, "08532-220");
+        Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2, "83992-332");
+        Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1, "36623-293");
 
         Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} \n{pedido1.Produto.Nome} " +
-            $"{pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()} - Imposto: R${pedido1.CalculaTotalImposto()}");
+            $"{pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()} - Imposto: R${pedido1.CalculaTotalImposto()}" +
+            $"\nCEP: {pedido1.Frete.Correios.Cep} - Frete: R${pedido1.Frete.Calcular()}");
         Console.WriteLine($"\n{pedido2.Id} - {pedido2.Data} Cliente: {pedido2.Cliente.NomeCompleto()} \n{pedido2.Produto.Nome} " +
-            $"{pedido2.QuantidadeVendida} unidades \nR${pedido2.CalculaValorTotal()} - Imposto: R${pedido2.CalculaTotalImposto()}");
+            $"{pedido2.QuantidadeVendida} unidades \nR${pedido2.CalculaValorTotal()} - Imposto: R${pedido2.CalculaTotalImposto()}" +
+            $"\nCEP: {pedido2.Frete.Correios.Cep} - Frete: R${pedido2.Frete.Calcular()}");
         Console.WriteLine($"\n{pedido3.Id} - {pedido3.Data} Cliente: {pedido3.Cliente.NomeCompleto()} \n{pedido3.Produto.Nome} " +
-            $"{pedido3.QuantidadeVendida} unidades \nR${pedido3.CalculaValorTotal()} - Imposto: R${pedido3.CalculaTotalImposto()}");
+            $"{pedido3.QuantidadeVendida} unidades \nR${pedido3.CalculaValorTotal()} - Imposto: R${pedido3.CalculaTotalImposto()}" +
+            $"\nCEP: {pedido3.Frete.Correios.Cep} - Frete: R${pedido3.Frete.Calcular()}");
         Console.WriteLine("---------------------------");
 
         Console.WriteLine($"Notas Fiscais: \n{nota1.GetNotaFiscal()}");

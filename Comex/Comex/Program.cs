@@ -38,7 +38,7 @@ class Program
         Cliente danilo = new Cliente("Danilo", "Siervi", "12345678913", "32998145012", "Rua Legal",
             "D13", "Perto de casa", "Centro", "Cidade bonita", "Minas Gerais");
 
-        // declaração dos pedidos e notas fiscais
+        // declaração dos pedidos
         Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2, "08532-220");
         Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2, "83992-332");
         Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1, "36623-293");

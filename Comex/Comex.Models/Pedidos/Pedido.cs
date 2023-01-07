@@ -1,6 +1,7 @@
 using System;
 using Comex.Produtos;
 using Comex.Clientes;
+using Comex.Modelos.Pedidos;
 
 namespace Comex.Pedidos
 {
@@ -13,8 +14,9 @@ namespace Comex.Pedidos
         public Produto Produto { get; set; }
         public int QuantidadeVendida { get; set; }
         public NotaFiscal Nota { get; private set; }
+        public Frete Frete { get; private set; }
 
-        public Pedido(string data, Cliente cliente, Produto produto, int quantidadeVendida)
+        public Pedido(string data, Cliente cliente, Produto produto, int quantidadeVendida, string cep)
         {
             Quantidade++;
             Id = Quantidade;
@@ -23,6 +25,7 @@ namespace Comex.Pedidos
             Produto = produto;
             QuantidadeVendida = quantidadeVendida;
             Nota = new NotaFiscal(this);
+            Frete = new Frete(cep);
         }
 
         public double CalculaValorTotal()

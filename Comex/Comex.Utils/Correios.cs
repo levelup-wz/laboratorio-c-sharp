@@ -4,9 +4,16 @@ namespace Comex.Utils
 {
     public class Correios
     {
-        public char ObterRegiaoPorCEP(string cep)
+        public string Cep { get; set; }
+
+        public Correios(string cep)
         {
-            return cep.FirstOrDefault();
+            Cep = cep;
+        }
+
+        public char ObterRegiaoPorCEP()
+        {
+            return Cep.FirstOrDefault();
         }
     }
 }

@@ -8,24 +8,27 @@
             <summary>
             Cria uma categoria nova
             </summary>
-            <param name="nome"> Nome da categoria necessário e maior que 3 caracteres </param>
-            <param name="status"> Status (ATIVA / INATIVA) </param>
+            <param name="nome"> <see cref="P:Comex.Categorias.Categoria.Nome"/> da categoria necessário e maior que 3 caracteres </param>
+            <param name="status"> <see cref="P:Comex.Categorias.Categoria.Status"/> (ATIVA / INATIVA) </param>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
-        <member name="M:Comex.Clientes.Cliente.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:Comex.Modelos.Pedidos.Frete.Calcular">
             <summary>
-            Cria um novo cliente
+            Retorna o preço do frete do pedido
             </summary>
-            <param name="nome"></param>
-            <param name="sobrenome"></param>
-            <param name="cpf"></param>
-            <param name="telefone"></param>
-            <param name="rua"></param>
-            <param name="numero"></param>
-            <param name="complemento"></param>
-            <param name="bairro"></param>
-            <param name="cidade"></param>
-            <param name="estado"></param>
+            <param name="cep"> Cep da região </param>
+            <returns></returns>
+        </member>
+        <member name="M:Comex.Produtos.Produto.#ctor(System.String,System.String,System.Double,System.Int32,Comex.Categorias.Categoria)">
+            <summary>
+            Cria uma instância de Produto
+            </summary>
+            <param name="nome"> <see cref="P:Comex.Produtos.Produto.Nome"/> necessário e maior que 5 caracteres </param>
+            <param name="descricao"></param>
+            <param name="preco"> <see cref="P:Comex.Produtos.Produto.Preco"/> obrigatório e diferente de zero </param>
+            <param name="estoque"> <see cref="P:Comex.Produtos.Produto.Estoque"/> obrigatório e diferente de zero </param>
+            <param name="categoria"> <see cref="P:Comex.Produtos.Produto.Categoria"/> obrigatória </param>
+            <exception cref="T:System.ArgumentException"></exception>
         </member>
     </members>
 </doc>

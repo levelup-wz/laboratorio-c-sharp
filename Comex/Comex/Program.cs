@@ -39,15 +39,10 @@ class Program
             "D13", "Perto de casa", "Centro", "Cidade bonita", "Minas Gerais");
 
         // declaração dos pedidos e notas fiscais
-        Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2);
-        Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2);
-        Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1);
-        Pedido pedido4 = new Pedido("09/12/2022", danilo, vacina, 200);
-
-        NotaFiscal nota1 = new NotaFiscal(pedido1);
-        NotaFiscal nota2 = new NotaFiscal(pedido2);
-        NotaFiscal nota3 = new NotaFiscal(pedido3);
-        NotaFiscal nota4 = new NotaFiscal(pedido4);
+        Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2, "08532-220");
+        Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2, "83992-332");
+        Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1, "36623-293");
+        Pedido pedido4 = new Pedido("09/12/2022", danilo, vacina, 200, "76509-234");
 
         // estoque
         Estoque estoque = new Estoque();
@@ -122,22 +117,26 @@ class Program
                     break;
                 #endregion
 
-                #region Testa Pedido, Cliente e Nota Fiscal
+                #region Testa Pedido, Cliente, Nota Fiscal e Frete
                 case "2":
                     Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} \n{pedido1.Produto.Nome} " +
-                        $"{pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()} - Imposto: R${pedido1.CalculaTotalImposto()}");
+                        $"{pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()} - Imposto: R${pedido1.CalculaTotalImposto()}" +
+                        $"\nCEP: {pedido1.Frete.Correios.Cep} - Frete: R${pedido1.Frete.Calcular()}");
                     Console.WriteLine($"\n{pedido2.Id} - {pedido2.Data} Cliente: {pedido2.Cliente.NomeCompleto()} \n{pedido2.Produto.Nome} " +
-                        $"{pedido2.QuantidadeVendida} unidades \nR${pedido2.CalculaValorTotal()} - Imposto: R${pedido2.CalculaTotalImposto()}");
+                        $"{pedido2.QuantidadeVendida} unidades \nR${pedido2.CalculaValorTotal()} - Imposto: R${pedido2.CalculaTotalImposto()}" +
+                        $"\nCEP: {pedido2.Frete.Correios.Cep} - Frete: R${pedido2.Frete.Calcular()}");
                     Console.WriteLine($"\n{pedido3.Id} - {pedido3.Data} Cliente: {pedido3.Cliente.NomeCompleto()} \n{pedido3.Produto.Nome} " +
-                        $"{pedido3.QuantidadeVendida} unidades \nR${pedido3.CalculaValorTotal()} - Imposto: R${pedido3.CalculaTotalImposto()}");
+                        $"{pedido3.QuantidadeVendida} unidades \nR${pedido3.CalculaValorTotal()} - Imposto: R${pedido3.CalculaTotalImposto()}" +
+                        $"\nCEP: {pedido3.Frete.Correios.Cep} - Frete: R${pedido3.Frete.Calcular()}");
                     Console.WriteLine($"\n{pedido4.Id} - {pedido4.Data} Cliente: {pedido4.Cliente.NomeCompleto()} \n{pedido4.Produto.Nome} " +
-                        $"{pedido4.QuantidadeVendida} unidades \nR${pedido4.CalculaValorTotal()} - Imposto: R${pedido4.CalculaTotalImposto()}");
+                        $"{pedido4.QuantidadeVendida} unidades \nR${pedido4.CalculaValorTotal()} - Imposto: R${pedido4.CalculaTotalImposto()}" +
+                        $"\nCEP: {pedido4.Frete.Correios.Cep} - Frete: R${pedido4.Frete.Calcular()}");
                     Console.WriteLine("---------------------------");
 
-                    Console.WriteLine($"Notas Fiscais: \n{nota1.GetNotaFiscal()}");
-                    Console.WriteLine($"\n{pedido1.Nota.GetNotaFiscal()}");
+                    Console.WriteLine($"Notas Fiscais: \n{pedido1.Nota.GetNotaFiscal()}");
                     Console.WriteLine($"\n{pedido2.Nota.GetNotaFiscal()}");
                     Console.WriteLine($"\n{pedido3.Nota.GetNotaFiscal()}");
+                    Console.WriteLine($"\n{pedido4.Nota.GetNotaFiscal()}");
                     Console.Read();
                     break;
                 #endregion

@@ -215,4 +215,8 @@ Correios c = new Correios();
 string regiao = c.ObterRegiaoPorCEP("72925162");
 Console.WriteLine(regiao);
 
+Frete frete = new Frete();
+decimal valorFrete = frete.Calcular("72925162");
+Console.WriteLine($"O valor do frete é {valorFrete:C}");
+
 Console.ReadKey();

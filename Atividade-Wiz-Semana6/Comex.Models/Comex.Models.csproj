@@ -12,4 +12,10 @@
     <PackageReference Include="NumerosExtensos" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="ComexXx.UtilsSs">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\workspace\Curso - Alura\ComexXx.UtilsSs\ComexXx.UtilsSs\bin\Debug\net6.0\ComexXx.UtilsSs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -27,8 +27,6 @@ namespace Comex.Modelos.Pedidos
 
                 case '5' or '6':
                     return 7.00M;
-
-                default: return 0.00M;
             }
         }
     }

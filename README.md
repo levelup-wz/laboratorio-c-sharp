@@ -1,3 +1,13 @@
+# Desafio Semana 7 - Comex - Strings, expressões regulares e a classe Object
+
+- [x] Setup Inicial
+- [x] Crie uma nova classe para formartar CPF
+- [x] Criar nova classe TestaCpf
+- [x] Modifique a Classe Produto
+- [x] Criar nova classe Vestuário
+- [x] Criar nova classe TestaVestuario
+
+
 # Desafio Semana 6 - Comex - Bibliotecas DLLs, documentação e usando o NuGet.
 
 - [x] Setup Inicial

@@ -135,6 +135,12 @@ Console.WriteLine();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
+Console.WriteLine("Valor do frete por região:" + "\n");
+TestaFrete.MostraFrete();
+Console.WriteLine();
+
+Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
+
 Console.WriteLine("Tecle enter para fechar o programa...");
 
 Console.ReadKey();

@@ -31,5 +31,8 @@ Console.WriteLine("Hello, World! - Projeto Comex");
 //TesteNotaFiscal.Main();
 
 //Teste de calculo de Frete
-TestaFrete.Main();
+//TestaFrete.Main();
+
+//Testa CPF
+TestaCpf.Main();
 

@@ -16,7 +16,7 @@ namespace Comex.TestesClasses
 
             Produto notebook = new Produto("Notebook Sansung", 3523.00, 1, informatica);
 
-            Cliente andre = new Cliente("Andre", "Sousa", "123456789-22", "7798802-0059", "Rua 1", "10", "Bem querer",
+            Cliente andre = new Cliente("Andre", "Sousa", "12345678922", "7798802-0059", "Rua 1", "10", "Bem querer",
                 "Candeias", "Vitoria da Conquista", "Bahia");
 
             Pedido pedido1 = new Pedido(andre, notebook, 2);

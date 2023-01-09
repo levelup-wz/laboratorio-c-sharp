@@ -6,7 +6,7 @@ namespace Comex.Testes
     public class TestPedido
     {
 
-        private Cliente novoCliente = new Cliente("Andre", "Sousa", "123456789-88", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia");
+        private Cliente novoCliente = new Cliente("Andre", "Sousa", "12345678988", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia");
         private Categoria categoria = new Categoria("Informatica");
         
         [Fact]

@@ -10,21 +10,22 @@ namespace Comex.Models.Models
     public class CPF
     {
         public string Cpf { get; set; }
+
+        private bool cpfValidation { get; set; }
         public CPF(string cpf)
         {
-            Cpf = cpf;
-        }
-
-        public string Formatar()
-        {
-
-            var cpfValidation = Validation(Cpf);
-
+            cpfValidation =  Validation(cpf);
+            
             if (!cpfValidation)
             {
                 throw new ArgumentException("Informe um valor válido para o CPF");
             }
 
+            Cpf = cpf;
+        }
+
+        public string Formatar()
+        {
             var newCpf = Cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
             return newCpf;
         }

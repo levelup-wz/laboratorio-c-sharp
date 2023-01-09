@@ -1,4 +1,5 @@
 using Comex.Entidades;
+using FluentAssertions;
 using System.Security.Cryptography;
 
 namespace Comex.Testes
@@ -68,6 +69,21 @@ namespace Comex.Testes
                 $"Nome: {cliente.NomeCompleto()}\n" +
                 $"Endereço: {cliente.EnderecoCompleto()}");
             Assert.Equal(result, listarCliente);
+        }
+
+        [Theory]
+        [InlineData("Jurema", "Tunner", "12345678988", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia")]
+        public void TestaCpfCliente(string nome, string sobreNome, string cpfEntry, string fone, string rua, string numeroEndereco,
+            string complemento, string bairro, string cidade, string estado)
+        {
+            var client = new Cliente(nome, sobreNome, cpfEntry, fone, rua, numeroEndereco, complemento, bairro, cidade, estado);
+            var cpf = client.Cpf.ToString();
+            var cpfFormatado = client.Cpf.Formatar();
+
+            client.Cpf.Cpf.Should().Be(cpfEntry);
+            cpf.Should().Be(cpfEntry);
+            cpfFormatado.Should().Be("123.456.789-88");
+
         }
 
     }

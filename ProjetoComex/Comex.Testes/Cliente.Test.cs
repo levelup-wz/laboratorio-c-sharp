@@ -5,14 +5,14 @@ namespace Comex.Testes
 {
     public class TestCliente
     {
-        private Cliente cliente = new Cliente("Andre", "Sousa", "123456789-88", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia");
+        private Cliente cliente = new Cliente("Andre", "Sousa", "12345678988", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia");
 
         [Fact]
         public void TestaClienteInstancia()
         {
             Assert.Equal("Andre", cliente.Nome);
             Assert.Equal("Sousa", cliente.SobreNome);
-            Assert.Equal("123456789-88", cliente.Cpf);
+            Assert.Equal("12345678988", cliente.Cpf.ToString());
             Assert.Equal("77988124578", cliente.Telefone);
             Assert.Equal("João Alberto", cliente.Rua);
             Assert.Equal("12", cliente.NumeroEndereco);
@@ -23,9 +23,9 @@ namespace Comex.Testes
         }
 
         [Theory]
-        [InlineData("Andre", "Sousa", "123456789-88", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia")]
-        [InlineData("Luis", "Jardim", "987654321-88", "77988526341", "Luis ALberto", "13", "Bnh", "Recreio", "Rio de Janeiro", "Rio de Janeiro")]
-        [InlineData("Lara", "Jesus", "852963741-88", "77988025698", "Carlos Henrique", "14", "Inocoop", "Centro", "Belo Horizonte", "Minas Gerais")]
+        [InlineData("Andre", "Sousa", "12345678988", "77988124578", "João Alberto", "12", "Bem querer", "Candeias", "Salvador", "Bahia")]
+        [InlineData("Luis", "Jardim", "98765432188", "77988526341", "Luis ALberto", "13", "Bnh", "Recreio", "Rio de Janeiro", "Rio de Janeiro")]
+        [InlineData("Lara", "Jesus", "85296374188", "77988025698", "Carlos Henrique", "14", "Inocoop", "Centro", "Belo Horizonte", "Minas Gerais")]
         public void TestaCriacaoClientes(string nome, string sobreNome, string cpf, string fone, string rua, string numeroEndereco,
             string complemento, string bairro, string cidade, string estado)
         {
@@ -33,7 +33,7 @@ namespace Comex.Testes
 
             Assert.Equal(nome, novoCliente.Nome);
             Assert.Equal(sobreNome, novoCliente.SobreNome);
-            Assert.Equal(cpf, novoCliente.Cpf);
+            Assert.Equal(cpf, novoCliente.Cpf.ToString());
             Assert.Equal(fone, novoCliente.Telefone);
             Assert.Equal(rua, novoCliente.Rua);
             Assert.Equal(numeroEndereco, novoCliente.NumeroEndereco);

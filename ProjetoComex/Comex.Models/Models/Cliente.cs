@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comex.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Comex.Entidades
         public int Id { get; }
         public string Nome { get; }
         public string SobreNome { get; }
-        public string Cpf { get; }
+        public CPF Cpf { get; }
         public string Telefone { get; }
         public string Rua { get; }
         public string NumeroEndereco { get; }
@@ -26,7 +27,7 @@ namespace Comex.Entidades
         {
             Nome = nome;
             SobreNome = sobreNome;
-            Cpf = cpf;
+            Cpf = new CPF(cpf);
             Telefone = telefone;
             Rua = rua;
             NumeroEndereco = numero;

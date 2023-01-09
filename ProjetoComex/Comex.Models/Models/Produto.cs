@@ -15,6 +15,18 @@ namespace Comex.Entidades
         public double PrecoUnitario { get; set; }
         public int QuantidadeEstoque { get; private set; }
         public Categoria Categoria { get; set; }
+        private string Atributo { get; set; }
+
+        public Produto(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria, string atributo)
+        {
+            Nome = nome;
+            PrecoUnitario = precoUnitario;
+            QuantidadeEstoque = quantidadeEstoque;
+            Categoria = categoria;
+            Id = Produto.prodId;
+            Produto.prodId++;
+            Atributo = atributo;
+        }
 
         public Produto(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria)
         {

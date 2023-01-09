@@ -36,3 +36,6 @@ Console.WriteLine("Hello, World! - Projeto Comex");
 //Testa CPF
 TestaCpf.Main();
 
+//Testa Vestuario
+TestaVestuario.Main();
+

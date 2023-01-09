@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comex.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,15 @@ using System.Threading.Tasks;
 
 namespace Comex.Models.Models
 {
-    internal class Vestuario
+    public class Vestuario : Produto
     {
+        public string Tamanho { get; }
+        public string Cor { get; }
+        public Vestuario(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria, string atributos) : base(nome, precoUnitario, quantidadeEstoque, categoria, atributos)
+        {
+            Tamanho = atributos.Substring(8, 2);
+            Cor = atributos.Substring(16);
+        }
+
     }
 }

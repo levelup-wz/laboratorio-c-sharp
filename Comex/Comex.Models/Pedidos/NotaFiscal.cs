@@ -2,7 +2,7 @@ using NumerosExtensos;
 using NumerosExtensos.Enums;
 using System;
 
-namespace Comex.Pedidos
+namespace Comex.Modelos.Pedidos
 {
     public class NotaFiscal
     {

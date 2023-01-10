@@ -1,7 +1,7 @@
 using System;
-using Comex.Exceptions;
+using Comex.Modelos.Exceptions;
 
-namespace Comex.Produtos
+namespace Comex.Modelos.Produtos
 {
     public class Estoque
     {

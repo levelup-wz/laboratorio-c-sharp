@@ -1,6 +1,6 @@
 using System;
 
-namespace Comex.Categorias
+namespace Comex.Modelos.Categorias
 {
     public class Categoria
     {

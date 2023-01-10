@@ -1,9 +1,8 @@
 using System;
-using Comex.Produtos;
-using Comex.Clientes;
-using Comex.Modelos.Pedidos;
+using Comex.Modelos.Produtos;
+using Comex.Modelos.Clientes;
 
-namespace Comex.Pedidos
+namespace Comex.Modelos.Pedidos
 {
     public class Pedido
     {

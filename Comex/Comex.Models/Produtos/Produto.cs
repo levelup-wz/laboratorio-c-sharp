@@ -1,7 +1,7 @@
 using System;
-using Comex.Categorias;
+using Comex.Modelos.Categorias;
 
-namespace Comex.Produtos
+namespace Comex.Modelos.Produtos
 {
     public class Produto
     {

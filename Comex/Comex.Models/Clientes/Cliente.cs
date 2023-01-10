@@ -1,6 +1,6 @@
 using System;
 
-namespace Comex.Clientes
+namespace Comex.Modelos.Clientes
 {
     public class Cliente
     {

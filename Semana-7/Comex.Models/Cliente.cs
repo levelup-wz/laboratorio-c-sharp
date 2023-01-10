@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Comex.Models
+﻿namespace Comex.Models
 {
     public class Cliente
     {
@@ -12,7 +6,7 @@ namespace Comex.Models
         public int Id { get; set; }
         public string PrimeiroNome { get; set; }
         public string Sobrenome { get; set; }
-        public string Cpf { get; set; }
+        public Cpf Cpf { get; set; }
         public string Telefone { get; set; }
         public string Rua { get; set; }
         public string NumeroDoEndereco { get; set; }
@@ -21,7 +15,7 @@ namespace Comex.Models
         public string Estado { get; set; }
 
 
-        public Cliente(string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numeroDoEndereco, string complemento, string cidade, string estado )
+        public Cliente(string primeiroNome, string sobrenome, Cpf cpf, string telefone, string rua, string numeroDoEndereco, string complemento, string cidade, string estado )
         {
             Id = ++_id;
             PrimeiroNome = primeiroNome;

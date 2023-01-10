@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Comex.Models;
+﻿using Comex.Models;
 
 namespace Comex.TestaModels
 {
     public class TestaPedido
     {
-        Cliente cliente1 = new Cliente("Saulo", "Alves Magalhães", "99999999999", "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
-        Cliente cliente2 = new Cliente("André", "Sousa", "99999999999", "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
-        Cliente cliente3 = new Cliente("Davi", "Kennedy", "99999999999", "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
+        Cliente cliente1 = new Cliente("Saulo", "Alves Magalhães", new Cpf("99999999999"), "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
+        Cliente cliente2 = new Cliente("André", "Sousa", new Cpf("99999999999"), "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
+        Cliente cliente3 = new Cliente("Davi", "Kennedy", new Cpf("99999999999"), "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
 
         public TestaPedido()
         {

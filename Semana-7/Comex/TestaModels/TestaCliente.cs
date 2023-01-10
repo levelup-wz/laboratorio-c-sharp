@@ -9,7 +9,7 @@ namespace Comex.TestaModels
 {
     public class TestaCliente
     {
-        Cliente cliente1 = new Cliente("Saulo", "Alves Magalhães", "99999999999", "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
+        Cliente cliente1 = new Cliente("Saulo", "Alves Magalhães", new Cpf("99999999999"), "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
 
         public TestaCliente()
         {

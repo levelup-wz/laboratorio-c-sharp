@@ -5,7 +5,7 @@ namespace Comex.Testes
 {
     public class ClienteTestes
     {
-        Cliente cliente = new Cliente("Saulo", "Alves", "99999999999", "77999999999", "Rua Luva de Pedreiro", "231", "Casa", "Ibotirama", "Bahia");
+        Cliente cliente = new Cliente("Saulo", "Alves", new Cpf("99999999999"), "77999999999", "Rua Luva de Pedreiro", "231", "Casa", "Ibotirama", "Bahia");
         [Fact]
         public void NomeCompleto()
         {

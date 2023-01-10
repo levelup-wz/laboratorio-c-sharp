@@ -37,6 +37,10 @@ try
     Console.WriteLine("-----------------------------------");
     TesteCPF.Main();
     Console.WriteLine(" ");
+    Console.WriteLine("Testa Vestuário:");
+    Console.WriteLine("-----------------------------------");
+    TestaVestuario.Main();
+    Console.WriteLine(" ");
 }
 catch (LimiteDeEstoqueExcedidoException ex)
 {

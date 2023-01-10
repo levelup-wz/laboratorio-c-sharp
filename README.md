@@ -1,7 +1,4 @@
-# Semana 6 - DLLs, documentação e nuget
-- [x]  Mover as classes para um novo projeto Comex.Modelos
-- [x]  Criar uma nova classe Nota Fiscal
-- [x]  Mostre o valor da nota fiscal por extenso
-- [x]  Procure uma biblioteca que converta números para um valor em extenso que seja em portugues.
-- [x]  Crie um pacote nuget para utilidades dos Correios.
-- [x]  Criar uma classe para calcular Frete.
+# Semana 7 - Strings, expressões regulares e a classe Object
+- [x]  Crie uma nova classe para formatar CPF
+- [ ]  Extrair atributos da classe Vestuario
+- [ ]  Faça uma implementação diferente para formatar CPF

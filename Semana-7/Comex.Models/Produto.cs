@@ -15,10 +15,17 @@ namespace Comex.Models
         public double PrecoUnitario { get; set; }
         public int QuantidadeEmEstoque { get; set; }
         public string Categoria { get; set; }
-
+        protected string Atributos { get; set; }
         public Produto(string nome, double precoUnitario, int quantidadeEmEstoque, string categoria)
         {
             Id = ++_id;
+            validaEntradaDeDados(nome, precoUnitario, quantidadeEmEstoque, categoria);
+        }
+
+        public Produto(string nome, double precoUnitario, int quantidadeEmEstoque, string categoria, string atributos)
+        {
+            Id = ++_id;
+            Atributos = atributos;
             validaEntradaDeDados(nome, precoUnitario, quantidadeEmEstoque, categoria);
         }
 

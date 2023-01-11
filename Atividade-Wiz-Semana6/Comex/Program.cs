@@ -58,7 +58,7 @@ Console.WriteLine();
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("TestaPedido:" + "\n");
-Pedido pedido1 = new(new Cliente("Hebert", "Belchior", "111.333.444-55", "(81)91234-5678","Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
+Pedido pedido1 = new(new Cliente("Hebert", "Belchior", new CPF("11133344455"), "(81)91234-5678","Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
                             "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new Produto("Notebook Samsung", 3523.00, 1, 
                             "Informática"), 1);
 Console.WriteLine($"Id do pedido: {pedido1.DefineId()}");
@@ -73,7 +73,7 @@ Console.WriteLine($"Categoria do produto: {pedido1.Produto.Categoria}");
 Console.WriteLine($"Quantidade vendida: {pedido1.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido1.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: { pedido1.CalculaTotalDeImpostos():N2}" + "\n");
-Pedido pedido2 = new(new Cliente("Monalisa", "Mata", "222.333.444-55", "(81)92345-6789", "Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
+Pedido pedido2 = new(new Cliente("Monalisa", "Mata", new CPF("22233344455"), "(81)92345-6789", "Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
                             "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new Produto("Clean Architecture", 102.90, 2,
                             "Livros"), 2);
 Console.WriteLine($"Id do pedido: {pedido2.DefineId()}");
@@ -89,7 +89,7 @@ Console.WriteLine($"Quantidade vendida: {pedido2.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido2.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido2.CalculaTotalDeImpostos():N2}" + "\n");
 
-Pedido pedido3 = new(new Cliente("Angélica", "Maria", "333.444.555-66", "(81)93456-7891", "Rua: 197,", "Numero: 55,", "Complemento: Bloco O, Apartamento 777,",
+Pedido pedido3 = new(new Cliente("Angélica", "Maria", new CPF("33344455566"), "(81)93456-7891", "Rua: 197,", "Numero: 55,", "Complemento: Bloco O, Apartamento 777,",
                             "Bairro: Ouro Preto,", "Cidade: Olinda,", "Estado: PE"), new Produto("Monitor Dell 27", 1889.00, 3, "Informática"), 3);
 Console.WriteLine($"Id do pedido: {pedido3.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido3.Cliente.DefineId()}");
@@ -127,7 +127,7 @@ Console.WriteLine();
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
 
 Console.WriteLine("Nota fiscal:" + "\n");
-NotaFiscal notaFiscal = new(new Pedido(new Cliente("Hebert", "Belchior", "111.333.444-55", "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
+NotaFiscal notaFiscal = new(new Pedido(new Cliente("Hebert", "Belchior", new CPF("11133344455"), "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
                            "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
                            new Produto("Notebook Samsung", 3523.00, 1, "Informática"), 1));
 notaFiscal.RegistraPedido();
@@ -137,6 +137,12 @@ Console.WriteLine(".--------------------..--------------------..----------------
 
 Console.WriteLine("Valor do frete por região:" + "\n");
 TestaFrete.MostraFrete();
+Console.WriteLine();
+
+Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");
+
+Console.WriteLine("Formata CPF:" + "\n");
+TesteCPF.RetornaCpf();
 Console.WriteLine();
 
 Console.WriteLine(".--------------------..--------------------..--------------------..--------------------..--------------------." + "\n");

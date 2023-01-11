@@ -26,7 +26,7 @@ namespace Comex.Modelos.Pedidos
             QuantidadeVendida = quantidadeVendida;
             Nota = new NotaFiscal(this);
             Cep = cep;
-            Frete = new Frete().Calcular(cep);
+            Frete = Frete.Calcular(cep);
         }
 
         public double CalculaValorTotal()

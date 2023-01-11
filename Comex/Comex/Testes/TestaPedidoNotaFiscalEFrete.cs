@@ -28,13 +28,13 @@ namespace Comex.Testes
 
         Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} \n{pedido1.Produto.Nome} " +
             $"{pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()} - Imposto: R${pedido1.CalculaTotalImposto()}" +
-            $"\nCEP: {pedido1.Cep} - Frete: R${pedido1.Frete}");
+            $"\nCEP: {pedido1.Cep} - Frete: R${pedido1.FretePedido}");
         Console.WriteLine($"\n{pedido2.Id} - {pedido2.Data} Cliente: {pedido2.Cliente.NomeCompleto()} \n{pedido2.Produto.Nome} " +
             $"{pedido2.QuantidadeVendida} unidades \nR${pedido2.CalculaValorTotal()} - Imposto: R${pedido2.CalculaTotalImposto()}" +
-            $"\nCEP: {pedido2.Cep} - Frete: R${pedido2.Frete}");
+            $"\nCEP: {pedido2.Cep} - Frete: R${pedido2.FretePedido}");
         Console.WriteLine($"\n{pedido3.Id} - {pedido3.Data} Cliente: {pedido3.Cliente.NomeCompleto()} \n{pedido3.Produto.Nome} " +
             $"{pedido3.QuantidadeVendida} unidades \nR${pedido3.CalculaValorTotal()} - Imposto: R${pedido3.CalculaTotalImposto()}" +
-            $"\nCEP: {pedido3.Cep} - Frete: R${pedido3.Frete}");
+            $"\nCEP: {pedido3.Cep} - Frete: R${pedido3.FretePedido}");
         Console.WriteLine("---------------------------");
 
         Console.WriteLine($"Notas Fiscais: \n{nota1.GetNotaFiscal()}");

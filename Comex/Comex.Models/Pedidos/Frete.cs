@@ -5,9 +5,9 @@ namespace Comex.Modelos.Pedidos
 {
     public class Frete
     {
-        public decimal Calcular(string cep)
+        public static decimal Calcular(string cep)
         {
-            switch (new Correios().ObterRegiaoPorCEP(cep))
+            switch (Correios.ObterRegiaoPorCEP(cep))
             {
                 case '0' or '1' or '2':
                     return 4.00M;

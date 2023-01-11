@@ -6,7 +6,7 @@
         public int Id { get; }
         public string PrimeiroNome { get; }
         public string Sobrenome { get; }
-        public string Cpf { get; }
+        public CPF Cpf { get; }
         public string Telefone { get; }
         public string Rua { get; }
         public string Numero { get; }
@@ -15,7 +15,7 @@
         public string Cidade { get; }
         public string Estado { get; }
 
-        public Cliente(string primeiroNome, string sobrenome, string cpf, string telefone, string rua, string numero, string complemento, string bairro, string cidade, string estado)
+        public Cliente(string primeiroNome, string sobrenome, CPF cpf, string telefone, string rua, string numero, string complemento, string bairro, string cidade, string estado)
         {
             Id = _id++;
             PrimeiroNome = primeiroNome;

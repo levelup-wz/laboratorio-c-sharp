@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Comex.Modelos</name>
+    </assembly>
+    <members>
+        <member name="M:Comex.Categorias.Categoria.#ctor(System.String,System.String)">
+            <summary>
+            Cria uma categoria nova
+            </summary>
+            <param name="nome"> <see cref="P:Comex.Categorias.Categoria.Nome"/> da categoria necessário e maior que 3 caracteres </param>
+            <param name="status"> <see cref="P:Comex.Categorias.Categoria.Status"/> (ATIVA / INATIVA) </param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Comex.Produtos.Produto.#ctor(System.String,System.String,System.Double,System.Int32,Comex.Categorias.Categoria)">
+            <summary>
+            Cria uma instância de Produto
+            </summary>
+            <param name="nome"> <see cref="P:Comex.Produtos.Produto.Nome"/> necessário e maior que 5 caracteres </param>
+            <param name="descricao"></param>
+            <param name="preco"> <see cref="P:Comex.Produtos.Produto.Preco"/> obrigatório e diferente de zero </param>
+            <param name="estoque"> <see cref="P:Comex.Produtos.Produto.Estoque"/> obrigatório e diferente de zero </param>
+            <param name="categoria"> <see cref="P:Comex.Produtos.Produto.Categoria"/> obrigatória </param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+    </members>
+</doc>

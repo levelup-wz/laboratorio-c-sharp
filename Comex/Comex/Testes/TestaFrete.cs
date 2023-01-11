@@ -26,9 +26,9 @@ namespace Comex.Testes
         Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2, "83992-332");
         Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1, "36623-293");
 
-        Console.WriteLine($"CEP: {pedido1.Cep} - Frete: R${pedido1.Frete}");
-        Console.WriteLine($"CEP: {pedido2.Cep} - Frete: R${pedido1.Frete}");
-        Console.WriteLine($"CEP: {pedido3.Cep} - Frete: R${pedido1.Frete}");
+        Console.WriteLine($"CEP: {pedido1.Cep} - Frete: R${pedido1.FretePedido}");
+        Console.WriteLine($"CEP: {pedido2.Cep} - Frete: R${pedido1.FretePedido}");
+        Console.WriteLine($"CEP: {pedido3.Cep} - Frete: R${pedido1.FretePedido}");
     }
 }
 */

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "64RSCvX92V2KtOY8wY2CzNz2Plp+gzH7Dd5ZGwHTD0r2c5bYMa4j6wweTg1rlgq3jLKi0DG9Gq8q++i2vFXbEA==",
+  "dgSpecHash": "w2RJqc4YOk1mPi61G2PWWk36DnO50eR/TX4xdP9u3OzJxUPEY8QYpR2EBjCA95pIkN10SDUEPNmmuc+71V+5NA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex\\Comex.csproj",
+  "projectFilePath": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex\\Comex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danil\\.nuget\\packages\\numerosextensos\\2.0.0\\numerosextensos.2.0.0.nupkg.sha512"
   ],

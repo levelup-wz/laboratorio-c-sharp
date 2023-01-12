@@ -12,3 +12,17 @@ C:\Users\danil\OneDrive\Área de Trabalho\Danilo\Programação\CSharp\Comex\Come
 C:\Users\danil\OneDrive\Área de Trabalho\Danilo\Programação\CSharp\Comex\Comex.Utils\obj\Debug\net6.0\ref\Comex.Utils.dll
 C:\Users\danil\OneDrive\Área de Trabalho\Danilo\Programação\CSharp\Comex\Comex.Utils\bin\Debug\net6.0\Comex.Utils.xml
 C:\Users\danil\OneDrive\Área de Trabalho\Danilo\Programação\CSharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.xml
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\bin\Debug\net6.0\Comex.Utils.deps.json
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\bin\Debug\net6.0\Comex.Utils.dll
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\bin\Debug\net6.0\Comex.Utils.pdb
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\bin\Debug\net6.0\Comex.Utils.xml
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.csproj.AssemblyReference.cache
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.AssemblyInfoInputs.cache
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.AssemblyInfo.cs
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.csproj.CoreCompileInputs.cache
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.dll
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\refint\Comex.Utils.dll
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.xml
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\Comex.Utils.pdb
+C:\Users\danil\Source\Repos\laboratorio-c-sharp\Comex\Comex.Utils\obj\Debug\net6.0\ref\Comex.Utils.dll

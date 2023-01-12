@@ -73,11 +73,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex\\Comex.csproj",
+      "projectUniqueName": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex\\Comex.csproj",
       "projectName": "Comex",
-      "projectPath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex\\Comex.csproj",
+      "projectPath": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex\\Comex.csproj",
       "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex\\obj\\",
+      "outputPath": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,8 +94,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Modelos\\Comex.Modelos.csproj": {
-              "projectPath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Modelos\\Comex.Modelos.csproj"
+            "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Modelos\\Comex.Modelos.csproj": {
+              "projectPath": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Modelos\\Comex.Modelos.csproj"
             }
           }
         }

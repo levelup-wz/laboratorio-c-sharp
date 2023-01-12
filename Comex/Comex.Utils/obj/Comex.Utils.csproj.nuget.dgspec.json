@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Utils\\Comex.Utils.csproj": {}
+    "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Utils\\Comex.Utils.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Utils\\Comex.Utils.csproj": {
+    "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Utils\\Comex.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Utils\\Comex.Utils.csproj",
+        "projectUniqueName": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Utils\\Comex.Utils.csproj",
         "projectName": "Comex.Utils",
-        "projectPath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Utils\\Comex.Utils.csproj",
+        "projectPath": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Utils\\Comex.Utils.csproj",
         "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex.Utils\\obj\\",
+        "outputPath": "C:\\Users\\danil\\Source\\Repos\\laboratorio-c-sharp\\Comex\\Comex.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -128,7 +128,7 @@ class Program
                     break;
                 #endregion
 
-                #region Testa Pedido, Cliente, Nota Fiscal e Frete
+                #region Testa Pedido, Cliente (Cpf), Nota Fiscal e Frete
                 case "2":
                     Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} {pedido1.Cliente.CpfCliente.Formatar()}" +
                         $"\n{pedido1.Produto.Nome} {pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()}" +

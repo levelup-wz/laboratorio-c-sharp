@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "64RSCvX92V2KtOY8wY2CzNz2Plp+gzH7Dd5ZGwHTD0r2c5bYMa4j6wweTg1rlgq3jLKi0DG9Gq8q++i2vFXbEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danil\\OneDrive\\Área de Trabalho\\Danilo\\Programação\\CSharp\\Comex\\Comex\\Comex.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danil\\.nuget\\packages\\numerosextensos\\2.0.0\\numerosextensos.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -244,7 +244,7 @@ class Program
 
                 #region Testa Validação de Produtos
                 case "7":
-                    Console.WriteLine("Criando Produto válido:");
+                    Console.WriteLine("Criando Produto válido: ");
                     try
                     {
                         Produto produto1 = new Produto("produto", "é um produto", 1.44, 20, moveis);

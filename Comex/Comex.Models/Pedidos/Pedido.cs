@@ -14,7 +14,7 @@ namespace Comex.Modelos.Pedidos
         public Produto Produto { get; set; }
         public int QuantidadeVendida { get; set; }
         public NotaFiscal Nota { get; private set; }
-        public decimal Frete { get; private set; }
+        public decimal FretePedido { get; private set; }
 
         public Pedido(string data, Cliente cliente, Produto produto, int quantidadeVendida, string cep)
         {
@@ -26,7 +26,7 @@ namespace Comex.Modelos.Pedidos
             QuantidadeVendida = quantidadeVendida;
             Nota = new NotaFiscal(this);
             Cep = cep;
-            Frete = Frete.Calcular(cep);
+            FretePedido = Frete.Calcular(cep);
         }
 
         public double CalculaValorTotal()

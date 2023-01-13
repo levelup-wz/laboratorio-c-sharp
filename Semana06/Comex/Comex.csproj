@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Comex.Models\Comex.Models.csproj" />
+    <ProjectReference Include="..\Comex.Utils\Comex.Utils.csproj" />
   </ItemGroup>
 
 </Project>

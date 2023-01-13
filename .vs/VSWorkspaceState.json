@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Semana05",
-    "\\Semana05\\Comex"
+    "\\Semana06",
+    "\\Semana06\\Comex",
+    "\\Semana06\\Comex.Models"
   ],
-  "SelectedNode": "\\Semana05\\Comex\\Program.cs",
+  "SelectedNode": "\\Semana06\\Comex.Models\\NotaFiscal.cs",
   "PreviewInSolutionExplorer": false
 }

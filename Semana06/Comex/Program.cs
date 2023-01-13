@@ -52,6 +52,8 @@ Console.WriteLine(testeNotaFiscal.ToString());
 
 
 
-Console.WriteLine("Telce enter para sair");
+
+
+Console.WriteLine("Tecle enter para sair");
 Console.ReadKey();
 

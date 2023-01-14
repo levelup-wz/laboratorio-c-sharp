@@ -226,3 +226,9 @@ Console.WriteLine(cpf.Formatar());
 Console.WriteLine(cpf);
 
 Console.ReadKey();*/
+
+Vestuario vestuario = new Vestuario("camiseta", 15, 1, new Categoria("Feminino"), "tamanho: P; cor: Laranja");
+
+Console.WriteLine(vestuario.Tamanho);
+Console.WriteLine(vestuario.Cor);
+Console.ReadKey();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Comex.Models
@@ -17,6 +18,11 @@ namespace Comex.Models
         public string Formatar()
         {
             return $"{Cpf.Substring(0, 3)}.{Cpf.Substring(3, 3)}.{Cpf.Substring(6, 3)}-{Cpf.Substring(9, 2)}";
+        }
+
+        public string FormatarComRegex()
+        {
+            return Convert.ToUInt64(Cpf).ToString(@"000\.000\.000\-00");
         }
 
         public override string ToString()

@@ -227,8 +227,14 @@ Console.WriteLine(cpf);
 
 Console.ReadKey();*/
 
-Vestuario vestuario = new Vestuario("camiseta", 15, 1, new Categoria("Feminino"), "tamanho: P; cor: Laranja");
+/*Vestuario vestuario = new Vestuario("camiseta", 15, 1, new Categoria("Feminino"), "tamanho: P; cor: Laranja");
 
 Console.WriteLine(vestuario.Tamanho);
 Console.WriteLine(vestuario.Cor);
+Console.ReadKey();*/
+
+CPF cpf = new CPF("03974884165");
+Console.WriteLine(cpf.FormatarComRegex());
+Console.WriteLine(cpf);
+
 Console.ReadKey();

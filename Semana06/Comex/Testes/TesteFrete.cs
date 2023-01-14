@@ -13,7 +13,7 @@ namespace Comex.Testes
 
           static Frete frete0 = new Frete();
 
-          public static void RetornaFrete()
+          public  TesteFrete()
           {
               Console.WriteLine($"{frete0.Calcular("75740000")}");
           }

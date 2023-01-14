@@ -1,4 +1,4 @@
-﻿using Comex.Models;
+﻿/*using Comex.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,3 +14,4 @@ namespace Comex.Testes
         var igual = formatado == "111.222.333-55";
     }
 }
+*/

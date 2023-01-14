@@ -9,6 +9,7 @@ namespace Comex.Models
     public class Produto
     {
         public int Id { get; set; }
+        protected string Atributos { get; set; }
         public string Nome { get; set; }
         public double PrecoUnitario { get; set; }
         public int QuantidadeEmEstoque { get; set; }

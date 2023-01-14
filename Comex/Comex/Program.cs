@@ -221,8 +221,8 @@ Console.WriteLine($"O valor do frete é {valorFrete:C}");
 
 Console.ReadKey();*/
 
-CPF cpf = new CPF("03974884165");
+/*CPF cpf = new CPF("03974884165");
 Console.WriteLine(cpf.Formatar());
 Console.WriteLine(cpf);
 
-Console.ReadKey();
+Console.ReadKey();*/

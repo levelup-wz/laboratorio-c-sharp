@@ -211,12 +211,18 @@ Console.WriteLine(notafiscal1.GerarNotaFiscal());
 
 Console.ReadKey();*/
 
-Correios c = new Correios();
+/*Correios c = new Correios();
 string regiao = c.ObterRegiaoPorCEP("72925162");
 Console.WriteLine(regiao);
 
 Frete frete = new Frete();
 decimal valorFrete = frete.Calcular("72925162");
 Console.WriteLine($"O valor do frete é {valorFrete:C}");
+
+Console.ReadKey();*/
+
+CPF cpf = new CPF("03974884165");
+Console.WriteLine(cpf.Formatar());
+Console.WriteLine(cpf);
 
 Console.ReadKey();

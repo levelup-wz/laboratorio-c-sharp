@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Comex.Models;
 
-namespace Comex.exceptions
+namespace Comex.Exceptions
 {
     public class LimiteDeEstoqueExcedidoException : Exception
     {

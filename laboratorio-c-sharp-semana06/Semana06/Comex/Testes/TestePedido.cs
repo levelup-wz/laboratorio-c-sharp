@@ -1,7 +1,7 @@
 ﻿using Comex;
 using System.ComponentModel;
 
-namespace Comex
+namespace Comex.Models
 {
     public class PedidoTeste
     {

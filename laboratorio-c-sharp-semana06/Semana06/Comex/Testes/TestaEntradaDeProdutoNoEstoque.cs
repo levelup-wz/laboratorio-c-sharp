@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using Comex.exceptions;
+using Comex.Exceptions;
 
-namespace Comex
+namespace Comex.Models
 {
     public class TestaEntradaDeProdutoNoEstoque
     {
@@ -24,7 +24,7 @@ namespace Comex
             {
                 estoque2.RegistarEntrada(vacina1);
                 estoque2.RegistarEntrada(use);
-                estoque2.RegistarEntrada(macbook);
+                estoque2.RegistarEntrada(macbook);  
                 estoque2.RegistarEntrada(bala);
                 Console.WriteLine(estoque2.RetornarInfosEstoque());
 

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
-using Comex.exceptions;
+using Comex.Exceptions;
 
-namespace Comex
+namespace Comex.Models
 {
     public class TestaSaidaDeProdutoNoEstoque
     {

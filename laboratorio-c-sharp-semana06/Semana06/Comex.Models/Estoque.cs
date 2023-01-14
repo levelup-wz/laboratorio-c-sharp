@@ -1,5 +1,5 @@
 ﻿using Comex;
-using Comex.exceptions;
+using Comex.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Comex.Models;
 
-namespace Comex
+namespace Comex.Models
 {
     public class Estoque
     {
-        private object error;
+        //private object error;
 
         public int Capacidade { get; private set; } = 1000;
         public int Ocupacao { get; private set; } 
@@ -24,7 +24,7 @@ namespace Comex
         {
             if (produto.Quantidade > Capacidade)
             {
-                throw new exceptions.LimiteDeEstoqueExcedidoException("O estoque não tem capacidade para essa quantidade de produtos!");
+                throw new Exceptions.LimiteDeEstoqueExcedidoException("O estoque não tem capacidade para essa quantidade de produtos!");
                 
             }
             if(Ocupacao >= 1000)

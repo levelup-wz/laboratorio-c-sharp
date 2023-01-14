@@ -13,11 +13,10 @@ namespace Comex
 
         }
 
-        public override double ValorEstoque()
+       /* public override double ValorEstoque()
         {
             return base.ValorEstoque();
-        }
-
+        }*/
         public override double Imposto()
         {
             double TotalImposto = 0;

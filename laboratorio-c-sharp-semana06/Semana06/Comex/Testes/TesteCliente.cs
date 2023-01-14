@@ -1,5 +1,5 @@
 ﻿
-namespace Comex
+namespace Comex.Models
 {
 
     public class ClienteTeste

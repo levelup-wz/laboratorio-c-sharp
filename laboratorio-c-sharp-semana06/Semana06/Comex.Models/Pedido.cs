@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comex
+namespace Comex.Models
 {
     public class Pedido
     {
@@ -35,14 +35,14 @@ namespace Comex
 
         public double ValorPedido() 
         {
-            double ValorTotal = ProdutoPedido.PrecoUnitario * Quantidade;
-            return ValorTotal;
+            double valorTotal = ProdutoPedido.PrecoUnitario * Quantidade;
+            return valorTotal;
         }
                 
         public double ImpostoTotal()
         {
-            double TotalPagar = Quantidade * ProdutoPedido.Imposto();
-            return TotalPagar;
+            double totalPagar = Quantidade * ProdutoPedido.Imposto();
+            return totalPagar;
         }
 
         public string RetornaInfosPedido()

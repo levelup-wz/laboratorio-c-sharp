@@ -37,7 +37,9 @@ namespace Comex.Models
                 throw new ArgumentException("Caracteres não permitidos");
             }
 
-            return Cpf.Substring(0, 3) + "." + Cpf.Substring(3, 3) + "." + Cpf.Substring(6, 3) + "-" + Cpf.Substring(9, 2);
+            return Regex.Replace(Cpf, @"(.{3})(.{3})(.{3})(.{2})", @"$1.$2.$3-$4");
+
+            //return Cpf.Substring(0, 3) + "." + Cpf.Substring(3, 3) + "." + Cpf.Substring(6, 3) + "-" + Cpf.Substring(9, 2);
         }
 
         public override string ToString()

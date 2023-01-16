@@ -47,7 +47,7 @@ Console.WriteLine("----------------------------------");*/
 Console.WriteLine("Teste Nota Fiscal:");
 Console.WriteLine("----------------------------------");
 
-var testeNotaFiscal = new NotaFiscal(new Pedido(new Cliente("André", "Azevêdo", "012.987.852-87", "(64) 98521-8574", "Rua João 123", "14", "Casa 02", "Centro", "Goaindira", "GO"), new Produto("Celular", 4500.00, 1, "Informática"), 5));
+var testeNotaFiscal = new NotaFiscal(new Pedido(new Cliente("André", "Azevêdo", new CPF("12598736822"), "(64) 98521-8574", "Rua João 123", "14", "Casa 02", "Centro", "Goaindira", "GO"), new Produto("Celular", 4500.00, 1, "Informática"), 5));
 Console.WriteLine(testeNotaFiscal.ToString());
 
 

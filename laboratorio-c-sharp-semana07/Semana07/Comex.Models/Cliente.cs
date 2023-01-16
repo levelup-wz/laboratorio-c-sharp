@@ -12,7 +12,7 @@ namespace Comex.Models
         public static int ContId = 0;
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public string Cpf { get; set; }
+        public CPF Cpf { get; set; } // tipo CPF
         public string Celular { get; set; }
         public string   Rua { get; set; }
         public string Numero { get; set; }
@@ -22,7 +22,7 @@ namespace Comex.Models
         public string Estado { get; set; }
         public Cliente ClienteClasse { get; set; } // tipo cliente
 
-        public Cliente( string nome, string sobrenome, string cpf, string celular, string rua, string numero, string complemento, string bairro, string cidade, string estado)
+        public Cliente( string nome, string sobrenome, CPF cpf, string celular, string rua, string numero, string complemento, string bairro, string cidade, string estado)
         {
             Id = ++ContId;
             Nome = nome;

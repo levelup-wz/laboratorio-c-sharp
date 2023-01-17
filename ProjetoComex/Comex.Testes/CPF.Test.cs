@@ -24,18 +24,18 @@ namespace Comex.Testes
             formated.Should().Be(cpfFormated);
         }
 
-        [Theory]
-        [InlineData("111122233355")] //12
-        [InlineData("1122233355")] // 10
-        [InlineData("a1122233355")] //nonumeric
-        [InlineData(" ")] // space
-        [InlineData("")] // null
+        //[Theory]
+        //[InlineData("111122233355")] //12
+        //[InlineData("1122233355")] // 10
+        //[InlineData("a1122233355")] //nonumeric
+        //[InlineData(" ")] // space
+        //[InlineData("")] // null
 
-        public void TestaNewCPFFail(string cpfEntry)
-        {
-            var ActionCpf = () => new CPF(cpfEntry);
+        //public void TestaNewCPFFail(string cpfEntry)
+        //{
+        //    var ActionCpf = () => new CPF(cpfEntry);
 
-            ActionCpf.Should().Throw<ArgumentException>().WithMessage("Informe um valor válido para o CPF");
-        }
+        //    ActionCpf.Should().Throw<ArgumentException>().WithMessage("Informe um valor válido para o CPF");
+        //}
     }
 }

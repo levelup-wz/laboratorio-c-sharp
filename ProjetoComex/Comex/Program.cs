@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Comex.TestesClasses;
 
-Console.WriteLine("Hello, World! - Projeto Comex");
+Console.WriteLine("Hello, World! - Projeto Comex\n");
 
 // CATEGORIAS
 //TestaCategoria.Main();
@@ -10,7 +10,7 @@ Console.WriteLine("Hello, World! - Projeto Comex");
 //TestaProduto.Main();
 
 // PEDIDOS
-//TestaPedido.Main();
+TestaPedido.Main();
 
 // PRODUTO ISENTO
 //TestaProdutoIsento.Main();
@@ -34,8 +34,11 @@ Console.WriteLine("Hello, World! - Projeto Comex");
 //TestaFrete.Main();
 
 //Testa CPF
-TestaCpf.Main();
+//TestaCpf.Main();
 
 //Testa Vestuario
-TestaVestuario.Main();
+//TestaVestuario.Main();
+
+//Testa ItemsDoPedido
+TestaItemsDoPedido.Main();
 

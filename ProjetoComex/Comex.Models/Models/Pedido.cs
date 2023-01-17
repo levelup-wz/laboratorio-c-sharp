@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comex.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,37 +13,59 @@ namespace Comex.Entidades
         public int Id { get; }
         public DateTime Date { get; }
         public Cliente Cliente { get; }
-        public Produto Produto { get; }
+        public List<ItemsDoPedido> Items { get; }
         public int QuantidadeVendida { get; }
 
         public Pedido(Cliente cliente, Produto produto, int quantidadeVendida)
         {
+            Items = new List<ItemsDoPedido>();
+            var item = new ItemsDoPedido(produto, quantidadeVendida);
+
             Date = DateTime.Now;
             Cliente = cliente;
-            Produto = produto;
+            Items.Add(item);
             QuantidadeVendida = quantidadeVendida;
             Id = Pedido.numPedido;
             Pedido.numPedido++;
         }
 
-        public double CalcularValorTotal()
+        public decimal CalcularValorTotal()
         {
-            double valorTotal = QuantidadeVendida * Produto.PrecoUnitario;
+            decimal valorTotal = 0;
+
+            foreach (var item in Items)
+            {
+                valorTotal += item.Total;
+            }
+
             return valorTotal;
         }
 
-        public double CalculaImpostoTotal()
+        public decimal CalculaImpostoTotal()
         {
-            double valorTotalImposto = QuantidadeVendida * Produto.CalculaImposto();
+            decimal valorTotalImposto = 0;
+
+            foreach (var item in Items)
+            {
+                valorTotalImposto += (decimal)(QuantidadeVendida * item.Produto.CalculaImposto());
+            }
+
             return valorTotalImposto;
         }
 
         public string ListarPedidos()
         {
+            var nomeProduto = "";
+            var categoriaProduto = "";
+            foreach (var item in Items)
+            {
+                nomeProduto = item.Produto.Nome;
+                categoriaProduto = item.Produto.Categoria.Nome;
+            }
             return $"***** Pedido nº {Id} *****\n" +
                 $"Nome do Cliente: {Cliente.NomeCompleto()}\n" +
                 $"Endereço do Cliente: {Cliente.EnderecoCompleto()}\n" +
-                $"Produto: {Produto.Nome} - Quantidade: {QuantidadeVendida} - Categoria: {Produto.Categoria.Nome}\n" +
+                $"Produto: {nomeProduto} - Quantidade: {QuantidadeVendida} - Categoria: {categoriaProduto}\n" +
                 $"Valor Total: R$ {CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {CalculaImpostoTotal().ToString("n2")}";
         }

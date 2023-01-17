@@ -10,7 +10,7 @@ namespace Comex.Models
 {
     public class TestaSaidaDeProdutoNoEstoque
     {
-        static Produto vacina2 = new Produto("Vacina",250.00, 0, "Saúde");
+        static Produto vacina2 = new Produto("Vacina",250.00, 0, "Saúde","");
         static Estoque estoque1 = new Estoque();
 
         public static void Main()

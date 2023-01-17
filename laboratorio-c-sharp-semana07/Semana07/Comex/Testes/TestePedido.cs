@@ -14,9 +14,9 @@ namespace Comex.Models
         Cliente cliente3 = new Cliente("Julio", "Pereira da Silva", new CPF("75315985265"), "(64) 99924-3258", "Rua Maria de Paula", "502",
             "Casa 02", "Margon", "Catalão", "Goiás");
 
-        static Produto produto1 = new Produto ("Notebook Samsung", 3523, 1, "Informática");
-        static Produto produto2 = new Produto("Clean Architecture", 102.90, 2, "Livros");
-        static Produto produto3 = new Produto("Monitor Dell 27", 1889, 3, "Informática");
+        static Produto produto1 = new Produto ("Notebook Samsung", 3523, 1, "Informática","");
+        static Produto produto2 = new Produto("Clean Architecture", 102.90, 2, "Livros", "");
+        static Produto produto3 = new Produto("Monitor Dell 27", 1889, 3, "Informática", "");
 
 
 

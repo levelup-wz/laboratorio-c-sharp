@@ -53,7 +53,11 @@ Console.WriteLine("Teste de CPF:");
 Console.WriteLine("----------------------------------");
 TesteCPF.RetornaCPF();
 Console.WriteLine("----------------------------------");
-
+Console.WriteLine("----------------------------------");
+Console.WriteLine("Teste de Vestuário");
+TestaVestuario.RetornaVestuario();
+Console.WriteLine();
+Console.WriteLine("----------------------------------");
 
 
 

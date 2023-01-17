@@ -14,7 +14,7 @@ namespace Comex.Testes
             try
             {
                 //Produto produto1 = new Produto("Cafeteira", 250, 0, "Eletro");
-                ProdutoIsento produto2 = new ProdutoIsento("lit", 100, 10, "Livros");
+                ProdutoIsento produto2 = new ProdutoIsento("lit", 100, 10, "Livros","");
               
 
               // Console.WriteLine($"{produto1.RetornaInfosProduto()}");

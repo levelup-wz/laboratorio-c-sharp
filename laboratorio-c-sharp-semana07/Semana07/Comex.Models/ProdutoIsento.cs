@@ -8,7 +8,7 @@ namespace Comex
 {
     public class ProdutoIsento : Produto
     {
-        public ProdutoIsento(string nome, double precoUnitario, int quantidade, string categoria) : base(nome, precoUnitario, quantidade, categoria)
+        public ProdutoIsento(string nome, double precoUnitario, int quantidade, string categoria, string atributos) :base(nome, precoUnitario, quantidade, categoria, atributos)
         {
 
         }

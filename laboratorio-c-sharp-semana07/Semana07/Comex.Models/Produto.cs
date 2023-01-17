@@ -19,13 +19,16 @@ namespace Comex
         public string Categoria { get; set; }
         public Produto produto { get; set; } //tipo produto
 
-        public Produto( string nome, double precoUnitario, int quantidade, string categoria)
+        protected String Atributos { get; set; }
+
+        public Produto( string nome, double precoUnitario, int quantidade, string categoria, string atributos)
         {
             Id = ++_id;
             Nome = nome;
             PrecoUnitario= precoUnitario;
             Quantidade = quantidade;
             Categoria = categoria;
+            Atributos = atributos;
 
             if (nome.Length <= 5)
             {

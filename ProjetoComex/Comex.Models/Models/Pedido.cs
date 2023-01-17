@@ -71,6 +71,18 @@ namespace Comex.Entidades
             Items.Add(itemDoPedido);
         }
 
+        public void RemoveItems(string name)
+        {   
+            var produto = Items.FirstOrDefault(x => x.Produto.Nome == name);
+
+            if (produto != null)
+            {
+                Items.Remove(produto);
+            }
+
+            Console.WriteLine("Produto não Localizado");
+        }
+
         public string ListarPedidos()
         {
             var nomeProduto = "";

@@ -26,8 +26,7 @@ try
     Console.WriteLine(" ");
     Console.WriteLine("Testa Saída da Nota Fiscal:");
     Console.WriteLine("-----------------------------------");
-    var notaFiscal = new NotaFiscal(new Pedido(new Cliente("Saulo", "Alves", new Cpf("99999999999"), "99", "s", "2", "casa", "ibotirama", "ba"), new Produto("Notebook", 10.00, 10, "informatica"), 10));
-    Console.WriteLine(notaFiscal.ToString());
+    TestaNotaFiscal.Main();
     Console.WriteLine(" ");
     Console.WriteLine("Testa Cálculo do Frete:");
     Console.WriteLine("-----------------------------------");

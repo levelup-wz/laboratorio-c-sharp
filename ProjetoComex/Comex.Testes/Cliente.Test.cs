@@ -80,7 +80,6 @@ namespace Comex.Testes
             var cpf = client.Cpf.ToString();
             var cpfFormatado = client.Cpf.Formatar();
 
-            client.Cpf.Cpf.Should().Be(cpfEntry);
             cpf.Should().Be(cpfEntry);
             cpfFormatado.Should().Be("123.456.789-88");
 

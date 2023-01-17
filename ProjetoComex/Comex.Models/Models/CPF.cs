@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Comex.Models.Models
 {
-    public class CPF
+    public sealed class CPF
     {
-        public string Cpf { get; set; }
+        private string Cpf { get; }
 
         private bool cpfValidation { get; set; }
         public CPF(string cpf)
@@ -34,13 +34,8 @@ namespace Comex.Models.Models
 
         public string Formatar()
         {   
-            if (cpfValidation)
-            {
-                var newCpf = Cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
-                return newCpf;
-            }
-
-            return "Cpf Inválido";
+            var newCpf = Cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
+            return newCpf;
            
         }
 

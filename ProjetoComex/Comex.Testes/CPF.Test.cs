@@ -20,7 +20,7 @@ namespace Comex.Testes
 
             var formated = cpf.Formatar();
 
-            cpf.Cpf.Should().Be(cpfEntry);
+            cpf.ToString().Should().Be(cpfEntry);
             formated.Should().Be(cpfFormated);
         }
 

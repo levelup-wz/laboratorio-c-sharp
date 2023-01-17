@@ -18,7 +18,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
 
             Assert.Equal(pedido.Cliente, novoCliente);
-            Assert.Equal(pedido.Produto, produto);
+            Assert.Equal(pedido.Items[0].Produto, produto);
             Assert.Equal(2, pedido.QuantidadeVendida);
         }
 
@@ -34,7 +34,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, novoProduto, quantidadePedido);
 
             Assert.Equal(pedido.Cliente, novoCliente);
-            Assert.Equal(pedido.Produto, novoProduto);
+            Assert.Equal(pedido.Items[0].Produto, novoProduto);
             Assert.Equal(pedido.QuantidadeVendida, quantidadePedido);
         }
 
@@ -45,7 +45,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
             
             var valorTotal = pedido.CalcularValorTotal();
-            var result = pedido.QuantidadeVendida * pedido.Produto.PrecoUnitario;
+            var result = pedido.QuantidadeVendida * (decimal)pedido.Items[0].Produto.PrecoUnitario;
 
             Assert.Equal(result, valorTotal);
         }
@@ -57,7 +57,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
 
             var valorImpostoTotal = pedido.CalculaImpostoTotal();
-            var result = pedido.QuantidadeVendida * pedido.Produto.CalculaImposto();
+            var result = pedido.QuantidadeVendida * (decimal)pedido.Items[0].Produto.CalculaImposto();
 
             Assert.Equal(result, valorImpostoTotal);
         }
@@ -72,7 +72,7 @@ namespace Comex.Testes
             var result = $"***** Pedido nº {pedido.Id} *****\n" +
                 $"Nome do Cliente: {pedido.Cliente.NomeCompleto()}\n" +
                 $"Endereço do Cliente: {pedido.Cliente.EnderecoCompleto()}\n" +
-                $"Produto: {pedido.Produto.Nome} - Quantidade: {pedido.QuantidadeVendida} - Categoria: {pedido.Produto.Categoria.Nome}\n" +
+                $"Produto: {pedido.Items[0].Produto.Nome} - Quantidade: {pedido.QuantidadeVendida} - Categoria: {pedido.Items[0].Produto.Categoria.Nome}\n" +
                 $"Valor Total: R$ {pedido.CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {pedido.CalculaImpostoTotal().ToString("n2")}";
 

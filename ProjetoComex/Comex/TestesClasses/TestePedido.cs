@@ -12,9 +12,9 @@ public class TestaPedido
         Categoria informatica = new Categoria("informática");
         Categoria livros = new Categoria("livros");
 
-        Produto notebook = new Produto("Notebook Sansung", 3523.00, 1, informatica); //3523,00
-        Produto cleanArchiteture = new Produto("Clean Architeture", 102.90, 2, livros); //102,9*2 = 205,84
-        Produto monitor = new Produto("Monitor Dell", 1889.00, 3, informatica); //5667
+        Produto notebook = new Produto("Notebook Sansung", 3523.00, 1, informatica);
+        Produto cleanArchiteture = new Produto("Clean Architeture", 102.90, 2, livros); 
+        Produto monitor = new Produto("Monitor Dell", 1889.00, 3, informatica); 
 
         Cliente andre = new Cliente("Andre", "Sousa", "123456789-22", "7798802-0059", "Rua 1", "10", "Bem querer",
             "Candeias", "Vitoria da Conquista", "Bahia");

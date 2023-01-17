@@ -41,6 +41,10 @@ try
     Console.WriteLine("-----------------------------------");
     TestaVestuario.Main();
     Console.WriteLine(" ");
+    Console.WriteLine("Testa Items do Pedido:");
+    Console.WriteLine("-----------------------------------");
+    TestaItemsDoPedido.Main();
+    Console.WriteLine(" ");
 }
 catch (LimiteDeEstoqueExcedidoException ex)
 {

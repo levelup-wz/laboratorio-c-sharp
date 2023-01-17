@@ -15,7 +15,7 @@ namespace Comex.Models
         {
             Cpf = cpf;
         }
-        
+
 
         public string Formatar()
         {
@@ -23,32 +23,32 @@ namespace Comex.Models
 
             if (!CpfNum)
             {
-                throw new ArgumentException("São permitidos apenas caracteres númericos");
+                return "CPF Invalido, são permitidos apenas caracteres númericos.";
             }
             if (string.IsNullOrEmpty(Cpf))
             {
-                throw new ArgumentException("Digite o seu CPF");
+                return "CPF Invalido, digite o seu CPF.";
             }
             if (Cpf.Length > 11)
             {
-                throw new ArgumentException("O CPF deve conter 11 números");
+                return "CPF Invalido, o CPF deve conter 11 números.";
             }
             if (Cpf.Length < 11)
             {
-                throw new ArgumentException("O CPF deve conter 11 números");
+                return "CPF Invalido, o CPF deve conter 11 números.";
             }
-            // return Convert.ToUInt64(Cpf).ToString(@"000\.000\.000\-00");
-             return Regex.Replace(Cpf, @"(.{3})(.{3})(.{3})(.{2})", @"$1.$2.$3-$4");
-            //return Cpf.Substring(0, 3) + "." + Cpf.Substring(3, 3) + "." + Cpf.Substring(6, 3) + "-" + Cpf.Substring(9, 2);
-            
-
-        }
+            return Convert.ToUInt64(Cpf).ToString(@"000\.000\.000\-00");
+            // return Regex.Replace(Cpf, @"(.{3})(.{3})(.{3})(.{2})", @"$1.$2.$3-$4");
+        }   
 
         public override string ToString()
         {
             return Cpf;
         }
-
-
     }
+
+       
+
+
+    
 }

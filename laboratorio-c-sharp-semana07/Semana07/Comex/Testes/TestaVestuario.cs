@@ -10,7 +10,7 @@ namespace Comex.Testes
     internal class TestaVestuario
     {
         static Vestuario camiseta = new("Algodão", 65, 37, "Camiseta", "tamanho: M; cor: Rosa");
-        //static Vestuario camisa = new("Regata", 60, 50, "Camisa", "tamanho: M; cor: Preta");
+       
 
         public static void RetornaVestuario()
         {

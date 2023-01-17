@@ -12,25 +12,35 @@ namespace Comex.Models
         public int Id { get; set; }
         public DateTime Data = DateTime.Now;
         public Cliente Cliente { get; set; }
-        public Produto Produto { get; set; }
-        public int QuantidadeVendida { get; set; }
+        public List<ItemsDoPedido> Items { get; set; }
 
-        public Pedido(Cliente cliente, Produto produto, int quantidadeVendida)
+        public Pedido(Cliente cliente, ItemsDoPedido item)
         {
             Id = ++_id;
             Cliente = cliente;
-            Produto = produto;
-            QuantidadeVendida= quantidadeVendida;
+            Items = new List<ItemsDoPedido>();
+            Items.Add(item);
         }
 
         public double ValorTotal()
         {   
-            return QuantidadeVendida * Produto.PrecoUnitario;
+            double valorTotal = 0;
+            foreach(ItemsDoPedido item in Items)
+            {
+                valorTotal += (double)item.Total;
+            }
+            return valorTotal;
         }
 
         public double TotalDeImpostos()
         {
-            return QuantidadeVendida * Produto.CalculaImposto();
+            double totalDeImpostos = 0;
+            foreach (ItemsDoPedido item in Items)
+            {
+                double soma = item.Quantidade * item.Produto.CalculaImposto();
+                totalDeImpostos += soma;
+            }
+            return (double)totalDeImpostos;
         }
     }
 }

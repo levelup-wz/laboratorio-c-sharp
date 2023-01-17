@@ -4,38 +4,39 @@ namespace Comex.Models
 {
     public class Cpf
     {
-        public string CpfSemFormatacao { get; set; }
+        private readonly string _cpfSemFormatacao;
 
         public Cpf(string cpf)
         {
-            CpfSemFormatacao = cpf;
+            ValidarCpf(cpf);
+            _cpfSemFormatacao = cpf;
         }
 
-        public string Formatar() 
+        public void ValidarCpf(string cpf)
         {
-            bool cpfIsNumeric = Regex.IsMatch(CpfSemFormatacao, @"^\d+$");
+            bool cpfIsNumeric = Regex.IsMatch(cpf, @"^\d+$");
 
-            if (string.IsNullOrWhiteSpace(CpfSemFormatacao))
+            if (string.IsNullOrWhiteSpace(cpf))
             {
-                return "Cpf deve ser informado";
+                throw new Exception("Cpf deve ser informado");
             }
             if (!cpfIsNumeric)
             {
-                return "Cpf inválido";
+                throw new Exception("Cpf inválido");
             }
-            if (CpfSemFormatacao.Length != 11)
+            if (cpf.Length != 11)
             {
-                return "Cpf inválido";
+                throw new Exception("Cpf inválido");
             }
-
-            return Convert.ToUInt64(CpfSemFormatacao).ToString(@"000\.000\.000\-00");
-
+        }
+        public string Formatar() 
+        {
+            return Convert.ToUInt64(_cpfSemFormatacao).ToString(@"000\.000\.000\-00");
         }
 
         public override string ToString()
         {
-            return CpfSemFormatacao;
+            return _cpfSemFormatacao;
         }
-
     }
 }

@@ -29,6 +29,18 @@ namespace Comex.Entidades
             Pedido.numPedido++;
         }
 
+        public Pedido(Cliente cliente, ItemsDoPedido itemsDoPedido)
+        {
+            Items = new List<ItemsDoPedido>();
+
+            Date = DateTime.Now;
+            Cliente = cliente;
+            Items.Add(itemsDoPedido);
+            QuantidadeVendida = itemsDoPedido.Quantidade;
+            Id = Pedido.numPedido;
+            Pedido.numPedido++;
+        }
+
         public decimal CalcularValorTotal()
         {
             decimal valorTotal = 0;
@@ -51,6 +63,12 @@ namespace Comex.Entidades
             }
 
             return valorTotalImposto;
+        }
+
+        public void AddItems(Produto produto, int qtdPedido)
+        {
+            var itemDoPedido = new ItemsDoPedido(produto, qtdPedido);
+            Items.Add(itemDoPedido);
         }
 
         public string ListarPedidos()

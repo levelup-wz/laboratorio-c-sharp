@@ -1,4 +1,6 @@
 using Comex.Entidades;
+using Comex.Models.Models;
+using FluentAssertions;
 using System.Security.Cryptography;
 
 namespace Comex.Testes
@@ -79,6 +81,40 @@ namespace Comex.Testes
             Assert.Equal(result, pedidoListarPedido);
         }
 
+        [Theory]
+        [InlineData("Informática", "Monitor", 300.00, 5, 3, 900.00)]
+        [InlineData("Livros", "A ida dos que não foram", 21.00, 3, 2, 42.00)]
+        public void TestaListaItemsPedido(string categoryEntry, string ProdutoNameEntry, double ProdutoPreco, int ProdutoQuantidade, int quantidadeVendida, decimal totalItemsPedido)
+        {
+            var categoria = new Categoria(categoryEntry);
+            var produto1 = new Produto(ProdutoNameEntry, ProdutoPreco, ProdutoQuantidade, categoria);
+            var itemDoPedido = new ItemsDoPedido(produto1, quantidadeVendida);
+            var pedido = new Pedido(novoCliente, itemDoPedido);
+
+            pedido.Items.Count().Should().Be(1);
+            pedido.Items.FirstOrDefault().Should().BeSameAs(itemDoPedido);
+        }
+
+        [Theory]
+        [InlineData("Informática", "Monitor", 300.00, 5, 3, 900.00)]
+        [InlineData("Livros", "A ida dos que não foram", 21.00, 3, 2, 42.00)]
+        public void TestaListaItemsPedidoADDSuccess(string categoryEntry, string ProdutoNameEntry, double ProdutoPreco, int ProdutoQuantidade, int quantidadeVendida, decimal totalItemsPedido)
+        {
+            var categoria = new Categoria(categoryEntry);
+            var produto1 = new Produto(ProdutoNameEntry, ProdutoPreco, ProdutoQuantidade, categoria);
+            var itemDoPedido = new ItemsDoPedido(produto1, quantidadeVendida);
+            var pedido = new Pedido(novoCliente, itemDoPedido);
+
+            var produto2 = new Produto("Notebook", 5000.00, 5, categoria);
+            var quantidadePedidaProduto2 = 4;
+            var itemDoPedido2 = new ItemsDoPedido(produto2, quantidadePedidaProduto2);
+            pedido.AddItems(produto2, quantidadePedidaProduto2);
+
+            pedido.Items.Should().HaveCount(2);
+            pedido.Items[0].Should().BeOfType<ItemsDoPedido>();
+            pedido.Items.FirstOrDefault().Should().BeEquivalentTo(itemDoPedido);
+            pedido.Items.LastOrDefault().Should().BeEquivalentTo(itemDoPedido2);
+        }
 
 
 

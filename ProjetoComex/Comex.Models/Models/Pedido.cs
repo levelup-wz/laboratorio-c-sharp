@@ -73,11 +73,23 @@ namespace Comex.Entidades
 
         public void RemoveItems(string name)
         {   
-            var produto = Items.FirstOrDefault(x => x.Produto.Nome == name);
+            var item = Items.FirstOrDefault(x => x.Produto.Nome == name);
 
-            if (produto != null)
+            if (item != null)
             {
-                Items.Remove(produto);
+                Items.Remove(item);
+            }
+
+            Console.WriteLine("Produto não Localizado");
+        }
+
+        public void UpdateQuantityItemsDoPedido(string name, int quantidade)
+        {
+            var item = Items.FirstOrDefault(x => x.Produto.Nome == name);
+
+            if (item != null)
+            {
+                item.Quantidade = quantidade;
             }
 
             Console.WriteLine("Produto não Localizado");

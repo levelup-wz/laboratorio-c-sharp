@@ -137,6 +137,22 @@ namespace Comex.Testes
             pedido.Items.Should().HaveCount(1);
         }
 
+        [Theory]
+        [InlineData("Informática", "Monitor", 300.00, 5, 3, 5)]
+        [InlineData("Livros", "A ida dos que não foram", 21.00, 3, 2, 3)]
+        public void TestaUPDATEItemsDoPedidoSuccess(string categoryEntry, string ProdutoNameEntry, double ProdutoPreco, int ProdutoQuantidade, int quantidadeVendida, int updateQuantidade)
+        {
+            var categoria = new Categoria(categoryEntry);
+            var produto1 = new Produto(ProdutoNameEntry, ProdutoPreco, ProdutoQuantidade, categoria);
+            var itemDoPedido = new ItemsDoPedido(produto1, quantidadeVendida);
+            var pedido = new Pedido(novoCliente, itemDoPedido);
+
+            pedido.UpdateQuantityItemsDoPedido(ProdutoNameEntry, updateQuantidade);
+            
+            pedido.Items.Should().HaveCount(1);
+            pedido.Items[0].Quantidade.Should().Be(updateQuantidade);
+        }
+
 
 
     }

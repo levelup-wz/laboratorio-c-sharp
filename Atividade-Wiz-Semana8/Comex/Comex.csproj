@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Comex.Models\Comex.Models.csproj" />
+    <ProjectReference Include="..\Comex.TestesUnitarios\Comex.TestesUnitarios.csproj" />
   </ItemGroup>
 
 </Project>

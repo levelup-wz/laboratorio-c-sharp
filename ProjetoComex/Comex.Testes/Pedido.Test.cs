@@ -74,7 +74,7 @@ namespace Comex.Testes
             var result = $"***** Pedido nº {pedido.Id} *****\n" +
                 $"Nome do Cliente: {pedido.Cliente.NomeCompleto()}\n" +
                 $"Endereço do Cliente: {pedido.Cliente.EnderecoCompleto()}\n" +
-                $"Produto: {pedido.Items[0].Produto.Nome} - Quantidade: {pedido.QuantidadeVendida} - Categoria: {pedido.Items[0].Produto.Categoria.Nome}\n" +
+                $"{pedido.ListarItensDoPedido()}" +
                 $"Valor Total: R$ {pedido.CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {pedido.CalculaImpostoTotal().ToString("n2")}";
 
@@ -150,7 +150,7 @@ namespace Comex.Testes
             pedido.UpdateQuantityItemsDoPedido(ProdutoNameEntry, updateQuantidade);
             
             pedido.Items.Should().HaveCount(1);
-            pedido.Items[0].Quantidade.Should().Be(updateQuantidade);
+            pedido.Items[0].GetQuantidade().Should().Be(updateQuantidade);
         }
 
 

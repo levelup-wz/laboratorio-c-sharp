@@ -24,7 +24,6 @@ namespace Comex.Testes
             itemsDoPedido.Produto.Should().BeSameAs(produto);
             itemsDoPedido.Produto.Nome.Should().Be(ProdutoNameEntry);
             itemsDoPedido.Total.Should().Be(totalItemsPedido);
-
         }
     }
 }

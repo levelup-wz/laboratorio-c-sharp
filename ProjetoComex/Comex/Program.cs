@@ -40,5 +40,5 @@ TestaPedido.Main();
 //TestaVestuario.Main();
 
 //Testa ItemsDoPedido
-TestaItemsDoPedido.Main();
+//TestaItemsDoPedido.Main();
 

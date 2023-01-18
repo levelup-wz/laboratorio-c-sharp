@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,9 +13,9 @@ public class ItemsDoPedido
 {
     public Produto Produto { get; }
 
-    public int Quantidade { get; set; }
+    private int Quantidade { get; set; }
 
-    public decimal Total { get; } 
+    public readonly decimal Total;
 
     public ItemsDoPedido(Produto produto, int quantidade)
     {
@@ -22,5 +23,19 @@ public class ItemsDoPedido
         Quantidade = quantidade;
         Total = (decimal)(Produto.PrecoUnitario * Quantidade);
     }
+
+    public void UpdateQuantidade(int quantidade)
+    {
+        if (quantidade > 0)
+        {
+            Quantidade = quantidade;
+        }
+    }
+
+    public int GetQuantidade()
+    {
+        return Quantidade;
+    }
+
 }
 

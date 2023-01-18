@@ -36,7 +36,7 @@ namespace Comex.Entidades
             Date = DateTime.Now;
             Cliente = cliente;
             Items.Add(itemsDoPedido);
-            QuantidadeVendida = itemsDoPedido.Quantidade;
+            QuantidadeVendida = itemsDoPedido.GetQuantidade();
             Id = Pedido.numPedido;
             Pedido.numPedido++;
         }
@@ -80,34 +80,43 @@ namespace Comex.Entidades
                 Items.Remove(item);
             }
 
-            Console.WriteLine("Produto não Localizado");
+            if (item == null)
+                Console.WriteLine("Produto não Localizado");
         }
 
         public void UpdateQuantityItemsDoPedido(string name, int quantidade)
         {
-            var item = Items.FirstOrDefault(x => x.Produto.Nome == name);
+            var itemDoPedido = Items.FirstOrDefault(x => x.Produto.Nome == name);
+            var produtoDoItem = itemDoPedido.Produto;
 
-            if (item != null)
+            if (itemDoPedido != null)
             {
-                item.Quantidade = quantidade;
+                Items.Remove(itemDoPedido);
+                var newItemDoPedido = new ItemsDoPedido(produtoDoItem, quantidade);
+                Items.Add(newItemDoPedido);
             }
 
-            Console.WriteLine("Produto não Localizado");
+            if (itemDoPedido == null)
+                Console.WriteLine("Produto não Localizado");
+        }
+
+        public string ListarItensDoPedido()
+        {
+            var itens = "";
+            foreach (var item in Items)
+            {
+                itens += $"Quantidade: {item.GetQuantidade()} - Produto: {item.Produto.Nome} - Valor Unitário: {item.Produto.PrecoUnitario.ToString("n2")} - SubTotal: {item.Total.ToString("n2")}\n";
+            }
+
+            return itens;
         }
 
         public string ListarPedidos()
         {
-            var nomeProduto = "";
-            var categoriaProduto = "";
-            foreach (var item in Items)
-            {
-                nomeProduto = item.Produto.Nome;
-                categoriaProduto = item.Produto.Categoria.Nome;
-            }
             return $"***** Pedido nº {Id} *****\n" +
                 $"Nome do Cliente: {Cliente.NomeCompleto()}\n" +
                 $"Endereço do Cliente: {Cliente.EnderecoCompleto()}\n" +
-                $"Produto: {nomeProduto} - Quantidade: {QuantidadeVendida} - Categoria: {categoriaProduto}\n" +
+                $"{ListarItensDoPedido()}" +
                 $"Valor Total: R$ {CalcularValorTotal().ToString("n2")}\n" +
                 $"Valor do Imposto: {CalculaImpostoTotal().ToString("n2")}";
         }

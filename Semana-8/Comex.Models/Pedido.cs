@@ -18,8 +18,7 @@ namespace Comex.Models
         {
             Id = ++_id;
             Cliente = cliente;
-            Items = new List<ItemsDoPedido>();
-            Items.Add(item);
+            Items = new List<ItemsDoPedido> { item };
         }
 
         public double ValorTotal()
@@ -41,6 +40,11 @@ namespace Comex.Models
                 totalDeImpostos += soma;
             }
             return (double)totalDeImpostos;
+        }
+
+        public void RemoverItemDoPedido(string nome)
+        {
+            Items.RemoveAll(i => i.Produto.Nome == nome);
         }
     }
 }

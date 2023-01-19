@@ -15,13 +15,12 @@ public class ItemsDoPedido
 
     private int Quantidade { get; set; }
 
-    public readonly decimal Total;
+    public decimal Total => (decimal)(Quantidade * Produto.PrecoUnitario);
 
     public ItemsDoPedido(Produto produto, int quantidade)
     {
         Produto = produto;
         Quantidade = quantidade;
-        Total = (decimal)(Produto.PrecoUnitario * Quantidade);
     }
 
     public void UpdateQuantidade(int quantidade)

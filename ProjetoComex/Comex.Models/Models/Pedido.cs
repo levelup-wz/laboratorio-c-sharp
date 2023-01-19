@@ -87,13 +87,10 @@ namespace Comex.Entidades
         public void UpdateQuantityItemsDoPedido(string name, int quantidade)
         {
             var itemDoPedido = Items.FirstOrDefault(x => x.Produto.Nome == name);
-            var produtoDoItem = itemDoPedido.Produto;
-
+            
             if (itemDoPedido != null)
             {
-                Items.Remove(itemDoPedido);
-                var newItemDoPedido = new ItemsDoPedido(produtoDoItem, quantidade);
-                Items.Add(newItemDoPedido);
+               itemDoPedido.UpdateQuantidade(quantidade);
             }
 
             if (itemDoPedido == null)

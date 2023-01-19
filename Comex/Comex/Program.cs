@@ -45,11 +45,15 @@ class Program
         // declaração dos pedidos
         ItensDoPedido itens1 = new ItensDoPedido(notebook, 3);
         ItensDoPedido itens2 = new ItensDoPedido(monitor, 4);
+        ItensDoPedido itens3 = new ItensDoPedido(vacina, 100);
+        ItensDoPedido itens4 = new ItensDoPedido(vestido, 4);
+        ItensDoPedido itens5 = new ItensDoPedido(bala, 10);
+        ItensDoPedido itens6 = new ItensDoPedido(livroJava, 2);
 
-        Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2, "08532-220");
-        Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2, "83992-332");
-        Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1, "36623-293");
-        Pedido pedido4 = new Pedido("09/12/2022", danilo, vacina, 200, "76509-234");
+        Pedido pedido1 = new Pedido("02/12/2022", danilo, "08532-220", itens1, itens2);
+        Pedido pedido2 = new Pedido("03/12/2022", danilo, "83992-332", itens3);
+        Pedido pedido3 = new Pedido("03/12/2022", danilo, "36623-293", itens4, itens5);
+        Pedido pedido4 = new Pedido("09/12/2022", danilo, "76509-234", itens6);
 
         // estoque
         Estoque estoque = new Estoque();
@@ -73,7 +77,7 @@ class Program
 
             switch (op) 
             {
-                #region Testa Categoria, Produto, ProdutoIsento e Vestuario
+                #region Testa Categoria, Produto, ProdutoIsento, Vestuario e ItensDoPedido
                 case "1":
                     Console.WriteLine($"{informatica.Nome} ({informatica.Id} - {informatica.Status}) \n" +
                         $"{moveis.Nome} ({moveis.Id} - {moveis.Status}) \n{livros.Nome} ({livros.Id} - {livros.Status}) \n" +
@@ -133,18 +137,22 @@ class Program
 
                 #region Testa Pedido, Cliente (Cpf), Nota Fiscal e Frete
                 case "2":
-                    Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} {pedido1.Cliente.CpfCliente.Formatar()}" +
-                        $"\n{pedido1.Produto.Nome} {pedido1.QuantidadeVendida} unidades \nR${pedido1.CalculaValorTotal()}" +
-                        $" - Imposto: R${pedido1.CalculaTotalImposto()}\nCEP: {pedido1.Cep} - Frete: R${pedido1.FretePedido}");
-                    Console.WriteLine($"Pedidos: \n{pedido2.Id} - {pedido2.Data} Cliente: {pedido2.Cliente.NomeCompleto()} {pedido2.Cliente.CpfCliente.Formatar()}" +
-                        $"\n{pedido2.Produto.Nome} {pedido2.QuantidadeVendida} unidades \nR${pedido2.CalculaValorTotal()}" +
-                        $" - Imposto: R${pedido2.CalculaTotalImposto()}\nCEP: {pedido2.Cep} - Frete: R${pedido2.FretePedido}");
-                    Console.WriteLine($"Pedidos: \n{pedido3.Id} - {pedido3.Data} Cliente: {pedido3.Cliente.NomeCompleto()} {pedido3.Cliente.CpfCliente.Formatar()}" +
-                        $"\n{pedido3.Produto.Nome} {pedido3.QuantidadeVendida} unidades \nR${pedido3.CalculaValorTotal()}" +
-                        $" - Imposto: R${pedido3.CalculaTotalImposto()}\nCEP: {pedido3.Cep} - Frete: R${pedido3.FretePedido}");
-                    Console.WriteLine($"Pedidos: \n{pedido4.Id} - {pedido4.Data} Cliente: {pedido4.Cliente.NomeCompleto()} {pedido4.Cliente.CpfCliente.Formatar()}" +
-                        $"\n{pedido4.Produto.Nome} {pedido4.QuantidadeVendida} unidades \nR${pedido4.CalculaValorTotal()}" +
-                        $" - Imposto: R${pedido4.CalculaTotalImposto()}\nCEP: {pedido4.Cep} - Frete: R${pedido4.FretePedido}");
+                    Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} {pedido1.Cliente.CpfCliente.Formatar()}");
+                    foreach (ItensDoPedido item in pedido1.Itens)
+                    {
+                        Console.WriteLine($"{item.Item.Nome} {item.Quantidade} unidades - R${item.Total}");
+                    }
+                    Console.WriteLine($"Quantidade Total de Itens: {pedido1.QuantidadeVendida} - Preço Total: R${pedido1.CalculaCustoTotal()}" +
+                        $"\nImposto: R${pedido1.CalculaTotalImposto()}\nCEP: {pedido1.Cep} - Frete: R${pedido1.FretePedido}");
+
+                    Console.WriteLine($"\n{pedido2.Id} - {pedido2.Data} Cliente: {pedido2.Cliente.NomeCompleto()} {pedido2.Cliente.CpfCliente.Formatar()}");
+                    foreach (ItensDoPedido item in pedido2.Itens)
+                    {
+                        Console.WriteLine($"{item.Item.Nome} {item.Quantidade} unidades - R${item.Total}");
+                    }
+                    Console.WriteLine($"Quantidade Total de Itens: {pedido2.QuantidadeVendida} - Preço Total: R${pedido2.CalculaCustoTotal()}" +
+                        $"\nImposto: R${pedido2.CalculaTotalImposto()}\nCEP: {pedido2.Cep} - Frete: R${pedido2.FretePedido}");
+
                     Console.WriteLine("---------------------------");
 
                     Console.WriteLine($"Notas Fiscais: \n{pedido1.Nota.GetNotaFiscal()}");
@@ -153,8 +161,6 @@ class Program
                     Console.WriteLine($"\n{pedido4.Nota.GetNotaFiscal()}");
                     Console.WriteLine("---------------------------");
 
-                    Console.WriteLine($"Item: {itens1.Item.Nome} - Quantidade: {itens1.Quantidade} \nTotal: R${itens1.Total}");
-                    Console.WriteLine($"Item: {itens2.Item.Nome} - Quantidade: {itens2.Quantidade} \nTotal: R${itens2.Total}");
                     Console.ReadKey();
                     break;
                 #endregion

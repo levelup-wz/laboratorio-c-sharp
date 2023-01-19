@@ -19,6 +19,7 @@ namespace Comex.Modelos.Pedidos
         {
             Quantidade++;
             Id = Quantidade;
+            Itens = new List<ItensDoPedido>();
             Data = data;
             Cliente = cliente;
             QuantidadeVendida = 0;
@@ -39,7 +40,7 @@ namespace Comex.Modelos.Pedidos
 
             foreach (ItensDoPedido item in Itens)
             {
-                valor += (double)item.Total * item.Quantidade;
+                valor += (double)item.Total;
             }
 
             return valor;

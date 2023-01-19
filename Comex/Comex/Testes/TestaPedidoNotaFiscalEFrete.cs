@@ -13,11 +13,11 @@ namespace Comex.Testes
         Categoria livros = new Categoria("LIVROS", "ATIVA");
 
         Produto notebook = new Produto("Notebook Samsung", "O melhor da marca!",
-            3523.00, 1, informatica);
+            (decimal)3523.00, 1, informatica);
         Produto cleanA = new Produto("Clean Architecture", "O melhor da marca!",
-            102.90, 2, livros);
+            (decimal)102.90, 2, livros);
         Produto monitor = new Produto("Monitor Dell", "O melhor da marca!",
-            1889.00, 3, informatica);
+            (decimal)1889.00, 3, informatica);
 
         Cliente danilo = new Cliente("Danilo", "Siervi", new Cpf("12345678913"), "999999999", "Rua Legal",
             "D13", "Perto de casa", "Centro", "Cidade bonita", "Minas Gerais");
@@ -27,10 +27,11 @@ namespace Comex.Testes
         ItensDoPedido itens3 = new ItensDoPedido(vacina, 100);
         ItensDoPedido itens4 = new ItensDoPedido(vestido, 4);
         ItensDoPedido itens5 = new ItensDoPedido(bala, 10);
+        ItensDoPedido itens6 = new ItensDoPedido(livroJava, 2);
 
         Pedido pedido1 = new Pedido("02/12/2022", danilo, "08532-220", itens1, itens2);
-        Pedido pedido2 = new Pedido("03/12/2022", danilo, "83992-332", itens3);
-        Pedido pedido3 = new Pedido("03/12/2022", danilo, "36623-293", itens4, itens5);
+        Pedido pedido2 = new Pedido("03/12/2022", danilo, "83992-332", itens3, itens5, itens6);
+        Pedido pedido3 = new Pedido("03/12/2022", danilo, "36623-293", itens4);
 
         Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} {pedido1.Cliente.CpfCliente.Formatar()}");
         foreach (ItensDoPedido item in pedido1.Itens)

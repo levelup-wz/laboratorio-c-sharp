@@ -8,7 +8,7 @@ namespace Comex.Testes
     {
         Categoria saude = new Categoria("SAUDE", "ATIVA");
         Produto vacina = new ProdutoIsento("Vacina", "Vacinas para todas as doenças",
-            250.00, 500, saude);
+            (decimal)250.00, 500, saude);
 
         Estoque estoque = new Estoque();
 

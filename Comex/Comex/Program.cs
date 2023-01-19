@@ -52,8 +52,8 @@ class Program
 
         Pedido pedido1 = new Pedido("02/12/2022", danilo, "08532-220", itens1, itens2);
         Pedido pedido2 = new Pedido("03/12/2022", danilo, "83992-332", itens3, itens5, itens6);
-        Pedido pedido3 = new Pedido("03/12/2022", danilo, "36623-293", itens4, itens5);
-        Pedido pedido4 = new Pedido("09/12/2022", danilo, "76509-234", itens6);
+        Pedido pedido3 = new Pedido("03/12/2022", danilo, "36623-293", itens4);
+        Pedido pedido4 = new Pedido("09/12/2022", danilo, "76509-234", itens2, itens4);
 
         // estoque
         Estoque estoque = new Estoque();

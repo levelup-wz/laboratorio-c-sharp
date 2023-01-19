@@ -43,6 +43,9 @@ class Program
             "D13", "Perto de casa", "Centro", "Cidade bonita", "Minas Gerais");
 
         // declaração dos pedidos
+        ItensDoPedido itens1 = new ItensDoPedido(notebook, 3);
+        ItensDoPedido itens2 = new ItensDoPedido(monitor, 4);
+
         Pedido pedido1 = new Pedido("02/12/2022", danilo, notebook, 2, "08532-220");
         Pedido pedido2 = new Pedido("03/12/2022", danilo, cleanA, 2, "83992-332");
         Pedido pedido3 = new Pedido("03/12/2022", danilo, monitor, 1, "36623-293");
@@ -90,12 +93,12 @@ class Program
 
                             Console.WriteLine($"\nCategoria: {macbookPro.Categoria.Nome} \nId: {macbookPro.Id} - {macbookPro.Nome}, {macbookPro.Descricao} " +
                                $"R${macbookPro.Preco} \nQuantidade em estoque: {macbookPro.Estoque} \nImposto R${macbookPro.CalculaImposto()}");
-                            Console.Read();
+                            Console.ReadKey();
                             break;
 
                         case "2":
                             Console.WriteLine("Categoria Inativa");
-                            Console.Read();
+                            Console.ReadKey();
                             break;
 
                         case "3":
@@ -104,25 +107,25 @@ class Program
 
                             Console.WriteLine($"\nCategoria: {livroJava.Categoria.Nome} \nId: {livroJava.Id} - {livroJava.Nome}, {livroJava.Descricao} " +
                                $"R${livroJava.Preco} \nQuantidade em estoque: {livroJava.Estoque} \nImposto R${livroJava.CalculaImposto()}");
-                            Console.Read();
+                            Console.ReadKey();
                             break;
 
                         case "4":
                             Console.WriteLine($"Produtos: \n\nCategoria: {vacina.Categoria.Nome} \nId: {vacina.Id} - {vacina.Nome}, {vacina.Descricao} R${vacina.Preco}" +
                                 $"\nQuantidade em estoque: {vacina.Estoque} \nImposto R${vacina.CalculaImposto()}");
-                            Console.Read();
+                            Console.ReadKey();
                             break;
 
                         case "5":
                             Console.WriteLine($"Produtos: \n\nCategoria: {bala.Categoria.Nome} \nId: {bala.Id} - {bala.Nome}, {bala.Descricao} R${bala.Preco}" +
                                 $"\nQuantidade em estoque: {bala.Estoque} \nImposto R${bala.CalculaImposto()}");
-                            Console.Read();
+                            Console.ReadKey();
                             break;
 
                         case "6":
                             Console.WriteLine($"Produtos: \n\nCategoria: {vestido.Categoria.Nome} \nId: {vestido.Id} - {vestido.Nome}, {vestido.Descricao} " +
                                 $"R${vestido.Preco} \nQuantidade em estoque: {vestido.Estoque} \nImposto R${vestido.CalculaImposto()} \nCor: {vestido.Cor} - Tamanho: {vestido.Tamanho}");
-                            Console.Read();
+                            Console.ReadKey();
                             break;
                     }
                     break;
@@ -148,14 +151,18 @@ class Program
                     Console.WriteLine($"\n{pedido2.Nota.GetNotaFiscal()}");
                     Console.WriteLine($"\n{pedido3.Nota.GetNotaFiscal()}");
                     Console.WriteLine($"\n{pedido4.Nota.GetNotaFiscal()}");
-                    Console.Read();
+                    Console.WriteLine("---------------------------");
+
+                    Console.WriteLine($"Item: {itens1.Item}\n Quantidade: {itens1.Quantidade}\n Total: R${itens1.Total}");
+                    Console.WriteLine($"Item: {itens2.Item}\n Quantidade: {itens2.Quantidade}\n Total: R${itens2.Total}");
+                    Console.ReadKey();
                     break;
                 #endregion
 
                 #region Testa Estoque
                 case "3":
                     Console.WriteLine($"Capacidade: {estoque.Capacidade} \nOcupação: {estoque.Ocupacao} \nMontante: {estoque.Montante}");
-                    Console.Read();
+                    Console.ReadKey();
                     break;
                 #endregion
 
@@ -178,7 +185,7 @@ class Program
                         Console.WriteLine($"Erro do tipo: {ex.Message}");
                     }
 
-                    Console.Read();
+                    Console.ReadKey();
                     break;
 
                 case "5":
@@ -199,7 +206,7 @@ class Program
                         Console.WriteLine($"Erro do tipo: {ex.Message}");
                     }
 
-                    Console.Read();
+                    Console.ReadKey();
                     break;
                 #endregion
 
@@ -238,7 +245,7 @@ class Program
                         Console.WriteLine($"Categoria inválida! \nErro do tipo: {ex.Message}");
                     }
 
-                    Console.Read();
+                    Console.ReadKey();
                     break;
                 #endregion
 
@@ -288,7 +295,7 @@ class Program
                         Console.WriteLine($"Produto inválido! \nErro do tipo: {ex.Message}");
                     }
 
-                    Console.Read();
+                    Console.ReadKey();
                     break;
                     #endregion
             }

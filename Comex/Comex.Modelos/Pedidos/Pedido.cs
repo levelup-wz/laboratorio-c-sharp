@@ -1,5 +1,4 @@
 ﻿using System;
-using Comex.Modelos.Produtos;
 using Comex.Modelos.Clientes;
 
 namespace Comex.Modelos.Pedidos
@@ -11,32 +10,51 @@ namespace Comex.Modelos.Pedidos
         public string Cep { get; private set; }
         public string Data { get; set; }
         public Cliente Cliente { get; set; }
-        public Produto Produto { get; set; }
+        public List<ItensDoPedido> Itens { get; set; }
         public int QuantidadeVendida { get; set; }
         public NotaFiscal Nota { get; private set; }
         public decimal FretePedido { get; private set; }
 
-        public Pedido(string data, Cliente cliente, Produto produto, int quantidadeVendida, string cep)
+        public Pedido(string data, Cliente cliente, string cep, params ItensDoPedido[] itens)
         {
             Quantidade++;
             Id = Quantidade;
             Data = data;
             Cliente = cliente;
-            Produto = produto;
-            QuantidadeVendida = quantidadeVendida;
+            QuantidadeVendida = 0;
             Nota = new NotaFiscal(this);
             Cep = cep;
             FretePedido = Frete.Calcular(cep);
+
+            foreach (ItensDoPedido item in itens)
+            {
+                QuantidadeVendida += item.Quantidade;
+                Itens.Add(item);
+            }
         }
 
         public double CalculaValorTotal()
         {
-            return Produto.Preco * QuantidadeVendida;
+            double valor = 0;
+
+            foreach (ItensDoPedido item in Itens)
+            {
+                valor += (double)item.Total * item.Quantidade;
+            }
+
+            return valor;
         }
 
         public double CalculaTotalImposto()
         {
-            return Produto.CalculaImposto() * QuantidadeVendida;
+            double valor = 0;
+
+            foreach (ItensDoPedido item in Itens)
+            {
+                valor += item.Item.CalculaImposto() * item.Quantidade;
+            }
+
+            return valor;
         }
 
         public double CalculaCustoTotal()

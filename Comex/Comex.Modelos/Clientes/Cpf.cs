@@ -6,7 +6,7 @@ namespace Comex.Modelos.Clientes
 {
     public class Cpf
     {
-        public string CPF { get; set; }
+        public string CPF { get; }
         public Cpf(string cpf)
         {
             CPF = cpf;

@@ -17,7 +17,7 @@ namespace Comex.Modelos.Produtos
             Cor = Extrator("cor:", atributos);
         }
 
-        public string Extrator(string param, string arg)
+        private string Extrator(string param, string arg)
         {
             param = param.ToLower();
             int index = arg.IndexOf(param);

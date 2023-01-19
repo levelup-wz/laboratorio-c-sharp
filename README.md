@@ -1,3 +1,5 @@
-# desafio-pull-request
-# Desafio Pull Request concluído!
-## Danilo Siervi esteve aqui!
+[x] Crie uma nova classe para formatar CPF
+[x] Extrair atributos da classe Vestuario
+[x] Faça uma implementação diferente para formatar CPF
+
+:)

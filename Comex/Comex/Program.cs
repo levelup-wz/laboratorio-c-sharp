@@ -153,6 +153,21 @@ class Program
                     Console.WriteLine($"Quantidade Total de Itens: {pedido2.QuantidadeVendida} - Preço Total: R${pedido2.CalculaCustoTotal()}" +
                         $"\nImposto: R${pedido2.CalculaTotalImposto()}\nCEP: {pedido2.Cep} - Frete: R${pedido2.FretePedido}");
 
+                    Console.WriteLine($"\n{pedido3.Id} - {pedido3.Data} Cliente: {pedido3.Cliente.NomeCompleto()} {pedido3.Cliente.CpfCliente.Formatar()}");
+                    foreach (ItensDoPedido item in pedido3.Itens)
+                    {
+                        Console.WriteLine($"{item.Item.Nome} {item.Quantidade} unidades - R${item.Total}");
+                    }
+                    Console.WriteLine($"Quantidade Total de Itens: {pedido3.QuantidadeVendida} - Preço Total: R${pedido3.CalculaCustoTotal()}" +
+                        $"\nImposto: R${pedido3.CalculaTotalImposto()}\nCEP: {pedido3.Cep} - Frete: R${pedido3.FretePedido}");
+
+                    Console.WriteLine($"\n{pedido4.Id} - {pedido4.Data} Cliente: {pedido4.Cliente.NomeCompleto()} {pedido4.Cliente.CpfCliente.Formatar()}");
+                    foreach (ItensDoPedido item in pedido4.Itens)
+                    {
+                        Console.WriteLine($"{item.Item.Nome} {item.Quantidade} unidades - R${item.Total}");
+                    }
+                    Console.WriteLine($"Quantidade Total de Itens: {pedido4.QuantidadeVendida} - Preço Total: R${pedido4.CalculaCustoTotal()}" +
+                        $"\nImposto: R${pedido4.CalculaTotalImposto()}\nCEP: {pedido4.Cep} - Frete: R${pedido4.FretePedido}");
                     Console.WriteLine("---------------------------");
 
                     Console.WriteLine($"Notas Fiscais: \n{pedido1.Nota.GetNotaFiscal()}");

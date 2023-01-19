@@ -60,7 +60,7 @@ namespace Comex.Modelos.Pedidos
 
         public double CalculaCustoTotal()
         {
-            return CalculaValorTotal() + CalculaTotalImposto();
+            return CalculaValorTotal() + CalculaTotalImposto() + (double)FretePedido;
         }
     }
 }

@@ -46,5 +46,11 @@ namespace Comex.Models
         {
             Items.RemoveAll(i => i.Produto.Nome == nome);
         }
+
+        public void EditarQuantidade(string nomeDoItem, int quantidade)
+        {
+            var item = Items.FirstOrDefault(i => i.Produto.Nome == nomeDoItem); 
+            item.Quantidade = quantidade;
+        }
     }
 }

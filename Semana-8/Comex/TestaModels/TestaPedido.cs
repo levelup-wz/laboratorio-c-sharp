@@ -16,6 +16,8 @@ namespace Comex.TestaModels
         {
             Pedido1.Items.Add(new ItemsDoPedido(new Produto("Iphone 14", 5500.00, 10, "Informática"), 10));
             Pedido1.RemoverItemDoPedido("Iphone 14");
+            Pedido1.EditarQuantidade("Notebook Samsung", 5);
+
             string produtos1 = "";
             string categoria1 = "";
             foreach(var item in Pedido1.Items)

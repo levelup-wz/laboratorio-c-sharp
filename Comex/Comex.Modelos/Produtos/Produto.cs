@@ -18,6 +18,7 @@ namespace Comex.Modelos.Produtos
         {
             return Preco * Estoque;
         }
+
         public virtual decimal CalculaImposto()
         {
             return (decimal)0.4 * Preco;

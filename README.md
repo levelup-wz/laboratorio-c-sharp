@@ -4,6 +4,9 @@
 - [x] Crie uma lista de produtos na classe Pedido
 - [x] Mude a classe Pedido para possuir itens
 - [x] Modificar Itens de um pedido
+    1. [x] Adicionar Itens
+    2. [x] Remover Itens
+    3. [x] Modificar quantidade do pedido
 - [x] Enviar entrega
 
 # Desafio Semana 7 - Comex - Strings, expressões regulares e a classe Object

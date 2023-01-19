@@ -8,7 +8,7 @@ namespace Comex.Modelos.Produtos
         public string Tamanho { get; }
         public string Cor { get; }
 
-        public Vestuario(string nome, string descricao, double preco, int estoque, Categoria categoria, string atributos)
+        public Vestuario(string nome, string descricao, decimal preco, int estoque, Categoria categoria, string atributos)
             : base(nome, descricao, preco, estoque, categoria)
         {
             Atributos = atributos;

@@ -34,21 +34,21 @@ namespace Comex.Modelos.Pedidos
             }
         }
 
-        public double CalculaValorTotal()
+        public decimal CalculaValorTotal()
         {
-            double valor = 0;
+            decimal valor = 0;
 
             foreach (ItensDoPedido item in Itens)
             {
-                valor += (double)item.Total;
+                valor += item.Total;
             }
 
             return valor;
         }
 
-        public double CalculaTotalImposto()
+        public decimal CalculaTotalImposto()
         {
-            double valor = 0;
+            decimal valor = 0;
 
             foreach (ItensDoPedido item in Itens)
             {
@@ -58,9 +58,37 @@ namespace Comex.Modelos.Pedidos
             return valor;
         }
 
-        public double CalculaCustoTotal()
+        public decimal CalculaCustoTotal()
         {
-            return CalculaValorTotal() + CalculaTotalImposto() + (double)FretePedido;
+            return CalculaValorTotal() + CalculaTotalImposto() + FretePedido;
+        }
+
+        public void RemoverItens(params ItensDoPedido[] itens)
+        {
+            try
+            {
+                foreach (ItensDoPedido item in itens)
+                {
+                    bool remove = Itens.Remove(item);
+
+                    if (!remove)
+                    {
+                        throw new ArgumentException();
+                    }
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Item não existente no pedido", ex.Message);
+            }
+        }
+
+        public void AlterarQuantidade(ItensDoPedido item)
+        {
+            Console.WriteLine($"Quantidade atual: {item.Quantidade} \nDigite a nova quantidade:");
+            int quantidade = Console.Read();
+
+            Itens[Itens.IndexOf(item)].Quantidade = quantidade;
         }
     }
 }

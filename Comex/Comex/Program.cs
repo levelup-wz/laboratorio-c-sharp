@@ -20,23 +20,23 @@ class Program
 
         // declaração dos produtos
         Produto notebook = new Produto("Notebook Samsung", "O melhor da marca!",
-            3523.00, 1, informatica);
+            (decimal)3523.00, 1, informatica);
         Produto cleanA = new Produto("Clean Architecture", "O melhor da marca!",
-            102.90, 2, livros);
+            (decimal)102.90, 2, livros);
         Produto monitor = new Produto("Monitor Dell", "O melhor da marca!",
-            1889.00, 3, informatica);
+            (decimal)1889.00, 3, informatica);
         Produto bala = new Produto("Bala 7 Belo", "A mais gostosa", 
-            0.1, 5000, alimentos);
+            (decimal)0.1, 5000, alimentos);
 
         Produto vacina = new ProdutoIsento("Vacina", "Vacinas para todas as doenças",
-            250.00, 500, saude);
+            (decimal)250.00, 500, saude);
         Produto livroJava = new ProdutoIsento("Use a Cabeça: Java", "Descomplicando Java",
-            112.90, 5, livros);
+            (decimal)112.90, 5, livros);
         Produto macbookPro = new ProdutoIsento("Macbook pro", "O melhor da marca!",
-            20000.00, 15, informatica);
+            (decimal)20000.00, 15, informatica);
 
         Vestuario vestido = new Vestuario("Vestido rosa", "Bonito",
-            249.90, 100, roupa, "tamanho:M;cor:rosa");
+            (decimal)249.90, 100, roupa, "tamanho:M;cor:rosa");
 
         // declaração do cliente
         Cliente danilo = new Cliente("Danilo", "Siervi", new Cpf("12345678913"), "999999999", "Rua Legal",
@@ -51,7 +51,7 @@ class Program
         ItensDoPedido itens6 = new ItensDoPedido(livroJava, 2);
 
         Pedido pedido1 = new Pedido("02/12/2022", danilo, "08532-220", itens1, itens2);
-        Pedido pedido2 = new Pedido("03/12/2022", danilo, "83992-332", itens3);
+        Pedido pedido2 = new Pedido("03/12/2022", danilo, "83992-332", itens3, itens5, itens6);
         Pedido pedido3 = new Pedido("03/12/2022", danilo, "36623-293", itens4, itens5);
         Pedido pedido4 = new Pedido("09/12/2022", danilo, "76509-234", itens6);
 
@@ -77,7 +77,7 @@ class Program
 
             switch (op) 
             {
-                #region Testa Categoria, Produto, ProdutoIsento, Vestuario e ItensDoPedido
+                #region Testa Categoria, Produto, ProdutoIsento e Vestuario
                 case "1":
                     Console.WriteLine($"{informatica.Nome} ({informatica.Id} - {informatica.Status}) \n" +
                         $"{moveis.Nome} ({moveis.Id} - {moveis.Status}) \n{livros.Nome} ({livros.Id} - {livros.Status}) \n" +
@@ -135,7 +135,7 @@ class Program
                     break;
                 #endregion
 
-                #region Testa Pedido, Cliente (Cpf), Nota Fiscal e Frete
+                #region Testa Pedido, Cliente (Cpf), Nota Fiscal, Frete e ItensDoPedido
                 case "2":
                     Console.WriteLine($"Pedidos: \n{pedido1.Id} - {pedido1.Data} Cliente: {pedido1.Cliente.NomeCompleto()} {pedido1.Cliente.CpfCliente.Formatar()}");
                     foreach (ItensDoPedido item in pedido1.Itens)
@@ -175,7 +175,6 @@ class Program
                     Console.WriteLine($"\n{pedido3.Nota.GetNotaFiscal()}");
                     Console.WriteLine($"\n{pedido4.Nota.GetNotaFiscal()}");
                     Console.WriteLine("---------------------------");
-
                     Console.ReadKey();
                     break;
                 #endregion
@@ -275,7 +274,7 @@ class Program
                     Console.WriteLine("Criando Produto válido: ");
                     try
                     {
-                        Produto produto1 = new Produto("produto", "é um produto", 1.44, 20, moveis);
+                        Produto produto1 = new Produto("produto", "é um produto", (decimal)1.44, 20, moveis);
                         Console.WriteLine("Produto válido!");
                     }
                     catch (ArgumentException ex)
@@ -297,7 +296,7 @@ class Program
                     Console.WriteLine("\nCriando Produto Isento com estoque inválido:");
                     try
                     {
-                        Produto produto1 = new ProdutoIsento("produto", "é um produto", 1.44, -10, moveis);
+                        Produto produto1 = new ProdutoIsento("produto", "é um produto", (decimal)1.44, -10, moveis);
                         Console.WriteLine("Produto válido!");
                     }
                     catch (ArgumentException ex)
@@ -308,7 +307,7 @@ class Program
                     Console.WriteLine("\nCriando Produto Isento com categoria nula:");
                     try
                     {
-                        Produto produto1 = new ProdutoIsento("produto", "é um produto", 1.44, 20, categoria: null);
+                        Produto produto1 = new ProdutoIsento("produto", "é um produto", (decimal)1.44, 20, categoria: null);
                         Console.WriteLine("Produto válido!");
                     }
                     catch (ArgumentException ex)

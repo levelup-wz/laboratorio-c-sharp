@@ -13,7 +13,7 @@ namespace Comex.Modelos.Pedidos
         {
             Item = item;
             Quantidade = quantidade;
-            Total = (decimal)item.Preco * quantidade;
+            Total = item.Preco * quantidade;
         }
     }
 }

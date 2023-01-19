@@ -9,18 +9,18 @@ namespace Comex.Modelos.Produtos
         public int Id { get; protected set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public double Preco { get; set; }
+        public decimal Preco { get; set; }
         public int Estoque { get; set; }
         public Categoria Categoria { get; set; }
         protected string Atributos { get; set; }
 
-        public double ValorTotal()
+        public decimal ValorTotal()
         {
             return Preco * Estoque;
         }
-        public virtual double CalculaImposto()
+        public virtual decimal CalculaImposto()
         {
-            return 0.4 * Preco;
+            return (decimal)0.4 * Preco;
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Comex.Modelos.Produtos
         /// <param name="estoque"> <see cref="Estoque"/> obrigatório e diferente de zero </param>
         /// <param name="categoria"> <see cref="Categoria"/> obrigatória </param>
         /// <exception cref="ArgumentException"></exception>
-        public Produto(string nome, string descricao, double preco, int estoque, Categoria categoria)
+        public Produto(string nome, string descricao, decimal preco, int estoque, Categoria categoria)
         {
             Quantidade++;
             Id = Quantidade;

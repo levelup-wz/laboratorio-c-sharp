@@ -7,7 +7,7 @@ namespace Comex.Modelos.Produtos
     {
         public int Capacidade { get; set; }
         public int Ocupacao { get; set; }
-        public double Montante { get; set; }
+        public decimal Montante { get; set; }
 
         public Estoque()
         {

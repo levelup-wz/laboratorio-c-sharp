@@ -1,4 +1,4 @@
-﻿using Comex.Modelos.Categorias;
+﻿/*using Comex.Modelos.Categorias;
 using Comex.Modelos.Pedidos;
 using Comex.Modelos.Produtos;
 using System;
@@ -21,3 +21,4 @@ namespace Comex.Testes
         Console.WriteLine($"Item: {itens2.Item} \nQuantidade: {itens2.Quantidade} \nPreço: R${itens2.Total}");
     }
 }
+*/

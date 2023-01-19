@@ -59,8 +59,8 @@ Console.WriteLine(".--------------------..--------------------..----------------
 
 Console.WriteLine("TestaPedido:" + "\n");
 Pedido pedido1 = new(new Cliente("Hebert", "Belchior", new CPF("11133344455"), "(81)91234-5678","Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
-                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new Produto("Notebook Samsung", 3523.00, 1, 
-                            "Informática", ""), 1);
+                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new ItemsDoPedido(new Produto("Notebook Samsung", 3523.00, 1, 
+                            "Informática", ""), quantidade: 1), quantidadeVendida: 1);
 Console.WriteLine($"Id do pedido: {pedido1.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido1.Cliente.DefineId()}");
 Console.WriteLine($"Data do pedido: { pedido1.Data}");
@@ -68,14 +68,15 @@ Console.WriteLine($"Nome do cliente: {pedido1.Cliente.NomeCompleto()}");
 Console.WriteLine($"CPF do cliente: {pedido1.Cliente.Cpf}");
 Console.WriteLine($"Telefone do cliente: {pedido1.Cliente.Telefone}");
 Console.WriteLine($"Endereço do cliente: {pedido1.Cliente.EnderecoCompleto()}");
-Console.WriteLine($"Produto do pedido: {pedido1.Produto.Nome}");
-Console.WriteLine($"Categoria do produto: {pedido1.Produto.Categoria}");
+Console.WriteLine($"Produto do pedido: {pedido1}");
+Console.WriteLine($"Categoria do produto: {pedido1}");
 Console.WriteLine($"Quantidade vendida: {pedido1.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido1.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: { pedido1.CalculaTotalDeImpostos():N2}" + "\n");
+
 Pedido pedido2 = new(new Cliente("Monalisa", "Mata", new CPF("22233344455"), "(81)92345-6789", "Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
-                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new Produto("Clean Architecture", 102.90, 2,
-                            "Livros", ""), 2);
+                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new ItemsDoPedido(new Produto("Clean Architecture", 102.90, 2,
+                            "Livros", ""), quantidade: 2), quantidadeVendida: 2);
 Console.WriteLine($"Id do pedido: {pedido2.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido2.Cliente.DefineId()}");
 Console.WriteLine($"Data do pedido: {pedido2.Data}");
@@ -83,14 +84,15 @@ Console.WriteLine($"Nome do cliente: {pedido2.Cliente.NomeCompleto()}");
 Console.WriteLine($"CPF do cliente: {pedido2.Cliente.Cpf}");
 Console.WriteLine($"Telefone do cliente: {pedido2.Cliente.Telefone}");
 Console.WriteLine($"Endereço do cliente: {pedido2.Cliente.EnderecoCompleto()}");
-Console.WriteLine($"Produto do pedido: {pedido2.Produto.Nome}");
-Console.WriteLine($"Categoria do produto: {pedido2.Produto.Categoria}");
+Console.WriteLine($"Produto do pedido: {pedido2}");
+Console.WriteLine($"Categoria do produto: {pedido2}");
 Console.WriteLine($"Quantidade vendida: {pedido2.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido2.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido2.CalculaTotalDeImpostos():N2}" + "\n");
 
 Pedido pedido3 = new(new Cliente("Angélica", "Maria", new CPF("33344455566"), "(81)93456-7891", "Rua: 197,", "Numero: 55,", "Complemento: Bloco O, Apartamento 777,",
-                            "Bairro: Ouro Preto,", "Cidade: Olinda,", "Estado: PE"), new Produto("Monitor Dell 27", 1889.00, 3, "Informática", ""), 3);
+                            "Bairro: Ouro Preto,", "Cidade: Olinda,", "Estado: PE"), new ItemsDoPedido(new Produto("Monitor Dell 27", 1889.00, 3,
+                            "Informática", ""), quantidade: 3), quantidadeVendida: 3);
 Console.WriteLine($"Id do pedido: {pedido3.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido3.Cliente.DefineId()}");
 Console.WriteLine($"Data do pedido: {pedido3.Data}");
@@ -98,8 +100,8 @@ Console.WriteLine($"Nome do cliente: {pedido3.Cliente.NomeCompleto()}");
 Console.WriteLine($"CPF do cliente: {pedido3.Cliente.Cpf}");
 Console.WriteLine($"Telefone do cliente: {pedido2.Cliente.Telefone}");
 Console.WriteLine($"Endereço do cliente: {pedido3.Cliente.EnderecoCompleto()}");
-Console.WriteLine($"Produto do pedido: {pedido3.Produto.Nome}");
-Console.WriteLine($"Categoria do produto: {pedido3.Produto.Categoria}");
+Console.WriteLine($"Produto do pedido: {pedido3}");
+Console.WriteLine($"Categoria do produto: {pedido3}");
 Console.WriteLine($"Quantidade vendida: {pedido3.QuantidadeVendida}");
 Console.WriteLine($"Valor total vendido: {pedido3.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido3.CalculaTotalDeImpostos():N2}" + "\n");
@@ -129,7 +131,7 @@ Console.WriteLine(".--------------------..--------------------..----------------
 Console.WriteLine("Nota fiscal:" + "\n");
 NotaFiscal notaFiscal = new(new Pedido(new Cliente("Hebert", "Belchior", new CPF("11133344455"), "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
                            "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
-                           new Produto("Notebook Samsung", 3523.00, 1, "Informática", ""), 1));
+                           new ItemsDoPedido(new Produto("Notebook Samsung", 3523.00, 1, "Informática", ""), quantidade: 1), quantidadeVendida: 1));
 notaFiscal.RegistraPedido();
 Console.WriteLine();
 

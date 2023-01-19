@@ -6,15 +6,15 @@
         public int Id { get; }
         public DateTime Data = DateTime.Now;
         public Cliente Cliente { get; }
-        public Produto Produto { get; }
+        public List<ItemsDoPedido> Items { get; }
         public double QuantidadeVendida { get; }
 
-        public Pedido(Cliente cliente, Produto produto, double quantidade_vendida)
+        public Pedido(Cliente cliente, ItemsDoPedido itemsDoPedido, double quantidadeVendida)
         {
             Id = _id++;
             Cliente = cliente;
-            Produto = produto;
-            QuantidadeVendida = quantidade_vendida;
+            QuantidadeVendida = quantidadeVendida;
+            Items = new List<ItemsDoPedido> { itemsDoPedido };
         }
 
         public int DefineId()
@@ -24,14 +24,26 @@
 
         public virtual double CalculaValorTotal()
         {
-            double resultado = Produto.PrecoUnitario * QuantidadeVendida;
-            return resultado;
+            var valorTotal = 0;
+
+            foreach (ItemsDoPedido item in Items)
+            {
+                valorTotal = valorTotal + (int)item.Total;
+            }
+
+            return valorTotal;
         }
 
         public double CalculaTotalDeImpostos()
         {
-            double resultado = QuantidadeVendida * Produto.CalculaImposto();
-            return resultado;
+            var totalDeImpostos = 0;
+
+            foreach (ItemsDoPedido item in Items)
+            {
+                totalDeImpostos = totalDeImpostos + (int)(QuantidadeVendida * item.Produto.CalculaImposto());
+            }
+
+            return totalDeImpostos;
         }
     }
 }

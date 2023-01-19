@@ -153,8 +153,8 @@ class Program
                     Console.WriteLine($"\n{pedido4.Nota.GetNotaFiscal()}");
                     Console.WriteLine("---------------------------");
 
-                    Console.WriteLine($"Item: {itens1.Item}\n Quantidade: {itens1.Quantidade}\n Total: R${itens1.Total}");
-                    Console.WriteLine($"Item: {itens2.Item}\n Quantidade: {itens2.Quantidade}\n Total: R${itens2.Total}");
+                    Console.WriteLine($"Item: {itens1.Item.Nome} - Quantidade: {itens1.Quantidade} \nTotal: R${itens1.Total}");
+                    Console.WriteLine($"Item: {itens2.Item.Nome} - Quantidade: {itens2.Quantidade} \nTotal: R${itens2.Total}");
                     Console.ReadKey();
                     break;
                 #endregion

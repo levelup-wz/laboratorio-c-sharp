@@ -233,7 +233,7 @@ Console.WriteLine(vestuario.Tamanho);
 Console.WriteLine(vestuario.Cor);
 Console.ReadKey();*/
 
-CPF cpf = new CPF("03974884165");
+CPF cpf = new CPF("01234567890");
 Console.WriteLine(cpf.FormatarComRegex());
 Console.WriteLine(cpf);
 

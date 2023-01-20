@@ -22,7 +22,7 @@ namespace Comex.Models
 
         public string FormatarComRegex()
         {
-            return Convert.ToUInt64(Cpf).ToString(@"000\.000\.000\-00");
+            return Regex.Replace(Cpf, @"(.{3})(.{3})(.{3})(.{2})", @"$1.$2.$3-$4");
         }
 
         public override string ToString()

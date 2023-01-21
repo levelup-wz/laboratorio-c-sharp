@@ -15,12 +15,19 @@ namespace Comex.Models
         public int Id { get; set; }
         public DateTime Data { get; set; }
         public Cliente ClientePedido { get; set; }
-        public Produto PedidoProduto { get; set; }
+        public List<ItemDoPedido> Itens { get; set; }
         public int QuantidadeVendida { get; set; }
 
         public double CalcularValorTotal()
-        {
-            return PedidoProduto.PrecoUnitario * QuantidadeVendida;
+        {             
+            double valorTotal = 0;
+            
+            foreach (ItemDoPedido item in Itens)
+            {
+                valorTotal += (double)item.Total;
+            }
+
+            return valorTotal;
         }
 
         public string CalcularValorPorExtenso()
@@ -43,17 +50,24 @@ namespace Comex.Models
 
         public double CalcularImposto()
         {
-            return QuantidadeVendida * PedidoProduto.CalcularImposto();
+            double impostoCalculado = 0;
+
+            foreach(ItemDoPedido item in Itens)
+            {
+                impostoCalculado += item.Quantidade * item.Produto.CalcularImposto();
+            }
+
+            return impostoCalculado;
         }
 
-        public Pedido(Cliente cliente, Produto pedidoProduto, int quantidadeVendida) 
+        public Pedido(Cliente cliente, ItemDoPedido item, int quantidadeVendida) 
         {
             TotalPedidos += 1;
 
             Id = TotalPedidos;
             Data = DateTime.Now;
             ClientePedido = cliente;
-            PedidoProduto = pedidoProduto;
+            Itens = new List<ItemDoPedido> { item };
             QuantidadeVendida = quantidadeVendida;
         }
 

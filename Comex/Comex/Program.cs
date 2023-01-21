@@ -233,8 +233,15 @@ Console.WriteLine(vestuario.Tamanho);
 Console.WriteLine(vestuario.Cor);
 Console.ReadKey();*/
 
-CPF cpf = new CPF("01234567890");
+/*CPF cpf = new CPF("01234567890");
 Console.WriteLine(cpf.FormatarComRegex());
 Console.WriteLine(cpf);
+
+Console.ReadKey();*/
+
+Produto produto = new Produto("Código Limpo", 50, 2, new Categoria("Livros"));
+ItemDoPedido item = new ItemDoPedido(produto, 1);
+
+Console.WriteLine($"Valor do item: {item.Total:C}");
 
 Console.ReadKey();

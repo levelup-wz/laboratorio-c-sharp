@@ -11,5 +11,11 @@ namespace Comex.Models
         public Produto Produto { get; private set; }
         public int Quantidade { get; set; }
         public decimal Total => (decimal)Produto.PrecoUnitario * Quantidade;
+
+        public ItemDoPedido(Produto produto, int quantidade)
+        {
+            Produto = produto;
+            Quantidade = quantidade;
+        }
     }
 }

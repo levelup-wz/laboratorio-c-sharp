@@ -18,6 +18,30 @@ namespace Comex.Models
         public List<ItemDoPedido> Itens { get; set; }
         public int QuantidadeVendida { get; set; }
 
+        public void RemoverItens(int idProduto)
+        {
+            foreach (ItemDoPedido item in Itens)
+            {
+                if (item.Produto.Id == idProduto)
+                {
+                    Itens.RemoveAt(idProduto);
+                    break;
+                }
+            }
+        }
+
+        public void AlterarQuantidade(int idProduto, int quantidade)
+        {
+            foreach (ItemDoPedido item in Itens)
+            {
+                if (item.Produto.Id == idProduto)
+                {
+                    item.Quantidade = quantidade;
+                    break;
+                }
+            }
+        }
+
         public double CalcularValorTotal()
         {             
             double valorTotal = 0;

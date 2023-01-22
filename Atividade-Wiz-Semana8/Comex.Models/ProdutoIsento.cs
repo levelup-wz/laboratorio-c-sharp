@@ -2,15 +2,15 @@
 {
     public class ProdutoIsento : Produto
     {
-        public ProdutoIsento(string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria, string atributos) : base(nome, preco_Unitario, quantidade_Em_Estoque, categoria, atributos)
+        public ProdutoIsento(string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria, string atributos) : base(nome, precoUnitario, quantidadeEmEstoque, categoria, atributos)
         {
         }
 
-        public ProdutoIsento(int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria) : base(id, nome, preco_Unitario, quantidade_Em_Estoque, categoria)
+        public ProdutoIsento(int id, string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria) : base(id, nome, precoUnitario, quantidadeEmEstoque, categoria)
         {
         }
 
-        public override double CalculaImposto()
+        public override decimal CalculaImposto()
         {
             return 0;
         }

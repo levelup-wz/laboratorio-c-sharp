@@ -4,9 +4,9 @@ namespace Comex.Testes
 {
     public static class TestaProdutoIsento
     {
-        static readonly ProdutoIsento isento1 = new("Vacina", 250.00, 1000, "Saúde", "");
-        static readonly ProdutoIsento isento2 = new("Use a Cabeça: Java", 112.90, 5, "Livros", "");
-        static readonly ProdutoIsento isento3 = new("Macbook Pro", 20000.00, 11, "Informática", "");
+        static readonly ProdutoIsento isento1 = new("Vacina", 250.00M, 1000, "Saúde", "");
+        static readonly ProdutoIsento isento2 = new("Use a Cabeça: Java", 112.90M, 5, "Livros", "");
+        static readonly ProdutoIsento isento3 = new("Macbook Pro", 20000.00M, 11, "Informática", "");
 
         public static void MostraProdutoIsento()
         {

@@ -9,10 +9,10 @@ namespace Comex.Testes
         {
             try
             {
-                ProdutoIsento vacina = new("Vacina", 250.00, 500, "Saúde", "");
-                ProdutoIsento useACabeca = new("Use a Cabeça: Java", 112.90, 5, "Livros", "");
-                Produto macbook = new("Macbook Pro", 20000.00, 15, "Informática", "");
-                Produto Bala7Belo = new("Bala 7 Belo", 0.1, 5000, "Alimentos", "");
+                ProdutoIsento vacina = new("Vacina", 250.00M, 500, "Saúde", "");
+                ProdutoIsento useACabeca = new("Use a Cabeça: Java", 112.90M, 5, "Livros", "");
+                Produto macbook = new("Macbook Pro", 20000.00M, 15, "Informática", "");
+                Produto Bala7Belo = new("Bala 7 Belo", 0.1M, 5000, "Alimentos", "");
 
                 Estoque estoque = new();
 

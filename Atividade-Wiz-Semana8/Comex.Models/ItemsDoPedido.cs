@@ -11,13 +11,14 @@ namespace Comex.Models
     {
         public readonly Produto Produto;
         public int Quantidade { get; set; }
+
         public readonly decimal Total;
 
         public ItemsDoPedido(Produto produto, int quantidade)
         {
             Produto = produto;
             Quantidade = quantidade;
-            Total = (decimal)(Produto.PrecoUnitario * Quantidade);
+            Total = Produto.PrecoUnitario * Quantidade;
         }
     }
 }

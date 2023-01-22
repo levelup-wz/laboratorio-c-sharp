@@ -6,27 +6,27 @@
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descircao { get; set; }
-        public double PrecoUnitario { get; set; }
-        public double QuantidadeEmEstoque { get; set; }
+        public decimal PrecoUnitario { get; set; }
+        public int QuantidadeEmEstoque { get; set; }
         public string Categoria { get; set; }
         protected string Atributos { get; set; }
 
-        public Produto (string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria, string atributos)
+        public Produto (string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria, string atributos)
         {
             Id = _id++;
             Nome = nome;
-            PrecoUnitario = preco_Unitario;
-            QuantidadeEmEstoque = quantidade_Em_Estoque;
+            PrecoUnitario = precoUnitario;
+            QuantidadeEmEstoque = quantidadeEmEstoque;
             Categoria = categoria;
             Atributos = atributos;
         }
 
-        public Produto (int id, string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria)
+        public Produto (int id, string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria)
         {
             Id = id;
             Nome = nome;
-            PrecoUnitario = preco_Unitario;
-            QuantidadeEmEstoque = quantidade_Em_Estoque;
+            PrecoUnitario = precoUnitario;
+            QuantidadeEmEstoque = quantidadeEmEstoque;
             Categoria = categoria;
 
             if (id <= 0)
@@ -37,13 +37,13 @@
             {
                 throw new ArgumentException("Nome deve ter mais que 5 caracteres", nameof(nome));
             }
-            if (preco_Unitario <= 0)
+            if (precoUnitario <= 0)
             {
-                throw new ArgumentException("Preço unitário não pode ser ZERO.", nameof(preco_Unitario));
+                throw new ArgumentException("Preço unitário não pode ser ZERO.", nameof(precoUnitario));
             }
-            if (quantidade_Em_Estoque <= 0)
+            if (quantidadeEmEstoque <= 0)
             {
-                throw new ArgumentException("Não é possível inserir um produto com a quantidade ZERO no estoque.", nameof(quantidade_Em_Estoque));
+                throw new ArgumentException("Não é possível inserir um produto com a quantidade ZERO no estoque.", nameof(quantidadeEmEstoque));
             }
             if (categoria.Length <= 0)
             {
@@ -56,15 +56,15 @@
             return Id;
         }
 
-        public double CalculaValorTotalEmEstoque()
+        public decimal CalculaValorTotalEmEstoque()
         {
-            double resultado = QuantidadeEmEstoque * PrecoUnitario;
+            var resultado = QuantidadeEmEstoque * PrecoUnitario;
             return resultado;
         }
 
-        public virtual double CalculaImposto()
+        public virtual decimal CalculaImposto()
         {
-            double resultado = PrecoUnitario * 0.40;
+            var resultado = PrecoUnitario * 0.40M;
             return resultado;
         }
     }

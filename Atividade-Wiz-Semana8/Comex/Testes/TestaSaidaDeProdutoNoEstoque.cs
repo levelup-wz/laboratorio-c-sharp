@@ -9,7 +9,7 @@ namespace Comex.Testes
         {
             try
             {
-                ProdutoIsento vacina = new("Vacina", 250.00, 500, "Saúde", "");
+                ProdutoIsento vacina = new("Vacina", 250.00M, 500, "Saúde", "");
 
                 Estoque estoque = new();
 

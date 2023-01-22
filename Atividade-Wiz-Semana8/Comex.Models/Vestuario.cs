@@ -12,7 +12,7 @@ namespace Comex.Models
         public string Cor { get; }
 
 
-        public Vestuario(string nome, double preco_Unitario, double quantidade_Em_Estoque, string categoria, string atributos) : base(nome, preco_Unitario, quantidade_Em_Estoque, categoria, atributos)
+        public Vestuario(string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria, string atributos) : base(nome, precoUnitario, quantidadeEmEstoque, categoria, atributos)
         {
             Tamanho = Atributos.Substring(9,1);
             Cor = Atributos.Substring(17);

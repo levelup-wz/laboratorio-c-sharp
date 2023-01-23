@@ -21,7 +21,7 @@ namespace Comex.Testes
 
             Assert.Equal(pedido.Cliente, novoCliente);
             Assert.Equal(pedido.Items[0].Produto, produto);
-            Assert.Equal(2, pedido.QuantidadeVendida);
+            Assert.Equal(2, pedido.Items[0].GetQuantidade());
         }
 
         [Theory]
@@ -37,7 +37,7 @@ namespace Comex.Testes
 
             Assert.Equal(pedido.Cliente, novoCliente);
             Assert.Equal(pedido.Items[0].Produto, novoProduto);
-            Assert.Equal(pedido.QuantidadeVendida, quantidadePedido);
+            Assert.Equal(pedido.Items[0].GetQuantidade(), quantidadePedido);
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
             
             var valorTotal = pedido.CalcularValorTotal();
-            var result = pedido.QuantidadeVendida * (decimal)pedido.Items[0].Produto.PrecoUnitario;
+            var result = pedido.Items[0].GetQuantidade() * (decimal)pedido.Items[0].Produto.PrecoUnitario;
 
             Assert.Equal(result, valorTotal);
         }
@@ -59,7 +59,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, produto, 2);
 
             var valorImpostoTotal = pedido.CalculaImpostoTotal();
-            var result = pedido.QuantidadeVendida * (decimal)pedido.Items[0].Produto.CalculaImposto();
+            var result = pedido.Items[0].GetQuantidade() * (decimal)pedido.Items[0].Produto.CalculaImposto();
 
             Assert.Equal(result, valorImpostoTotal);
         }
@@ -114,12 +114,17 @@ namespace Comex.Testes
             var valorTotal = pedido.CalcularValorTotal();
             var expectedValorTotal = quantidadeVendida * ProdutoPreco + quantidadePedidaProduto2 * produto2.PrecoUnitario;
 
+            var valorTotalImposto = pedido.CalculaImpostoTotal();
+            var expectedValorTotalImposto = (quantidadeVendida * produto1.CalculaImposto()) + (quantidadePedidaProduto2 * produto2.CalculaImposto());
+
             pedido.Items.Should().HaveCount(2);
             pedido.Items[0].Should().BeOfType<ItemsDoPedido>();
             pedido.Items[0].Total.Should().Be(totalItemsPedido);
             pedido.Items.FirstOrDefault().Should().BeEquivalentTo(itemDoPedido);
             pedido.Items.LastOrDefault().Should().BeEquivalentTo(itemDoPedido2);
             valorTotal.Should().Be((decimal)expectedValorTotal);
+            valorTotalImposto.Should().Be((decimal)expectedValorTotalImposto);
+
         }
 
         [Theory]

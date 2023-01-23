@@ -14,7 +14,6 @@ namespace Comex.Entidades
         public DateTime Date { get; }
         public Cliente Cliente { get; }
         public List<ItemsDoPedido> Items { get; }
-        public int QuantidadeVendida { get; }
 
         public Pedido(Cliente cliente, Produto produto, int quantidadeVendida)
         {
@@ -24,7 +23,6 @@ namespace Comex.Entidades
             Date = DateTime.Now;
             Cliente = cliente;
             Items.Add(item);
-            QuantidadeVendida = quantidadeVendida;
             Id = Pedido.numPedido;
             Pedido.numPedido++;
         }
@@ -36,7 +34,6 @@ namespace Comex.Entidades
             Date = DateTime.Now;
             Cliente = cliente;
             Items.Add(itemsDoPedido);
-            QuantidadeVendida = itemsDoPedido.GetQuantidade();
             Id = Pedido.numPedido;
             Pedido.numPedido++;
         }
@@ -57,14 +54,16 @@ namespace Comex.Entidades
 
         public decimal CalculaImpostoTotal()
         {
-            decimal valorTotalImposto = 0;
+            //decimal valorTotalImposto = 0;
 
-            foreach (var item in Items)
-            {
-                valorTotalImposto += (decimal)(QuantidadeVendida * item.Produto.CalculaImposto());
-            }
+            //foreach (var item in Items)
+            //{
+            //    valorTotalImposto += (decimal)(QuantidadeVendida * item.Produto.CalculaImposto());
+            //}
 
-            return valorTotalImposto;
+            var valorTotalImposto = Items.Sum(p => p.GetQuantidade() * p.Produto.CalculaImposto());
+            
+            return (decimal)valorTotalImposto;
         }
 
         public void AddItems(Produto produto, int qtdPedido)

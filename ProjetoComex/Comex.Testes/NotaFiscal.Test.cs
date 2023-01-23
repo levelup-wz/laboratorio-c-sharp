@@ -20,7 +20,7 @@ namespace Comex.Testes
             new Cliente("Andre", "Sousa", "12345678922", "7798802-0059", "Rua 1", "10", "Bem querer",
                 "Candeias", "Vitoria da Conquista", "Bahia"),
             2,
-            $"Numero pedido: {Pedido.numPedido}\n" +
+            $"Numero pedido: 5\n" +
                 $"Nome: Andre Sousa\n" +
                 $"Data da compra: {DateTime.Now}\n" +
                 $"Total do pedido: R$ 7.046,00 => " +

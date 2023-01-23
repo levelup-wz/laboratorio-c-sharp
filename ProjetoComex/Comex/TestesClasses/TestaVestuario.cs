@@ -24,6 +24,10 @@ namespace Comex.TestesClasses
             var bermuda = new Vestuario("Vestido", 120.00, 10, vestuario, "tamanho: P; cor: Verde");
             Console.WriteLine($"O atributo tamanho do produto é: {bermuda.Tamanho}");
             Console.WriteLine($"O atributo cor do produto é: {bermuda.Cor}\n");
+
+            var calca = new Vestuario("Calça", 100.00, 5, vestuario, "tamanho: G; cor: Jeans");
+            Console.WriteLine($"O atributo tamanho do produto é: {calca.Tamanho}");
+            Console.WriteLine($"O atributo cor do produto é: {calca.Cor}\n");
         }
     }
 }

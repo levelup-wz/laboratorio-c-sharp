@@ -1,4 +1,5 @@
 ﻿using Comex.Entidades;
+using Comex.Models.Extensoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,8 @@ namespace Comex.Models.Models
         public string Cor { get; }
         public Vestuario(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria, string atributos) : base(nome, precoUnitario, quantidadeEstoque, categoria, atributos)
         {
-            Tamanho = atributos.Substring(9, 1);
-            Cor = atributos.Substring(17);
+            Tamanho = atributos.ExtrairTamanho();
+            Cor = atributos.ExtrairCor();
         }
 
     }

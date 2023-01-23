@@ -10,7 +10,7 @@ Console.WriteLine("Hello, World! - Projeto Comex\n");
 //TestaProduto.Main();
 
 // PEDIDOS
-TestaPedido.Main();
+//TestaPedido.Main();
 
 // PRODUTO ISENTO
 //TestaProdutoIsento.Main();
@@ -37,7 +37,7 @@ TestaPedido.Main();
 //TestaCpf.Main();
 
 //Testa Vestuario
-//TestaVestuario.Main();
+TestaVestuario.Main();
 
 //Testa ItemsDoPedido
 //TestaItemsDoPedido.Main();

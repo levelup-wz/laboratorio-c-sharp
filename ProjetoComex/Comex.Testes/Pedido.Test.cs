@@ -111,11 +111,15 @@ namespace Comex.Testes
             var itemDoPedido2 = new ItemsDoPedido(produto2, quantidadePedidaProduto2);
             pedido.AddItems(produto2, quantidadePedidaProduto2);
 
+            var valorTotal = pedido.CalcularValorTotal();
+            var expectedValorTotal = quantidadeVendida * ProdutoPreco + quantidadePedidaProduto2 * produto2.PrecoUnitario;
+
             pedido.Items.Should().HaveCount(2);
             pedido.Items[0].Should().BeOfType<ItemsDoPedido>();
             pedido.Items[0].Total.Should().Be(totalItemsPedido);
             pedido.Items.FirstOrDefault().Should().BeEquivalentTo(itemDoPedido);
             pedido.Items.LastOrDefault().Should().BeEquivalentTo(itemDoPedido2);
+            valorTotal.Should().Be((decimal)expectedValorTotal);
         }
 
         [Theory]

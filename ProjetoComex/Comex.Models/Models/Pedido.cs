@@ -43,12 +43,14 @@ namespace Comex.Entidades
 
         public decimal CalcularValorTotal()
         {
-            decimal valorTotal = 0;
+            //decimal valorTotal = 0;
 
-            foreach (var item in Items)
-            {
-                valorTotal += item.Total;
-            }
+            //foreach (var item in Items)
+            //{
+            //    valorTotal += item.Total;
+            //}
+
+            decimal valorTotal = Items.Sum(p => p.Total);
 
             return valorTotal;
         }

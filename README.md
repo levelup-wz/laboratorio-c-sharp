@@ -3,7 +3,7 @@
 - [x] Setup Inicial
 - [x] Crie novos métodos de extensão
 - [x] Crie uma nova extensão para List
-- [ ] Calcular ValorTotal usando Lambda
+- [x] Calcular ValorTotal usando Lambda
 - [ ] Calcular TotalDeImposto usando Lambda
 - [ ] Enviar entrega
 

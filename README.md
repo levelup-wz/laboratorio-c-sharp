@@ -4,8 +4,8 @@
 - [x] Crie novos métodos de extensão
 - [x] Crie uma nova extensão para List
 - [x] Calcular ValorTotal usando Lambda
-- [ ] Calcular TotalDeImposto usando Lambda
-- [ ] Enviar entrega
+- [x] Calcular TotalDeImposto usando Lambda
+- [x] Enviar entrega
 
 # Desafio Semana 8 - Comex - Arrays e tipos genéricos
 

@@ -1,3 +1,12 @@
+# Desafio Semana 9 - Comex - List, Lambda, Linq
+
+- [x] Setup Inicial
+- [ ] Crie novos métodos de extensão
+- [ ] Crie uma nova extensão para List
+- [ ] Calcular ValorTotal usando Lambda
+- [ ] Calcular TotalDeImposto usando Lambda
+- [ ] Enviar entrega
+
 # Desafio Semana 8 - Comex - Arrays e tipos genéricos
 
 - [x] Setup Inicial

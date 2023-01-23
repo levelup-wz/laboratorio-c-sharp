@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pPibefxErmipe4VEHJ3fZ7y8w+ST6E4hk7DoUWxVATLhAh4owGsHPB0RdtNh6AZxLCB8oOXjJ4RqsUuaCIzBHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vanessa\\Downloads\\laboratorio-c-sharp-semana4\\laboratorio-c-sharp-semana5\\Semana 6\\Comex.Models\\Comex.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vanessa\\.nuget\\packages\\numericwordsconversion\\2.0.0\\numericwordsconversion.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -9,7 +9,7 @@ namespace Comex.Models
 {
     public  class CPF
     {
-        public string Cpf { get; set; }
+        private readonly string Cpf;
 
         public CPF(string cpf)
         {

@@ -29,13 +29,13 @@ namespace Comex.Models
 
         }
 
-        public override string ToString()
+       /* public override string ToString()
         {
             return $" Nome completo:{Pedido.ClientePedido.Nome} {Pedido.ClientePedido.Sobrenome} \n" +
                 $"Data da Compra: {Pedido.Data} \n" +
                 $"Total do Pedido: {Pedido.ValorPedido()} \n" +
                 $"Valor Total do Pedido por Extenso em Inglês: {ValorExtensoIngles} \n" +
                 $"Valor Total do Pedido por Extenso em Português: {ValorExtensoPortugues}";
-        }
+        }*/
     }
 }

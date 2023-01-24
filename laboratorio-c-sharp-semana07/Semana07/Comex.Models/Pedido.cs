@@ -10,22 +10,23 @@ namespace Comex.Models
 {
     public class Pedido
     {
-       
-        public Produto ProdutoPedido { get; set; } //tipo produto
+
+        //public Produto ProdutoPedido { get; set; } //tipo produto
+        public List<ItemsDoPedido> Itens { get; set; }
         public int Id { get; set; }
         public static int ContId = 0;
         public DateTime Data { get; set; }
-       // public string Cliente { get; set; }
+        // public string Cliente { get; set; }
         public int Quantidade { get; set; }
+        public Cliente Cliente { get; set; }
 
-        public Cliente ClientePedido { get; set; }
-
-        public Pedido( Cliente cliente, Produto produto, int quantidade)
+        public Pedido(Cliente cliente,  ItemsDoPedido item, int quantidade)
         {
             Id = ++ContId;
-            ClientePedido = cliente;
+            Cliente = cliente;
             Data = DateTime.Now; 
-            ProdutoPedido = produto;
+            //ProdutoPedido = produto;
+            Itens = new List<ItemsDoPedido>{item};
             Quantidade= quantidade;
         }
 
@@ -35,17 +36,29 @@ namespace Comex.Models
 
         public double ValorPedido() 
         {
-            double valorTotal = ProdutoPedido.PrecoUnitario * Quantidade;
+             double valorTotal = 0;
+
+            foreach(ItemsDoPedido item in Itens)
+            {
+                valorTotal += (double)item.Total;
+            }
+          
             return valorTotal;
         }
                 
         public double ImpostoTotal()
         {
-            double totalPagar = Quantidade * ProdutoPedido.Imposto();
+            double totalPagar = 0;
+
+            foreach(ItemsDoPedido item in Itens)
+            {
+                totalPagar += item.Quantidade * item.Produto.Imposto();
+            }
             return totalPagar;
         }
 
-        public string RetornaInfosPedido()
+        //Teste subsitutuido por teste unitário.
+       /* public string RetornaInfosPedido() 
         {
             return $"ID pedido número: {Id} \n" +
                 $"{ClientePedido.RetornaCliente()}" +
@@ -55,7 +68,7 @@ namespace Comex.Models
                 $"Valor unitário: {ProdutoPedido.PrecoUnitario.ToString("N2")}\n" +
                 $"O valor total do pedido R$ {ValorPedido().ToString("N2")}\n" +
                 $"Impostos do pedido R$ {ImpostoTotal().ToString("N2")}\n ";
-        }
+        }*/
 
 
     }

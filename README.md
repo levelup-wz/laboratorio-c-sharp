@@ -1,4 +1,5 @@
-# Semana 8 - Array e tipos genéricos
-- [x] Crie uma lista de produtos na classe Pedido
-- [x] Mude a classe Pedido para possuir Items
-- [x]  Modificar items de um Pedido
+# Semana 8 - List, lambda, linq
+- [ ] Crie novos métodos de extensão
+- [ ] Crie uma nova extensão para List
+- [ ] Calcular o ValorTotal usando lambda
+- [ ] Calcular TotalDeImpostos usando lambda

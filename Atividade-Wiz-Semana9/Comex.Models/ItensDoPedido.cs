@@ -7,14 +7,14 @@ using System.Xml.Schema;
 
 namespace Comex.Models
 {
-    public class ItemsDoPedido
+    public class ItensDoPedido
     {
         public readonly Produto Produto;
         public int Quantidade { get; set; }
 
         public readonly decimal Total;
 
-        public ItemsDoPedido(Produto produto, int quantidade)
+        public ItensDoPedido(Produto produto, int quantidade)
         {
             Produto = produto;
             Quantidade = quantidade;

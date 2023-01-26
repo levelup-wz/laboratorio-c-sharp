@@ -6,17 +6,17 @@
         public int Id { get; }
         public DateTime Data = DateTime.Now;
         public Cliente Cliente { get; }
-        public List<ItemsDoPedido> Items { get; private set; }
+        public List<ItensDoPedido> Itens { get; private set; }
         public int QuantidadeVendida { get; }
 
-        public Pedido(Cliente cliente, List<ItemsDoPedido> itemsDoPedido, int quantidadeVendida)
+        public Pedido(Cliente cliente, List<ItensDoPedido> itemsDoPedido, int quantidadeVendida)
         {
             Id = _id++;
             Cliente = cliente;
             QuantidadeVendida = quantidadeVendida;
 
-            Items = new List<ItemsDoPedido>();
-            Items.AddRange(itemsDoPedido);
+            Itens = new List<ItensDoPedido>();
+            Itens.AddRange(itemsDoPedido);
         }
 
         public int DefineId()
@@ -27,42 +27,42 @@
         public virtual decimal CalculaValorTotal()
         {
             // (.Sum) Computa a soma de uma sequência de valores numéricos.
-            return Items.Sum(x => x.Total);
+            return Itens.Sum(x => x.Total);
         }
 
         public decimal CalculaTotalDeImpostos()
         {
             var totalDeImpostos = 0;
 
-            foreach (ItemsDoPedido item in Items)
+            foreach (ItensDoPedido item in Itens)
             {
                 totalDeImpostos = totalDeImpostos + (int)(QuantidadeVendida * item.Produto.CalculaImposto());
             }
 
-            return Items.Sum(x => (int)QuantidadeVendida * x.Produto.CalculaImposto());
+            return Itens.Sum(x => (int)QuantidadeVendida * x.Produto.CalculaImposto());
         }
 
         public void RemoverItems(string nome)
         {
             string itemToRemove = nome;
-            Items.RemoveAll(x => x.Produto.Nome == itemToRemove);
+            Itens.RemoveAll(x => x.Produto.Nome == itemToRemove);
         }
         public void EditaQuantidadeDeItems(string nome, int quantidade)
         {
-            var edita = Items.FirstOrDefault(x => x.Produto.Nome == nome);
+            var edita = Itens.FirstOrDefault(x => x.Produto.Nome == nome);
 
             if(edita != null)
                 edita.Quantidade = quantidade;
         }
 
-        public void Adicionar(ItemsDoPedido item)
+        public void Adicionar(ItensDoPedido item)
         {
-            Items.Add(item);
+            Itens.Add(item);
         }
 
-        public void Modificar(ItemsDoPedido item)
+        public void Modificar(ItensDoPedido item)
         {
-            var edita = Items.FirstOrDefault(x => x.Produto.Nome == item.Produto.Nome);
+            var edita = Itens.FirstOrDefault(x => x.Produto.Nome == item.Produto.Nome);
 
             if (edita != null)
                 edita = item;

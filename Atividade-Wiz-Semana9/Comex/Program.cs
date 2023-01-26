@@ -59,7 +59,7 @@ Console.WriteLine(".--------------------..--------------------..----------------
 
 Console.WriteLine("TestaPedido:" + "\n");
 var pedido1 = new Pedido(new Cliente("Hebert", "Belchior", new CPF("11133344455"), "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
-                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new List<ItemsDoPedido>{new ItemsDoPedido(new Produto("Notebook Samsung", 3523.00M, 1,
+                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new List<ItensDoPedido>{new ItensDoPedido(new Produto("Notebook Samsung", 3523.00M, 1,
                             "Informática", ""), quantidade: 1) }, quantidadeVendida: 1);
 Console.WriteLine($"Id do pedido: {pedido1.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido1.Cliente.DefineId()}");
@@ -75,7 +75,7 @@ Console.WriteLine($"Valor total vendido: {pedido1.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido1.CalculaTotalDeImpostos():N2}" + "\n");
 
 Pedido pedido2 = new(new Cliente("Monalisa", "Mata", new CPF("22233344455"), "(81)92345-6789", "Rua: Vila Local,", "Numero: 801,", "Complemento: Bloco F, " +
-                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new List<ItemsDoPedido>{new ItemsDoPedido(new Produto("Clean Architecture", 102.90M, 2,
+                            "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"), new List<ItensDoPedido>{new ItensDoPedido(new Produto("Clean Architecture", 102.90M, 2,
                             "Livros", ""), quantidade: 2) }, quantidadeVendida: 2);
 Console.WriteLine($"Id do pedido: {pedido2.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido2.Cliente.DefineId()}");
@@ -91,7 +91,7 @@ Console.WriteLine($"Valor total vendido: {pedido2.CalculaValorTotal():N2}");
 Console.WriteLine($"Total de impostos: {pedido2.CalculaTotalDeImpostos():N2}" + "\n");
 
 Pedido pedido3 = new(new Cliente("Angélica", "Maria", new CPF("33344455566"), "(81)93456-7891", "Rua: 197,", "Numero: 55,", "Complemento: Bloco O, Apartamento 777,",
-                            "Bairro: Ouro Preto,", "Cidade: Olinda,", "Estado: PE"), new List<ItemsDoPedido>{new ItemsDoPedido(new Produto("Monitor Dell 27", 1889.00M, 3,
+                            "Bairro: Ouro Preto,", "Cidade: Olinda,", "Estado: PE"), new List<ItensDoPedido>{new ItensDoPedido(new Produto("Monitor Dell 27", 1889.00M, 3,
                             "Informática", ""), quantidade: 3) }, quantidadeVendida: 3);
 Console.WriteLine($"Id do pedido: {pedido3.DefineId()}");
 Console.WriteLine($"Id do cliente: {pedido3.Cliente.DefineId()}");
@@ -131,7 +131,7 @@ Console.WriteLine(".--------------------..--------------------..----------------
 Console.WriteLine("Nota fiscal:" + "\n");
 NotaFiscal notaFiscal = new(new Pedido(new Cliente("Hebert", "Belchior", new CPF("11133344455"), "(81)91234-5678", "Rua: Vila Local,", "Numero: 801,",
                            "Complemento: Bloco F, " + "Apartamento 948,", "Bairro: Janga,", "Cidade: Paulista,", "Estado: PE"),
-                           new List<ItemsDoPedido> { new ItemsDoPedido(new Produto("Notebook Samsung", 3523.00M, 1, "Informática", ""), quantidade: 1) }, quantidadeVendida: 1));
+                           new List<ItensDoPedido> { new ItensDoPedido(new Produto("Notebook Samsung", 3523.00M, 1, "Informática", ""), quantidade: 1) }, quantidadeVendida: 1));
 notaFiscal.RegistraPedido();
 Console.WriteLine();
 

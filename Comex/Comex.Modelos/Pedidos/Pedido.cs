@@ -63,25 +63,17 @@ namespace Comex.Modelos.Pedidos
             return CalculaValorTotal() + CalculaTotalImposto() + FretePedido;
         }
 
-        public void RemoverItens(params ItensDoPedido[] itens)
+        public void RemoverItens(int id)
         {
-            foreach (ItensDoPedido item in itens)
+            IEnumerable<ItensDoPedido> itens = (
+                from item in Itens
+                where item.Item.Id == id
+                select item).ToList();
+
+            if (itens == null)
             {
-                bool remove = Itens.Remove(item);
-
-                if (!remove)
-                {
-                    throw new ArgumentException("Item não existente no pedido");
-                }
+                throw new ArgumentNullException("Item não existente no pedido");
             }
-        }
-
-        public void AlterarQuantidade(ItensDoPedido item)
-        {
-            Console.WriteLine($"Quantidade atual: {item.Quantidade} \nDigite a nova quantidade:");
-            int quantidade = Console.Read();
-
-            Itens[Itens.IndexOf(item)].Quantidade = quantidade;
         }
     }
 }

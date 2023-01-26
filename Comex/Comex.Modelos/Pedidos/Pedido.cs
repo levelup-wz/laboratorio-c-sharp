@@ -65,14 +65,21 @@ namespace Comex.Modelos.Pedidos
 
         public void RemoverItens(params ItensDoPedido[] itens)
         {
-            foreach (ItensDoPedido item in itens)
+            try
             {
-                bool remove = Itens.Remove(item);
-
-                if (!remove)
+                foreach (ItensDoPedido item in itens)
                 {
-                    throw new ArgumentException("Item não existente no pedido");
+                    bool remove = Itens.Remove(item);
+
+                    if (!remove)
+                    {
+                        throw new ArgumentException();
+                    }
                 }
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Item não existente no pedido", ex.Message);
             }
         }
 

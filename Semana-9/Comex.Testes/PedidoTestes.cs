@@ -6,8 +6,7 @@ namespace Comex.Testes
     public class PedidoTestes
     {
         static Cliente cliente = new Cliente("Saulo", "Alves Magalhães", new Cpf("99999999999"), "99999999999", "Rua Luva De Pedreiro", "100", "Casa", "Ibotirama", "BA");
-        static Produto produto = new Produto("Notebook Samsung", 3523.00, 1, "Informática");
-        Pedido pedido = new Pedido(cliente, produto, 10);
+        Pedido pedido = new Pedido(cliente, new ItemsDoPedido(new Produto("Notebook Samsung", 3523.00, 10, "Informática"), 10));
         [Fact]
         public void ValorTotal() 
         {

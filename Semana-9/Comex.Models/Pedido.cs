@@ -22,24 +22,28 @@ namespace Comex.Models
         }
 
         public double ValorTotal()
-        {   
-            double valorTotal = 0;
-            foreach(ItemsDoPedido item in Items)
-            {
-                valorTotal += (double)item.Total;
-            }
+        {
+            var valorTotal = (double)Items.Sum(item => item.Total);
             return valorTotal;
+            //double valorTotal = 0;
+            //foreach(ItemsDoPedido item in Items)
+            //{
+            //    valorTotal += (double)item.Total;
+            //}
+            //return valorTotal;
         }
 
         public double TotalDeImpostos()
         {
-            double totalDeImpostos = 0;
-            foreach (ItemsDoPedido item in Items)
-            {
-                double soma = item.Quantidade * item.Produto.CalculaImposto();
-                totalDeImpostos += soma;
-            }
-            return (double)totalDeImpostos;
+            var totalDeImpostos = Items.Sum(item => item.Quantidade * item.Produto.CalculaImposto());
+            return totalDeImpostos;
+            //double totalDeImpostos = 0;
+            //foreach (ItemsDoPedido item in Items)
+            //{
+            //    double soma = item.Quantidade * item.Produto.CalculaImposto();
+            //    totalDeImpostos += soma;
+            //}
+            //return (double)totalDeImpostos;
         }
 
         public void RemoverItemDoPedido(string nome)

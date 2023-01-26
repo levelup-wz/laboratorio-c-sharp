@@ -12,7 +12,7 @@ namespace Comex.Models
     {
 
         //public Produto ProdutoPedido { get; set; } //tipo produto
-        public List<ItemsDoPedido> Itens { get; set; }
+        public List<ItemsDoPedido> Itens { get; private set; }
         public int Id { get; set; }
         public static int ContId = 0;
         public DateTime Data { get; set; }

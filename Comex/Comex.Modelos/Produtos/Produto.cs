@@ -9,9 +9,9 @@ namespace Comex.Modelos.Produtos
         public int Id { get; protected set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public decimal Preco { get; set; }
-        public int Estoque { get; set; }
-        public Categoria Categoria { get; set; }
+        public decimal Preco { get; }
+        public int Estoque { get; }
+        public Categoria Categoria { get; }
         protected string Atributos { get; set; }
 
         public decimal ValorTotal()

@@ -5,10 +5,10 @@ namespace Comex.Modelos.Clientes
     public class Cliente
     {
         public static int Quantidade { get; private set; }
-        public int Id { get; private set; }
+        public int Id { get; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public Cpf CpfCliente { get; set; }
+        public Cpf CpfCliente { get; }
         public string Telefone { get; set; }
         public string Rua { get; set; }
         public string Numero { get; set; }

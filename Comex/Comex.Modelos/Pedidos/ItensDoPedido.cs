@@ -16,7 +16,7 @@ namespace Comex.Modelos.Pedidos
             Total = item.Preco * quantidade;
         }
 
-        public void AlterarQuantidade(ItensDoPedido item)
+        public void AlterarQuantidade(int id)
         {
         }
     }

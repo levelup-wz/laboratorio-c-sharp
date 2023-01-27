@@ -14,8 +14,7 @@ namespace Comex.Modelos.Clientes
 
         public string Formatar()
         {
-            string formatado = CPF.Substring(0, 3) + "." + CPF.Substring(3, 3) + "." + CPF.Substring(6, 3) + "-" + CPF.Substring(9,2);
-            return formatado;
+            return CPF.Substring(0, 3) + "." + CPF.Substring(3, 3) + "." + CPF.Substring(6, 3) + "-" + CPF.Substring(9,2);
         }
 
         public override string ToString()

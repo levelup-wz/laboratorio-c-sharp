@@ -5,9 +5,9 @@ namespace Comex.Modelos.Produtos
 {
     public class Estoque
     {
-        public int Capacidade { get; set; }
-        public int Ocupacao { get; set; }
-        public decimal Montante { get; set; }
+        public int Capacidade { get; private set; }
+        public int Ocupacao { get; private set; }
+        public decimal Montante { get; private set; }
 
         public Estoque()
         {

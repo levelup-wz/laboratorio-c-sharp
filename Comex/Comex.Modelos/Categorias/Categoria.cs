@@ -5,9 +5,9 @@ namespace Comex.Modelos.Categorias
     public class Categoria
     {
         public static int Quantidade { get; private set; }
-        public int Id { get; private set; }
-        public string Nome { get; set; }
-        public string Status { get; set; }
+        public int Id { get; }
+        public string Nome { get; private set; }
+        public string Status { get; private set; }
 
         /// <summary>
         /// Cria uma categoria nova

@@ -8,12 +8,12 @@ namespace Comex.Modelos.Pedidos
         public static int Quantidade { get; private set; }
         public int Id { get; private set; }
         public string Cep { get; private set; }
-        public string Data { get; set; }
-        public Cliente Cliente { get; set; }
-        public List<ItensDoPedido> Itens { get; set; }
-        public int QuantidadeVendida { get; set; }
+        public string Data { get; }
+        public Cliente Cliente { get; }
+        public List<ItensDoPedido> Itens { get; private set; }
+        public int QuantidadeVendida { get; private set; }
         public NotaFiscal Nota { get; private set; }
-        public decimal FretePedido { get; private set; }
+        public decimal FretePedido { get; }
 
         public Pedido(string data, Cliente cliente, string cep, params ItensDoPedido[] itens)
         {
@@ -63,17 +63,8 @@ namespace Comex.Modelos.Pedidos
             return CalculaValorTotal() + CalculaTotalImposto() + FretePedido;
         }
 
-        public void RemoverItens(int id)
+        public void RemoverItens(params int[] id)
         {
-            IEnumerable<ItensDoPedido> itens = (
-                from item in Itens
-                where item.Item.Id == id
-                select item).ToList();
-
-            if (itens == null)
-            {
-                throw new ArgumentNullException("Item não existente no pedido");
-            }
         }
     }
 }

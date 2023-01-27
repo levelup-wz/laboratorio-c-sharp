@@ -21,7 +21,41 @@ namespace Comex.Testes
         {
             Console.Clear();
             Console.WriteLine("Testa Produto\n");
-            Console.WriteLine($"{notebook} \n\n{monitor} \n\n{cleanA}");
+            Console.WriteLine($"Produtos válidos: \n{notebook} \n\n{monitor} \n\n{cleanA}");
+
+            Console.WriteLine("Produto com preço inválido:");
+            try
+            {
+                Produto produto1 = new Produto("produto", "é um produto", 0M, 20, moveis);
+                Console.WriteLine("Produto válido!");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Produto inválido! \nErro do tipo: {ex.Message}");
+            }
+
+            Console.WriteLine("Produto Isento com estoque inválido:");
+            try
+            {
+                Produto produto1 = new ProdutoIsento("produto", "é um produto", 1.44M, -10, moveis);
+                Console.WriteLine("Produto válido!");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Produto inválido! \nErro do tipo: {ex.Message}");
+            }
+
+            Console.WriteLine("Produto Isento com categoria nula:");
+            try
+            {
+                Produto produto1 = new ProdutoIsento("produto", "é um produto", 1.44M, 20, categoria: null);
+                Console.WriteLine("Produto válido!");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Produto inválido! \nErro do tipo: {ex.Message}");
+            }
+
             Console.ReadKey();
         }
     }

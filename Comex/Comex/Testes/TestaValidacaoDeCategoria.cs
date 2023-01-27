@@ -1,17 +1,21 @@
-﻿/*using Comex.Categorias;
+﻿using Comex.Modelos.Categorias;
 using System;
 
-namespace Comex.Testes
+namespace Comex.Testes;
+
+public class TestaValidacaoDeCategoria
 {
-    public class TestaValidacaoDeCategoria
+    public static void ExecutarTeste()
     {
+        Console.Clear();
+        Console.WriteLine("Testa Validação de Produtos\n");
         Console.WriteLine("Criando Categoria válida");
         try
         {
             Categoria categoria1 = new Categoria("FILMES", "INATIVA");
             Console.WriteLine("Categoria válida!");
         }
-        catch(ArgumentException ex)
+        catch (ArgumentException ex)
         {
             Console.WriteLine($"Categoria inválida! \nErro do tipo: {ex.Message}");
         }
@@ -37,6 +41,7 @@ namespace Comex.Testes
         {
             Console.WriteLine($"Categoria inválida! \nErro do tipo: {ex.Message}");
         }
+
+        Console.ReadKey();
     }
 }
-*/

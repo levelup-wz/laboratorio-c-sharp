@@ -31,9 +31,9 @@ class Program
                 case "6":
                     TestaSaidaDeProdutoNoEstoque.ExecutarTeste(); break;
                 case "7":
-                    TestaCategoria.ExecutarTeste(); break;
+                    TestaValidacaoDeCategoria.ExecutarTeste(); break;
                 case "8":
-                    TestaCategoria.ExecutarTeste(); break;
+                    TestaValidacaoDeProdutos.ExecutarTeste(); break;
                 case "9":
                     TestaCategoria.ExecutarTeste(); break;
                 case "10":

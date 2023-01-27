@@ -31,4 +31,9 @@ public class Vestuario : Produto
 
         return resultado.Remove(resultado.IndexOf(';'));
     }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
 }

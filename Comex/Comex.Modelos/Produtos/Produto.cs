@@ -21,7 +21,7 @@ public class Produto
 
     public virtual decimal CalculaImposto()
     {
-        return (decimal)0.4 * Preco;
+        return 0.4M * Preco;
     }
 
     /// <summary>
@@ -40,19 +40,19 @@ public class Produto
         
         if (nome.Length <= 5)
         {
-            throw new ArgumentException("Nome deve ser maior que 5 caracteres");
+            throw new ArgumentException("Nome deve ser maior que 5 caracteres", nameof(nome));
         }
         if (preco <= 0)
         {
-            throw new ArgumentException("Preço obrigatório e não nulo");
+            throw new ArgumentException("Preço obrigatório e não nulo", nameof(preco));
         }
         if (estoque <= 0)
         {
-            throw new ArgumentException("Estoque obrigatório e não nulo");
+            throw new ArgumentException("Estoque obrigatório e não nulo", nameof(estoque));
         }
         if (categoria == null)
         {
-            throw new ArgumentException("Categoria necessária");
+            throw new ArgumentException("Categoria necessária", nameof(categoria));
         }
 
         Nome = nome;

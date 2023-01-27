@@ -12,7 +12,7 @@ public class Produto
     public decimal Preco { get; }
     public int Estoque { get; }
     public Categoria Categoria { get; }
-    protected string Atributos { get; }
+    protected string Atributos { get; set; }
 
     public decimal ValorTotal()
     {

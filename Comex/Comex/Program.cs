@@ -12,7 +12,8 @@ class Program
             Console.Clear();
             Console.WriteLine("Testes: \n[1] Testa Categoria \n[2] Testa Produto \n[3] Testa Pedido \n[4] Testa Produto Isento" +
                 "\n[5] Testa Entrada de Produto no Estoque \n[6] Testa Saída de Produto no Estoque \n[7] Testa Validação de Categoria" +
-                "\n[8] Testa Validação de Produto \n[9] Testa Frete \n[10] Testa Cpf \n[11] Testa Vestuário \n[13] Testa Itens do Pedido");
+                "\n[8] Testa Validação de Produto \n[9] Testa Frete \n[10] Testa Cpf \n[11] Testa Vestuário \n[12] Testa Itens do Pedido" +
+                "\n[13] Testa Remover Itens do Pedido \n[14] Testa Alterar Quantidade Itens do Pedido \n[20] Encerrar");
             op = Console.ReadLine();
 
             switch (op)
@@ -43,6 +44,8 @@ class Program
                     TestaItensDoPedido.ExecutarTeste(); break;
                 case "13":
                     TestaRemoverItensDoPedido.ExecutarTeste(); break;
+                case "14":
+                    TestaAlterarQuantidadeItensDoPedido.ExecutarTeste(); break;
             }
         }
     }

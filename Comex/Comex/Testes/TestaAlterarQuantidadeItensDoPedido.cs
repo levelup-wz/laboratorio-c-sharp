@@ -6,7 +6,7 @@ using System;
 
 namespace Comex.Testes;
 
-internal class TestaRemoverItensDoPedido
+internal class TestaAlterarQuantidadeItensDoPedido
 {
     static Categoria informatica = new("INFORMÁTICA", "ATIVA");
     static Categoria livros = new("LIVROS", "ATIVA");
@@ -35,18 +35,9 @@ internal class TestaRemoverItensDoPedido
         Console.Clear();
         Console.WriteLine("Testa Remover Itens do Pedido");
         Console.WriteLine($"\n{pedido}");
-        int op = -1;
 
-        while (op != 0)
-        {
-            Console.WriteLine("Qual item deseja remover? (0 para encerrar)");
-            op = int.Parse(Console.ReadLine());
-            pedido.RemoverItens(op);
-
-            Console.Clear();
-            Console.WriteLine("Testa Remover Itens do Pedido");
-            Console.WriteLine($"\n{pedido}");
-        }        
+        pedido.AlterarQuantidade(2, 10);
+        Console.WriteLine($"\n{pedido}");
         Console.ReadKey();
     }
 }

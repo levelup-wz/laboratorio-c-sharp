@@ -24,6 +24,9 @@ public class ItensDoPedido
 
     public void AlterarQuantidade(int quantidade)
     {
+        Total /= Quantidade;
+        Total *= quantidade;
+        Quantidade = quantidade;
     }
 
     public override string ToString()

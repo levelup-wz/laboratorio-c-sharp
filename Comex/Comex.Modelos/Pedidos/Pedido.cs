@@ -87,8 +87,8 @@ public class Pedido
     {
         IEnumerable<ItensDoPedido> items = (
             from item in Itens
-            where item.Item.Id == id
-            select item);
+            where item.Id == id
+            select item).ToList();
 
         foreach (ItensDoPedido item in items)
         {
@@ -98,7 +98,7 @@ public class Pedido
             Itens.Remove(item);
             Itens.Add(novoItem);
 
-            QuantidadeVendida = QuantidadeVendida - item.Quantidade + novoItem.Quantidade;
+            QuantidadeVendida += novoItem.Quantidade - item.Quantidade;
         }
     }
 

@@ -100,6 +100,11 @@ public class Pedido
 
             QuantidadeVendida += novoItem.Quantidade - item.Quantidade;
         }
+
+        for (int i = 0; i < Itens.Count; i++)
+        {
+            Itens[i].Id = i + 1;
+        }
     }
 
     public override string ToString()

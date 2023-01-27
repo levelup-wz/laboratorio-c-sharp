@@ -1,17 +1,19 @@
-﻿/*using Comex.Categorias;
+﻿using Comex.Modelos.Categorias;
 using System;
 
-namespace Comex.Testes
-{
-    public class TestaCategoria
-    {
-        Categoria informatica = new Categoria("INFORMÁTICA", "ATIVA");
-        Categoria moveis = new Categoria("MÓVEIS", "INATIVA");
-        Categoria livros = new Categoria("LIVROS", "ATIVA");
+namespace Comex.Testes;
 
-        Console.WriteLine($"{informatica.Nome} ({informatica.Id} - {informatica.Status});
-        Console.WriteLine($"{moveis.Nome} ({moveis.Id} - {moveis.Status});
-        Console.WriteLine($"{livros.Nome} ({livros.Id} - {livros.Status});
+public class TestaCategoria
+{
+    static Categoria informatica = new("INFORMÁTICA", "ATIVA");
+    static Categoria moveis = new("MÓVEIS", "INATIVA");
+    static Categoria livros = new("LIVROS", "ATIVA");
+
+    public static void ExecutarTeste()
+    {
+        Console.Clear();
+        Console.WriteLine("Testa Categoria\n");
+        Console.WriteLine($"{informatica} \n{moveis} \n{livros}");
+        Console.ReadKey();
     }
 }
-*/

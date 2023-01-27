@@ -1,43 +1,47 @@
 ﻿using System;
 using Comex.Modelos.Exceptions;
 
-namespace Comex.Modelos.Produtos
+namespace Comex.Modelos.Produtos;
+
+public class Estoque
 {
-    public class Estoque
+    public int Capacidade { get; private set; }
+    public int Ocupacao { get; private set; }
+    public decimal Montante { get; private set; }
+
+    public Estoque()
     {
-        public int Capacidade { get; set; }
-        public int Ocupacao { get; set; }
-        public decimal Montante { get; set; }
+        Capacidade = 1000;
+        Ocupacao = 0;
+        Montante = 0;
+    }
 
-        public Estoque()
+    public void RegistraEntrada(Produto produto)
+    {
+        if (Ocupacao + produto.Estoque >= 1000)
         {
-            Capacidade = 1000;
-            Ocupacao = 0;
-            Montante = 0;
+            throw new LimiteDeEstoqueExcedidoException("Estoque excedido!");
         }
 
-        public void RegistraEntrada(Produto produto)
-        {
-            if (Ocupacao + produto.Estoque >= 1000)
-            {
-                throw new LimiteDeEstoqueExcedidoException("Estoque excedido!");
-            }
+        Capacidade -= produto.Estoque;
+        Ocupacao += produto.Estoque;
+        Montante += produto.ValorTotal();
+    }
 
-            Capacidade -= produto.Estoque;
-            Ocupacao += produto.Estoque;
-            Montante += produto.ValorTotal();
+    public void RegistraSaida(Produto produto)
+    {
+        if (Ocupacao - produto.Estoque < 0)
+        {
+            throw new LimiteDeEstoqueExcedidoException("Não há produtos no estoque!");
         }
 
-        public void RegistraSaida(Produto produto)
-        {
-            if (Ocupacao - produto.Estoque < 0)
-            {
-                throw new LimiteDeEstoqueExcedidoException("Não há produtos no estoque!");
-            }
+        Capacidade += produto.Estoque;
+        Ocupacao -= produto.Estoque;
+        Montante -= produto.ValorTotal();
+    }
 
-            Capacidade += produto.Estoque;
-            Ocupacao -= produto.Estoque;
-            Montante -= produto.ValorTotal();
-        }
+    public override string ToString()
+    {
+        return $"Capacidade: {Capacidade} \nOcupação: {Ocupacao} \nMontante: R${Montante}";
     }
 }

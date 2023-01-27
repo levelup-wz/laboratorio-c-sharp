@@ -1,31 +1,39 @@
-﻿/*using Comex.Categorias;
-using Comex.Produtos;
+﻿using Comex.Modelos.Categorias;
+using Comex.Modelos.Exceptions;
+using Comex.Modelos.Produtos;
 using System;
 
-namespace Comex.Testes
+namespace Comex.Testes;
+
+public class TestaSaidaDeProdutoNoEstoque
 {
-    public class TestaSaidaDeProdutoNoEstoque
+    static Categoria saude = new("SAUDE", "ATIVA");
+    static Produto vacina = new("Vacina", "Vacinas para todas as doenças",
+        250.00M, 500, saude);
+
+    static Estoque estoque = new();
+
+    public static void ExecutarTeste()
     {
-        Categoria saude = new Categoria("SAUDE", "ATIVA");
-        Produto vacina = new ProdutoIsento("Vacina", "Vacinas para todas as doenças",
-            (decimal)250.00, 500, saude);
-
-        Estoque estoque = new Estoque();
-
-        estoque.RegistraEntrada(vacina);
-        Console.WriteLine($"Entrada: \nCapacidade: {estoque.Capacidade} \nOcupação: {estoque.Ocupacao} \nMontante: {estoque.Montante}");
-
-        estoque.RegistraSaida(vacina);
-        Console.WriteLine($"Saída: \nCapacidade: {estoque.Capacidade} \nOcupação: {estoque.Ocupacao} \nMontante: {estoque.Montante}");
+        Console.Clear();
+        Console.WriteLine("Testa Saída de Produto no Estoque\n");
+        Console.WriteLine(estoque);
 
         try
         {
+            estoque.RegistraEntrada(vacina);
+            Console.WriteLine($"\nApós entrada: \n{estoque}");
+
+            estoque.RegistraSaida(vacina);
+            Console.WriteLine($"\nApós saída: \n{estoque}");
+
             estoque.RegistraSaida(vacina);
         }
-        catch(LimiteDeEstoqueExcedidoException ex)
+        catch (LimiteDeEstoqueExcedidoException ex)
         {
-            Console.WriteLine($"Erro do tipo: {ex.Message}");
+            Console.WriteLine($"Validação: \nErro do tipo: {ex.Message}");
         }
+
+        Console.ReadKey();
     }
 }
-*/

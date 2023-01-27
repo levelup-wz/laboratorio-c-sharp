@@ -8,13 +8,13 @@ public class LimiteDeEstoqueExcedidoException : Exception
     {
     }
 
-    public LimiteDeEstoqueExcedidoException(string mensagem)
-        : base(mensagem)
+    public LimiteDeEstoqueExcedidoException(string message)
+        : base(message)
     {
     }
 
-    public LimiteDeEstoqueExcedidoException(string mensagem, Exception innerException)
-        : base(mensagem, innerException)
+    public LimiteDeEstoqueExcedidoException(string message, Exception innerException)
+        : base(message, innerException)
     {
     }
 }

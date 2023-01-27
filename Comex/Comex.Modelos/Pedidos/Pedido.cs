@@ -48,7 +48,7 @@ public class Pedido
 
     public decimal CalculaTotalImposto()
     {
-        decimal valor = 0;
+        decimal valor = 0M;
 
         foreach (ItensDoPedido item in Itens)
         {

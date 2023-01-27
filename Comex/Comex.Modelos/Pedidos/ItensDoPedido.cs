@@ -6,8 +6,8 @@ namespace Comex.Modelos.Pedidos;
 public class ItensDoPedido
 {
     public Produto Item { get; }
-    public int Quantidade { get; set; }
-    public decimal Total { get; }
+    public int Quantidade { get; private set; }
+    public decimal Total { get; private set; }
 
     public ItensDoPedido(Produto item, int quantidade)
     {
@@ -23,7 +23,6 @@ public class ItensDoPedido
 
     public void AlterarQuantidade(int quantidade)
     {
-        Quantidade = quantidade;
     }
 
     public override string ToString()

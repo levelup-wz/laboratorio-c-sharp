@@ -5,7 +5,7 @@ namespace Comex.Modelos.Produtos;
 
 public class ProdutoIsento : Produto
 {
-    public static new int Quantidade { get; set; }
+    public static new int Quantidade { get; private set; }
 
     public ProdutoIsento(string nome, string descricao, decimal preco, int estoque, Categoria categoria)
         : base(nome, descricao, preco, estoque, categoria)

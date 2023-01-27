@@ -5,7 +5,7 @@ namespace Comex.Modelos.Produtos;
 
 public class Vestuario : Produto
 {
-    public static new int Quantidade { get; set; }
+    public static new int Quantidade { get; private set; }
     public string Tamanho { get; }
     public string Cor { get; }
 

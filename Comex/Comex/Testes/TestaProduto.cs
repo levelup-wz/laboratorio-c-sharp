@@ -21,7 +21,7 @@ public class TestaProduto
     {
         Console.Clear();
         Console.WriteLine("Testa Produto\n");
-        Console.WriteLine($"Produtos válidos: \n{notebook} \n\n{monitor} \n\n{cleanA}");
+        Console.WriteLine($"{notebook} \n\n{monitor} \n\n{cleanA}");
         Console.ReadKey();
     }
 }

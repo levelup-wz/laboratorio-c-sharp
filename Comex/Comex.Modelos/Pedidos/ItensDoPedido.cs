@@ -6,6 +6,7 @@ namespace Comex.Modelos.Pedidos;
 public class ItensDoPedido
 {
     public Produto Item { get; }
+    public int Id { get; internal set; }
     public int Quantidade { get; private set; }
     public decimal Total { get; private set; }
 
@@ -27,6 +28,6 @@ public class ItensDoPedido
 
     public override string ToString()
     {
-        return $"\n{Item.Nome} {Quantidade} unidades - R${Total}";
+        return $"\nItem {Id} - {Item.Nome} {Quantidade} unidades - R${Total}";
     }
 }

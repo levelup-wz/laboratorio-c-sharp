@@ -27,10 +27,11 @@ public class Pedido
         Cep = cep;
         FretePedido = Frete.Calcular(cep);
 
-        foreach (ItensDoPedido item in itens)
+        for (int i = 0; i < itens.Length; i++)
         {
-            QuantidadeVendida += item.Quantidade;
-            Itens.Add(item);
+            itens[i].Id = i + 1;
+            QuantidadeVendida += itens[i].Quantidade;
+            Itens.Add(itens[i]);
         }
     }
 
@@ -67,14 +68,18 @@ public class Pedido
     {
         IEnumerable<ItensDoPedido> items = (
             from item in Itens
-            where item.Item.Id == id
-            select item);
+            where item.Id == id
+            select item).ToList();
 
         foreach (ItensDoPedido item in items)
         {
             QuantidadeVendida -= item.Quantidade;
             Itens.Remove(item);
-            Nota.AlterarPedido(this);
+        }
+
+        for (int i = 0; i < Itens.Count; i++)
+        {
+            Itens[i].Id = i + 1;
         }
     }
 
@@ -94,22 +99,26 @@ public class Pedido
             Itens.Add(novoItem);
 
             QuantidadeVendida = QuantidadeVendida - item.Quantidade + novoItem.Quantidade;
-            Nota.AlterarPedido(this);
         }
     }
 
     public override string ToString()
     {
-        string pedido = "";
-        pedido += $"{Id} - {Data} \nCliente: {Cliente.NomeCompleto()} {Cliente.CpfCliente.CPF}";
+        string pedido = "======================================\n";
+        pedido += $"[{Id}] - {Data} \nCliente: {Cliente.NomeCompleto()} - {Cliente.CpfCliente.CPF} \n";
+        pedido += "-------------------";
 
         foreach (ItensDoPedido item in Itens)
         {
             pedido += item.ToString();
         }
 
+        pedido += "\n-------------------";
         pedido += $"\nQuantidade Total de Itens: {QuantidadeVendida} \nImposto: R${CalculaTotalImposto()}" +
-            $"\nCEP: {Cep} - Frete: R${FretePedido} \nPreço Total: R${CalculaCustoTotal()}";
+            $"\nCEP: {Cep} - Frete: R${FretePedido}";
+        pedido += "\n-------------------";
+        pedido += "\n" + Nota;
+        pedido += "\n======================================";
         return pedido;
     }
 }

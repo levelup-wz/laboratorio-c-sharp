@@ -27,7 +27,6 @@ public class NotaFiscal
 
     public override string ToString()
     {
-        return $"Cliente: {Pedido.Cliente.NomeCompleto()} \nValor: {Pedido.CalculaCustoTotal()}" +
-            $" - {ValorPorExtenso()} \nData: {Pedido.Data}";
+        return $"Valor: R${Pedido.CalculaCustoTotal()} \n{ValorPorExtenso()}";
     }
 }

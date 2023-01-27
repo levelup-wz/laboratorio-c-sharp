@@ -41,6 +41,8 @@ class Program
                     TestaVestuario.ExecutarTeste(); break;
                 case "12":
                     TestaItensDoPedido.ExecutarTeste(); break;
+                case "13":
+                    TestaRemoverItensDoPedido.ExecutarTeste(); break;
             }
         }
     }

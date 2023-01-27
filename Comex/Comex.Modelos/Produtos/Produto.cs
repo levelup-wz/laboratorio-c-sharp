@@ -64,7 +64,7 @@ public class Produto
 
     public override string ToString()
     {
-        return $"Categoria: {Categoria.Nome} \nId: {Id} - {Nome}, {Descricao} R${ Preco}"+
+        return $"[{Id}] - {Nome}, {Descricao} R${ Preco} \nCategoria: {Categoria.Nome}" +
             $"\nQuantidade em estoque: {Estoque} \nImposto R${CalculaImposto()}";
     }
 }

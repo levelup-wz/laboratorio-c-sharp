@@ -63,32 +63,39 @@ public class Pedido
         return CalculaValorTotal() + CalculaTotalImposto() + FretePedido;
     }
 
-    public void RemoverItens(params ItensDoPedido[] itens)
+    public void RemoverItens(int id)
     {
-        try
-        {
-            foreach (ItensDoPedido item in itens)
-            {
-                bool remove = Itens.Remove(item);
+        IEnumerable<ItensDoPedido> items = (
+            from item in Itens
+            where item.Item.Id == id
+            select item);
 
-                if (!remove)
-                {
-                    throw new ArgumentException();
-                }
-            }
-        }
-        catch (ArgumentException ex)
+        foreach (ItensDoPedido item in items)
         {
-            Console.WriteLine("Item não existente no pedido", ex.Message);
+            QuantidadeVendida -= item.Quantidade;
+            Itens.Remove(item);
+            Nota.AlterarPedido(this);
         }
     }
 
-    public void AlterarQuantidade(ItensDoPedido item)
+    public void AlterarQuantidade(int id, int quantidade)
     {
-        Console.WriteLine($"Quantidade atual: {item.Quantidade} \nDigite a nova quantidade:");
-        int quantidade = Console.Read();
+        IEnumerable<ItensDoPedido> items = (
+            from item in Itens
+            where item.Item.Id == id
+            select item);
 
-        Itens[Itens.IndexOf(item)].Quantidade = quantidade;
+        foreach (ItensDoPedido item in items)
+        {
+            var novoItem = item;
+            novoItem.AlterarQuantidade(quantidade);
+
+            Itens.Remove(item);
+            Itens.Add(novoItem);
+
+            QuantidadeVendida = QuantidadeVendida - item.Quantidade + novoItem.Quantidade;
+            Nota.AlterarPedido(this);
+        }
     }
 
     public override string ToString()

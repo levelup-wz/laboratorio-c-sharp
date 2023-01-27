@@ -21,6 +21,11 @@ public class ItensDoPedido
         Total = item.Preco * quantidade;
     }
 
+    public void AlterarQuantidade(int quantidade)
+    {
+        Quantidade = quantidade;
+    }
+
     public override string ToString()
     {
         return $"\n{Item.Nome} {Quantidade} unidades - R${Total}";

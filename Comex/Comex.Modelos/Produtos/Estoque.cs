@@ -13,7 +13,7 @@ public class Estoque
     {
         Capacidade = 1000;
         Ocupacao = 0;
-        Montante = 0;
+        Montante = 0M;
     }
 
     public void RegistraEntrada(Produto produto)

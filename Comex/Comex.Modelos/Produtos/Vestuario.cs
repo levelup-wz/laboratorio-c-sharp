@@ -35,6 +35,6 @@ public class Vestuario : Produto
 
     public override string ToString()
     {
-        return base.ToString();
+        return base.ToString() + $"Cor: {Cor} - Tamanho: {Tamanho}";
     }
 }

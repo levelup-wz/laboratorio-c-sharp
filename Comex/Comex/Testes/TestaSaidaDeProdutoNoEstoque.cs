@@ -31,7 +31,7 @@ public class TestaSaidaDeProdutoNoEstoque
         }
         catch (LimiteDeEstoqueExcedidoException ex)
         {
-            Console.WriteLine($"Validação: \nErro do tipo: {ex.Message}");
+            Console.WriteLine($"\nValidação: \nErro do tipo: {ex.Message}");
         }
 
         Console.ReadKey();

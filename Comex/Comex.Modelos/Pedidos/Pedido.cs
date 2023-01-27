@@ -101,7 +101,7 @@ public class Pedido
     public override string ToString()
     {
         string pedido = "";
-        pedido += $"{Id} - {Data} \nCliente: {Cliente.NomeCompleto()} {Cliente.CpfCliente.Formatar()}";
+        pedido += $"{Id} - {Data} \nCliente: {Cliente.NomeCompleto()} {Cliente.CpfCliente.CPF}";
 
         foreach (ItensDoPedido item in Itens)
         {

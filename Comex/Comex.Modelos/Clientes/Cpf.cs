@@ -4,7 +4,7 @@ namespace Comex.Modelos.Clientes;
 
 public class Cpf
 {
-    public string CPF { get; }
+    public string CPF { get; private set; }
     public Cpf(string cpf)
     {
         if (cpf.Length != 11)
@@ -13,12 +13,12 @@ public class Cpf
         }
 
         CPF = cpf;
+        Formatar();
     }
 
-    public string Formatar()
+    private void Formatar()
     {
-        string formatado = CPF.Substring(0, 3) + "." + CPF.Substring(3, 3) + "." + CPF.Substring(6, 3) + "-" + CPF.Substring(9,2);
-        return formatado;
+        CPF = CPF.Substring(0, 3) + "." + CPF.Substring(3, 3) + "." + CPF.Substring(6, 3) + "-" + CPF.Substring(9,2);
     }
 
     public override string ToString()

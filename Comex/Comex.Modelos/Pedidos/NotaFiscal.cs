@@ -25,7 +25,7 @@ public class NotaFiscal
         return valor.Numero(Pedido.CalculaCustoTotal().ToString());
     }
 
-    public string GetNotaFiscal()
+    public override string ToString()
     {
         return $"Cliente: {Pedido.Cliente.NomeCompleto()} \nValor: {Pedido.CalculaCustoTotal()}" +
             $" - {ValorPorExtenso()} \nData: {Pedido.Data}";

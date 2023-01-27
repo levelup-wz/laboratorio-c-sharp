@@ -11,9 +11,8 @@ class Program
         {
             Console.Clear();
             Console.WriteLine("Testes: \n[1] Testa Categoria \n[2] Testa Produto \n[3] Testa Pedido \n[4] Testa Produto Isento" +
-                "\n[5] Testa Entrada de Produto no Estoque \n[6] Testa Saída de Produto no Estoque \n[7] Testa Validações de Estoque" +
-                "\n[8] Testa Validação de Categoria \n[9] Testa Validação de Produto \n[10] Testa Frete \n[11] Testa Cpf" +
-                "\n[12] Testa Vestuário \n[13] Testa Itens do Pedido");
+                "\n[5] Testa Entrada de Produto no Estoque \n[6] Testa Saída de Produto no Estoque \n[7] Testa Validação de Categoria" +
+                "\n[8] Testa Validação de Produto \n[9] Testa Frete \n[10] Testa Cpf \n[11] Testa Vestuário \n[13] Testa Itens do Pedido");
             op = Console.ReadLine();
 
             switch (op)
@@ -35,15 +34,13 @@ class Program
                 case "8":
                     TestaValidacaoDeProdutos.ExecutarTeste(); break;
                 case "9":
-                    TestaCategoria.ExecutarTeste(); break;
+                    TestaFrete.ExecutarTeste(); break;
                 case "10":
-                    TestaCategoria.ExecutarTeste(); break;
+                    TestaCpf.ExecutarTeste(); break;
                 case "11":
-                    TestaCategoria.ExecutarTeste(); break;
+                    TestaVestuario.ExecutarTeste(); break;
                 case "12":
-                    TestaCategoria.ExecutarTeste(); break;
-                case "13":
-                    TestaCategoria.ExecutarTeste(); break;
+                    TestaItensDoPedido.ExecutarTeste(); break;
             }
         }
     }

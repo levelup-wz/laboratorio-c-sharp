@@ -10,6 +10,7 @@ public class TestaValidacaoDeCategoria
         Console.Clear();
         Console.WriteLine("Testa Validação de Produtos\n");
         Console.WriteLine("Criando Categoria válida");
+
         try
         {
             Categoria categoria1 = new Categoria("FILMES", "INATIVA");

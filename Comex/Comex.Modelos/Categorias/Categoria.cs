@@ -22,11 +22,11 @@ public class Categoria
         
         if (nome.Length <= 3) 
         {
-            throw new ArgumentException("Nome deve ser maior que 3 caracteres");
+            throw new ArgumentException("Nome deve ser maior que 3 caracteres", nameof(nome));
         }
         if (status != "ATIVA" && status != "INATIVA")
         {
-            throw new ArgumentException("Status deve ser somente ATIVA ou INATIVA");
+            throw new ArgumentException("Status deve ser somente ATIVA ou INATIVA", nameof(status));
         }
         
         Nome = nome;

@@ -6,9 +6,14 @@ namespace Comex.Modelos.Pedidos;
 
 public class NotaFiscal
 {
-    internal Pedido Pedido { get; set; }
+    internal Pedido Pedido { get; private set; }
 
     public NotaFiscal(Pedido pedido) 
+    {
+        Pedido = pedido;
+    }
+
+    public void AlterarPedido(Pedido pedido)
     {
         Pedido = pedido;
     }

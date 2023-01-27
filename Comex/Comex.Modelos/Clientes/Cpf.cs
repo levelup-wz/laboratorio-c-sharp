@@ -7,6 +7,11 @@ public class Cpf
     public string CPF { get; }
     public Cpf(string cpf)
     {
+        if (cpf.Length != 11)
+        {
+            throw new ArgumentException("Formato de cpf inválido!", nameof(cpf));
+        }
+
         CPF = cpf;
     }
 

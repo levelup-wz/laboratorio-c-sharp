@@ -11,6 +11,11 @@ public class ItensDoPedido
 
     public ItensDoPedido(Produto item, int quantidade)
     {
+        if (quantidade <= 0)
+        {
+            throw new ArgumentException("Quantidade necessária e maior que zero", nameof(quantidade));
+        }
+
         Item = item;
         Quantidade = quantidade;
         Total = item.Preco * quantidade;

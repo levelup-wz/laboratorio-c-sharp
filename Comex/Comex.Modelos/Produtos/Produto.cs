@@ -38,9 +38,9 @@ public class Produto
         Quantidade++;
         Id = Quantidade;
         
-        if (nome.Length <= 5)
+        if (nome.Length <= 3)
         {
-            throw new ArgumentException("Nome deve ser maior que 5 caracteres", nameof(nome));
+            throw new ArgumentException("Nome deve ser maior que 3 caracteres", nameof(nome));
         }
         if (preco <= 0)
         {
@@ -57,6 +57,34 @@ public class Produto
 
         Nome = nome;
         Descricao = descricao;
+        Preco = preco;
+        Estoque = estoque;
+        Categoria = categoria;
+    }
+
+    public Produto(string nome, decimal preco, int estoque, Categoria categoria)
+    {
+        Quantidade++;
+        Id = Quantidade;
+
+        if (nome.Length <= 3)
+        {
+            throw new ArgumentException("Nome deve ser maior que 3 caracteres", nameof(nome));
+        }
+        if (preco <= 0)
+        {
+            throw new ArgumentException("Preço obrigatório e não nulo", nameof(preco));
+        }
+        if (estoque <= 0)
+        {
+            throw new ArgumentException("Estoque obrigatório e não nulo", nameof(estoque));
+        }
+        if (categoria == null)
+        {
+            throw new ArgumentException("Categoria necessária", nameof(categoria));
+        }
+
+        Nome = nome;
         Preco = preco;
         Estoque = estoque;
         Categoria = categoria;

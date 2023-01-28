@@ -5,6 +5,7 @@ namespace Comex.Modelos.Clientes;
 public class Cpf
 {
     public string CPF { get; }
+
     public Cpf(string cpf)
     {
         if (cpf.Length != 11)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comex.Models.Extensoes;
 
 namespace Comex.Models
 {
@@ -13,20 +14,8 @@ namespace Comex.Models
         public Vestuario(string nome, double precoUnitario, int quantidade, Categoria categoria, string atributos) : base(nome, precoUnitario, quantidade, categoria)
         {
             Atributos = atributos;
-            Tamanho = ObterTamanho();
-            Cor = ObterCor();
-        }
-
-        private string ObterTamanho()
-        {
-            int indice = Atributos.IndexOf("tamanho: ") + 9;
-            return Atributos.Substring(indice, 1);
-        }
-
-        private string ObterCor()
-        {
-            int indice = Atributos.IndexOf("cor: ") + 5;
-            return Atributos.Substring(indice);
+            Tamanho = Atributos.ExtrairTamanho();
+            Cor = Atributos.ExtrairCor();
         }
     }
 }

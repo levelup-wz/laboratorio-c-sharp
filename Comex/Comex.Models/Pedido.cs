@@ -15,7 +15,7 @@ namespace Comex.Models
         public int Id { get; set; }
         public DateTime Data { get; set; }
         public Cliente ClientePedido { get; set; }
-        public List<ItemDoPedido> Itens { get; set; }
+        public List<ItemDoPedido> Itens { get; set; } //= new List<ItemDoPedido>();
         public int QuantidadeVendida { get; set; }
 
         public void RemoverItens(int idProduto)

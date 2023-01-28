@@ -43,15 +43,9 @@ namespace Comex.Models
         }
 
         public double CalcularValorTotal()
-        {             
-            double valorTotal = 0;
-            
-            foreach (ItemDoPedido item in Itens)
-            {
-                valorTotal += (double)item.Total;
-            }
-
-            return valorTotal;
+        {
+            var valorTotal = Itens.Sum(item => item.Total);
+            return (double)valorTotal;
         }
 
         public string CalcularValorPorExtenso()

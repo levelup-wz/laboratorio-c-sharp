@@ -68,12 +68,8 @@ namespace Comex.Models
 
         public double CalcularImposto()
         {
-            double impostoCalculado = 0;
-
-            foreach(ItemDoPedido item in Itens)
-            {
-                impostoCalculado += item.Quantidade * item.Produto.CalcularImposto();
-            }
+            var impostoCalculado = Itens
+                .Sum(item => item.Quantidade * item.Produto.CalcularImposto());
 
             return impostoCalculado;
         }

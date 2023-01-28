@@ -63,6 +63,7 @@ namespace Comex
         {
             double TotalImposto = PrecoUnitario * 0.40;
             return TotalImposto;
+           
         }
 
         public string RetornaInfosProduto()

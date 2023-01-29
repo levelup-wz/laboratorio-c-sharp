@@ -6,7 +6,7 @@ namespace Comex.Models
     /// <summary>
     ///
     ///
-    public class Produto<T> where T : struct, INumber<T>, ISignedNumber<T>
+    public class Produto<T> where T : struct, INumber<T> //, ISignedNumber<T>
     {
         private static int _id = 0;
         public int Id { get; set; }
@@ -49,7 +49,7 @@ namespace Comex.Models
             {
                 throw new ArgumentException("O preço unitário deve ser maior que 0", nameof(precoUnitario));
             }
-            if (quantidadeEmEstoque.CompareTo(0) < -1)
+            if (Convert.ToDecimal(quantidadeEmEstoque) < 0)
             {
                 throw new ArgumentException("A quantidade em estoque deve ser maior que 0", nameof(quantidadeEmEstoque));
             }

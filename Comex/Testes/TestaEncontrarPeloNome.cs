@@ -2,7 +2,7 @@ using Comex.Modelos.Extensions;
 using Comex.Modelos.Produtos;
 using Comex.Modelos.Categorias;
 
-namespace Testes;
+namespace UnitTesting;
 
 public class TestaEncontrarPeloNome
 {

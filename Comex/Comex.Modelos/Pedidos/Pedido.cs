@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Comex.Modelos.Clientes;
 
 namespace Comex.Modelos.Pedidos;
@@ -37,26 +38,12 @@ public class Pedido
 
     public decimal CalculaValorTotal()
     {
-        decimal valor = 0;
-
-        foreach (ItensDoPedido item in Itens)
-        {
-            valor += item.Total;
-        }
-
-        return valor;
+        return Itens.Sum(pedido => pedido.Total);
     }
 
     public decimal CalculaTotalImposto()
     {
-        decimal valor = 0M;
-
-        foreach (ItensDoPedido item in Itens)
-        {
-            valor += item.Item.CalculaImposto() * item.Quantidade;
-        }
-
-        return valor;
+        return Itens.Sum(valor => valor.Item.CalculaImposto() * valor.Quantidade);
     }
 
     public decimal CalculaCustoTotal()

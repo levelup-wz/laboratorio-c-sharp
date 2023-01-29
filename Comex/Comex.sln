@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex.Modelos", "Comex.Mode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex.Utils", "Comex.Utils\Comex.Utils.csproj", "{A7FDFA1C-13EF-4232-BAFA-9B402EC30D4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "Testes\Testes.csproj", "{AE74C34B-2B60-43FD-BBC8-95F2704169A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "Testes\UnitTesting.csproj", "{AE74C34B-2B60-43FD-BBC8-95F2704169A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

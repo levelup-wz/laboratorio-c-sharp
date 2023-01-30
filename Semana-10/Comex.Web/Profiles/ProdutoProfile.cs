@@ -9,5 +9,6 @@ public class ProdutoProfile : Profile
     public ProdutoProfile()
     {
         CreateMap<CriarProdutoDto, Produto>().ReverseMap();
+        CreateMap<AtualizarProdutoDto, Produto>().ReverseMap();
     }
 }

@@ -28,7 +28,26 @@ public class ProdutoController : ControllerBase
     {
         var produto = _mapper.Map<Produto>(produtoDto);
         _produtos.Add(produto);
-        return Created("",produto);
+        return CreatedAtAction(nameof(OberProdutoPorId), new {id = produto.Id}, produto);
     }
 
+    [HttpGet("{id}")]
+    public IActionResult OberProdutoPorId(int id)
+    {
+        var produto = _produtos.FirstOrDefault(x => x.Id == id);
+        if (produto == null)
+            return BadRequest(new { error = "Produto inexistente" });
+        return Ok(produto);
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult AtualizaProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
+    {
+        var produto = _produtos.FirstOrDefault(x => x.Id == id);
+        if (produto == null)
+            return BadRequest(new { error = "Produto inexistente" });
+
+        produto = _mapper.Map(produtoDto, produto);
+        return NoContent();
+    }
 }

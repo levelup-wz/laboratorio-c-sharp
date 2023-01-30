@@ -3,4 +3,4 @@
 - [x] Adicionar método para criar um novo Produto
 - [x] Obter um produto pelo Id
 - [x] Alterar os dados de um produto
-- [ ] Excluir um Produto da coleção
+- [x] Excluir um Produto da coleção

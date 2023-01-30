@@ -50,4 +50,14 @@ public class ProdutoController : ControllerBase
         produto = _mapper.Map(produtoDto, produto);
         return NoContent();
     }
+
+    [HttpDelete("{id}")]
+    public IActionResult RemoveProduto(int id)
+    {
+        var produto = _produtos.FirstOrDefault(x => x.Id == id);
+        if (produto == null)
+            return BadRequest(new { error = "Produto inexistente" });
+        _produtos.Remove(produto);
+        return NoContent();
+    }
 }

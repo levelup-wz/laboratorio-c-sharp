@@ -23,6 +23,14 @@ public class ProdutoController : ControllerBase
         return Ok(DateTime.Now);
     }
 
+    [HttpGet]
+    [Route("listarTodos")]
+    public IActionResult ListarProdutos()
+    {
+        var produtos = _produtos.ToList();
+        return Ok(produtos);
+    }
+
     [HttpPost]
     public IActionResult CriaProduto([FromBody] CriarProdutoDto produtoDto)
     {

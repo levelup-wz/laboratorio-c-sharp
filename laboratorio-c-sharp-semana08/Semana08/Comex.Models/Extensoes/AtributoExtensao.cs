@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Comex.Models.Extensoes
 {
-    internal class AtributoExtensao
+    public static class AtributoExtensao
     {
+        public static string ExtrairTamanho (this string tamanho)
+        {
+            return tamanho.Substring(9, 1);
+
+        }
+
+        public static string ExtrairCor (this string cor)
+        {
+            return cor.Substring(17);
+
+        }
     }
 }

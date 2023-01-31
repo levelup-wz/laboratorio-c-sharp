@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Comex.Models.Extensoes
+{
+    public static class ProdutosExtensao
+    {
+        //public static Produto EncontrarPeloNome terminar no domingo.
+    }
+}

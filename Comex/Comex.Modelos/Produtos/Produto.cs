@@ -101,10 +101,6 @@ public class Produto
         Categoria = categoria;
     }
 
-    public Produto()
-    {
-    }
-
     public override string ToString()
     {
         return $"[{Id}] - {Nome}, {Descricao} R${ Preco} \nCategoria: {Categoria.Nome}" +

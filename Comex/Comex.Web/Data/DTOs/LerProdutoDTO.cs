@@ -8,4 +8,5 @@ public class LerProdutoDTO
     public string Descricao { get; set; }
     public decimal Preco { get; set; }
     public Categoria Categoria { get; set; }
+    public DateTime HoraDaConsulta { get; set; } = DateTime.Now;
 }

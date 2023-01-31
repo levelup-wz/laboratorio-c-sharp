@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Comex.Modelos.Categorias;
 
 namespace Comex.Modelos.Produtos;
@@ -7,10 +8,20 @@ public class Produto
 {
     public static int Quantidade { get; private set; }
     public int Id { get; protected set; }
+
+    [Required(ErrorMessage = "Nome do produto é obrigatório")]
+    [MinLength(3, ErrorMessage = "Nome deve ser maior que 3 caracteres")]
     public string Nome { get; }
+
     public string Descricao { get; }
+
+    [Required(ErrorMessage = "Preço obrigatório")]
     public decimal Preco { get; }
+
+    [Required(ErrorMessage = "Estoque obrigatório")]
     public int Estoque { get; }
+
+    [Required(ErrorMessage = "Categoria obrigatória")]
     public Categoria Categoria { get; }
     protected string Atributos { get; set; }
 
@@ -88,6 +99,10 @@ public class Produto
         Preco = preco;
         Estoque = estoque;
         Categoria = categoria;
+    }
+
+    public Produto()
+    {
     }
 
     public override string ToString()

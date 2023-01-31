@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex.Modelos", "Comex.Mode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex.Utils", "Comex.Utils\Comex.Utils.csproj", "{A7FDFA1C-13EF-4232-BAFA-9B402EC30D4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "TestProject\UnitTesting.csproj", "{F47F9D07-0B5B-469B-9AF1-FD9C37887ABA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Comex.Testes", "TestProject\Comex.Testes.csproj", "{F47F9D07-0B5B-469B-9AF1-FD9C37887ABA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comex.Web", "Comex.Web\Comex.Web.csproj", "{2212210D-C207-4086-9631-0F2BC2F3EF02}"
 EndProject

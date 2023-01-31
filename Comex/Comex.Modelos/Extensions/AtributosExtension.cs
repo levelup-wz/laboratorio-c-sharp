@@ -7,7 +7,7 @@ internal static class AtributosExtension
 {
     internal static string ExtrairTamanho(this Vestuario vestuario, string atributos)
     {
-        string param = "tamanho:";
+        string param = "tamanho=";
         int index = atributos.IndexOf(param);
         string resultado = atributos.Substring(index + param.Length);
 
@@ -21,7 +21,7 @@ internal static class AtributosExtension
 
     internal static string ExtrairCor(this Vestuario vestuario, string atributos)
     {
-        string param = "cor:";
+        string param = "cor=";
         int index = atributos.IndexOf(param);
         string resultado = atributos.Substring(index + param.Length);
 

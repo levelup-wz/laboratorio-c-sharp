@@ -2,9 +2,9 @@ using Comex.Modelos.Extensions;
 using Comex.Modelos.Produtos;
 using Comex.Modelos.Categorias;
 
-namespace UnitTesting;
+namespace Comex.Testes;
 
-public class TestaEncontrarPeloNome
+public class TestaProdutosExtension
 {
     [Fact]
     public void Deve_encontrar_um_produto_na_lista_pela_descricao()

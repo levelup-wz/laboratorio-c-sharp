@@ -27,6 +27,7 @@ public class Pedido
         Nota = new NotaFiscal(this);
         Cep = cep;
         FretePedido = Frete.Calcular(cep);
+        IndentificarItens();
     }
 
     public decimal CalculaValorTotal()
@@ -46,13 +47,19 @@ public class Pedido
 
     public void RemoverItens(int id)
     {
-        Itens.RemoveAll(item => item.Item.Id == id);
+        Itens.RemoveAll(item => item.Id == id);
+        IndentificarItens();
     }
 
     public void AlterarQuantidade(int id, int quantidade)
     {
-        ItensDoPedido item = Itens.FirstOrDefault(item => item.Item.Id == id);
+        var item = Itens.First(item => item.Id == id);
         item.Quantidade = quantidade;
+    }
+
+    private void IndentificarItens()
+    {
+        for (int i = 0; i < Itens.Count; i++) Itens[i].Id = i + 1;
     }
 
     public override string ToString()

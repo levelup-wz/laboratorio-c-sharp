@@ -7,6 +7,8 @@ namespace Comex.Modelos.Produtos;
 public class Produto
 {
     public static int Quantidade { get; private set; }
+
+    [Key]
     public int Id { get; protected set; }
 
     [Required(ErrorMessage = "Nome do produto é obrigatório")]

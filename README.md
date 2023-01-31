@@ -7,7 +7,7 @@
 <p> <b> 2. Tarefas </b> </p>
 
 
-- [ ] Crie uma lista de produtos na classe Pedido.
-- [ ] Mude a classe Pedido para possuir Itens.
-- [ ] Modificar items de um Pedido.
+- [ ] Criar uma lista de produtos na classe Pedido.
+- [ ] Mudar a classe Pedido para possuir Itens.
+- [ ] Modificar itens de um Pedido.
 

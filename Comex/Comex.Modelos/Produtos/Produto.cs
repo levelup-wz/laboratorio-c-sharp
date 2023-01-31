@@ -13,8 +13,6 @@ public class Produto
     [MinLength(3, ErrorMessage = "Nome deve ser maior que 3 caracteres")]
     public string Nome { get; }
 
-    public string Descricao { get; }
-
     [Required(ErrorMessage = "Preço obrigatório")]
     public decimal Preco { get; }
 
@@ -23,7 +21,6 @@ public class Produto
 
     [Required(ErrorMessage = "Categoria obrigatória")]
     public Categoria Categoria { get; }
-    protected string Atributos { get; set; }
 
     public decimal ValorTotal()
     {
@@ -39,40 +36,10 @@ public class Produto
     /// Cria uma instância de Produto
     /// </summary>
     /// <param name="nome"> <see cref="Nome"/> necessário e maior que 5 caracteres </param>
-    /// <param name="descricao"></param>
     /// <param name="preco"> <see cref="Preco"/> obrigatório e diferente de zero </param>
     /// <param name="estoque"> <see cref="Estoque"/> obrigatório e diferente de zero </param>
     /// <param name="categoria"> <see cref="Categoria"/> obrigatória </param>
     /// <exception cref="ArgumentException"></exception>
-    public Produto(string nome, string descricao, decimal preco, int estoque, Categoria categoria)
-    {
-        Quantidade++;
-        Id = Quantidade;
-        
-        if (nome.Length <= 3)
-        {
-            throw new ArgumentException("Nome deve ser maior que 3 caracteres", nameof(nome));
-        }
-        if (preco <= 0)
-        {
-            throw new ArgumentException("Preço obrigatório e não nulo", nameof(preco));
-        }
-        if (estoque <= 0)
-        {
-            throw new ArgumentException("Estoque obrigatório e não nulo", nameof(estoque));
-        }
-        if (categoria == null)
-        {
-            throw new ArgumentException("Categoria necessária", nameof(categoria));
-        }
-
-        Nome = nome;
-        Descricao = descricao;
-        Preco = preco;
-        Estoque = estoque;
-        Categoria = categoria;
-    }
-
     public Produto(string nome, decimal preco, int estoque, Categoria categoria)
     {
         Quantidade++;
@@ -103,7 +70,7 @@ public class Produto
 
     public override string ToString()
     {
-        return $"[{Id}] - {Nome}, {Descricao} R${ Preco} \nCategoria: {Categoria.Nome}" +
+        return $"[{Id}] - {Nome} R${ Preco} \nCategoria: {Categoria.Nome}" +
             $"\nQuantidade em estoque: {Estoque} \nImposto R${CalculaImposto()}";
     }
 }

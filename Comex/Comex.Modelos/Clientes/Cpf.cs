@@ -20,9 +20,4 @@ public class Cpf
     {
         return cpf.Substring(0, 3) + "." + cpf.Substring(3, 3) + "." + cpf.Substring(6, 3) + "-" + cpf.Substring(9,2);
     }
-
-    public override string ToString()
-    {
-        return $"Cpf: {CPF}";
-    }
 }

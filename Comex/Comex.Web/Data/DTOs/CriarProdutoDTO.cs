@@ -8,7 +8,6 @@ public class CriarProdutoDTO
     [Required(ErrorMessage = "Nome do produto é obrigatório")]
     [MinLength(3, ErrorMessage = "Nome deve ser maior que 3 caracteres")]
     public string Nome { get; set; }
-    public string Descricao { get; set; }
 
     [Required(ErrorMessage = "Preço obrigatório")]
     public decimal Preco { get; set; }

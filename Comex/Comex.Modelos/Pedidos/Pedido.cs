@@ -12,38 +12,31 @@ public class Pedido
     public string Data { get; set; }
     public Cliente Cliente { get; set; }
     public List<ItensDoPedido> Itens { get; set; }
-    public int QuantidadeVendida { get; set; }
-    public NotaFiscal Nota { get; private set; }
-    public decimal FretePedido { get; private set; }
+    public int QuantidadeVendida { get { return Itens.Sum(item => item.Quantidade); } }
+    public NotaFiscal Nota { get; }
+    public decimal FretePedido { get; }
 
     public Pedido(string data, Cliente cliente, string cep, params ItensDoPedido[] itens)
     {
         Quantidade++;
         Id = Quantidade;
         Itens = new List<ItensDoPedido>();
+        Itens.AddRange(itens);
         Data = data;
         Cliente = cliente;
-        QuantidadeVendida = 0;
         Nota = new NotaFiscal(this);
         Cep = cep;
         FretePedido = Frete.Calcular(cep);
-
-        for (int i = 0; i < itens.Length; i++)
-        {
-            itens[i].Id = i + 1;
-            QuantidadeVendida += itens[i].Quantidade;
-            Itens.Add(itens[i]);
-        }
     }
 
     public decimal CalculaValorTotal()
     {
-        return Itens.Sum(pedido => pedido.Total);
+        return Itens.Sum(item => item.Total);
     }
 
     public decimal CalculaTotalImposto()
     {
-        return Itens.Sum(valor => valor.Item.CalculaImposto() * valor.Quantidade);
+        return Itens.Sum(item => item.Item.CalculaImposto() * item.Quantidade);
     }
 
     public decimal CalculaCustoTotal()
@@ -53,51 +46,19 @@ public class Pedido
 
     public void RemoverItens(int id)
     {
-        IEnumerable<ItensDoPedido> items = (
-            from item in Itens
-            where item.Id == id
-            select item).ToList();
-
-        foreach (ItensDoPedido item in items)
-        {
-            QuantidadeVendida -= item.Quantidade;
-            Itens.Remove(item);
-        }
-
-        for (int i = 0; i < Itens.Count; i++)
-        {
-            Itens[i].Id = i + 1;
-        }
+        Itens.RemoveAll(item => item.Item.Id == id);
     }
 
     public void AlterarQuantidade(int id, int quantidade)
     {
-        IEnumerable<ItensDoPedido> items = (
-            from item in Itens
-            where item.Id == id
-            select item).ToList();
-
-        foreach (ItensDoPedido item in items)
-        {
-            var novoItem = item;
-            novoItem.AlterarQuantidade(quantidade);
-
-            Itens.Remove(item);
-            Itens.Add(novoItem);
-
-            QuantidadeVendida += novoItem.Quantidade - item.Quantidade;
-        }
-
-        for (int i = 0; i < Itens.Count; i++)
-        {
-            Itens[i].Id = i + 1;
-        }
+        ItensDoPedido item = Itens.FirstOrDefault(item => item.Item.Id == id);
+        item.Quantidade = quantidade;
     }
 
     public override string ToString()
     {
         string pedido = "======================================\n";
-        pedido += $"[{Id}] - {Data} \nCliente: {Cliente.NomeCompleto()} - {Cliente.CpfCliente.CPF} \n";
+        pedido += $"[{Id}] - {Data} \nCliente: {Cliente.NomeCompleto()} - {Cliente.Cpf.CPF} \n";
         pedido += "-------------------";
 
         foreach (ItensDoPedido item in Itens)

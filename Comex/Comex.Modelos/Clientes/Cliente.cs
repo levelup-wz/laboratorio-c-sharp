@@ -8,7 +8,7 @@ public class Cliente
     public int Id { get; }
     public string Nome { get; set; }
     public string Sobrenome { get; set; }
-    public Cpf CpfCliente { get; }
+    public Cpf Cpf { get; }
     public string Telefone { get; set; }
     public string Rua { get; set; }
     public string Numero { get; set; }
@@ -23,7 +23,7 @@ public class Cliente
         Id = Quantidade;
         Nome = nome;
         Sobrenome = sobrenome;
-        CpfCliente = cpf;
+        Cpf = cpf;
         Telefone = telefone;
         Rua = rua;
         Numero = numero;

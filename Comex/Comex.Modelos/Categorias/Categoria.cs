@@ -5,7 +5,7 @@ namespace Comex.Modelos.Categorias;
 public class Categoria
 {
     public static int Quantidade { get; private set; }
-    public int Id { get; private set; }
+    public int Id { get; }
     public string Nome { get; }
     public string Status { get; }
 

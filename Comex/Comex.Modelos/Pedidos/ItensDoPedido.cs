@@ -7,8 +7,8 @@ public class ItensDoPedido
 {
     public Produto Item { get; }
     public int Id { get; internal set; }
-    public int Quantidade { get; private set; }
-    public decimal Total { get; private set; }
+    public int Quantidade { get; internal set; }
+    public decimal Total { get { return Item.Preco * Quantidade; } }
 
     public ItensDoPedido(Produto item, int quantidade)
     {
@@ -18,14 +18,6 @@ public class ItensDoPedido
         }
 
         Item = item;
-        Quantidade = quantidade;
-        Total = item.Preco * quantidade;
-    }
-
-    public void AlterarQuantidade(int quantidade)
-    {
-        Total /= Quantidade;
-        Total *= quantidade;
         Quantidade = quantidade;
     }
 

@@ -32,16 +32,10 @@ namespace Comex.Models
 
        
 
-        public double ValorPedido() 
+        public decimal ValorPedido() 
         {
-             double valorTotal = 0;
-
-            foreach(ItemsDoPedido item in Itens)
-            {
-                valorTotal += (double)item.Total;
-            }
-          
-            return valorTotal;
+            return Itens.Sum(pedido => pedido.Total);
+           
         }
                 
         public double ImpostoTotal()

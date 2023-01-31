@@ -157,7 +157,7 @@ namespace Comex.Testes
             var pedido = new Pedido(novoCliente, itemDoPedido);
 
             pedido.UpdateQuantityItemsDoPedido(ProdutoNameEntry, updateQuantidade);
-            
+
             pedido.Items.Should().HaveCount(1);
             pedido.Items[0].GetQuantidade().Should().Be(updateQuantidade);
         }

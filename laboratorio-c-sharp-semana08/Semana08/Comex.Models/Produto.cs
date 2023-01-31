@@ -30,7 +30,7 @@ namespace Comex
             Categoria = categoria;
             Atributos = atributos;
 
-            if (nome.Length <= 5)
+            if (nome.Length < 5)
             {
                 throw new ArgumentException("O nome deve conter mais de cinco caracteres", nameof(nome));
             }

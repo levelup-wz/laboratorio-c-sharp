@@ -1,3 +1,23 @@
+# Desafio Semana 10 - Api Rest - Operações essenciais com verbos HTTP
+
+- [x] Setup Inicial
+
+- [x] Crie novo controller ProdutosController
+    * [x] Criar endpoint `Time` retornando a hora atual.
+
+- [x] Crie um Dto Criar produto Dto
+    * [x] Criar uma pasta `Dto` e uma classe `CriarProdutosDto`
+    * [x] Criar validações no DTO
+    * [x] Criar uma `Lista` para salvar os produtos.
+    * [x] Criar um método na `Controller`
+    * [x] Adicionar o item a lista. Retornando o resultado ao `client`.
+
+- [x] Criar um método no Controller chamado ObterProdutoPorId
+
+- [x] Criar um novo `Dto`, chamado `AtualizarDto`.
+    * [x] Criar um método no controller chamado `AtualizarProduto`
+- [x] Criar um método no controller chamado `RemoverProduto`.
+
 # Desafio Semana 9 - Comex - List, Lambda, Linq
 
 - [x] Setup Inicial

@@ -54,5 +54,11 @@ namespace Comex.Web.Repositorio.ProdutoRepositorio
             _mapper.Map(atualizarProdutoDto, produto);
 
         }
+
+        public void RemoverProduto(int id)
+        {
+            var produto = Produtos.FirstOrDefault(p => p.Id == id);
+            Produtos.Remove(produto);
+        }
     }
 }

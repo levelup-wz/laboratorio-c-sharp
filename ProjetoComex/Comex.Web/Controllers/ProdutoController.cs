@@ -76,7 +76,18 @@ namespace Comex.Web.Controllers
             _repository.AtualizarProduto(id, produto);
 
             return NoContent();
+        }
 
+        [HttpDelete("{id}")]
+        public IActionResult RemoveProduto(int id)
+        {
+            var findProduto = _repository.ObterProdutoPorId(id);
+            if (findProduto == null)
+            {
+                return NotFound("Produto não localizado");
+            }
+            _repository.RemoverProduto(id);
+            return NoContent();
         }
     }
 }

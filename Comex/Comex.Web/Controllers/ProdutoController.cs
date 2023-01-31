@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Comex.Modelos.Pedidos;
 using Comex.Modelos.Produtos;
 using Comex.Web.Data.Dtos;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Comex.Web.Controllers;
@@ -19,9 +19,9 @@ public class ProdutoController : Controller
     }
 
     [HttpPost]
-    public IActionResult PostProduto([FromBody] CriarProdutoDto produtoDTO)
+    public IActionResult PostProduto([FromBody] CriarProdutoDto produtoDto)
     {
-        var produto = _mapper.Map<Produto>(produtoDTO);
+        var produto = _mapper.Map<Produto>(produtoDto);
         _produtos.Add(produto);
 
         return Ok();
@@ -40,9 +40,46 @@ public class ProdutoController : Controller
         if (produto == null)
             return NotFound();
 
-        var produtoDTO = _mapper.Map<LerProdutoDto>(produto);
+        var produtoDto = _mapper.Map<LerProdutoDto>(produto);
         return Ok(produto);
     }
 
+    [HttpPut("{id}")]
+    public IActionResult PutProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        if (produto == null)
+            return NotFound();
 
+        _mapper.Map(produtoDto, produto);
+        return NoContent();
+    }
+
+    [HttpPatch("{id}")]
+    public IActionResult PatchProduto(int id, JsonPatchDocument<AtualizarProdutoDto> patch)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        if (produto == null)
+            return NotFound();
+
+        var patchProduto = _mapper.Map<AtualizarProdutoDto>(produto);
+
+        patch.ApplyTo(patchProduto, ModelState);
+        if (!TryValidateModel(patchProduto))
+            return ValidationProblem(ModelState);
+
+        _mapper.Map(patchProduto, produto);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteProduto(int id)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        if (produto == null)
+            return NotFound();
+
+        _produtos.Remove(produto);
+        return NoContent();
+    }
 }

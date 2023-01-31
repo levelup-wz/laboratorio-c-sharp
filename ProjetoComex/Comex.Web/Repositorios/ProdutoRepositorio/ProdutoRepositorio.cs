@@ -46,5 +46,13 @@ namespace Comex.Web.Repositorio.ProdutoRepositorio
 
             return produtoDto;
         }
+
+        public void AtualizarProduto(int id, CriarProdutoDtoCategoria atualizarProdutoDto)
+        {
+            var produto = Produtos.FirstOrDefault(p => p.Id == id);
+
+            _mapper.Map(atualizarProdutoDto, produto);
+
+        }
     }
 }

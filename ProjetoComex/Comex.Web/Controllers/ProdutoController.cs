@@ -55,9 +55,28 @@ namespace Comex.Web.Controllers
             var produto = new CriarProdutoDtoCategoria(request.Nome, request.PrecoUnitario, request.QuantidadeEstoque, categoria);
 
             var response = _repository.CriarProduto(produto);
-            
+
             return CreatedAtAction(nameof(ObterProdutoPorId), new { id = response.Id }, response);
         }
-    };
-    
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizarProduto(int id, AtualizarProdutoDto request)
+        {
+
+            var findProduto = _repository.ObterProdutoPorId(id);
+
+            if (findProduto == null)
+            {
+                return NotFound("Produto não localizado");
+            }
+
+            var categoria = new Categoria(request.Categoria);
+            var produto = new CriarProdutoDtoCategoria(request.Nome, request.PrecoUnitario, request.QuantidadeEstoque, categoria);
+
+            _repository.AtualizarProduto(id, produto);
+
+            return NoContent();
+
+        }
+    }
 }

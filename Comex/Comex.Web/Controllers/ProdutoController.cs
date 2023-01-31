@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
+using Comex.Modelos.Pedidos;
 using Comex.Modelos.Produtos;
-using Comex.Web.Data.DTOs;
+using Comex.Web.Data.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Comex.Web.Controllers;
@@ -17,18 +18,31 @@ public class ProdutoController : Controller
         _mapper = mapper;
     }
 
-    [HttpGet]
-    public IEnumerable<LerProdutoDTO> GetProduto()
-    {
-        return _mapper.Map<List<LerProdutoDTO>>(_produtos);
-    }
-
     [HttpPost]
-    public IActionResult PostProduto([FromBody]CriarProdutoDTO produtoDTO)
+    public IActionResult PostProduto([FromBody] CriarProdutoDto produtoDTO)
     {
         var produto = _mapper.Map<Produto>(produtoDTO);
         _produtos.Add(produto);
 
         return Ok();
     }
+
+    [HttpGet]
+    public IEnumerable<LerProdutoDto> GetProduto()
+    {
+        return _mapper.Map<List<LerProdutoDto>>(_produtos);
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult GetProduto(int id)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        if (produto == null)
+            return NotFound();
+
+        var produtoDTO = _mapper.Map<LerProdutoDto>(produto);
+        return Ok(produto);
+    }
+
+
 }

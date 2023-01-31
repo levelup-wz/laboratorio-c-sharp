@@ -10,18 +10,9 @@ public class Produto
 
     [Key]
     public int Id { get; protected set; }
-
-    [Required(ErrorMessage = "Nome do produto é obrigatório")]
-    [MinLength(3, ErrorMessage = "Nome deve ser maior que 3 caracteres")]
     public string Nome { get; }
-
-    [Required(ErrorMessage = "Preço obrigatório")]
     public decimal Preco { get; }
-
-    [Required(ErrorMessage = "Estoque obrigatório")]
     public int Estoque { get; }
-
-    [Required(ErrorMessage = "Categoria obrigatória")]
     public Categoria Categoria { get; }
 
     public decimal ValorTotal()

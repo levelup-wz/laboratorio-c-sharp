@@ -1,8 +1,8 @@
 ﻿using Comex.Modelos.Categorias;
 
-namespace Comex.Web.Data.DTOs;
+namespace Comex.Web.Data.Dtos;
 
-public class LerProdutoDTO
+public class LerProdutoDto
 {
     public string Nome { get; set; }
     public decimal Preco { get; set; }

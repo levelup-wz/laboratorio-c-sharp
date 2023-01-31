@@ -39,14 +39,9 @@ namespace Comex.Models
         }
                 
         public double ImpostoTotal()
-        {
-            double totalPagar = 0;
-
-            foreach(ItemsDoPedido item in Itens)
-            {
-                totalPagar += item.Quantidade * item.Produto.Imposto();
-            }
-            return totalPagar;
+        {     
+            var impostoTotal = Itens.Sum(x => x.Quantidade * x.Produto.Imposto());
+            return (double) impostoTotal;
         }
 
         public void RemoveItemPedido(string nome)

@@ -33,7 +33,18 @@ namespace Comex.Web.Controllers
             {
                 return NotFound();
             }
-            return Ok();
+            return CreatedAtAction(nameof(ObterProdutoPorId), new { id = produto.Id }, produto);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult ObterProdutoPorId(int id)
+        {
+            var produto = _produtoList.FirstOrDefault(p => p.Id == id);
+            if (produto == null)
+            {
+                return NotFound("O produto não existe");
+            }
+            return Ok(produto);
         }
     }
 }

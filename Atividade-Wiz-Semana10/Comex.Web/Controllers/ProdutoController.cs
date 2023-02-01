@@ -29,8 +29,11 @@ namespace Comex.Web.Controllers
         {
             var produto = _mapper.Map<Produto>(produtoDto);
             _produtoList.Add(produto);
+            if (produto == null)
+            {
+                return NotFound();
+            }
             return Ok();
         }
-
     }
 }

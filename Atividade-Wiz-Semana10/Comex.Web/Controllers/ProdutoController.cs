@@ -46,5 +46,17 @@ namespace Comex.Web.Controllers
             }
             return Ok(produto);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizarProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
+        {
+            Produto produto = _produtoList.FirstOrDefault(p => p.Id == id);
+            if (produto == null)
+            {
+                return NotFound("O produto não existe");
+            }
+            _mapper.Map(produtoDto, produto);
+            return NoContent();
+        }
     }
 }

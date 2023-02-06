@@ -1,0 +1,28 @@
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\bin\Debug\net6.0\Comex.Models.deps.json
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\bin\Debug\net6.0\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\bin\Debug\net6.0\Comex.Models.pdb
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.csproj.AssemblyReference.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.AssemblyInfoInputs.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.AssemblyInfo.cs
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\refint\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\Comex.Models.pdb
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 6\Comex.Models\obj\Debug\net6.0\ref\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.csproj.AssemblyReference.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.AssemblyInfoInputs.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.AssemblyInfo.cs
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\refint\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\laboratorio-c-sharp-semana5\Semana 7\Comex.Models\obj\Debug\net6.0\Comex.Models.pdb
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.csproj.AssemblyReference.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.AssemblyInfoInputs.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.AssemblyInfo.cs
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\refint\Comex.Models.dll
+C:\Users\Vanessa\Downloads\laboratorio-c-sharp-semana4\Repositórioc CSharp\Semana 9\Comex.Models\obj\Debug\net6.0\Comex.Models.pdb

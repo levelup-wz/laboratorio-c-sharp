@@ -1,7 +1,8 @@
-# Semana-6
+# Semana-10
 ## Atividades:
 - Setup inicial ✔️
-- Mover as classes para um novo projeto Comex.Modelos ✔️
-- Criar uma nova classe Nota Fiscal ✔️
-- Mostre o valor da nota fiscal por extenso ✔️
-- Procure uma biblioteca que converta números para um valor em extenso que seja em portugues. ✔️
+- Crie um novo Controller para Produto ✔️
+- Adicionar método para criar um novo Produto ✔️
+- Obter um produto pelo Id ✔️
+- Alterar os dados de um produto ✔️
+- Excluir um Produto da coleção ✔️

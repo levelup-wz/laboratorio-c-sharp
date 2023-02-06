@@ -8,7 +8,7 @@ namespace Comex.Testes
         {
             try
             {
-                Produto teste1 = new(0, "Notebook Samsung", 3523.00M, 1, "Informática");
+                Produto teste1 = new("Notebook Samsung", 3523.00M, 1, "Informática");
 
                 Console.WriteLine($"{teste1.Categoria} ({teste1.DefineId()} - {teste1.Nome})");
                 Console.WriteLine($"Quantidade em estoque: {teste1.QuantidadeEmEstoque}");
@@ -25,7 +25,7 @@ namespace Comex.Testes
             }
             try
             {
-                Produto teste2 = new(31, "Clean", 102.90M, 2, "Livros");
+                Produto teste2 = new("Clean", 102.90M, 2, "Livros");
 
                 Console.WriteLine($"{teste2.Categoria} ({teste2.DefineId()} - {teste2.Nome})");
                 Console.WriteLine($"Quantidade em estoque: {teste2.QuantidadeEmEstoque}");
@@ -42,7 +42,7 @@ namespace Comex.Testes
             }
             try
             {
-                Produto teste3 = new(32, "Monitor Dell 27", 0, 3, "Informática");
+                Produto teste3 = new("Monitor Dell 27", 0, 3, "Informática");
 
                 Console.WriteLine($"{teste3.Categoria} ({teste3.DefineId()} - {teste3.Nome})");
                 Console.WriteLine($"Quantidade em estoque: {teste3.QuantidadeEmEstoque}");
@@ -59,7 +59,7 @@ namespace Comex.Testes
             }
             try
             {
-                Produto teste4 = new(33, "Código Limpo", 102.90M, 0, "Livros");
+                Produto teste4 = new("Código Limpo", 102.90M, 0, "Livros");
 
                 Console.WriteLine($"{teste4.Categoria} ({teste4.DefineId()} - {teste4.Nome})");
                 Console.WriteLine($"Quantidade em estoque: {teste4.QuantidadeEmEstoque}");
@@ -76,7 +76,7 @@ namespace Comex.Testes
             }
             try
             {
-                Produto teste5 = new(34, "mouse pad", 50.00M, 3, "");
+                Produto teste5 = new("mouse pad", 50.00M, 3, "");
 
                 Console.WriteLine($"{teste5.Categoria} ({teste5.DefineId()} - {teste5.Nome})");
                 Console.WriteLine($"Quantidade em estoque: {teste5.QuantidadeEmEstoque}");

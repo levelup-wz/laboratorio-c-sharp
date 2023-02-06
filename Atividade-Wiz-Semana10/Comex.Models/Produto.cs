@@ -21,17 +21,17 @@
             Atributos = atributos;
         }
 
-        public Produto (int id, string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria)
+        public Produto (string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria)
         {
-            Id = id;
+            Id = _id++;
             Nome = nome;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque = quantidadeEmEstoque;
             Categoria = categoria;
 
-            if (id <= 0)
+            if (_id <= 0)
             {
-                throw new ArgumentException("ID deve ser maior que ZERO.", nameof(id));
+                throw new ArgumentException("ID deve ser maior que ZERO.", nameof(_id));
             }
             if (nome.Length <= 5)
             {

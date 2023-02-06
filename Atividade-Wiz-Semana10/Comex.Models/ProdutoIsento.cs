@@ -6,7 +6,7 @@
         {
         }
 
-        public ProdutoIsento(int id, string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria) : base(id, nome, precoUnitario, quantidadeEmEstoque, categoria)
+        public ProdutoIsento(int id, string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria) : base(nome, precoUnitario, quantidadeEmEstoque, categoria)
         {
         }
 

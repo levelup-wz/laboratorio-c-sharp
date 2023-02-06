@@ -10,10 +10,10 @@ namespace Comex.Comex.Models
 {
     public class ItensDoPedido
     {
-        public readonly Produto Produto;
+        public Produto Produto { get; private set;}
         public int Quantidade { get; set; }
 
-        public readonly decimal Total;
+        public decimal Total;
 
         public ItensDoPedido(Produto produto, int quantidade)
         {

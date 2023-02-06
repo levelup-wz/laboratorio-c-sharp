@@ -10,7 +10,7 @@ namespace Comex
     {
         if(produto.QuantidadeEmEstoque > Capacidade)
             {
-                throw new CapacityLimitExceededException("A quantidade de produto é maior que a capacidade do estoque.");
+                throw new LimiteDeEstoqueExcedidoException("A quantidade de produto é maior que a capacidade do estoque.");
             }
 
         Capacidade -= produto.QuantidadeEmEstoque;
@@ -22,7 +22,7 @@ namespace Comex
     {
         if(Ocupacao == 0)
             {
-                throw new CapacityLimitExceededException("O estoque está vazio.");
+                throw new LimiteDeEstoqueExcedidoException("O estoque está vazio.");
             }
 
             Capacidade += produto.QuantidadeEmEstoque;

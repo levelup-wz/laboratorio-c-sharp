@@ -8,9 +8,18 @@ namespace Comex
 
     public Categoria(string nome, string status = "ATIVA")
     {
-      Id = Id + 1;
+      Id++;
       Nome = nome;
       Status = status;
+
+      if (nome.Length <= 3)
+      {
+        throw new ArgumentException("O nome deve ser maior que 3 caracteres", nameof(nome));
+      }
+      if (status != "ATIVA" && status != "INATIVA")
+      {
+        throw new ArgumentException("Só é permitido os valores 'ATIVA' e 'INATIVA'", nameof(status));
+      }
     }
   }
 }

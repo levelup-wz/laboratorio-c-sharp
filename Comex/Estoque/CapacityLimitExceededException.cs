@@ -1,8 +1,8 @@
 namespace Comex
 {
-  class CapacityLimitExceededException : Exception
+  class LimiteDeEstoqueExcedidoException : Exception
   {
-    public CapacityLimitExceededException(string message) : base(message)
+    public LimiteDeEstoqueExcedidoException(string message) : base(message)
     {
     }
   }

@@ -17,6 +17,21 @@ namespace Comex
       PrecoUnitario = precoUnitario;
       QuantidadeEmEstoque = quantidadeEmEstoque;
       Categoria = categoria;
+
+      if(nome.Length <= 5)
+      {
+        throw new ArgumentException("O nome deve ser maior que 5 caracteres", nameof(nome));
+      }
+
+      if(precoUnitario <= 0)
+      {
+        throw new ArgumentException("O preço unitário deve ser maior que 0", nameof(precoUnitario));
+      }
+
+      if (quantidadeEmEstoque <= 0)
+      {
+        throw new ArgumentException("A quantidade em estoque deve ser maior que 0", nameof(quantidadeEmEstoque));
+      }
     }
 
     public double CalculaValorTotalEmEstoque()

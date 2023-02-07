@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Comex.Models
 {
     public class Produto
     {
-        private static int _id = 0;
+        [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
@@ -16,15 +17,16 @@ namespace Comex.Models
         public int QuantidadeEmEstoque { get; set; }
         public string Categoria { get; set; }
         protected string Atributos { get; set; }
+
+        public Produto() { }
+
         public Produto(string nome, double precoUnitario, int quantidadeEmEstoque, string categoria)
         {
-            Id = ++_id;
             validaEntradaDeDados(nome, precoUnitario, quantidadeEmEstoque, categoria);
         }
 
         public Produto(string nome, double precoUnitario, int quantidadeEmEstoque, string categoria, string atributos)
         {
-            Id = ++_id;
             Atributos = atributos;
             validaEntradaDeDados(nome, precoUnitario, quantidadeEmEstoque, categoria);
         }

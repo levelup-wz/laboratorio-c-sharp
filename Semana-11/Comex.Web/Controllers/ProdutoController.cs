@@ -55,10 +55,10 @@ public class ProdutoController : ControllerBase
     {
         var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
-            return BadRequest(new { error = "Produto inexistente" });
+            return NotFound(new { error = "Produto inexistente" });
 
         produto = _mapper.Map(produtoDto, produto);
-        return NoContent();
+        return Ok(produto);
     }
 
     [HttpDelete("{id}")]
@@ -66,7 +66,7 @@ public class ProdutoController : ControllerBase
     {
         var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
-            return BadRequest(new { error = "Produto inexistente" });
+            return NotFound(new { error = "Produto inexistente" });
         _db.Remove(produto);
         return NoContent();
     }

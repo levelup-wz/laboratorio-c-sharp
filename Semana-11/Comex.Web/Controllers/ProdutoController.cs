@@ -10,21 +10,21 @@ namespace Comex.Web.Controllers;
 [ApiController]
 public class ProdutoController : ControllerBase
 {
-    private readonly ComexDbContext _db;
+    private readonly AppDbContext _sqlite;
     private readonly IMapper _mapper;
 
-    public ProdutoController(IMapper mapper, ComexDbContext db)
+    public ProdutoController(IMapper mapper, ComexDbContext db, AppDbContext sqlite)
     {
         _mapper = mapper;
-        _db = db;
+        _sqlite = sqlite;
     }
 
     [HttpGet]
     public IActionResult ListarProdutos(string? categoria)
     {
         var produtos = string.IsNullOrEmpty(categoria)
-            ? _db.Produtos.ToList()
-            : _db.Produtos.Where(p => p.Categoria == categoria).ToList();
+            ? _sqlite.Produtos.ToList()
+            : _sqlite.Produtos.Where(p => p.Categoria == categoria).ToList();
 
         return Ok(produtos);
     }
@@ -33,15 +33,15 @@ public class ProdutoController : ControllerBase
     public IActionResult CriaProduto([FromBody] CriarProdutoDto produtoDto)
     {
         var produto = _mapper.Map<Produto>(produtoDto);
-        _db.Add(produto);
-        _db.SaveChanges();
+        _sqlite.Add(produto);
+        _sqlite.SaveChanges();
         return CreatedAtAction(nameof(OberProdutoPorId), new {id = produto.Id}, produto);
     }
 
     [HttpGet("{id}")]
     public IActionResult OberProdutoPorId(int id)
     {
-        var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
+        var produto = _sqlite.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
             return BadRequest(new { error = "Produto inexistente" });
         return Ok(produto);
@@ -50,24 +50,24 @@ public class ProdutoController : ControllerBase
     [HttpPut("{id}")]
     public IActionResult AtualizaProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
     {
-        var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
+        var produto = _sqlite.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
             return NotFound(new { error = "Produto inexistente" });
 
         produto = _mapper.Map(produtoDto, produto);
-        _db.Update(produto);
-        _db.SaveChanges();
+        _sqlite.Update(produto);
+        _sqlite.SaveChanges();
         return Ok(produto);
     }
 
     [HttpDelete("{id}")]
     public IActionResult RemoveProduto(int id)
     {
-        var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
+        var produto = _sqlite.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
             return NotFound(new { error = "Produto inexistente" });
-        _db.Remove(produto);
-        _db.SaveChanges();
+        _sqlite.Remove(produto);
+        _sqlite.SaveChanges();
         return NoContent();
     }
 }

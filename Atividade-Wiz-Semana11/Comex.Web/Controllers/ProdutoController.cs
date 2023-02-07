@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using Comex.Models;
+using Comex.Web.Data;
 using Comex.Web.Data.Dto;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Comex.Web.Controllers
 {
@@ -10,11 +10,12 @@ namespace Comex.Web.Controllers
     [Route("[controller]")]
     public class ProdutoController : ControllerBase
     {
-        private static List<Produto> _produtoList = new();
+        private ComexDbContext _context;
         private IMapper _mapper;
 
-        public ProdutoController(IMapper mapper)
+        public ProdutoController(ComexDbContext context, IMapper mapper)
         {
+            _context = context;
             _mapper = mapper;
         }
 
@@ -29,15 +30,15 @@ namespace Comex.Web.Controllers
         public IActionResult PostProduto([FromBody] CriarProdutoDTO produtoDto)
         {
             var produto = _mapper.Map<Produto>(produtoDto);
-            _produtoList.Add(produto);
+            _context.Add(produto);
             return CreatedAtAction(nameof(ObterProdutoPorId), new { id = produto.Id }, produto);
         }
 
         [HttpGet("/List")]
         public IActionResult ListaDeProdutos()
         {
-            var produtoList = _produtoList.ToList();
-            if (produtoList.Any())
+            var produtoList = _context;
+            if (produtoList.Produtos.Any())
             {
                 return Ok(produtoList);
             }
@@ -47,7 +48,7 @@ namespace Comex.Web.Controllers
         [HttpGet("{id}")]
         public IActionResult ObterProdutoPorId(int id)
         {
-            var produto = _produtoList.FirstOrDefault(p => p.Id == id);
+            var produto = _context.Produtos.FirstOrDefault(p => p.Id == id);
             if (produto == null)
             {
                 return NotFound("O produto não existe.");
@@ -58,7 +59,7 @@ namespace Comex.Web.Controllers
         [HttpPut("{id}")]
         public IActionResult AtualizarProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
         {
-            var produto = _produtoList.FirstOrDefault(p => p.Id == id);
+            var produto = _context.Produtos.FirstOrDefault(p => p.Id == id);
             if (produto == null)
             {
                 return NotFound("O produto não existe.");
@@ -70,12 +71,12 @@ namespace Comex.Web.Controllers
         [HttpDelete("{id}")]
         public IActionResult RemoveProduto(int id)
         {
-            var produto = _produtoList.FirstOrDefault(p => p.Id == id);
+            var produto = _context.Produtos.FirstOrDefault(p => p.Id == id);
             if (produto == null)
             {
                 return NotFound("O produto não existe.");
             }
-            _produtoList.Remove(produto);
+            _context.Remove(produto);
             return NoContent();
         }
     }

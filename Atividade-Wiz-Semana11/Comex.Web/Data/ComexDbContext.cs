@@ -10,6 +10,6 @@ namespace Comex.Web.Data
 
         }
 
-        DbSet<Produto> Produtos { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
     }
 }

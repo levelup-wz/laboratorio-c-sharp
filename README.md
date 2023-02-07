@@ -3,5 +3,5 @@
 - [x] Criar o ComexDbContext
 - [x] Refatorar classe Produto
 - [x] Modificar Controller para receber o DbContext
-- [x] Faça uma busca que retorne os produtos filtrados por categoria
-- [x] Substitua o InMemoryDataBase pelo SQLite
+- [ ] Faça uma busca que retorne os produtos filtrados por categoria
+- [ ] Substitua o InMemoryDataBase pelo SQLite

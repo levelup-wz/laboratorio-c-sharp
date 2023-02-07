@@ -1,8 +1,11 @@
-﻿namespace Comex.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Comex.Models
 {
     public class Produto
     {
-        private static int _id = 1;
+        [Key]
+        [Required]
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descircao { get; set; }
@@ -11,9 +14,10 @@
         public string Categoria { get; set; }
         protected string Atributos { get; set; }
 
+        public Produto() { }
+
         public Produto (string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria, string atributos)
         {
-            Id = _id++;
             Nome = nome;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque = quantidadeEmEstoque;
@@ -23,15 +27,14 @@
 
         public Produto (string nome, decimal precoUnitario, int quantidadeEmEstoque, string categoria)
         {
-            Id = _id++;
             Nome = nome;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque = quantidadeEmEstoque;
             Categoria = categoria;
 
-            if (_id <= 0)
+            if (Id <= 0)
             {
-                throw new ArgumentException("ID deve ser maior que ZERO.", nameof(_id));
+                throw new ArgumentException("ID deve ser maior que ZERO.", nameof(Id));
             }
             if (nome.Length <= 5)
             {

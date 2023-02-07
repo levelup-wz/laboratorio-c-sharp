@@ -20,16 +20,12 @@ public class ProdutoController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult HoraAtual()
+    public IActionResult ListarProdutos(string? categoria)
     {
-        return Ok(DateTime.Now);
-    }
+        var produtos = string.IsNullOrEmpty(categoria)
+            ? _db.Produtos.ToList()
+            : _db.Produtos.Where(p => p.Categoria == categoria).ToList();
 
-    [HttpGet]
-    [Route("listarTodos")]
-    public IActionResult ListarProdutos()
-    {
-        var produtos = _db.Produtos.ToList();
         return Ok(produtos);
     }
 
@@ -38,6 +34,7 @@ public class ProdutoController : ControllerBase
     {
         var produto = _mapper.Map<Produto>(produtoDto);
         _db.Add(produto);
+        _db.SaveChanges();
         return CreatedAtAction(nameof(OberProdutoPorId), new {id = produto.Id}, produto);
     }
 
@@ -58,6 +55,8 @@ public class ProdutoController : ControllerBase
             return NotFound(new { error = "Produto inexistente" });
 
         produto = _mapper.Map(produtoDto, produto);
+        _db.Update(produto);
+        _db.SaveChanges();
         return Ok(produto);
     }
 
@@ -68,6 +67,7 @@ public class ProdutoController : ControllerBase
         if (produto == null)
             return NotFound(new { error = "Produto inexistente" });
         _db.Remove(produto);
+        _db.SaveChanges();
         return NoContent();
     }
 }

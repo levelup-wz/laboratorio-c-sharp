@@ -1,6 +1,7 @@
-# Semana 10 - API Rest: operações essenciais com verbos HTTP
-- [x] Crie um novo Controller para Produto
-- [x] Adicionar método para criar um novo Produto
-- [x] Obter um produto pelo Id
-- [x] Alterar os dados de um produto
-- [x] Excluir um Produto da coleção
+# Semana 11 - NET 5 e EF Core: relacionando entidades
+- [x] Criar Profiles para Produto
+- [x] Criar o ComexDbContext
+- [x] Refatorar classe Produto
+- [x] Modificar Controller para receber o DbContext
+- [x] Faça uma busca que retorne os produtos filtrados por categoria
+- [x] Substitua o InMemoryDataBase pelo SQLite

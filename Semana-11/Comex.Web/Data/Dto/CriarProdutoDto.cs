@@ -9,6 +9,10 @@ public class CriarProdutoDto
     public string  Nome { get; set; }
 
     [Required(ErrorMessage = "O preço unitário do produto é obrigatório")]
+    [MinLength(6, ErrorMessage = "A descricao deve ter no mínimo 6 caracteres")]
+    public string Descricao { get; set; }
+
+    [Required(ErrorMessage = "O preço unitário do produto é obrigatório")]
     [Range(0.01, double.PositiveInfinity, ErrorMessage ="O preço unitário deve ser maior que 0 ")]
     public double PrecoUnitario { get; set; }
 

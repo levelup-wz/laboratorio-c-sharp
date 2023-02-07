@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Comex.Models;
+using Comex.Web.Data;
 using Comex.Web.Data.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,12 +10,13 @@ namespace Comex.Web.Controllers;
 [ApiController]
 public class ProdutoController : ControllerBase
 {
-    private static List<Produto> _produtos = new();
+    private readonly ComexDbContext _db;
     private readonly IMapper _mapper;
 
-    public ProdutoController(IMapper mapper)
+    public ProdutoController(IMapper mapper, ComexDbContext db)
     {
         _mapper = mapper;
+        _db = db;
     }
 
     [HttpGet]
@@ -27,7 +29,7 @@ public class ProdutoController : ControllerBase
     [Route("listarTodos")]
     public IActionResult ListarProdutos()
     {
-        var produtos = _produtos.ToList();
+        var produtos = _db.Produtos.ToList();
         return Ok(produtos);
     }
 
@@ -35,14 +37,14 @@ public class ProdutoController : ControllerBase
     public IActionResult CriaProduto([FromBody] CriarProdutoDto produtoDto)
     {
         var produto = _mapper.Map<Produto>(produtoDto);
-        _produtos.Add(produto);
+        _db.Add(produto);
         return CreatedAtAction(nameof(OberProdutoPorId), new {id = produto.Id}, produto);
     }
 
     [HttpGet("{id}")]
     public IActionResult OberProdutoPorId(int id)
     {
-        var produto = _produtos.FirstOrDefault(x => x.Id == id);
+        var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
             return BadRequest(new { error = "Produto inexistente" });
         return Ok(produto);
@@ -51,7 +53,7 @@ public class ProdutoController : ControllerBase
     [HttpPut("{id}")]
     public IActionResult AtualizaProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
     {
-        var produto = _produtos.FirstOrDefault(x => x.Id == id);
+        var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
             return BadRequest(new { error = "Produto inexistente" });
 
@@ -62,10 +64,10 @@ public class ProdutoController : ControllerBase
     [HttpDelete("{id}")]
     public IActionResult RemoveProduto(int id)
     {
-        var produto = _produtos.FirstOrDefault(x => x.Id == id);
+        var produto = _db.Produtos.FirstOrDefault(x => x.Id == id);
         if (produto == null)
             return BadRequest(new { error = "Produto inexistente" });
-        _produtos.Remove(produto);
+        _db.Remove(produto);
         return NoContent();
     }
 }

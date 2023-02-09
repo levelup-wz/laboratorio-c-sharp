@@ -13,7 +13,7 @@ namespace Comex.Models
         public string Nome { get; set; }
         public double PrecoUnitario { get; set; }
         public int QuantidadeEmEstoque { get; set; }
-        public Categoria ProdutoCategoria { get; set; }
+        public string Categoria { get; set; }
 
 
         public double CalcularValorTotal()
@@ -28,7 +28,7 @@ namespace Comex.Models
             return PrecoUnitario * 0.4;
         }
 
-        public Produto(string nome, double precoUnitario, int quantidade, Categoria categoria)
+        public Produto(string nome, double precoUnitario, int quantidade, string categoria)
         {
             TotalProdutos++;
 
@@ -36,10 +36,10 @@ namespace Comex.Models
             Nome = nome;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque += quantidade;
-            ProdutoCategoria = categoria;
+            Categoria = categoria;
         }
 
-        public Produto(int id, string nome, double precoUnitario, int quantidadeEmEstoque, Categoria produtoCategoria)
+        public Produto(int id, string nome, double precoUnitario, int quantidadeEmEstoque, string categoria)
         {
 
             if (id <= 0)
@@ -62,7 +62,7 @@ namespace Comex.Models
                 throw new ArgumentException("A quantidade em estoque deve ser maior do que 0.");
             }
 
-            if (produtoCategoria is null)
+            if (categoria is null)
             {
                 throw new ArgumentException("A categoria deve ser informada.");
             }
@@ -73,7 +73,7 @@ namespace Comex.Models
             Nome = nome;
             PrecoUnitario = precoUnitario;
             QuantidadeEmEstoque = quantidadeEmEstoque;
-            ProdutoCategoria = produtoCategoria;
+            Categoria = categoria;
         }
 
         public static int TotalProdutos { get; set; }

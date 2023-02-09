@@ -246,8 +246,13 @@ Console.WriteLine($"Valor do item: {item.Total:C}");
 
 Console.ReadKey();*/
 
-Vestuario vestuario = new Vestuario("camiseta", 15, 1, new Categoria("Feminino"), "tamanho: PP; cor: Vermelho");
+/*Vestuario vestuario = new Vestuario("camiseta", 15, 1, new Categoria("Feminino"), "tamanho: PP; cor: Vermelho");
 
 Console.WriteLine(vestuario.Tamanho);
 Console.WriteLine(vestuario.Cor);
+Console.ReadKey();*/
+
+Produto produto = new Produto("Código Limpo", 50, 2, "padsfoia");
+Console.WriteLine($"{produto.Categoria}");
+
 Console.ReadKey();

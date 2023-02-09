@@ -11,7 +11,7 @@ namespace Comex.Models
     {
         public string Tamanho { get; private set; }
         public string Cor { get; private set; }
-        public Vestuario(string nome, double precoUnitario, int quantidade, Categoria categoria, string atributos) : base(nome, precoUnitario, quantidade, categoria)
+        public Vestuario(string nome, double precoUnitario, int quantidade, string categoria, string atributos) : base(nome, precoUnitario, quantidade, categoria)
         {
             Atributos = atributos;
             Tamanho = Atributos.ExtrairTamanho();

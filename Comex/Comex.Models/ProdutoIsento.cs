@@ -13,11 +13,11 @@ namespace Comex.Models
             return 0;
         }
 
-        public ProdutoIsento(string nome, double precoUnitario, int quantidade, Categoria categoria) :
+        public ProdutoIsento(string nome, double precoUnitario, int quantidade, string categoria) :
         base (nome, precoUnitario, quantidade, categoria)
         {
         }
-        public ProdutoIsento(int id, string nome, double precoUnitario, int quantidadeEmEstoque, Categoria produtoCategoria) : 
+        public ProdutoIsento(int id, string nome, double precoUnitario, int quantidadeEmEstoque, string produtoCategoria) : 
         base (id, nome, precoUnitario, quantidadeEmEstoque, produtoCategoria)
         {
         }

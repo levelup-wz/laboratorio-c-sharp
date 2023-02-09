@@ -1,7 +1,9 @@
 # Semana-6
 ## Atividades:
 - Setup inicial ✔️
-- Mover as classes para um novo projeto Comex.Modelos ✔️
-- Criar uma nova classe Nota Fiscal ✔️
-- Mostre o valor da nota fiscal por extenso ✔️
-- Procure uma biblioteca que converta números para um valor em extenso que seja em portugues. ✔️
+- Criar Profiles para Produto ✔️
+- Criar o ComexDbContext ✔️
+- Refatorar classe Produto ✔️
+- Modificar Controller para receber o DbContext ✔️
+- Faça uma busca que retorne os produtos filtrados por categoria ✔️
+- Substitua o InMemoryDataBase pelo SQLite ✔️

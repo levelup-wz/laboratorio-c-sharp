@@ -9,5 +9,6 @@ public class ProdutoProfile : Profile
     public ProdutoProfile()
     {
         CreateMap<CriarProdutoDto, Produto>();
+        CreateMap<Produto, LerProdutoDto>();
     }
 }

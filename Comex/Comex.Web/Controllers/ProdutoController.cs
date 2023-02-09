@@ -9,7 +9,7 @@ namespace Comex.Web.Controllers;
 [Route("[controller]")]
 public class ProdutoController : ControllerBase
 {
-
+    private static int id = 0;
     private IMapper _mapper;
     private static List<Produto> _produtos = new List<Produto>();
 
@@ -22,10 +22,25 @@ public class ProdutoController : ControllerBase
     public IActionResult AdicionarProduto([FromBody] CriarProdutoDto produtoDto)
     {
         Produto produto = _mapper.Map<Produto>(produtoDto);
+        produto.Id = ++id;
 
         _produtos.Add(produto);
 
-        return Ok(_produtos);
+        return CreatedAtAction(nameof(ObterProdutoPorId), new { Id = produto.Id }, produto);
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult ObterProdutoPorId(int id)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+
+        if (produto != null)
+        {
+            LerProdutoDto produtoDto = _mapper.Map<LerProdutoDto>(produto);
+            return Ok(produtoDto);
+        }
+
+        return NotFound();
     }
 
     [HttpGet]

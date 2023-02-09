@@ -1,3 +1,14 @@
+# Desafio Semana 11 - NET 5 e EF CORE: relacionando entidades
+
+- [x] Setup Inicial
+- [x] Criar Profiles para Produto
+- [x] Crie ComexDbContext
+- [x] Refatorar classe Produto
+- [x] Modificar controller para receber o DbContext
+- [x] Faça uma busca que retorne os produtos filtrados por categoria
+- [x] Substitua o InMemoryDatabase pelo SQLLite
+- [x] Enviar entregas
+
 # Desafio Semana 10 - Api Rest - Operações essenciais com verbos HTTP
 
 - [x] Setup Inicial

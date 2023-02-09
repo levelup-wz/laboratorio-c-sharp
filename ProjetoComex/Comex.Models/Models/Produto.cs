@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +9,19 @@ namespace Comex.Entidades
 {
     public class Produto
     {
-        public static int prodId = 1;
+        [Key]
         public int Id { get; private set; }
         public string Nome { get; set; }
-        public string Descricao { get; set; }
+        public string? Descricao { get; set; }
         public double PrecoUnitario { get; set; }
         public int QuantidadeEstoque { get; private set; }
         public Categoria Categoria { get; set; }
-        protected string Atributo { get; set; }
+        protected string? Atributo { get; set; }
+
+        public Produto()
+        {
+
+        }
 
         public Produto(string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria, string atributo)
         {
@@ -23,8 +29,6 @@ namespace Comex.Entidades
             PrecoUnitario = precoUnitario;
             QuantidadeEstoque = quantidadeEstoque;
             Categoria = categoria;
-            Id = Produto.prodId;
-            Produto.prodId++;
             Atributo = atributo;
         }
 
@@ -34,8 +38,6 @@ namespace Comex.Entidades
             PrecoUnitario = precoUnitario;
             QuantidadeEstoque = quantidadeEstoque;
             Categoria = categoria;
-            Id = Produto.prodId;
-            Produto.prodId++;
         }
 
         public Produto(int id, string nome, double precoUnitario, int quantidadeEstoque, Categoria categoria)

@@ -8,7 +8,6 @@ namespace Comex.Entidades
 {
     public class Categoria
     {
-        private static int numId = 1;
         public int Id { get; private set; }
         public string Nome { get; private set; }
         //public EStatus Status { get; private set; }
@@ -26,8 +25,6 @@ namespace Comex.Entidades
         {
             Status = status;
             Nome = nome.ToUpper();
-            Id = Categoria.numId;
-            Categoria.numId++;
         }
 
         public Categoria(int id, string nome, string status)

@@ -24,9 +24,11 @@ namespace Comex.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListarProdutos()
+        public IActionResult ListarProdutos(string? categoria)
         {
-            return Ok(_repository.ListarProdutos());
+            var response = _repository.ListarProdutos(categoria);
+
+            return Ok(response);
         }
 
         [HttpGet("{id}")]
@@ -60,7 +62,7 @@ namespace Comex.Web.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult AtualizarProduto(int id, AtualizarProdutoDto request)
+        public IActionResult AtualizarProduto(int id, [FromBody] AtualizarProdutoDto request)
         {
 
             var findProduto = _repository.ObterProdutoPorId(id);

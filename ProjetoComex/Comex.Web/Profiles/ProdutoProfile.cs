@@ -11,6 +11,7 @@ namespace Comex.Web.Profiles
             CreateMap<CriarProdutoDto, Produto>();
             CreateMap<CriarProdutoDtoCategoria, Produto>();
             CreateMap<Produto, ProdutoDto>();
+            CreateMap<AtualizarProdutoDto, Produto>();
         }
     }
 }

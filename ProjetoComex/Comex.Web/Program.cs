@@ -1,8 +1,14 @@
+using Comex.Web.Data;
 using Comex.Web.Repositorio.ProdutoRepositorio;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+// Configurando o Context
+builder.Services.AddDbContext<ComexDbContext>(opts => opts.UseInMemoryDatabase(databaseName: "ComexDb"));
+builder.Services.AddDbContext<ComexDbSqliteContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

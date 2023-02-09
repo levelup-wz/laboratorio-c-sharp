@@ -23,7 +23,7 @@ namespace Comex.Web.Controllers
         public IActionResult GetHoraAtual()
         {
             var HoraAtual = DateTime.Now;
-            return Ok(HoraAtual);
+            return Ok(HoraAtual.ToString("dd/MM/yyyy HH:mm"));
         }
 
         [HttpPost]
@@ -31,18 +31,24 @@ namespace Comex.Web.Controllers
         {
             var produto = _mapper.Map<Produto>(produtoDto);
             _context.Add(produto);
+            _context.SaveChanges();
             return CreatedAtAction(nameof(ObterProdutoPorId), new { id = produto.Id }, produto);
         }
 
         [HttpGet("/List")]
-        public IActionResult ListaDeProdutos()
+        public IActionResult ListaDeProdutos([FromQuery] string categoria)
         {
-            var produtoList = _context;
-            if (produtoList.Produtos.Any())
+            var produtos = _context.Produtos.ToList();
+            if (!string.IsNullOrEmpty(categoria))
             {
-                return Ok(produtoList);
+                produtos = produtos.Where(p => p.Categoria == categoria).ToList();
             }
-            return NotFound("Não existe produto na lista.");
+            if (!produtos.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(produtos);
         }
 
         [HttpGet("{id}")]
@@ -65,6 +71,7 @@ namespace Comex.Web.Controllers
                 return NotFound("O produto não existe.");
             }
             _mapper.Map(produtoDto, produto);
+            _context.SaveChanges();
             return NoContent();
         }
 
@@ -77,6 +84,7 @@ namespace Comex.Web.Controllers
                 return NotFound("O produto não existe.");
             }
             _context.Remove(produto);
+            _context.SaveChanges();
             return NoContent();
         }
     }

@@ -13,6 +13,5 @@ namespace Comex.Web.Data.Dto
         public int QuantidadeEmEstoque { get; set; }
         [Required(ErrorMessage = "O campo Categoria é obrigátório")]
         public string Categoria { get; set; }
-        //public string Atributos { get; set; }
     }
 }

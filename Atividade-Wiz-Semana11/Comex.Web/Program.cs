@@ -1,5 +1,6 @@
 using Comex.Web.Data;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Crypto.Tls;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddDbContext<ComexDbContext>(opts => opts.UseInMemoryDatabase(databaseName: "ComexDb"));
+builder.Services.AddDbContext<ComexDbContext>(options => options.UseSqlite("Data Source=ComexDbContext.db"));
 
 var app = builder.Build();
 

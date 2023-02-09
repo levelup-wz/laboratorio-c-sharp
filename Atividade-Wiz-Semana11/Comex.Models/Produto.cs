@@ -5,10 +5,9 @@ namespace Comex.Models
     public class Produto
     {
         [Key]
-        [Required]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Descircao { get; set; }
+        public string? Descricao { get; set; }
         public decimal PrecoUnitario { get; set; }
         public int QuantidadeEmEstoque { get; set; }
         public string Categoria { get; set; }
@@ -32,10 +31,6 @@ namespace Comex.Models
             QuantidadeEmEstoque = quantidadeEmEstoque;
             Categoria = categoria;
 
-            if (Id <= 0)
-            {
-                throw new ArgumentException("ID deve ser maior que ZERO.", nameof(Id));
-            }
             if (nome.Length <= 5)
             {
                 throw new ArgumentException("Nome deve ter mais que 5 caracteres", nameof(nome));

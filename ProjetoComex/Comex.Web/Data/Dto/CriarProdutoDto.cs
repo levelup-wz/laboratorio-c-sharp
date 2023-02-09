@@ -10,7 +10,7 @@ namespace Comex.Web.Data.Dto
         public string Nome { get; set; }
         
         [Required]
-        [Range(1, double.MaxValue, ErrorMessage = "Preço Unitário deve ser maior que ZERO")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Preço Unitário deve ser maior que ZERO")]
         public double PrecoUnitario { get; set; }
 
         [Required]

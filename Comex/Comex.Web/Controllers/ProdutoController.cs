@@ -43,6 +43,17 @@ public class ProdutoController : ControllerBase
         return NotFound();
     }
 
+    [HttpPut("{id}")]
+    public IActionResult AtualizarProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        
+        if (produto == null) return NotFound();
+
+        _mapper.Map(produtoDto, produto);
+        return NoContent();
+    }
+
     [HttpGet]
     public IActionResult InformarHorario()
     {

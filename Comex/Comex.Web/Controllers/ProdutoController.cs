@@ -54,6 +54,17 @@ public class ProdutoController : ControllerBase
         return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public IActionResult RemoverProduto(int id)
+    {
+        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+
+        if (produto == null) return NotFound();
+
+        _produtos.Remove(produto);
+        return NoContent();
+    }
+
     [HttpGet]
     public IActionResult InformarHorario()
     {

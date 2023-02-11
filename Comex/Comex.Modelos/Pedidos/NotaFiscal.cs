@@ -2,28 +2,26 @@
 using NumerosExtensos.Enums;
 using System;
 
-namespace Comex.Modelos.Pedidos
+namespace Comex.Modelos.Pedidos;
+
+public class NotaFiscal
 {
-    public class NotaFiscal
+    internal Pedido Pedido { get; private set; }
+
+    public NotaFiscal(Pedido pedido) 
     {
-        internal Pedido Pedido { get; set; }
+        Pedido = pedido;
+    }
 
-        public NotaFiscal(Pedido pedido) 
-        {
-            Pedido = pedido;
-        }
+    public void AlterarPedido(Pedido pedido)
+    {
+        Pedido = pedido;
+    }
 
-        public string ValorPorExtenso()
-        {
-            Extenso extenso = new Extenso();
-            var valor = extenso.Escrever(OpcoesPredefinidas.Predefinicoes[Predefinicoes.MonetarioBRL]);
-            return valor.Numero(Pedido.CalculaCustoTotal().ToString());
-        }
-
-        public string GetNotaFiscal()
-        {
-            return $"Cliente: {Pedido.Cliente.NomeCompleto()} \nValor: {Pedido.CalculaCustoTotal()}" +
-                $" - {ValorPorExtenso()} \nData: {Pedido.Data}";
-        }
+    public string ValorPorExtenso()
+    {
+        Extenso extenso = new Extenso();
+        var valor = extenso.Escrever(OpcoesPredefinidas.Predefinicoes[Predefinicoes.MonetarioBRL]);
+        return valor.Numero(Pedido.CalculaCustoTotal().ToString());
     }
 }

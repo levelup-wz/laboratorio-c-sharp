@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace Comex.Utils
+namespace Comex.Utils;
+
+public class Correios
 {
-    public class Correios
+    public static char ObterRegiaoPorCEP(string cep)
     {
-        public static char ObterRegiaoPorCEP(string cep)
-        {
-            return cep.FirstOrDefault();
-        }
+        return cep.FirstOrDefault();
     }
 }

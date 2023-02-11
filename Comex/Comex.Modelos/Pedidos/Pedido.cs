@@ -1,94 +1,51 @@
 ﻿using System;
+using System.Linq;
 using Comex.Modelos.Clientes;
 
-namespace Comex.Modelos.Pedidos
+namespace Comex.Modelos.Pedidos;
+
+public class Pedido
 {
-    public class Pedido
+    public Pedido(string data, Cliente cliente, string cep, params ItensDoPedido[] itens)
     {
-        public static int Quantidade { get; private set; }
-        public int Id { get; private set; }
-        public string Cep { get; private set; }
-        public string Data { get; set; }
-        public Cliente Cliente { get; set; }
-        public List<ItensDoPedido> Itens { get; set; }
-        public int QuantidadeVendida { get; set; }
-        public NotaFiscal Nota { get; private set; }
-        public decimal FretePedido { get; private set; }
+        Id = Quantidade++;
+        Itens = new List<ItensDoPedido>();
+        Itens.AddRange(itens);
+        Data = data;
+        Cliente = cliente;
+        Nota = new NotaFiscal(this);
+        Cep = cep;
+        FretePedido = Frete.Calcular(cep);
+        IndentificarItens();
+    }
 
-        public Pedido(string data, Cliente cliente, string cep, params ItensDoPedido[] itens)
-        {
-            Quantidade++;
-            Id = Quantidade;
-            Itens = new List<ItensDoPedido>();
-            Data = data;
-            Cliente = cliente;
-            QuantidadeVendida = 0;
-            Nota = new NotaFiscal(this);
-            Cep = cep;
-            FretePedido = Frete.Calcular(cep);
+    public static int Quantidade { get; private set; }
+    public int Id { get; private set; }
+    public string Cep { get; private set; }
+    public string Data { get; set; }
+    public Cliente Cliente { get; set; }
+    public List<ItensDoPedido> Itens { get; set; }
+    public int QuantidadeVendida => Itens.Sum(item => item.Quantidade);
+    public NotaFiscal Nota { get; }
+    public decimal FretePedido { get; }
+    public decimal CalculaValorTotal => Itens.Sum(item => item.Total);
+    public decimal CalculaTotalImposto => Itens.Sum(item => item.Item.CalculaImposto * item.Quantidade);
+    public decimal CalculaCustoTotal => CalculaValorTotal + CalculaTotalImposto + FretePedido;
 
-            foreach (ItensDoPedido item in itens)
-            {
-                QuantidadeVendida += item.Quantidade;
-                Itens.Add(item);
-            }
-        }
+    public void RemoverItens(int id)
+    {
+        Itens.RemoveAll(item => item.Id == id);
+        IndentificarItens();
+    }
 
-        public decimal CalculaValorTotal()
-        {
-            decimal valor = 0;
+    public void AlterarQuantidade(int id, int quantidade)
+    {
+        var item = Itens.First(item => item.Id == id);
+        item.Quantidade = quantidade;
+    }
 
-            foreach (ItensDoPedido item in Itens)
-            {
-                valor += item.Total;
-            }
-
-            return valor;
-        }
-
-        public decimal CalculaTotalImposto()
-        {
-            decimal valor = 0;
-
-            foreach (ItensDoPedido item in Itens)
-            {
-                valor += item.Item.CalculaImposto() * item.Quantidade;
-            }
-
-            return valor;
-        }
-
-        public decimal CalculaCustoTotal()
-        {
-            return CalculaValorTotal() + CalculaTotalImposto() + FretePedido;
-        }
-
-        public void RemoverItens(params ItensDoPedido[] itens)
-        {
-            try
-            {
-                foreach (ItensDoPedido item in itens)
-                {
-                    bool remove = Itens.Remove(item);
-
-                    if (!remove)
-                    {
-                        throw new ArgumentException();
-                    }
-                }
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine("Item não existente no pedido", ex.Message);
-            }
-        }
-
-        public void AlterarQuantidade(ItensDoPedido item)
-        {
-            Console.WriteLine($"Quantidade atual: {item.Quantidade} \nDigite a nova quantidade:");
-            int quantidade = Console.Read();
-
-            Itens[Itens.IndexOf(item)].Quantidade = quantidade;
-        }
+    private void IndentificarItens()
+    {
+        for (int i = 0; i < Itens.Count; i++) Itens[i].Id = i + 1;
     }
 }

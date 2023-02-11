@@ -1,9 +1,2 @@
-### Semana 10 Wiz Level Up
-
-- [x] Crie um novo Controller para Produto
-- [x] Adicionar método para criar um novo Produto
-- [x] Obter um produto pelo Id
-- [x] Alterar os dados de um produto
-- [x] Excluir um Produto da coleção
 
 :)

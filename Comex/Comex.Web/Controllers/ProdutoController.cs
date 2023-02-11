@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Comex.Modelos.Produtos;
+using Comex.Web.Data;
 using Comex.Web.Data.Dtos;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -10,11 +11,12 @@ namespace Comex.Web.Controllers;
 [Route("[controller]")]
 public class ProdutoController : Controller
 {
-    private static List<Produto> _produtos = new();
+    private ComexDbContext _context;
     private IMapper _mapper;
 
-    public ProdutoController(IMapper mapper)
+    public ProdutoController(IMapper mapper, ComexDbContext context)
     {
+        _context = context;
         _mapper = mapper;
     }
 
@@ -22,7 +24,8 @@ public class ProdutoController : Controller
     public IActionResult PostProduto([FromBody] CriarProdutoDto produtoDto)
     {
         var produto = _mapper.Map<Produto>(produtoDto);
-        _produtos.Add(produto);
+        _context.Produtos.Add(produto);
+        _context.SaveChanges();
 
         return Ok();
     }
@@ -30,13 +33,13 @@ public class ProdutoController : Controller
     [HttpGet]
     public IEnumerable<LerProdutoDto> GetProduto()
     {
-        return _mapper.Map<List<LerProdutoDto>>(_produtos);
+        return _mapper.Map<List<LerProdutoDto>>(_context.Produtos);
     }
 
     [HttpGet("{id}")]
     public IActionResult GetProduto(int id)
     {
-        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        var produto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);
         if (produto == null)
             return NotFound();
 
@@ -47,7 +50,7 @@ public class ProdutoController : Controller
     [HttpPut("{id}")]
     public IActionResult PutProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
     {
-        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        var produto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);
         if (produto == null)
             return NotFound();
 
@@ -58,7 +61,7 @@ public class ProdutoController : Controller
     [HttpPatch("{id}")]
     public IActionResult PatchProduto(int id, JsonPatchDocument<AtualizarProdutoDto> patch)
     {
-        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        var produto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);
         if (produto == null)
             return NotFound();
 
@@ -75,11 +78,13 @@ public class ProdutoController : Controller
     [HttpDelete("{id}")]
     public IActionResult DeleteProduto(int id)
     {
-        var produto = _produtos.FirstOrDefault(produto => produto.Id == id);
+        var produto = _context.Produtos.FirstOrDefault(produto => produto.Id == id);
         if (produto == null)
             return NotFound();
 
-        _produtos.Remove(produto);
+        _context.Remove(produto);
+        _context.SaveChanges();
+
         return NoContent();
     }
 }

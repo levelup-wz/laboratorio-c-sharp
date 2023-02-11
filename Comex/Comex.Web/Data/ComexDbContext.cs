@@ -1,5 +1,7 @@
-﻿using Comex.Modelos.Produtos;
+﻿using Comex.Modelos.Categorias;
+using Comex.Modelos.Produtos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Comex.Web.Data
 {
@@ -11,5 +13,13 @@ namespace Comex.Web.Data
         }
 
         public DbSet<Produto> Produtos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Produto>()
+                .HasOne(p => p.Categoria)
+                .WithMany(c => c.Produtos)
+                .HasForeignKey(p => p.CategoriaId);
+        }
     }
 }

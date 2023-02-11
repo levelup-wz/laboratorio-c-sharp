@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comex.Modelos.Produtos;
+using System;
 
 namespace Comex.Modelos.Categorias;
 
@@ -12,8 +13,6 @@ public class Categoria
     /// <exception cref="ArgumentException"></exception>
     public Categoria(string nome, string status)
     {
-        Id = Quantidade++;
-
         if (nome.Length <= 3)
         {
             throw new ArgumentException("Nome deve ser maior que 3 caracteres", nameof(nome));
@@ -27,8 +26,9 @@ public class Categoria
         Status = status;
     }
 
-    public static int Quantidade { get; private set; }
     public int Id { get; }
     public string Nome { get; }
     public string Status { get; }
+
+    public List<Produto> Produtos { get; set; }
 }

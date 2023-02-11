@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Comex.Models;
 
 namespace Comex.Web.Data.Dto
 {

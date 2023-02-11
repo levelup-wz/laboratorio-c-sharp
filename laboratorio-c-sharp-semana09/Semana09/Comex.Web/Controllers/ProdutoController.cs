@@ -46,8 +46,19 @@ namespace Comex.Web.Controllers
             return NotFound();
         }
 
+        [HttpPut("{id}")]
+        public IActionResult AtualizarProduto(int id, [FromBody] AtualizarProdutoDto produtoDto)
+        {
+            var produto = _produto.FirstOrDefault(produto => produto.Id == id);
 
-        [HttpGet]
+            if (produto == null) return NotFound();
+
+            _imapper.Map(produtoDto, produto);
+            return NoContent();
+        }
+
+
+        [HttpGet("/DateTime")]
         public ActionResult HoraAtual() 
         {
             return Ok(DateAndTime.Now);

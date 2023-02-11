@@ -5,6 +5,8 @@ namespace Comex.Web.Data.Dto
 {
     public class CriarProdutoDTO
     {
+        [Key]
+        [Required]
         public int Id { get; set; }
 
         [Required(ErrorMessage ="O nome do produto deve ter mais de 5 caracteres")]

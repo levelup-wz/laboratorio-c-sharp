@@ -51,9 +51,26 @@ namespace Comex.Web.Controllers
         {
             var produto = _produto.FirstOrDefault(produto => produto.Id == id);
 
-            if (produto == null) return NotFound();
+            if (produto == null)
+            {
+                return NotFound("O produto não existe");
+            }
 
             _imapper.Map(produtoDto, produto);
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult RemoverProduto(int id)
+        {
+            var produto = _produto.FirstOrDefault(produto => produto.Id == id);
+
+            if (produto == null)
+            {
+                return NotFound("O produto não existe");
+            }
+
+            _produto.Remove(produto);
             return NoContent();
         }
 

@@ -9,7 +9,8 @@ namespace Comex.Web.Profiles
         {
             CreateMap<CriarProdutoDTO, Produto>();
             CreateMap<Produto, LerProdutoDto>();
-            
+            CreateMap<AtualizarProdutoDto, Produto>();
+
         }
 
     }

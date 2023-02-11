@@ -16,8 +16,8 @@ public class Cpf
         CPF = Formatar(cpf);
     }
 
-    private string Formatar(string cpf)
+    private static string Formatar(string cpf)
     {
-        return cpf.Substring(0, 3) + "." + cpf.Substring(3, 3) + "." + cpf.Substring(6, 3) + "-" + cpf.Substring(9,2);
+        return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
     }
 }

@@ -5,16 +5,16 @@ namespace Comex.Modelos.Produtos;
 
 public class Estoque
 {
-    public int Capacidade { get; private set; }
-    public int Ocupacao { get; private set; }
-    public decimal Montante { get; private set; }
-
     public Estoque()
     {
         Capacidade = 1000;
         Ocupacao = 0;
         Montante = 0M;
     }
+
+    public int Capacidade { get; private set; }
+    public int Ocupacao { get; private set; }
+    public decimal Montante { get; private set; }
 
     public void RegistraEntrada(Produto produto)
     {
@@ -25,7 +25,7 @@ public class Estoque
 
         Capacidade -= produto.Estoque;
         Ocupacao += produto.Estoque;
-        Montante += produto.ValorTotal();
+        Montante += produto.ValorTotal;
     }
 
     public void RegistraSaida(Produto produto)
@@ -37,11 +37,6 @@ public class Estoque
 
         Capacidade += produto.Estoque;
         Ocupacao -= produto.Estoque;
-        Montante -= produto.ValorTotal();
-    }
-
-    public override string ToString()
-    {
-        return $"Capacidade: {Capacidade} \nOcupação: {Ocupacao} \nMontante: R${Montante}";
+        Montante -= produto.ValorTotal;
     }
 }

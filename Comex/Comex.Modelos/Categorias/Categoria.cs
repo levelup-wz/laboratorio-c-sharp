@@ -4,11 +4,6 @@ namespace Comex.Modelos.Categorias;
 
 public class Categoria
 {
-    public static int Quantidade { get; private set; }
-    public int Id { get; }
-    public string Nome { get; }
-    public string Status { get; }
-
     /// <summary>
     /// Cria uma categoria nova
     /// </summary>
@@ -17,10 +12,9 @@ public class Categoria
     /// <exception cref="ArgumentException"></exception>
     public Categoria(string nome, string status)
     {
-        Quantidade++;
-        Id = Quantidade;
-        
-        if (nome.Length <= 3) 
+        Id = Quantidade++;
+
+        if (nome.Length <= 3)
         {
             throw new ArgumentException("Nome deve ser maior que 3 caracteres", nameof(nome));
         }
@@ -28,13 +22,13 @@ public class Categoria
         {
             throw new ArgumentException("Status deve ser somente ATIVA ou INATIVA", nameof(status));
         }
-        
+
         Nome = nome;
         Status = status;
     }
 
-    public override string ToString()
-    {
-        return $"{Nome} ({Id} - {Status})";
-    }
+    public static int Quantidade { get; private set; }
+    public int Id { get; }
+    public string Nome { get; }
+    public string Status { get; }
 }

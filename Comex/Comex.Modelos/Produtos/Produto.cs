@@ -6,25 +6,6 @@ namespace Comex.Modelos.Produtos;
 
 public class Produto
 {
-    public static int Quantidade { get; private set; }
-
-    [Key]
-    public int Id { get; protected set; }
-    public string Nome { get; }
-    public decimal Preco { get; }
-    public int Estoque { get; }
-    public Categoria Categoria { get; }
-
-    public decimal ValorTotal()
-    {
-        return Preco * Estoque;
-    }
-
-    public virtual decimal CalculaImposto()
-    {
-        return 0.4M * Preco;
-    }
-
     /// <summary>
     /// Cria uma instância de Produto
     /// </summary>
@@ -35,8 +16,7 @@ public class Produto
     /// <exception cref="ArgumentException"></exception>
     public Produto(string nome, decimal preco, int estoque, Categoria categoria)
     {
-        Quantidade++;
-        Id = Quantidade;
+        Id = Quantidade++;
 
         if (nome.Length <= 3)
         {
@@ -61,9 +41,12 @@ public class Produto
         Categoria = categoria;
     }
 
-    public override string ToString()
-    {
-        return $"[{Id}] - {Nome} R${ Preco} \nCategoria: {Categoria.Nome}" +
-            $"\nQuantidade em estoque: {Estoque} \nImposto R${CalculaImposto()}";
-    }
+    public static int Quantidade { get; private set; }
+    public int Id { get; protected set; }
+    public string Nome { get; }
+    public decimal Preco { get; }
+    public int Estoque { get; }
+    public Categoria Categoria { get; }
+    public decimal ValorTotal => Preco * Estoque;
+    public virtual decimal CalculaImposto => 0.1M * Preco;
 }

@@ -5,11 +5,6 @@ namespace Comex.Modelos.Pedidos;
 
 public class ItensDoPedido
 {
-    public Produto Item { get; }
-    public int Id { get; internal set; }
-    public int Quantidade { get; internal set; }
-    public decimal Total { get { return Item.Preco * Quantidade; } }
-
     public ItensDoPedido(Produto item, int quantidade)
     {
         if (quantidade <= 0)
@@ -21,8 +16,8 @@ public class ItensDoPedido
         Quantidade = quantidade;
     }
 
-    public override string ToString()
-    {
-        return $"\nItem {Id} - {Item.Nome} {Quantidade} unidades - R${Total}";
-    }
+    public Produto Item { get; }
+    public int Id { get; internal set; }
+    public int Quantidade { get; internal set; }
+    public decimal Total => Item.Preco * Quantidade;
 }

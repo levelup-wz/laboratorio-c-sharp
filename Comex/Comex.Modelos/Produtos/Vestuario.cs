@@ -6,13 +6,8 @@ namespace Comex.Modelos.Produtos;
 
 public class Vestuario : Produto
 {
-    public static new int Quantidade { get; private set; }
-    public string Atributos { get; set; }
-    public string Tamanho { get; }
-    public string Cor { get; }
-
     public Vestuario(string nome, decimal preco, int estoque, Categoria categoria, string atributos)
-        : base(nome, preco, estoque, categoria)
+    : base(nome, preco, estoque, categoria)
     {
         Atributos = atributos;
 
@@ -20,8 +15,8 @@ public class Vestuario : Produto
         Cor = this.ExtrairCor(atributos);
     }
 
-    public override string ToString()
-    {
-        return base.ToString() + $"\nCor: {Cor} - Tamanho: {Tamanho}";
-    }
+    public static new int Quantidade { get; private set; }
+    public string Atributos { get; set; }
+    public string Tamanho { get; }
+    public string Cor { get; }
 }

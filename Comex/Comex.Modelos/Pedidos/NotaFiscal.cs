@@ -24,9 +24,4 @@ public class NotaFiscal
         var valor = extenso.Escrever(OpcoesPredefinidas.Predefinicoes[Predefinicoes.MonetarioBRL]);
         return valor.Numero(Pedido.CalculaCustoTotal().ToString());
     }
-
-    public override string ToString()
-    {
-        return $"Valor: R${Pedido.CalculaCustoTotal()} \n{ValorPorExtenso()}";
-    }
 }
